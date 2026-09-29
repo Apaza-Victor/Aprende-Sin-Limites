@@ -37,16 +37,20 @@ y todo entra por CDN.
 
 ## Ver el sitio
 
-Como no hay compilación, basta con abrir `index.html`. Si prefieres servirlo por
-HTTP —recomendado, para que las rutas relativas se comporten como en
+**Está publicado en
+<https://apaza-victor.github.io/Aprende-Sin-Limites/>**, servido por GitHub
+Pages directamente desde `main`: cada `git push` actualiza la web sin ningún
+paso de compilación, porque el repositorio ya es el sitio.
+
+En local tampoco hay que instalar nada. Basta con abrir `index.html`, o servirlo
+por HTTP —recomendado, para que las rutas relativas se comporten como en
 producción—:
 
 ```bash
 python -m http.server 8000
 ```
 
-Y abrir <http://localhost:8000>. No hace falta instalar nada: las dependencias
-del proyecto son cero.
+Y abrir <http://localhost:8000>. Las dependencias del proyecto son cero.
 
 ## Los once cursos
 
