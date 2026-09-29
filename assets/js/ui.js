@@ -50,8 +50,11 @@ function aplicarTema(tema) {
    el mismo motivo que el boton de subir: ui.js es el unico archivo que cargan
    todas las paginas, asi que el boton no hay que repetirlo en seis sitios.
 
-   Va antes del .navbar-toggler, no dentro del menu desplegable: asi se ve
-   tambien en movil sin tener que abrir el menu primero. */
+   Se anade al FINAL del .container, que es el hijo flexible de la barra. En
+   escritorio el menu esta desplegado y asi el boton cae a la derecha de los
+   enlaces, que es donde se busca. En movil el menu esta plegado y el final del
+   container ya es la esquina, pero se quiere el boton junto al de abrir el
+   menu: eso lo resuelve el CSS con "order", sin tocar el HTML. */
 function inicializarTema() {
   var nav = document.querySelector(".nav-guia .container");
   if (!nav || document.getElementById("btnTema")) return;
@@ -85,9 +88,8 @@ function inicializarTema() {
     pintarBoton();
   });
 
-  var toggler = nav.querySelector(".navbar-toggler");
-  if (toggler) nav.insertBefore(boton, toggler);
-  else nav.appendChild(boton);
+  // Ultimo hijo del container: a la derecha de la barra en escritorio.
+  nav.appendChild(boton);
 
   pintarBoton();
 

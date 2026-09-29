@@ -234,6 +234,12 @@ a:hover { color: var(--acento-2, #93c5fd); }
 .btn-ghost:hover { background: var(--realce-fuerte); color: var(--texto); }
 
 /* ===== Cards ===== */
+
+/* El relleno vive aqui y no en cada variante. .tarjeta es la clase que se pone
+   en el HTML de toda tarjeta y antes no traia padding: las variantes que si lo
+   definian (.curso-card, .mod-card, .lecc-card) tapaban bien, pero las que no
+   -como .faq-card- dejaban el texto pegado al borde. Con un valor por defecto
+   aqui, una tarjeta nueva no puede salir sin margen. */
 .tarjeta {
   background: var(--fondo-card);
   border: 1px solid var(--borde);
@@ -242,6 +248,7 @@ a:hover { color: var(--acento-2, #93c5fd); }
   -webkit-backdrop-filter: blur(8px);
   transition: transform .2s ease, border-color .2s ease, background .2s ease;
   height: 100%;
+  padding: 1.5rem 1.6rem;
 }
 .tarjeta:hover {
   transform: translateY(-6px);
@@ -452,8 +459,19 @@ a:hover { color: var(--acento-2, #93c5fd); }
 .lecc-card.hecha .lecc-num { color: var(--verde); border-color: color-mix(in srgb, var(--verde) 45%, transparent); background: color-mix(in srgb, var(--verde) 15%, transparent); }
 
 /* ===== FAQ (cards visibles, sin desplegables) ===== */
-.faq-card { transition: transform .2s ease, border-color .2s ease; }
+
+/* Tres cards en columnas estrechas: el relleno se sube un poco para que el
+   parrafo respire sin que la caja crezca de mas. El icono va arriba, el titulo
+   debajo y el texto ocupa lo que queda; las tres quedan a la misma altura
+   gracias a h-100 en el marcado. */
+.faq-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 1.7rem;
+  transition: transform .2s ease, border-color .2s ease;
+}
 .faq-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--acento) 40%, var(--borde)); }
+.faq-card > p { margin-bottom: 0; text-wrap: pretty; }
 .faq-ico {
   display: grid;
   place-items: center;
@@ -1400,6 +1418,19 @@ a:hover { color: var(--acento-2, #93c5fd); }
 .btn-tema:focus-visible { outline: 2px solid var(--acento-2); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) {
   .btn-tema { transition: none; }
+}
+
+/* Donde cae el selector de tema. ui.js lo anade al final del .container de la
+   barra, que es un hijo flexible con justify-content: space-between, asi que
+   queda a la derecha en cualquier ancho: en escritorio detras de los enlaces y
+   en movil en la esquina, junto al boton de menu.
+
+   No se recoloca con "order" en movil. "order" cambia el orden visual pero no
+   el de tabulacion, y esa diferencia rompe el recorrido del teclado: el foco
+   saltaria en un orden que no es el que se ve. Dejando el boton el ultimo
+   hijo, el orden del DOM y el visual coinciden en los dos casos. */
+@media (min-width: 992px) {
+  .nav-guia .btn-tema { margin-left: .85rem; }
 }
 
 /* ============================================================================
