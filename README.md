@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="https://apaza-victor.github.io/Aprende-Sin-Limites/"><img alt="Web publicada" src="https://img.shields.io/badge/web-Visitar-22c55e?style=for-the-badge"></a>
   <a href="index.html"><img alt="Portada" src="https://img.shields.io/badge/portada-index.html-3b82f6?style=for-the-badge"></a>
   <a href="secciones/cursos.html"><img alt="11 cursos" src="https://img.shields.io/badge/cursos-11-8b5cf6?style=for-the-badge"></a>
   <a href="secciones/tablas.html"><img alt="398 fórmulas" src="https://img.shields.io/badge/f%C3%B3rmulas-398-06b6d4?style=for-the-badge"></a>
@@ -183,6 +184,33 @@ concreta sin revalidar todo el sitio:
 ```bash
 node herramientas/verificar-marcas.cjs contenido/matematica.js
 ```
+
+### Despliegue
+
+La web está en GitHub Pages, servida desde la rama `main` en su raíz:
+
+<https://apaza-victor.github.io/Aprende-Sin-Limites/>
+
+No hay workflow, ni carpeta de compilación, ni nada que configurar: como el
+repositorio ya **es** el sitio, cada `git push` publica. El orden importa,
+porque lo que se sube es el resultado de los generadores, no la fuente:
+
+```bash
+node herramientas/cargar-datos.cjs        # 1. fusionar contenido/
+node herramientas/generar-estructura.cjs  # 2. cursos, módulos y lecciones
+node herramientas/generar-secciones.cjs   # 3. secciones
+node herramientas/generar-tablas.cjs      # 4. tabla de fórmulas
+node herramientas/generar-calculadora.cjs # 5. calculadora
+git add -A && git commit -m "..." && git push
+```
+
+Si solo se tocan `assets/`, `plantillas/` o el CSS, basta con el `push`.
+
+Un detalle que condiciona todo lo demás: **todas las rutas del sitio son
+relativas**, ninguna empieza por `/`. Por eso funciona igual en local, en un
+servidor propio y dentro del subdirectorio `github.io/Repositorio/`. Si alguna
+vez se escribe una ruta absoluta, la web se rompe en producción pero sigue
+funcionando al abrir el archivo.
 
 ## Licencia
 
