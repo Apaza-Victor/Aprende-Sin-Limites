@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="Aprende Sin Límites: sitio educativo con 11 cursos, 50 módulos y 242 lecciones">
+  <title>Aprende Sin Límites</title>
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="55%" stop-color="#161d45"/>
+      <stop offset="100%" stop-color="#2a1c5c"/>
+    </linearGradient>
+    <linearGradient id="acento" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.78" cy="0.22" r="0.55">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1000" height="300" fill="url(#fondo)"/>
+  <rect width="1000" height="300" fill="url(#halo)"/>
+
+  <!-- Franja de acento -->
+  <rect x="0" y="0" width="1000" height="5" fill="url(#acento)"/>
+
+  <!-- Simbolos matematicos de fondo, muy tenues -->
+  <g fill="#ffffff" opacity="0.07" font-family="Cambria Math, Cambria, Georgia, serif" font-size="54">
+    <text x="806" y="112">π</text>
+    <text x="884" y="188">√</text>
+    <text x="742" y="212">∑</text>
+    <text x="58" y="252">x²</text>
+  </g>
+
+  <!-- Marca -->
+  <g transform="translate(64 60)">
+    <rect x="0" y="0" width="56" height="56" rx="16" fill="url(#acento)"/>
+    <path d="M16 34 L28 16 L40 34" fill="none" stroke="#0b1020" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="20" y1="42" x2="36" y2="42" stroke="#0b1020" stroke-width="5" stroke-linecap="round"/>
+    <text x="76" y="26" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="26" font-weight="700" fill="#9aa6c3" letter-spacing="3">SITIO EDUCATIVO</text>
+    <text x="76" y="60" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="34" font-weight="800" fill="#e8ecf7">HTML · CSS · JavaScript</text>
+  </g>
+
+  <!-- Titulo -->
+  <text x="64" y="182" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="62" font-weight="800" fill="#ffffff">Aprende Sin Límites</text>
+  <text x="64" y="218" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="21" fill="#9aa6c3">Material de refuerzo para cursos de preparación, en español</text>
+
+  <!-- Cifras -->
+  <g font-family="Poppins, Segoe UI, system-ui, sans-serif">
+    <g transform="translate(64 240)">
+      <text x="0" y="26" font-size="30" font-weight="700" fill="#3b82f6">11</text>
+      <text x="42" y="26" font-size="15" fill="#9aa6c3">cursos</text>
+    </g>
+    <g transform="translate(168 240)">
+      <text x="0" y="26" font-size="30" font-weight="700" fill="#8b5cf6">50</text>
+      <text x="42" y="26" font-size="15" fill="#9aa6c3">módulos</text>
+    </g>
+    <g transform="translate(300 240)">
+      <text x="0" y="26" font-size="30" font-weight="700" fill="#06b6d4">242</text>
+      <text x="62" y="26" font-size="15" fill="#9aa6c3">lecciones</text>
+    </g>
+    <g transform="translate(452 240)">
+      <text x="0" y="26" font-size="30" font-weight="700" fill="#10b981">310</text>
+      <text x="62" y="26" font-size="15" fill="#9aa6c3">páginas</text>
+    </g>
+    <g transform="translate(586 240)">
+      <text x="0" y="26" font-size="30" font-weight="700" fill="#f59e0b">0</text>
+      <text x="18" y="26" font-size="15" fill="#9aa6c3">dependencias de npm</text>
+    </g>
+  </g>
+</svg>

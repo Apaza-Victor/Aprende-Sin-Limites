@@ -1,134 +1,192 @@
-# Aprende Sin Límites
+<p align="center">
+  <img src="docs/banner.svg" alt="Aprende Sin Límites" width="100%">
+</p>
 
-Sitio educativo estático, en español, con material de refuerzo para cursos de
-preparación: matemáticas, física, química, biología, historia, comunicación,
-razonamiento verbal y matemático, alfabetización digital, ciencias
-naturales y admisión universitaria.
+<p align="center">
+  <a href="index.html"><img alt="Portada" src="https://img.shields.io/badge/portada-index.html-3b82f6?style=for-the-badge"></a>
+  <a href="secciones/cursos.html"><img alt="11 cursos" src="https://img.shields.io/badge/cursos-11-8b5cf6?style=for-the-badge"></a>
+  <a href="secciones/tablas.html"><img alt="398 fórmulas" src="https://img.shields.io/badge/f%C3%B3rmulas-398-06b6d4?style=for-the-badge"></a>
+  <a href="secciones/calculadora.html"><img alt="Calculadora científica" src="https://img.shields.io/badge/calculadora-cient%C3%ADfica-10b981?style=for-the-badge"></a>
+  <img alt="Sin dependencias de npm" src="https://img.shields.io/badge/npm-0%20dependencias-f59e0b?style=for-the-badge">
+  <img alt="Node 18 o superior" src="https://img.shields.io/badge/node-18%2B-10b981?style=for-the-badge">
+</p>
 
-No hay build, ni framework, ni paso de compilación: son HTML, CSS y JavaScript
-vanilla que se abren directamente en el navegador. Las únicas dependencias son
-tres CDNs (Bootstrap, Bootstrap Icons y la tipografía Poppins).
+<p align="center">
+  <b>Sitio educativo estático en español</b> · sin compilación · sin framework · sin <code>package.json</code>
+</p>
 
-- **11 cursos** · **50 módulos** · **242 lecciones**
-- **310 páginas** HTML generadas
-- **66 figuras** SVG dibujadas a mano
-- Tema claro y oscuro que recuerda tu elección
-- Calculadora científica con historial, sin conexión
+---
+
+## Qué es
+
+Material de refuerzo para cursos de preparación, en HTML, CSS y JavaScript
+vanilla. Se abre el archivo y funciona: no hay compilación, ni empaquetado, ni
+paso de instalación. Lo único externo son Bootstrap, sus iconos y la tipografía,
+y todo entra por CDN.
+
+| Métrica | Detalle |
+| :--- | :--- |
+| 📚 **11 cursos** | matemática, física, química, biología, historia, comunicación, razonamiento verbal y matemático, alfabetización digital, ciencias naturales y admisión universitaria |
+| 🧩 **50 módulos** | de 3 a 5 lecciones cada uno |
+| 📄 **242 lecciones** | todas con objetivo, teoría, ejemplo y consejo |
+| 🖼️ **310 páginas** | HTML generadas a partir de las tres plantillas |
+| 📊 **66 figuras** | SVG dibujadas a mano, sin imágenes de mapa de bits |
+| 🔗 **6 965 enlaces** | revisados uno a uno en cada generación |
+| 📐 **398 fórmulas** | dibujadas con SVG desde LaTeX, sin MathJax |
+| 🧮 **1 calculadora** | científica, con historial y sin `eval()` |
 
 ## Ver el sitio
 
-Como no hay compilación, se abre el archivo directamente:
-
-```
-index.html
-```
-
-O, si prefieres servirlo por HTTP (recomendado, para que las rutas relativas
-funcionen igual que en producción):
+Como no hay compilación, basta con abrir `index.html`. Si prefieres servirlo por
+HTTP —recomendado, para que las rutas relativas se comporten como en
+producción—:
 
 ```bash
 python -m http.server 8000
-# luego: http://localhost:8000
 ```
 
-## Estructura
+Y abrir <http://localhost:8000>. No hace falta instalar nada: las dependencias
+del proyecto son cero.
+
+## Los once cursos
+
+| Curso | Enlace | Curso | Enlace |
+|---|---|---|---|
+| 🧮 Matemática | [`cursos/matematica/`](cursos/matematica/) | 🧬 Biología | [`cursos/biologia/`](cursos/biologia/) |
+| ⚛️ Física | [`cursos/fisica/`](cursos/fisica/) | 🌍 Ciencia, tecnología y ambiente | [`cursos/ciencia-tecnologia-ambiente/`](cursos/ciencia-tecnologia-ambiente/) |
+| ⚗️ Química | [`cursos/quimica/`](cursos/quimica/) | 📜 Historia | [`cursos/historia/`](cursos/historia/) |
+| ✍️ Comunicación | [`cursos/comunicacion/`](cursos/comunicacion/) | 🧠 Razonamiento verbal | [`cursos/razonamiento-verbal/`](cursos/razonamiento-verbal/) |
+| ➗ Razonamiento matemático | [`cursos/razonamiento-matematico/`](cursos/razonamiento-matematico/) | 💻 Alfabetización digital | [`cursos/alfabetizacion-digital/`](cursos/alfabetizacion-digital/) |
+| 🎓 Admisión universitaria | [`cursos/admision-universitaria/`](cursos/admision-universitaria/) | | |
+
+## Secciones
+
+| Sección | Qué hay |
+|---|---|
+| [`cursos.html`](secciones/cursos.html) | Los once cursos y su índice de lecciones |
+| [`metodo.html`](secciones/metodo.html) | Cómo estudiar cada bloque |
+| [`tablas.html`](secciones/tablas.html) | Tabla de fórmulas, constantes y unidades del SI |
+| [`calculadora.html`](secciones/calculadora.html) | Calculadora científica con historial |
+| [`recursos.html`](secciones/recursos.html) | Simuladores y bancos de preguntas externos |
+| [`faq.html`](secciones/faq.html) | Preguntas frecuentes |
+
+## Cómo está construido
+
+El contenido se escribe **una sola vez**, en `contenido/`, y de ahí sale todo lo
+demás. El HTML de `cursos/` y `secciones/` es un resultado generado: se puede
+tocar para una prueba rápida, pero cualquier cambio se pierde al volver a
+generar.
+
+```mermaid
+flowchart TD
+A["contenido/&lt;curso&gt;.js<br/>11 archivos"] --> B["cargar-datos.cjs"]
+B --> C["assets/js/cursos-data.js<br/>los 11 cursos"]
+C --> D["generar-estructura.cjs"]
+C --> E["generar-secciones.cjs"]
+C --> F["generar-tablas.cjs"]
+D --> G["cursos/&lt;curso&gt;/&lt;módulo&gt;/&lt;lección&gt;.html<br/>303 archivos"]
+E --> H["secciones/*.html"]
+F --> H
+G --> I["verificar-*.cjs"]
+H --> I
+```
+
+<details>
+<summary><b>Estructura de carpetas</b></summary>
 
 ```
-index.html              Portada
-assets/
-  css/estilos.css       Hoja de estilos: tokens de color, tema, componentes
-  js/                   Comportamiento del sitio
-  img/figuras/          66 figuras SVG
-contenido/              Contenido profundo, un archivo por curso (lecciones, teoría, ejercicios)
-cursos/                 HTML generado: 11 cursos, sus módulos y sus lecciones
-plantillas/             Las tres plantillas de las que se generan los HTML
-secciones/              HTML generado: cursos, método, tablas, calculadora, recursos, FAQ
-herramientas/           Generadores y verificadores (Node.js, sin dependencias)
+.
+├── index.html                  Portada
+├── assets/
+│   ├── css/estilos.css         Tokens de color, tema y componentes
+│   ├── js/                     Comportamiento del sitio y datos
+│   └── img/figuras/            66 figuras SVG
+├── contenido/                  Contenido profundo, un archivo por curso
+├── cursos/                     HTML generado: cursos, módulos y lecciones
+├── plantillas/                 Las tres plantillas de las que se genera
+├── secciones/                  HTML generado: las seis secciones
+├── herramientas/               Generadores y verificadores (Node.js)
+└── docs/banner.svg             Cabecera de este README
 ```
 
-### La idea
+</details>
 
-El contenido se escribe una sola vez, en `contenido/`, y de ahí sale todo:
+### Decisiones que no son obvias
 
-```
-contenido/matematica.js
-        │
-        │  cargar-datos.cjs          fusiona estructura + contenido
-        ▼
-assets/js/cursos-data.js
-        │
-        │  generar-estructura.cjs    aplica las plantillas
-        ▼
-cursos/matematica/modulo-1-.../01-....html
-```
+**Sin framework.** Un sitio de 310 páginas estáticas no necesita React ni un
+bundler. Cargar Bootstrap por CDN y escribir el resto a mano deja el proyecto
+legible entero y sin `node_modules`.
 
-Si quieres **cambiar una lección**, edita `contenido/<curso>.js` y vuelve a
-generar. Si solo quieres **retocar el texto exacto de una página**, puedes
-editar el HTML generado, pero el cambio se perderá la próxima vez que se
-genere.
+**Colores por variables, no dos temas.** `assets/css/estilos.css` define el tema
+oscuro en `:root` y el claro en `:root[data-tema="claro"]`. El tema claro son 37
+líneas de variables redefinidas más 13 de acentos por curso, no una segunda
+hoja de estilos: añadir un color nuevo se hace en un sitio y los dos temas lo
+heredan.
+
+**El tema no parpadea.** Un `<script>` de seis líneas en el `<head>` lee
+`localStorage` y fija `data-tema` en `<html>` antes de que se pinte el fondo. Si
+no hay elección guardada, sigue a `prefers-color-scheme`. `assets/js/ui.js` es
+quien después dibuja el botón de cambio.
+
+**La calculadora no usa `eval()`.** `assets/js/calculadora.js` trae su propio
+tokenizador y su propio intérprete de expresiones, porque meter texto del
+usuario en `eval()` o en `new Function()` es entregarle el navegador a
+cualquiera que abra la página. Entiende `2^10`, `5!`, `200 + 10%`, `sin(30)`,
+`2pi`, `(1+2)(3+4)`, logaritmos y factoriales, avisa de los errores en
+castellano y funciona en grados o radianes.
+
+**LaTeX dibujado a mano.** `generar-estructura.cjs` convierte cada fórmula en
+SVG. MathJax o KaTeX habrían cargado cientos de kilobytes para mostrar 398
+fórmulas que se pueden renderizar en 3 KB de código propio, y además quedarían
+ilegibles sin JavaScript.
+
+**Nada se publica sin pasar los cinco verificadores.** No es burocracia: cada
+uno existe porque ya encontró algo. El de enlaces ha detectado rutas rotas en
+secciones que se habían regenerado a medias; el de fórmulas, un comando LaTeX
+que el generador no sabía dibujar y que salía crudo en la página.
 
 ## Herramientas
 
-Todo vive en `herramientas/` y se ejecuta con Node.js (probado con v24). No
-hacen falta dependencias: no hay `package.json` ni `node_modules`.
+Todo vive en `herramientas/` y se ejecuta con Node.js. Sin dependencias: no hay
+`package.json` ni `node_modules`.
 
 ### Generar el sitio
 
 ```bash
-node herramientas/cargar-datos.cjs           # fusiona contenido/ en cursos-data.js
+node herramientas/cargar-datos.cjs           # contenido/ -> cursos-data.js
 node herramientas/generar-estructura.cjs     # cursos, módulos y lecciones
 node herramientas/generar-secciones.cjs      # secciones que salen del index
 node herramientas/generar-tablas.cjs         # tabla de fórmulas
 node herramientas/generar-calculadora.cjs    # página de la calculadora
 ```
 
-Orden recomendado: los cinco, en ese orden. Son idempotentes: ejecutarlos dos
-veces seguidas produce exactamente los mismos archivos.
+Los cinco, en ese orden. Son **idempotentes**: ejecutarlos dos veces seguidas
+produce archivos byte a byte idénticos.
 
 ### Verificar que nada se rompió
 
 ```bash
 node herramientas/verificar-sintaxis.cjs     # todos los scripts compilan
 node herramientas/verificar-enlaces.cjs      # ningún href relativo roto
-node herramientas/verificar-marcas.cjs       # las fórmulas LaTeX están bien formadas
+node herramientas/verificar-marcas.cjs       # las fórmulas están bien formadas
 node herramientas/verificar-figuras.cjs      # las figuras existen y son válidas
 node herramientas/verificar-contenido.cjs    # sin texto corrupto ni lecciones vacías
 ```
 
-Los cinco tienen que salir en verde antes de publicar. Comprueban, entre otras
-cosas, que las 6 965 rutas internas apunten a archivos que existen y que las
-398 fórmulas del sitio solo usen comandos que el generador sabe dibujar.
-
-`verificar-marcas.cjs` también admite un archivo suelto, para depurar una
-lección concreta sin revalidar todo:
+Los cinco tienen que salir en verde antes de publicar. Para depurar una lección
+concreta sin revalidar todo el sitio:
 
 ```bash
 node herramientas/verificar-marcas.cjs contenido/matematica.js
 ```
 
-## Cómo está hecho
-
-**Estilos.** Una sola hoja de CSS con variables para el color y el texto, y
-reglas que se recolorean solas con `:root[data-tema="claro"]`. No hay un tema
-duplicado en dos sitios.
-
-**Tema.** Un `<script>` pequeño en el `<head>` lee la elección guardada en
-`localStorage` y la aplica antes de que se pinte el fondo, así que la página no
-parpadea nunca. Si no hay elección previa, sigue a la preferencia del sistema.
-`assets/js/ui.js` es quien dibuja el botón de cambio.
-
-**Calculadora.** `assets/js/calculadora.js` trae su propio tokenizador e
-intérprete de expresiones. No usa `eval()` ni `new Function()`. Entiende
-`2^10`, `5!`, `200 + 10%`, `sin(30)`, `2pi`, `(1+2)(3+4)`, logaritmos y
-factoriales, avisa de los errores en castellano y funciona en grados o radianes.
-
-**Contenido.** Cada lección tiene objetivo, teoría, ejemplo y consejo, y hay
-comprobaciones automáticas de que no se queden vacías ni demasiado cortas.
-
-**Iconos y tipografía.** Bootstrap Icons y Poppins, por CDN. El resto es todo
-propio.
-
 ## Licencia
 
 Material educativo de uso libre. Si reúses el contenido o el código, cítalo
 como tal.
+
+---
+
+<p align="center">
+  Hecho con HTML, CSS y JavaScript, sin dependencias que instalar.
+</p>
