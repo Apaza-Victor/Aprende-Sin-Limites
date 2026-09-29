@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magnitudes y unidades — Física</title>
+  <meta name="description" content="Diferenciar magnitudes escalares y vectoriales y usar unidades del SI." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Movimiento y cinemática</a> <span class="mx-2 opacity-50">/</span>
+          <span>Magnitudes y unidades</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Magnitudes y unidades</h1>
+            <p class="articulo-modulo">Módulo 1 · Movimiento y cinemática</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Diferenciar magnitudes escalares y vectoriales y usar unidades del SI.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Una magnitud es todo lo que se puede medir, y un problema de física empieza siempre por una pregunta incómoda: ¿se puede medir esto con un número solamente, o hace falta también una dirección? De esa respuesta dependen dos familias que se usan todo el curso.</p><h4 class="lecc-h4">Escalar y vectorial</h4><ul class="lecc-ul"><li><strong>Escalar</strong>: se describe con un número y una unidad. La masa, el tiempo, la temperatura, la energía, la rapidez. La distancia recorrida es escalar aunque el trayecto sea curvo, porque solo cuenta cuánto se avanzó.</li><li><strong>Vectorial</strong>: necesita magnitud, dirección y sentido. El desplazamiento, la velocidad, la aceleración, la fuerza, el peso.</li><li>La diferencia práctica: si alguien camina 100 metros hacia el norte y regresa, recorrió 200 metros de distancia, pero su desplazamiento es cero. Dos números que cuentan cosas distintas, y confundirlos es el error más común del primer módulo.</li></ul><h4 class="lecc-h4">El vector y sus operaciones</h4><p>Un vector se escribe con los componentes de su eje, y se puede sumar componente por componente, como cualquier par de números. Eso permite sumar fuerzas sin dibujar nada: dos fuerzas de (3 N, 4 N) y (−3 N, 2 N) dan (0 N, 6 N).</p><ul class="lecc-ul"><li><strong>Módulo</strong>: la longitud del vector, que es su cantidad. Se calcula con el teorema de Pitágoras: raíz de la suma de los cuadrados.</li><li><strong>Dirección y sentido</strong>: la dirección es el valor del ángulo sobre una referencia; el sentido distingue un norte de un sur. &quot;30 grados&quot; no está completo si no se dice hacia dónde.</li></ul><h4 class="lecc-h4">El Sistema Internacional</h4><p>Trabajar con unidades mezcladas es la causa número uno de resultados absurdos. El SI tiene siete magnitudes base, y de ellas salen todas las demás mediante combinaciones:</p><ul class="lecc-ul"><li>Longitud: metro (m).</li><li>Masa: kilogramo (kg).</li><li>Tiempo: segundo (s).</li><li>Corriente eléctrica: amperio (A).</li><li>Temperatura: kelvin (K).</li><li>Cantidad de sustancia: mol (mol).</li><li>Intensidad luminosa: candela (cd).</li></ul><p>Las derivadas se construyen con productos y cocientes: la velocidad es longitud entre tiempo, la fuerza es masa por aceleración, el trabajo es fuerza por distancia. Entender esto hace que las fórmulas no se memoricen, porque se deducen.</p><h4 class="lecc-h4">El análisis dimensional como comprobación</h4><p>Si has despejado mal y la unidad final no tiene sentido físico, casi siempre el error está en la fórmula, no en la cuenta. Ejemplo: si te da que una velocidad se mide en newtons, el resultado es imposible y hay que volver atrás. Este control de unidades es más rápido que rehacer la cuenta, y por eso conviene hacerlo siempre, incluso cuando el número &quot;parece&quot; bien.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un estudiante recorre 300 metros al norte, luego 400 metros al este y finalmente 120 metros al sur. ¿Cuál es su distancia total y su desplazamiento, y cuánto vale la rapidez media si tardó 92 segundos?</p><h4 class="lecc-h4">Método 1: separar distancia y desplazamiento</h4><ul class="lecc-ul"><li>Primero: la distancia es la suma de los tres tramos, 300 + 400 + 120 = 820 metros. Es un escalar, se suman sin más.</li><li>Segundo: para el desplazamiento elijo el norte como eje positivo vertical y el este como positivo horizontal. El desplazamiento vertical es 300 − 120 = 180 metros hacia el norte, y el horizontal es 400 metros hacia el este.</li><li>Tercero: el módulo del desplazamiento es raíz de 180² + 400² = raíz de 32400 + 160000 = raíz de 192400, que da unos 438,6 metros.</li><li>La dirección la obtengo del ángulo, tangente inversa de 180 sobre 400, unos 24,2 grados al norte del este.</li></ul><h4 class="lecc-h4">Método 2: dibujar el vector primero</h4><ul class="lecc-ul"><li>Cuarto: hago un croquis a escala, con 300 hacia arriba, 400 a la derecha y 120 hacia abajo. El camino es un triángulo rectángulo de catetos 180 y 400.</li><li>Quinto: la hipotenusa es 438,6 metros y coincide exactamente con el método anterior. Que dos caminos distintos lleguen al mismo número confirma que la operación estaba bien planteada.</li></ul><h4 class="lecc-h4">Método 3: calcular la rapidez</h4><ul class="lecc-ul"><li>Sexto: la rapidez media es distancia entre tiempo, 820 metros entre 92 segundos, unos 8,9 metros por segundo, unos 32 kilómetros por hora.</li><li>La velocidad media, en cambio, es 438,6 entre 92, unos 4,8 metros por segundo. Son distintas, y esa diferencia es justamente el contenido del ejemplo.</li></ul><div class="lecc-nota">El resultado importante no es 438,6 sino que hay dos cifras legítimas para la pregunta y cada una tiene su nombre. Saber cuál se pide es la mitad del problema.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Escribe en la primera línea del ejercicio si lo que piden es distancia o desplazamiento, y luego qué unidad corresponde. El 90 % de los errores de cinemática vienen de responder bien con la magnitud equivocada.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-0-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="index.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-movimiento-rectilineo-uniforme-mru.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-0-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oraciones eliminadas — Razonamiento Verbal</title>
+  <meta name="description" content="Detectar la oración que sobra en un texto, justificar por que rompe la coherencia y comprobar que las demás forman un bloque único." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="razonamiento-verbal">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Razonamiento Verbal</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Semántica y precisión</a> <span class="mx-2 opacity-50">/</span>
+          <span>Oraciones eliminadas</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-chat-quote"></i></div>
+            <h1 class="articulo-titulo">Oraciones eliminadas</h1>
+            <p class="articulo-modulo">Módulo 2 · Semántica y precisión</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Detectar la oración que sobra en un texto, justificar por que rompe la coherencia y comprobar que las demás forman un bloque único.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">Qué es una oración eliminada</h4><p>Es una oración que el ejercicio propone quitar del texto. Casi siempre sobra <strong>una sola</strong>, y el trabajo está en justificar cuál.</p><h4 class="lecc-h4">Los cuatro motivos de sobra</h4><ul class="lecc-ul"><li><strong>Rompe la unidad temática</strong>: la oración habla de algo que no aparece en el resto.</li><li><strong>Rompe la cronología</strong>: interrumpe el orden en que ocurren los hechos.</li><li><strong>Es una repetición</strong>: repite lo que ya se dijo con otras palabras, sin aportar nada.</li><li><strong>Es una opinión impertinente</strong>: mete el punto de vista personal del autor dónde el texto es informativo.</li></ul><h4 class="lecc-h4">Cómo se comprueba</h4><ol class="lecc-ol"><li><strong>Lee el texto con la oración incluida.</strong> Anota que dice.</li><li><strong>Quita la oración.</strong> Vuelve a leer.</li><li>Si el texto sigue siendo coherente y completo, esa era la sobrante.</li><li>Si al quitarla falta un dato, la oración era necesaria.</li></ol><div class="lecc-nota">La prueba decisiva es la <strong>redacción</strong>: si al quitar la oración el texto queda más fluido, era la correcta. No basta con que parezca menos importante.</div><h4 class="lecc-h4">El error típico</h4><p>Quedarse con la oración más larga o la más llamativa. El ejercicio de eliminación suele usar una oración llana y redundante, que pasa desapercibida.</p><h4 class="lecc-h4">Cuando hay dos candidatas</h4><p>Si dos oraciones parecen sobrar, se aplica el criterio de la <strong>cantidad de información</strong>: sobra la que aporta menos información nueva, no la que más se parece a otra.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un texto sobre la historia de la imprenta tiene cuatro párrafos. El tercero dice: sin la imprenta, los libros se quedaban en los monasterios.</p><h4 class="lecc-h4">Método 1: qué aporta cada párrafo</h4><ul class="lecc-ul"><li>Párrafo 1: la imprenta surge en Europa.</li><li>Párrafo 2: que permitía copiar muchos ejemplares.</li><li>Párrafo 3: sin ella, los libros solo circulaban entre los monasterios.</li><li>Párrafo 4: su efecto en la difusión del conocimiento.</li></ul><h4 class="lecc-h4">Método 2: la prueba de la unidad</h4><ul class="lecc-ul"><li>Los párrafos 1, 2 y 4 hablan de la imprenta y sus efectos.</li><li>El párrafo 3 también habla de ella, así que no rompe el tema.</li></ul><h4 class="lecc-h4">Método 3: buscar el problema real</h4><ul class="lecc-ul"><li>El problema del párrafo 3 es que está al final del desarrollo y repite la idea del párrafo 4: limiter la circulación es justamente lo que cambia con la imprenta.</li><li>Es una repetición, no una ruptura de tema.</li></ul><h4 class="lecc-h4">Método 4: la conclusión</h4><ul class="lecc-ul"><li>La oración sobrante es la del párrafo 3, por repetición.</li><li>Conclusiones: el texto sin ese párrafo mantiene su unidad y su orden lógico.</li></ul><ul class="lecc-ul"><li>Ojo: si el párrafo 3 hablará sobre el costo de los libros, entonces si aporta un dato nuevo y habría que conservarlo.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Elimina primero la oración que más te incómoda y lee el texto en voz alta. Si no se nota la falta, era la sobrante. La prueba de lectura en voz alta descubre los saltos de flujo mejor que el análisis.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="razonamiento-verbal-1-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-plan-de-redaccion.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-terminos-contextuales.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "razonamiento-verbal-1-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

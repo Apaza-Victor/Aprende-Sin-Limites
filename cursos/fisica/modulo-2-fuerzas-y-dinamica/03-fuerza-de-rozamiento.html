@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuerza de rozamiento — Física</title>
+  <meta name="description" content="Calcular el rozamiento estático y cinético entre superficies comprobando unidades y verificando el resultado con un segundo camino de cálculo." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Fuerzas y dinámica</a> <span class="mx-2 opacity-50">/</span>
+          <span>Fuerza de rozamiento</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Fuerza de rozamiento</h1>
+            <p class="articulo-modulo">Módulo 2 · Fuerzas y dinámica</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Calcular el rozamiento estático y cinético entre superficies comprobando unidades y verificando el resultado con un segundo camino de cálculo.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La fricción es la única fuerza de este módulo que se opone al movimiento y que se calcula con una fórmula propia. Entenderla bien evita el error más caro de la dinámica.</p><h4 class="lecc-h4">Dos tipos y dos fórmulas</h4><ul class="lecc-ul"><li><strong>Fricción estática</strong>: la que impide que el cuerpo empiece a deslizarse. Se ajusta a lo necesario hasta su valor máximo, y por eso su fórmula lleva un &quot;menor o igual&quot;: f estático ≤ μ estático · N.</li><li><strong>Fricción cinética</strong>: la que actúa una vez que el cuerpo ya se desliza. Es constante e independiente de la velocidad, y vale f cinético = μ cinético · N.</li></ul><p>El coeficiente de fricción no tiene unidades y es una propiedad de los dos materiales en contacto, no del objeto. Acero sobre hielo tiene menos fricción que madera sobre madera, y por eso las tablas no traen el valor.</p><h4 class="lecc-h4">La normal es la clave</h4><p>Ambas fórmulas usan la fuerza normal, y ese es el punto donde se concentran los errores. En una superficie horizontal, la normal es igual al peso. En un plano inclinado, no: es el peso multiplicado por el coseno del ángulo. En un empujón horizontal contra una pared, la normal es la fuerza del empuje. En cada caso hay que dibujar el diagrama y preguntarse qué empuja hacia la superficie.</p><p>Que la fricción sea proporcional a la normal explica un hecho cotidiano: un comprimido sin tapa resbala y con tapa se mantiene firme, y nada cambió en el material.</p><h4 class="lecc-h4">La condición de movimiento</h4><p>El error clásico es aplicar directamente μ · N. Ese valor es el máximo, y solo se alcanza en el instante en que el cuerpo empieza a deslizar. Para saber si un cuerpo se mueve o se queda quieto:</p><ul class="lecc-ul"><li>Calcula la fuerza aplicada y compárala con el máximo estático, μe · N.</li><li>Si la fuerza aplicada es menor o igual, el cuerpo no se mueve y la fricción real es igual a la aplicada.</li><li>Si lo supera, el cuerpo se mueve y la fricción real pasa a ser μc · N, que suele ser menor. Ese descenso brusco, de estático a cinético, es la razón de las caídas repentinas de objetos que estaban quietos sobre una superficie inclinada.</li></ul><h4 class="lecc-h4">Rozamiento en el giro y en las poleas</h4><p>Cuando un cuerpo gira alrededor de un punto o de un eje, aparece también la fricción radial, que se opone al giro y es proporcional a la velocidad angular. Aparece en discos, en poleas y en los músculos del brazo. La misma idea de &quot;se opone al movimiento relativo&quot; se conserva, y reconocerlo evita tratarlo como un caso aparte.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un bloque de 3 kg descansa sobre una mesa horizontal. Se le aplica una fuerza horizontal de 8 N. El coeficiente de fricción estático es 0,4 y el cinético es 0,3. ¿Se mueve? Si se mueve, ¿con qué aceleración y qué fuerza de fricción actúa realmente? Use g = 9,8 m/s².</p><h4 class="lecc-h4">Método 1: comprobar si supera el máximo estático</h4><ul class="lecc-ul"><li>Primero: la normal en una mesa horizontal es igual al peso, N = 3 · 9,8 = 29,4 N.</li><li>Segundo: la fricción estática máxima es 0,4 · 29,4 = 11,76 N. Como la fuerza aplicada es 8 N, que es menor, el bloque no se mueve.</li><li>Tercero: la fricción real vale exactamente 8 N hacia la izquierda, porque debe equilibrar al empuje. No vale 11,76 N, y esa es la clave del ejercicio.</li></ul><h4 class="lecc-h4">Método 2: el caso contrario para ver el cambio</h4><ul class="lecc-ul"><li>Cuarto: si la fuerza fuera 14 N, superaría los 11,76 N, el bloque empezaría a deslizarse y la fricción pasaría a ser cinética: 0,3 · 29,4 = 8,82 N.</li><li>Quinto: entonces la fuerza neta sería 14 − 8,82 = 5,18 N, y la aceleración 5,18 entre 3 = 1,73 m/s².</li></ul><h4 class="lecc-h4">Método 3: verificar la coherencia</h4><ul class="lecc-ul"><li>Sexto: obsérvese que la aceleración de 1,73 m/s² se obtiene con una fuerza aplicada de 14 N pero no de 8 N. El mismo empuje, en un caso, no mueve nada y en el otro acelera, y la única diferencia es el valor de μ.</li><li>Séptimo: si μc fuera igual a μe, no habría esa discontinuidad y el movimiento empezaría sin tirón. La diferencia entre los dos coeficientes explica por qué los objetos se sueltan de golpe.</li></ul><div class="lecc-nota">El resultado a retener es que la fricción estática es variable y la cinética es fija. Aplicar μN a un cuerpo parado produce un número correcto con un significado físico equivocado.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Primero decide si el cuerpo se mueve o no, y solo después elige entre μe y μc. Calcular la fricción sin responder antes a esa pregunta es el error que más puntos cuesta en exámenes de dinámica.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-1-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-fuerza-masa-y-aceleracion.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-plano-inclinado.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-1-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

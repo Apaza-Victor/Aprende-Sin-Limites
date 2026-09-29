@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concepto de función y dominio y recorrido — Matemática</title>
+  <meta name="description" content="Comprender qué es una función, distinguirla de una relación y determinar su dominio y recorrido con precisión." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 5 · Funciones y sucesiones</a> <span class="mx-2 opacity-50">/</span>
+          <span>Concepto de función y dominio y recorrido</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Concepto de función y dominio y recorrido</h1>
+            <p class="articulo-modulo">Módulo 5 · Funciones y sucesiones</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Comprender qué es una función, distinguirla de una relación y determinar su dominio y recorrido con precisión.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Una <strong>función</strong> es una relación que a cada elemento del conjunto de partida le asigna <strong>un único</strong> elemento del conjunto de llegada. Esa condición de unicidad es la que marca la diferencia con cualquier otra relación.</p><h4 class="lecc-h4">Notación y elementos</h4><ol class="lecc-ol"><li>Se escribe <strong>f(x) = expresión</strong>, donde x es la variable independiente y f(x) es la imagen.</li><li><strong>Dominio D(f)</strong>: valores de x para los que existe la imagen. En álgebra se excluyen los que anulan denominadores o hacen negativa la raíz par.</li><li><strong>Recorrido R(f)</strong>: valores que toma f(x) cuando x recorre el dominio.</li></ol><div class="formula">f: A → B,      y = f(x) = 3x + 2</div><h4 class="lecc-h4">Casos que restringen el dominio</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Expresión</th><th>Restricción</th><th>Ejemplo</th></tr></thead><tbody><tr><td><span class="formula formula-linea">f(x) = <span class="frac"><span class="frac-n">1</span><span class="frac-d">g(x)</span></span></span></td><td><span class="formula formula-linea">g(x) ≠ 0</span></td><td><span class="formula formula-linea">f(x)=<span class="frac"><span class="frac-n">1</span><span class="frac-d">x-2</span></span> ⇒ D = <span class="conj">R</span> - {2}</span></td></tr><tr><td><span class="formula formula-linea">f(x) = <span class="raiz"><span class="r-signo">√</span><span class="radicando">g(x)</span></span></span> de índice par</td><td><span class="formula formula-linea">g(x) ≥ 0</span></td><td><span class="formula formula-linea">f(x)=<span class="raiz"><span class="r-signo">√</span><span class="radicando">x-3</span></span> ⇒ x ≥ 3</span></td></tr><tr><td><span class="formula formula-linea">f(x) = <span class="frac"><span class="frac-n">1</span><span class="frac-d"><span class="raiz"><span class="r-signo">√</span><span class="radicando">g(x)</span></span></span></span></span></td><td><span class="formula formula-linea">g(x) &gt; 0</span></td><td><span class="formula formula-linea">f(x)=<span class="frac"><span class="frac-n">1</span><span class="frac-d"><span class="raiz"><span class="r-signo">√</span><span class="radicando">x+1</span></span></span></span> ⇒ x &gt; -1</span></td></tr></tbody></table></div><p>El ejemplo del dominio se lee así: todos los reales salvo el 2. La llave es parte del conjunto que se quita, no un adorno.</p><div class="lecc-nota">Un error frecuente es confundir la condición de la raíz: la raíz cuadrada de un número negativo <strong>no existe</strong> en los reales, y por eso se pide mayor o igual que cero, no mayor que cero.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Dada la función <span class="formula formula-linea">f(x)=<span class="frac"><span class="frac-n">2x+1</span><span class="frac-d">x<sup>2</sup>-9</span></span></span>, determina su dominio.</p><h4 class="lecc-h4">Método por el denominador</h4><ul class="lecc-ul"><li>El denominador no puede ser cero: <span class="formula formula-linea">x<sup>2</sup> - 9 = 0 ⇒ x<sup>2</sup> = 9 ⇒ x = 3 <span class="fn-txt"> o </span> x = -3</span>.</li><li>Por tanto el dominio es todos los reales menos esos dos valores.</li></ul><h4 class="lecc-h4">Representación con intervalos</h4><div class="formula">D(f) = (-∞, -3) ∪ (-3, 3) ∪ (3, +∞)</div><ul class="lecc-ul"><li>Se lee: desde menos infinito hasta -3, luego entre -3 y 3, y desde 3 hasta más infinito. Los extremos quedan fuera porque allí el denominador vale cero.</li></ul><div class="lecc-nota">Si en lugar de intervalos se pide notación de conjuntos, vale lo mismo: se escriben los tres tramos separados por unión.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Cuando busques el recorrido, despeja x en función de y siempre que sea posible. Ese cambio de variable evita muchísimas confusiones al leer la curva, y sobre todo en las funciones racionales, donde el recorrido no se adivina a simple vista.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-4-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-4-trigonometria/05-alturas-y-distancias.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-funciones-lineales-cuadraticas-y-de-proporcionalidad.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-4-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

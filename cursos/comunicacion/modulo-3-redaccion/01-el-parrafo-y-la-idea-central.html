@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El párrafo y la idea central — Comunicación / Lenguaje</title>
+  <meta name="description" content="Construir un parrafo con una idea central clara, que es la unidad con la que se sostiene cualquier texto largo." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="comunicacion">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Comunicación / Lenguaje</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Redacción</a> <span class="mx-2 opacity-50">/</span>
+          <span>El párrafo y la idea central</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-chat-square-text"></i></div>
+            <h1 class="articulo-titulo">El párrafo y la idea central</h1>
+            <p class="articulo-modulo">Módulo 3 · Redacción</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Construir un parrafo con una idea central clara, que es la unidad con la que se sostiene cualquier texto largo.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">Que es un parrafo</h4><p>Un parrafo es un conjunto de oraciones que desarrollan <strong>una sola idea</strong>. Si en un parrafo hay dos ideas centrales, hay dos parrafos.</p><h4 class="lecc-h4">Las tres partes de un parrafo</h4><ol class="lecc-ol"><li><strong>La idea central</strong>: la afirmacion que el parrafo quiere demostrar. Es la primera oración, y es la unica que no lleva conectores.</li><li><strong>Las ideas secundarias</strong>: las oraciones que apoyan la central con datos, ejemplos y razones.</li><li><strong>La idea de cierre</strong>: puede repetir la central con otras palabras o resumir el parrafo.</li></ol><div class="lecc-nota">La prueba de que un parrafo es uno solo: si puedes poner un titulo que lo resuma en cinco palabras, es un parrafo. Y ese titulo es la idea central.</div><h4 class="lecc-h4">Los tres conectores que debes evitar</h4><ol class="lecc-ol"><li><strong>En medio del parrafo</strong>: porque, por eso, ademas. La idea central no debe depender de un conector para entenderse.</li><li><strong>Al principio</strong>: la oracion central no necesita justificacion. Empieza por la afirmacion.</li><li><strong>De mas</strong>: un parrafo de mas de diez lineas suele tener dos ideas, y hay que partirlo.</li></ol><h4 class="lecc-h4">La longitud util</h4><p>Un parrafo en un examen puede medir de tres a seis lineas. Si ocupa una pagina entera, casi siempre sobran repeticiones.</p><h4 class="lecc-h4">Como partir un parrafo</h4><p>Cuando aparecen dos ideas centrales, se corta en el punto donde empieza la segunda. Cada mitad empieza con su propia oracion central.</p><div class="lecc-nota">Si tienes dudas, haz dos listas: una con lo que dice el parrafo y otra con lo que demuestra. La segunda tiene que tener un solo elemento. Si tiene mas, hay que partir.</div><figure class="lecc-figura"><svg viewBox="0 0 360 270" role="img" aria-label="Todo lo que va despues apoya la idea central"><text x="180" y="18" text-anchor="middle" class="fig-titulo">Las cuatro partes de un parrafo</text>
+
+  <rect x="24" y="32" width="312" height="46" rx="9" class="fig-destac"/>
+  <text x="40" y="52" class="fig-destac-txt">1. Idea central</text>
+  <text x="40" y="70" class="fig-sub">la primera oracion, y no lleva conector</text>
+
+  <line x1="180" y1="78" x2="180" y2="94" class="fig-flecha"/>
+  <text x="192" y="90" class="fig-nota">se apoya en</text>
+
+  <rect x="24" y="100" width="150" height="58" rx="8" class="fig-apoyo"/>
+  <text x="99" y="122" text-anchor="middle" class="fig-titulo" font-size="12.5">2. Idea secundaria</text>
+  <text x="99" y="142" text-anchor="middle" class="fig-nota" font-size="11.5">un dato o un ejemplo</text>
+
+  <rect x="186" y="100" width="150" height="58" rx="8" class="fig-apoyo"/>
+  <text x="261" y="122" text-anchor="middle" class="fig-titulo" font-size="12.5">3. Idea secundaria</text>
+  <text x="261" y="142" text-anchor="middle" class="fig-nota" font-size="11.5">una razon mas</text>
+
+  <line x1="180" y1="158" x2="180" y2="174" class="fig-flecha"/>
+
+  <rect x="24" y="180" width="312" height="42" rx="9" class="fig-ok"/>
+  <text x="40" y="198" class="fig-ok-txt">4. Cierre</text>
+  <text x="40" y="215" class="fig-sub">repite la central con otras palabras</text>
+
+  <rect x="24" y="230" width="312" height="30" rx="8" class="fig-zona"/>
+  <text x="40" y="250" class="fig-nota">Prueba: si puedes poner un titulo de cinco palabras, es un parrafo.</text></svg><figcaption class="fig-titulo">Todo lo que va despues apoya la idea central</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Parrafo para analizar: *El agua es un recurso limitado. Solo hay una cantidad determined de agua dulce en el planeta, y esa cantidad no aumenta. Por eso, cuando la poblacion crece, el agua disponible por persona baja. Ademas, la contaminacion reduce la parte que se puede beber. Por esta razon, ahorrar agua es una responsabilidad de todos.*</p><h4 class="lecc-h4">Metodo 1: identificar la oracion central</h4><ul class="lecc-ul"><li>La primera oracion dice que el agua es un recurso limitado. Esa es la idea central.</li></ul><h4 class="lecc-h4">Metodo 2: revisar los conectores</h4><ul class="lecc-ul"><li>Hay dos conectores: por eso y ademas.</li><li>La oracion central no depende de ellos, y por eso puede ir al principio.</li></ul><h4 class="lecc-h4">Metodo 3: contar las ideas</h4><ul class="lecc-ul"><li>Idea 1: el agua es limitada.</li><li>Idea 2: el agua por persona baja cuando crece la poblacion.</li><li>Idea 3: la contaminacion reduce el agua potable.</li><li>Hay tres ideas, asi que el texto necesita dos o tres parrafos.</li></ul><h4 class="lecc-h4">Metodo 4: ver el cierre</h4><ul class="lecc-ul"><li>La ultima oracion, ahorrar agua es responsabilidad de todos, es la idea de cierre. Repite la central con otras palabras.</li></ul><h4 class="lecc-h4">Metodo 5: propone la division</h4><ul class="lecc-ul"><li>Parrafo 1: el agua es limitada y por eso el agua por persona baja.</li><li>Parrafo 2: la contaminacion reduce el agua disponible y por eso hay que ahorrar.</li></ul><h4 class="lecc-h4">Conclusion</h4><ul class="lecc-ul"><li>Conclusion: un parrafo tiene una idea central, y todo lo demas la apoya.</li><li>Ojo: si la central lleva un conector como por eso, es que no es la central, porque todavia depende de algo anterior.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Escribe siempre la oracion central antes que el resto. Si al final no la puedes quitar sin romper el parrafo, es que no era la central.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="comunicacion-2-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-2-ortografia/05-tilde-diacritica-y-en-diptongos-hiatos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-cohesion-y-conectores.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "comunicacion-2-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ondas: sonido y luz — Ciencia, Tecnología y Ambiente</title>
+  <meta name="description" content="Describir como viajan el sonido y la luz, y deducir por que se necesita un medio en un caso y no en el otro." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="ciencia-tecnologia-ambiente">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Ciencia, Tecnología y Ambiente</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Materia, energía y fenómenos</a> <span class="mx-2 opacity-50">/</span>
+          <span>Ondas: sonido y luz</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-leaf"></i></div>
+            <h1 class="articulo-titulo">Ondas: sonido y luz</h1>
+            <p class="articulo-modulo">Módulo 2 · Materia, energía y fenómenos</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Describir como viajan el sonido y la luz, y deducir por que se necesita un medio en un caso y no en el otro.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">La idea de fondo</h4><p>Una onda es una perturbación que viaja transportando energía, pero no transporta materia. Cuando mueves una cuerda, la forma viaja hasta el otro extremo: la cuerda no se desplaza. Lo mismo pasa con el sonido y con la luz.</p><h4 class="lecc-h4">Las dos familias de ondas</h4><ol class="lecc-ol"><li><strong>Ondas mecánicas</strong>: necesitan un medio material para viajar. Mueven las partículas del medio.</li><li><strong>Ondas electromagnéticas</strong>: no necesitan medio. Viajan en el vacío.</li></ol><div class="lecc-nota">El sonido es mecánico y la luz es electromagnética. Esa es la razón de que en el espacio no se oye nada, pero si se ve el sol.</div><figure class="lecc-figura"><svg viewBox="0 0 360 230" role="img" aria-label="La amplitud marca que tan alto sube la onda; lambda, cada cuanto se repite."><text x="180" y="18" text-anchor="middle" class="fig-titulo">Amplitud y longitud de onda</text>
+
+  <line x1="16" y1="110" x2="344" y2="110" class="fig-medida"/>
+
+  <path d="M 16 110 C 46 50 76 50 106 110 C 136 170 166 170 196 110 C 226 50 256 50 286 110 C 306 150 330 150 344 110" class="fig-acento" fill="none" stroke-width="2.2"/>
+
+  <line x1="106" y1="110" x2="106" y2="58" class="fig-medida"/>
+  <text x="112" y="54" class="fig-acento-texto" font-size="12">amplitud</text>
+
+  <line x1="16" y1="196" x2="196" y2="196" class="fig-medida"/>
+  <line x1="16" y1="190" x2="16" y2="202" class="fig-medida"/>
+  <line x1="196" y1="190" x2="196" y2="202" class="fig-medida"/>
+  <text x="106" y="186" text-anchor="middle" class="fig-acento-texto" font-size="12">una longitud de onda (lambda)</text>
+
+  <text x="180" y="222" text-anchor="middle" class="fig-nota" font-size="12">El sonido viaja por un medio; la luz tambien puede cruzar el vacio.</text></svg><figcaption class="fig-titulo">La amplitud marca que tan alto sube la onda; lambda, cada cuanto se repite.</figcaption></figure><h4 class="lecc-h4">Las ondas mecánicas</h4><ol class="lecc-ol"><li><strong>Transversales</strong>: la vibración va perpendicular a la dirección de avance. Una cuerda, la superficie del agua.</li><li><strong>Longitudinales</strong>: la vibración va en la misma dirección. El aire dentro de un tubo, o un resorte que se estira.</li></ol><div class="lecc-nota">El sonido en el aire es longitudinal: se forma por zonas de compresión y rareza, y por eso en un examen se dibuja con líneas juntas y separadas.</div><h4 class="lecc-h4">El sonido</h4><ul class="lecc-ul"><li>Viaja por el aire a unos 340 metros por segundo. En el agua, más rápido. En el acero, mucho más rápido.</li><li>Su altura depende de la <strong>frecuencia</strong>: vibraciones altas suenan agudas, vibraciones bajas suenan graves.</li><li>Su intensidad depende de la <strong>amplitud</strong>: vibraciones grandes suenan más fuertes.</li><li>Se mide en <strong>decibeles</strong>, no en hercios. Los hercios miden frecuencia.</li></ul><div class="lecc-nota">Confusión clasica: la pregunta *por que este sonido es más agudo?* se responde con frecuencia. La de *por que se oye más fuerte?* se responde con amplitud.</div><h4 class="lecc-h4">La luz</h4><ul class="lecc-ul"><li>Viaja en el vacío a unos 300 mil kilometros por segundo.</li><li>Se comporta de dos maneras a la vez, segun como se mida: como onda y como partícula.</li><li>Su frecuencia determina el color. Roja es baja frecuencia, violeta es alta frecuencia.</li><li>Si la luz se refleja en un objeto y llega a los ojos, se ve color. Si no llega luz, no hay color.</li></ul><div class="lecc-nota">Por que el cielo es azul? Porque la luz azul se dispersa más que la roja al entrar en la atmósfera. Por eso la dispersa en todas direcciones y la vemos desde cualquier ángulo.</div><h4 class="lecc-h4">La velocidad en un medio</h4><p>La luz es más lenta en el agua que en el aire, y por eso el palo de una pala parece quebrado al meterlo en el agua. La luz cambia de dirección al pasar de un medio a otro: eso se llama refracción.</p><div class="lecc-nota">El rayo se ve porque hay diminutas gotas de agua en el aire. La luz rebota en ellas y llega a los ojos.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Comparemos dos sonidos y una refracción.</p><h4 class="lecc-h4">Caso 1: un teléfono con la alarma apagada</h4><ul class="lecc-ul"><li>Suena en un tono muy agudo y a bajo volumen.</li><li>Conclusión: es agudo porque la frecuencia es alta, y suave porque la amplitud es pequeña.</li></ul><h4 class="lecc-h4">Caso 2: la misma alarma al máximo</h4><ul class="lecc-ul"><li>El tono es idéntico, pero se oye mucho más fuerte.</li><li>Conclusión: la frecuencia no cambio. Lo que cambio fue la amplitud.</li><li>Ojo: si el tono fuera más grave, entonces si habría cambiado la frecuencia.</li></ul><h4 class="lecc-h4">Caso 3: por que cambia el sonido dentro del agua</h4><ul class="lecc-ul"><li>En el agua, el sonido viaja más rápido que en el aire.</li><li>Conclusión: si la distancia es la misma, el sonido llega antes.</li><li>Ojo: el sonido no viaja en el vacío. Un astronauta en la luna no oye sus propios pasos.</li></ul><h4 class="lecc-h4">Caso 4: por que una pala parece partida en un estanque</h4><ul class="lecc-ul"><li>La luz de la parte sumergida tarda más en salir del agua que la de la parte seca.</li><li>Al cambiar de dirección al pasar al aire, la parte baja se ve desplazada.</li><li>Conclusión: es refracción de la luz, no un defecto del agua.</li></ul><h4 class="lecc-h4">Conclusión</h4><ul class="lecc-ul"><li>Conclusión: el sonido necesita un medio y la luz no. Agudo y fuerte son dos propiedades distintas, y confundirlas es el error más común de este tema.</li><li>Ojo: si una pregunta dice que la luz no puede viajar en el agua, es falsa. Viaja más despacio, pero viaja.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Separa siempre altura e intensidad. Altura es frecuencia, y frecuencia se mide en hercios. Intensidad es amplitud, y se mide en decibeles.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="ciencia-tecnologia-ambiente-1-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-la-energia-y-sus-formas.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-electricidad-y-magnetismo.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "ciencia-tecnologia-ambiente-1-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

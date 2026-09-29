@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pH y neutralización — Química</title>
+  <meta name="description" content="Calcular el pH y el pOH de disoluciones fuertes y débiles, deducirlos del Kw, resolver una neutralización ácido-base con la estequiometría de la reacción, y describir el papel de un tampón en el control del pH." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Disoluciones y reacciones</a> <span class="mx-2 opacity-50">/</span>
+          <span>pH y neutralización</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">pH y neutralización</h1>
+            <p class="articulo-modulo">Módulo 3 · Disoluciones y reacciones</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Calcular el pH y el pOH de disoluciones fuertes y débiles, deducirlos del Kw, resolver una neutralización ácido-base con la estequiometría de la reacción, y describir el papel de un tampón en el control del pH.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El pH mide la acidez mediante el logaritmo negativo de la concentración de iones hidrogeno: <strong>pH = −log[H₃O⁺]</strong>. El pH va de 0 a 14 en disoluciones acuosas diluidas, y cada unidad representa una diferencia de <strong>diez veces</strong> en la concentración, no de dos veces.</p><h4 class="lecc-h4">Kw y pH + pOH</h4><p>A 25 °C, el producto iónico del agua vale 1 × 10⁻¹⁴: [H₃O⁺] · [OH⁻] = 1 × 10⁻¹⁴. Tomando logaritmos negativos, se obtiene <strong>pH + pOH = 14</strong>. Ese 14 solo es válido a 25 °C; al subir la temperatura el Kw cambia.</p><figure class="lecc-figura"><svg viewBox="0 0 360 200" role="img" aria-label="El 7 es el punto neutro: por debajo acido y por encima basico."><text x="180" y="18" text-anchor="middle" class="fig-titulo">La escala de pH: de 0 a 14</text>
+
+  <text x="70" y="52" text-anchor="middle" class="fig-mal-txt" font-size="13">Acido</text>
+  <text x="180" y="52" text-anchor="middle" class="fig-destac-txt" font-size="13">Neutro</text>
+  <text x="290" y="52" text-anchor="middle" class="fig-ok-txt" font-size="13">Basico</text>
+
+  <rect x="14" y="60" width="112" height="34" class="fig-mal"/>
+  <rect x="126" y="60" width="108" height="34" class="fig-destac"/>
+  <rect x="234" y="60" width="112" height="34" class="fig-ok"/>
+
+  <text x="14" y="114" text-anchor="middle" class="fig-nota" font-size="10">0</text>
+  <text x="38" y="114" text-anchor="middle" class="fig-nota" font-size="10">1</text>
+  <text x="61" y="114" text-anchor="middle" class="fig-nota" font-size="10">2</text>
+  <text x="85" y="114" text-anchor="middle" class="fig-nota" font-size="10">3</text>
+  <text x="109" y="114" text-anchor="middle" class="fig-nota" font-size="10">4</text>
+  <text x="133" y="114" text-anchor="middle" class="fig-nota" font-size="10">5</text>
+  <text x="156" y="114" text-anchor="middle" class="fig-nota" font-size="10">6</text>
+  <text x="180" y="114" text-anchor="middle" class="fig-destac-txt" font-size="11">7</text>
+  <text x="204" y="114" text-anchor="middle" class="fig-nota" font-size="10">8</text>
+  <text x="227" y="114" text-anchor="middle" class="fig-nota" font-size="10">9</text>
+  <text x="251" y="114" text-anchor="middle" class="fig-nota" font-size="10">10</text>
+  <text x="275" y="114" text-anchor="middle" class="fig-nota" font-size="10">11</text>
+  <text x="299" y="114" text-anchor="middle" class="fig-nota" font-size="10">12</text>
+  <text x="322" y="114" text-anchor="middle" class="fig-nota" font-size="10">13</text>
+  <text x="346" y="114" text-anchor="middle" class="fig-nota" font-size="10">14</text>
+
+  <text x="180" y="140" text-anchor="middle" class="fig-nota" font-size="12">7 es el punto neutro; por debajo acido y por encima basico.</text>
+  <text x="180" y="162" text-anchor="middle" class="fig-nota" font-size="12">Cada unidad de pH es diez veces mas acida que la anterior.</text></svg><figcaption class="fig-titulo">El 7 es el punto neutro: por debajo acido y por encima basico.</figcaption></figure><h4 class="lecc-h4">Disoluciones de ácido fuerte</h4><p>Como un ácido fuerte se ioniza por completo, [H₃O⁺] es directamente la molaridad del ácido (salvo que sea diprótico, como el H₂SO₄, que aporta dos H⁺).</p><ul class="lecc-ul"><li>HCl 0,01 M: pH = −log(0,01) = <strong>2</strong>.</li><li>H₂SO₄ 0,005 M: aporta 2 H₃O⁺, así que [H₃O⁺] = 0,01 y el pH también es <strong>2</strong>.</li></ul><h4 class="lecc-h4">Disoluciones de base fuerte</h4><p>Una base fuerte produce OH⁻ de forma completa, así que [OH⁻] es su molaridad y el pOH = −log[OH⁻].</p><ul class="lecc-ul"><li>NaOH 0,001 M: pOH = 3, entonces pH = 14 − 3 = <strong>11</strong>.</li></ul><h4 class="lecc-h4">Ácidos y bases débiles</h4><p>Aquí no se puede igualar la concentración con la de H₃O⁺ porque solo se ioniza una parte. Se plantea la disociación, se escribe la constante Ka y se resuelve la cuadrática. Para un ácido débil monoprótico de concentración C y constante Ka:</p><p>Ka = x²/(C − x), donde x es la concentración de H₃O⁺. Si Ka es muy pequeño frente a C, se puede aproximar x = √(Ka · C), y esa aproximación es válida cuando el resultado da menos del 5 % de C.</p><h4 class="lecc-h4">Neutralización</h4><p>Reaccionan ácido y base en proporción 1:1, más exactamente en la proporción de sus coeficientes balanceados. En la titulación, el punto de equivalencia es donde se han mezclado exactamente los moles equivalentes.</p><ul class="lecc-ul"><li>50 mL de HCl 0,2 M neutralizan 20 mL de NaOH: n(HCl) = 0,01 mol, y n(NaOH) = 0,2 × 0,02 = 0,004 mol. Sobran 0,006 mol de HCl.</li></ul><h4 class="lecc-h4">Disoluciones amortiguadoras</h4><p>Una mezcla de un ácido débil con su base conjugada en cantidades comparables <strong>resiste el pH</strong>: al añadir ácido o base consumirse, el par se repone. Por eso la sangre con pH 7,4 no se altera al respirar o al hacer ejercicio, y por eso el pH de la sangre se mantiene entre 7,35 y 7,45.</p><div class="lecc-nota">Un tampón funciona mejor cuando las dos concentraciones son casi iguales, y su mejor pH es el pKa del par. Un pH muy distinto del pKa no está bien protegido.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se tienen 300 mL de HCl 0,02 M y se neutralizan con NaOH 0,05 M. Se pide el volumen de base necesario, el pH inicial y el pH de la mezcla al llegar al punto de equivalencia.</p><h4 class="lecc-h4">Método 1: pH inicial y moles</h4><ul class="lecc-ul"><li>El HCl es monoprótico y fuerte, así que [H₃O⁺] = 0,02 M.</li><li>pH = −log(0,02) = <strong>1,7</strong>.</li><li>n(HCl) = 0,02 × 0,3 = 0,006 mol.</li></ul><h4 class="lecc-h4">Método 2: volumen de base hasta equivalencia</h4><ul class="lecc-ul"><li>La reacción es HCl + NaOH → NaCl + H₂O, razón 1:1.</li><li>Hacen falta 0,006 mol de NaOH: V = 0,006 / 0,05 = 0,12 L = <strong>120 mL</strong>.</li><li>Control: la base es más concentrada, así que hace falta menos volumen que los 300 mL iniciales, y 120 es efectivamente menor.</li></ul><h4 class="lecc-h4">Método 3: pH en el punto de equivalencia</h4><ul class="lecc-ul"><li>En la equivalencia no queda ni ácido ni base: solo NaCl en agua, que no se hidroliza porque ninguno de sus iones es ácido o base de Brønsted apreciable.</li><li>La disolución es neutra, así que pH = <strong>7</strong>.</li><li>Si el ácido fuera débil, en cambio, el pH sería <strong>mayor que 7</strong>, porque la base conjugada que queda se hidroliza. Esa distinción es la que más se pregunta.</li><li>Volumen total 300 + 120 = 420 mL, y [Cl⁻] = 0,006/0,42 = 0,0143 M, que no afecta al pH.</li></ul><div class="lecc-nota">Un control de coherencia: el pH <strong>subió</strong> de 1,7 a 7 al añadir base, que es lo esperado. Si al neutralizar un ácido el pH te baja, es que has invertido el signo del logaritmo.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>En los problemas de neutralización, calcula primero los moles de ambos lados y recién ahí el volumen. Intentar igualar directamente las concentraciones ignora que los volúmenes cambian al mezclar, y esa es la causa más común de respuestas mal.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-2-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-acidos-y-bases.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-reacciones-redox.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-2-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

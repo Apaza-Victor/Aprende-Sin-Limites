@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mol y masa molar — Química</title>
+  <meta name="description" content="Definir el mol como unidad de cantidad de materia, calcular la masa molar a partir de la tabla periódica, y convertir entre masa, moles y número de partículas usando el número de Avogadro en ambas direcciones." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Estequiometría</a> <span class="mx-2 opacity-50">/</span>
+          <span>Mol y masa molar</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">Mol y masa molar</h1>
+            <p class="articulo-modulo">Módulo 2 · Estequiometría</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Definir el mol como unidad de cantidad de materia, calcular la masa molar a partir de la tabla periódica, y convertir entre masa, moles y número de partículas usando el número de Avogadro en ambas direcciones.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Un mol es una unidad de cantidad de materia, igual que el metro mide longitud o el gramo masa. La escala del mol es el <strong>número de Avogadro</strong>, 6,022 × 10²³.</p><h4 class="lecc-h4">Qué representa ese número</h4><p>6,022 × 10²³ es aproximadamente el número de átomos que hay en 12 g de carbono 12, y por definición también en 1 mol de cualquier sustancia. Es un número tan grande que conviene razonarlo así: si una gota de agua contuviera un mol de moléculas, al multiplicar esa gota por el número de Avogadro se obtendría materia suficiente para llenar todo el planeta.</p><h4 class="lecc-h4">Masa molar</h4><p>La <strong>masa molar</strong> M es la masa de un mol de la sustancia, y se expresa en g/mol. Se obtiene sumando las masas atómicas de los elementos que la forman, con la cantidad de átomos que aparecen en la fórmula.</p><ul class="lecc-ul"><li>H₂O: 2(1) + (16) = <strong>18 g/mol</strong>.</li><li>CO₂: (12) + 2(16) = <strong>44 g/mol</strong>.</li><li>Ca(OH)₂: (40) + 2(16 + 1) = <strong>74 g/mol</strong>, y es el error clásico olvidar que el paréntesis se repite dos veces.</li></ul><h4 class="lecc-h4">Las tres conversiones que se piden</h4><p>Todo el ejercicio se reduce a una cadena de tres pasos:</p><ol class="lecc-ol"><li>De <strong>masa a moles</strong>: n = m / M.</li><li>De <strong>moles a partículas</strong>: N = n · 6,022 × 10²³.</li><li>De <strong>partículas a moles</strong>: n = N / (6,022 × 10²³).</li></ol><h4 class="lecc-h4">Ejemplo con la masa molar</h4><p>Si tienes 50 g de CaCO₃, su masa molar es 40 + 12 + 3(16) = 100 g/mol, así que n = 50/100 = 0,5 mol. Cada mol tiene 6,022 × 10²³ fórmulas, o sea 3,01 × 10²³ unidades de CaCO₃, y los átomos de calcio serían también 3,01 × 10²³, porque hay un calcio por fórmula.</p><div class="lecc-nota">Cuando el enunciado pida el número de <strong>átomos</strong> y la sustancia tenga más de un tipo de elemento, multiplica por la suma de los subíndices. En H₂O hay 3 átomos por molécula; en CaCO₃ hay 5.</div><h4 class="lecc-h4">La masa molar siempre es positiva</h4><p>Nunca da negativo ni cero. Si obtienes un valor raro, revisa la fórmula: probablemente se te olvidó un subíndice.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se pide cuántos átomos de oxígeno hay en 60 g de agua, y también cuántos átomos en total.</p><h4 class="lecc-h4">Método 1: cadena completa masa → moles → moléculas → átomos</h4><ul class="lecc-ul"><li>M(H₂O) = 2(1) + 16 = 18 g/mol.</li><li>n = 60 / 18 = 3,333 mol de agua.</li><li>Moléculas: 3,333 × 6,022 × 10²³ = 2,007 × 10²⁴ moléculas de H₂O.</li><li>Cada molécula tiene 1 átomo de oxígeno, así que hay <strong>2,007 × 10²⁴ átomos de oxígeno</strong>.</li></ul><h4 class="lecc-h4">Método 2: atajo por proporción dentro de la fórmula</h4><ul class="lecc-ul"><li>La fórmula H₂O tiene 1 átomo de oxígeno por cada 3 átomos totales.</li><li>2,007 × 10²⁴ moléculas × 1 = 2,007 × 10²⁴ átomos de oxígeno.</li><li>Para el total: 2,007 × 10²⁴ × 3 = 6,02 × 10²⁴ átomos.</li></ul><h4 class="lecc-h4">Método 3: comprobación con la masa de un átomo</h4><ul class="lecc-ul"><li>La masa de una molécula de agua es 18 u = 18 × 1,66 × 10⁻²⁴ g ≈ 2,99 × 10⁻²³ g.</li><li>60 g divididos entre 2,99 × 10⁻²³ g por molécula da 2,007 × 10²⁴ moléculas.</li><li>El resultado coincide con el método 1, así que el procedimiento está bien.</li></ul><div class="lecc-nota">Una masa grande de una sustancia ligera da un número enorme de átomos: 60 g de agua son 3,3 moles, y por eso el total de átomos se acerca al orden de 10²⁴. Si te da 10²¹, casi seguro dividiste por Avogadro en lugar de multiplicar.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Dibuja siempre la cadena de conversions en el papel, con una flecha por paso, y escribe la unidad de la derecha de cada número. Es la forma más rápida de detectar el error de multiplicar y dividir por Avogadro al revés.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-1-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-1-materia-y-estructura/05-nomenclatura-inorganica.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-balanceo-de-ecuaciones.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-1-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

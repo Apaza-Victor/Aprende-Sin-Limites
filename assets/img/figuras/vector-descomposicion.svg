@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240">
+  <path d="M60 190 L60 50" class="fig-dato"/>
+  <path d="M60 190 L280 190" class="fig-dato"/>
+  <path d="M60 190 L230 80" class="fig-acento"/>
+  <path d="M230 80 L230 190" class="fig-medida"/>
+  <path d="M60 190 L205 190" class="fig-medida"/>
+  <path d="M150 190 A90 90 0 0 0 121 141"/>
+  <path d="M150 190 A60 60 0 0 0 129 163"/>
+  <text x="146" y="152" text-anchor="middle" font-size="14" class="fig-nota">30°</text>
+  <text x="163" y="182" text-anchor="middle" font-size="14" class="fig-nota">60°</text>
+  <text x="245" y="182" text-anchor="middle" font-size="14" class="fig-acento-texto">componente vertical</text>
+  <text x="150" y="182" text-anchor="middle" font-size="14" class="fig-acento-texto">horizontal</text>
+  <text x="30" y="60" text-anchor="middle" font-size="14" class="fig-nota">eje vertical</text>
+  <text x="300" y="182" text-anchor="middle" font-size="14" class="fig-nota">eje horizontal</text>
+  <text x="150" y="30" text-anchor="middle" font-size="15" class="fig-acento-texto">resultante</text>
+  <text x="205" y="72" text-anchor="middle" font-size="15" class="fig-nota">ángulo con la vertical</text>
+  <text x="60" y="222" text-anchor="middle" font-size="13" class="fig-nota">origen</text>
+</svg>

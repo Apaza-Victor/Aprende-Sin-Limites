@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Arbol de probabilidades: se multiplica bajando</text>
+
+  <rect x="12" y="98" width="66" height="44" rx="9" class="fig-ok"/>
+  <text x="45" y="118" text-anchor="middle" class="fig-ok-txt">Saco</text>
+  <text x="45" y="134" text-anchor="middle" class="fig-ok-txt" font-size="11">total 1</text>
+
+  <line x1="78" y1="112" x2="126" y2="70" class="fig-flecha-ok"/>
+  <text x="92" y="82" class="fig-ok-txt" font-size="11">0,4</text>
+  <line x1="78" y1="128" x2="126" y2="186" class="fig-flecha-ok"/>
+  <text x="88" y="176" class="fig-ok-txt" font-size="11">0,6</text>
+
+  <rect x="126" y="46" width="76" height="40" rx="9" class="fig-apoyo"/>
+  <text x="164" y="71" text-anchor="middle" class="fig-apoyo-txt">Verde</text>
+  <rect x="126" y="164" width="76" height="40" rx="9" class="fig-destac"/>
+  <text x="164" y="189" text-anchor="middle" class="fig-destac-txt">Rojo</text>
+
+  <line x1="202" y1="62" x2="244" y2="40" class="fig-flecha"/>
+  <text x="210" y="44" class="fig-nota" font-size="11">0,5</text>
+  <line x1="202" y1="72" x2="244" y2="94" class="fig-flecha"/>
+  <text x="208" y="100" class="fig-nota" font-size="11">0,5</text>
+  <line x1="202" y1="180" x2="244" y2="160" class="fig-flecha"/>
+  <text x="208" y="152" class="fig-nota" font-size="11">0,3</text>
+  <line x1="202" y1="190" x2="244" y2="214" class="fig-flecha"/>
+  <text x="208" y="220" class="fig-nota" font-size="11">0,7</text>
+
+  <rect x="244" y="24" width="72" height="32" rx="9" class="fig-zona"/>
+  <text x="280" y="45" text-anchor="middle" class="fig-nota" font-size="11">2 verdes</text>
+  <rect x="244" y="78" width="72" height="32" rx="9" class="fig-zona"/>
+  <text x="280" y="99" text-anchor="middle" class="fig-nota" font-size="11">1 verde</text>
+  <rect x="244" y="144" width="72" height="32" rx="9" class="fig-zona"/>
+  <text x="280" y="165" text-anchor="middle" class="fig-nota" font-size="11">1 rojo</text>
+  <rect x="244" y="198" width="72" height="32" rx="9" class="fig-zona"/>
+  <text x="280" y="219" text-anchor="middle" class="fig-nota" font-size="11">2 rojos</text>
+
+  <rect x="12" y="228" width="304" height="26" rx="8" class="fig-acento"/>
+  <text x="164" y="246" text-anchor="middle" class="fig-acento-texto" font-size="12">0,4 · 0,5 = 0,20   -&gt;   se multiplican las ramas</text>
+</svg>

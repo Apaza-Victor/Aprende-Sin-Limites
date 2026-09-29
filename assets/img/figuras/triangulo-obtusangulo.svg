@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 210">
+  <polygon points="40,170 120,120 270,170" class="fig-forma"/>
+  <path d="M94.5 135.9 A30 30 0 0 1 148.5 129.5" class="fig-acento"/>
+  <text x="205" y="152" text-anchor="middle" font-size="16">a</text>
+  <text x="155" y="192" text-anchor="middle" font-size="16">b</text>
+  <text x="70" y="148" text-anchor="middle" font-size="16">c</text>
+  <text x="26" y="186" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="120" y="100" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="284" y="186" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text>
+  <text x="188" y="98" text-anchor="middle" font-size="13" class="fig-nota">B &gt; 90°</text>
+</svg>

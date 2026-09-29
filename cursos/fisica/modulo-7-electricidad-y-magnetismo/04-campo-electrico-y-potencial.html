@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campo eléctrico y potencial — Física</title>
+  <meta name="description" content="Representar líneas de campo, calcular el campo de una carga puntual y distinguir potencial de energía." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 7 · Electricidad y magnetismo</a> <span class="mx-2 opacity-50">/</span>
+          <span>Campo eléctrico y potencial</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Campo eléctrico y potencial</h1>
+            <p class="articulo-modulo">Módulo 7 · Electricidad y magnetismo</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Representar líneas de campo, calcular el campo de una carga puntual y distinguir potencial de energía.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El <strong>campo eléctrico</strong> es la capacidad que tiene una carga de empujar o atraer otras cargas. Se representa con líneas de campo, que tienen tres reglas:</p><ol class="lecc-ol"><li>Salen de las cargas positivas.</li><li>Entran en las cargas negativas.</li><li>Su número es proporcional a la carga: un dipolo tiene igual número de líneas saliendo de la positiva que entrando en la negativa.</li></ol><figure class="lecc-figura"><svg viewBox="0 0 360 260" role="img" aria-label="La estructura de las líneas de campo recuerda a la de un árbol: nacen de las cargas positivas"><text x="180" y="18" text-anchor="middle" class="fig-titulo">Arbol de probabilidades: se multiplica bajando</text>
+
+  <rect x="12" y="98" width="66" height="44" rx="9" class="fig-ok"/>
+  <text x="45" y="118" text-anchor="middle" class="fig-ok-txt">Saco</text>
+  <text x="45" y="134" text-anchor="middle" class="fig-ok-txt" font-size="11">total 1</text>
+
+  <line x1="78" y1="112" x2="126" y2="70" class="fig-flecha-ok"/>
+  <text x="92" y="82" class="fig-ok-txt" font-size="11">0,4</text>
+  <line x1="78" y1="128" x2="126" y2="186" class="fig-flecha-ok"/>
+  <text x="88" y="176" class="fig-ok-txt" font-size="11">0,6</text>
+
+  <rect x="126" y="46" width="76" height="40" rx="9" class="fig-apoyo"/>
+  <text x="164" y="71" text-anchor="middle" class="fig-apoyo-txt">Verde</text>
+  <rect x="126" y="164" width="76" height="40" rx="9" class="fig-destac"/>
+  <text x="164" y="189" text-anchor="middle" class="fig-destac-txt">Rojo</text>
+
+  <line x1="202" y1="62" x2="244" y2="40" class="fig-flecha"/>
+  <text x="210" y="44" class="fig-nota" font-size="11">0,5</text>
+  <line x1="202" y1="72" x2="244" y2="94" class="fig-flecha"/>
+  <text x="208" y="100" class="fig-nota" font-size="11">0,5</text>
+  <line x1="202" y1="180" x2="244" y2="160" class="fig-flecha"/>
+  <text x="208" y="152" class="fig-nota" font-size="11">0,3</text>
+  <line x1="202" y1="190" x2="244" y2="214" class="fig-flecha"/>
+  <text x="208" y="220" class="fig-nota" font-size="11">0,7</text>
+
+  <rect x="244" y="24" width="72" height="32" rx="9" class="fig-zona"/>
+  <text x="280" y="45" text-anchor="middle" class="fig-nota" font-size="11">2 verdes</text>
+  <rect x="244" y="78" width="72" height="32" rx="9" class="fig-zona"/>
+  <text x="280" y="99" text-anchor="middle" class="fig-nota" font-size="11">1 verde</text>
+  <rect x="244" y="144" width="72" height="32" rx="9" class="fig-zona"/>
+  <text x="280" y="165" text-anchor="middle" class="fig-nota" font-size="11">1 rojo</text>
+  <rect x="244" y="198" width="72" height="32" rx="9" class="fig-zona"/>
+  <text x="280" y="219" text-anchor="middle" class="fig-nota" font-size="11">2 rojos</text>
+
+  <rect x="12" y="228" width="304" height="26" rx="8" class="fig-acento"/>
+  <text x="164" y="246" text-anchor="middle" class="fig-acento-texto" font-size="12">0,4 · 0,5 = 0,20   -&gt;   se multiplican las ramas</text></svg><figcaption class="fig-titulo">La estructura de las líneas de campo recuerda a la de un árbol: nacen de las cargas positivas</figcaption></figure><h4 class="lecc-h4">Intensidad del campo</h4><div class="formula">E = <span class="frac"><span class="frac-n">F</span><span class="frac-d">q</span></span> = k <span class="frac"><span class="frac-n">Q</span><span class="frac-d">r<sup>2</sup></span></span></div><p>Es la fuerza que siente <strong>una</strong> carga de prueba por unidad de carga. Nótese que el campo no depende de la carga de prueba: por eso se dice que el campo es una propiedad del lugar.</p><h4 class="lecc-h4">Potencial y energía</h4><p>El <strong>potencial</strong> <span class="formula formula-linea">V</span> es la energía por unidad de carga, y por eso:</p><div class="formula">V = <span class="frac"><span class="frac-n">U</span><span class="frac-d">q</span></span> = k <span class="frac"><span class="frac-n">Q</span><span class="frac-d">r</span></span></div><p>La diferencia clave: el potencial <strong>no depende de la carga de prueba</strong>, pero la energía sí:</p><div class="formula">U = q V</div><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Magnitud</th><th>Depende de la carga de prueba</th><th>Unidad</th></tr></thead><tbody><tr><td>Campo E</td><td>no</td><td>N/C</td></tr><tr><td>Potencial V</td><td>no</td><td>voltio</td></tr><tr><td>Energía U</td><td>sí</td><td>joule</td></tr></tbody></table></div><div class="lecc-nota">En el campo de una carga positiva, el potencial <strong>decrece</strong> con la distancia, y lo mismo que el campo. Pero el potencial se puede hacer cero de una forma más cómoda: tomando el infinito como referencia, porque allí la influencia de la carga es nula.</div><dl class="lecc-glosario"><dt>Campo eléctrico</dt><dd>Fuerza por unidad de carga positiva de prueba en un punto.</dd><dt>Línea de campo</dt><dd>Curva imaginaria que marca la dirección de la fuerza sobre una carga positiva de prueba.</dd><dt>Potencial eléctrico</dt><dd>Energía por unidad de carga en un punto; se mide en voltios.</dd><dt>Carga de prueba</dt><dd>Carga pequeña que se coloca para medir el campo sin alterarlo.</dd><dt>Diferencia de potencial</dt><dd>Trabajo por unidad de carga entre dos puntos: <span class="formula formula-linea">V<sub>A</sub> - V<sub>B</sub> = W/q</span>.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una carga de 5 μC está a 20 cm de un punto. Calcula el campo y el potencial en ese punto.</p><h4 class="lecc-h4">Datos en unidades del SI</h4><div class="formula">Q = 5 × 10<sup>-6</sup><span class="cmd"> </span><span class="fn-txt">C</span>,       r = 0.2<span class="cmd"> </span><span class="fn-txt">m</span></div><h4 class="lecc-h4">Campo</h4><div class="formula">E = 9 × 10<sup>9</sup> × <span class="frac"><span class="frac-n">5 × 10<sup>-6</sup></span><span class="frac-d">0.04</span></span> = 1.125 × 10<sup>6</sup><span class="cmd"> </span><span class="fn-txt">N/C</span></div><h4 class="lecc-h4">Potencial</h4><div class="formula">V = 9 × 10<sup>9</sup> × <span class="frac"><span class="frac-n">5 × 10<sup>-6</sup></span><span class="frac-d">0.2</span></span> = 2.25 × 10<sup>5</sup><span class="cmd"> </span><span class="fn-txt">V</span></div><h4 class="lecc-h4">Energía de una carga de 2 μC en ese punto</h4><div class="formula">U = qV = 2 × 10<sup>-6</sup> × 2.25 × 10<sup>5</sup> = 0.45<span class="cmd"> </span><span class="fn-txt">J</span></div><div class="lecc-nota">Fíjate en la diferencia: el campo cae con <span class="formula formula-linea">r<sup>2</sup></span> y el potencial con <span class="formula formula-linea">r</span>. El campo describes una fuerza, el potencial describe una energía acumulada.</div><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Distingue campo y potencial</h4><ol class="lecc-ol"><li>Una carga negativa de 2 μC en ese punto, ¿qué energía tiene?</li><li>Si la distancia se duplica, ¿cómo cambia el potencial?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p>La energía sería <span class="formula formula-linea">-0.45<span class="cmd"> </span><span class="fn-txt">J</span></span>, negativa porque el potencial es positivo y la carga también. Al duplicar la distancia el potencial se reduce a la mitad: 1,125 × 10⁵ V.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Cuando el enunciado pida «energía», casi siempre hay una carga multiplicando. Si solo te dan la carga que crea el campo, lo que se busca es el campo o el potencial, no la energía: son tres preguntas distintas.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-6-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-potencia-y-resistencia-interna.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-magnetismo-campo-magnetico-y-fuerza-de-lorentz.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-6-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

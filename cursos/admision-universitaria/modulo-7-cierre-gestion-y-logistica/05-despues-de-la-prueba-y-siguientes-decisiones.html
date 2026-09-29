@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Después de la prueba y siguientes decisiones — Admisión Universitaria</title>
+  <meta name="description" content="Interpretar un resultado decepcionante sin dramatizarlo y definir la siguiente decisión de estudio a partir de datos, no de la pura cascada de emociones." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 7 · Cierre, gestión y logística</a> <span class="mx-2 opacity-50">/</span>
+          <span>Después de la prueba y siguientes decisiones</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Después de la prueba y siguientes decisiones</h1>
+            <p class="articulo-modulo">Módulo 7 · Cierre, gestión y logística</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Interpretar un resultado decepcionante sin dramatizarlo y definir la siguiente decisión de estudio a partir de datos, no de la pura cascada de emociones.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El resultado de una prueba se interpreta mal con mucha frecuencia, y esa mala interpretación se lleva meses de trabajo. La forma correcta de leer un resultado es separar tres cosas: el nivel, la tendencia y el margen, y la decisión que corresponde a cada una.</p><h4 class="lecc-h4">Los tres números que importan</h4><ol class="lecc-ol"><li><strong>Nivel</strong>: el puntaje bruto. Compara con la meta de la carrera, no con el promedio de otras personas.</li><li><strong>Tendencia</strong>: la diferencia con tu simulacro anterior. Este número dice si tu preparación está funcionando.</li><li><strong>Margen</strong>: cuántos puntos te faltaron. Dice dónde mirar.</li></ol><p>La mayoría de los postulantes mira solo el primero y toma decisiones sobre el segundo, que es el error.</p><h4 class="lecc-h4">La diferencia entre puntaje bruto y ponderado</h4><p>El puntaje bruto de la prueba total casi nunca es el que decide. Lo que decide es la ponderación por sección y, en muchas universidades, el orden de corte por carrera. Un resultado con 62 de promedio puede ser excelente para una carrera con corte 58 y mediocre para otra con corte 70.</p><p>Antes de lamentarte o celebrarte, revisa cómo se calcula tu admitidos. La misma nota significa cosas distintas.</p><h4 class="lecc-h4">Qué hacer con cada resultado</h4><ul class="lecc-ul"><li><strong>Aprobaste con margen amplio</strong>: deja de estudiar la prueba y empieza a preparar el ingreso a la carrera.</li><li><strong>Aprobaste por poco</strong>: repite el ciclo de simulacros solo con las secciones donde perdiste puntos, no el temario completo.</li><li><strong>No aprobaste por poco</strong>: el margen dice que estás a un diagnóstico de distancia, y un ciclo corto bien dirigido suele bastar.</li><li><strong>No aprobaste por mucho</strong>: hay que revisar el método de estudio, no solo el tiempo. Más horas sobre el mismo plan no cambian el resultado.</li></ul><h4 class="lecc-h4">El tiempo de la decisión</h4><p>Tomar la decisión de repetir un ciclo completo cuesta semanas. Tomar la decisión de cambiar de plan cuesta un día. Después de un resultado, el primer movimiento no es estudiar más: es escribir, en una hoja, el número de puntos perdidos por sección y decidir una sola cosa que cambiar.</p><p>Esa hoja es el único objeto que hace útil el resultado.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un postulante obtiene 58 de 70 en su prueba, y la carrera que eligió tiene un corte de 60 ese año. Su última sección de matemática fue la más baja, con 55 % de aciertos.</p><h4 class="lecc-h4">Método 1: separar los tres números</h4><ul class="lecc-ul"><li>Primero: el nivel es 58 de 70. La tendencia se conoce comparando con su simulacro, que fue de 54. O sea, subió cuatro puntos.</li><li>El margen es de 2 puntos para el corte, concentrados en matemática, donde perdió más.</li></ul><h4 class="lecc-h4">Método 2: leer la ponderación</h4><ul class="lecc-ul"><li>Segundo: si matemática pesa el 40 % de la nota y él sacaba 55 % allí, recuperar tres puntos de esa sección lo lleva al corte sin tocar las demás.</li><li>Cambiar el plan de cuatro secciones a una sola es lo que hace viable el segundo intento.</li></ul><h4 class="lecc-h4">Método 3: definir una sola decisión</h4><ul class="lecc-ul"><li>Tercero: la hoja dice &quot;un solo cambio: cuatro semanas de matemática, dos simulacros semanales, y nada más&quot;.</li><li>Un plan con cinco cambios simultáneos no es medible, y en un mes no se puede saber cuál de los cinco funcionó.</li></ul><div class="lecc-nota">Con tres números leídos bien, el resultado dejó de ser una frustración y pasó a ser un plan de cuatro semanas con un solo objetivo verificable.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Después de cada resultado escribe solo tres líneas: cuánto faltó, dónde se perdió y qué vas a cambiar. Todo lo demás es enojo o habladurio, y ninguno de los dos ayuda.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-6-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-logistica-del-dia-de-la-prueba.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="index.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-6-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

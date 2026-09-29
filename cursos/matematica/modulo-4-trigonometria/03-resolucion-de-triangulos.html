@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resolución de triángulos — Matemática</title>
+  <meta name="description" content="Resolver triángulos rectángulos e inclinados hallando lados y ángulos desconocidos, incluido el teorema del seno y del coseno." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Trigonometría</a> <span class="mx-2 opacity-50">/</span>
+          <span>Resolución de triángulos</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Resolución de triángulos</h1>
+            <p class="articulo-modulo">Módulo 4 · Trigonometría</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Resolver triángulos rectángulos e inclinados hallando lados y ángulos desconocidos, incluido el teorema del seno y del coseno.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p><strong>Resolver un triángulo</strong> significa hallar los lados y ángulos que faltan cuando se conocen dos datos. En un triángulo rectángulo eso se hace con Pitágoras y con las razones trigonométricas.</p><h4 class="lecc-h4">Dos datos no siempre bastan</h4><p>En un triángulo rectángulo, dos lados determinan todo el triángulo. Un cateto y un ángulo también. Pero un cateto y <strong>solo</strong> un ángulo pueden no bastar, porque no sabes si ese ángulo es el opuesto o el adyacente a ese cateto.</p><h4 class="lecc-h4">Triángulos inclinados (no rectángulos)</h4><p>Cuando no hay ángulo recto se usan otros dos teoremas, y hacen falta <strong>tres datos</strong> (dos lados y un ángulo, o dos ángulos y un lado):</p><ul class="lecc-ul"><li><strong>Teorema del seno</strong>: a/seno A = b/seno B = c/seno C.</li><li><strong>Teorema del coseno</strong>: c² = a² + b² − 2ab × coseno C.</li></ul><figure class="lecc-figura"><svg viewBox="0 0 300 250" role="img" aria-label="Ley de senos: dos lados y un ángulo no siempre bastan"><polygon points="50,175 140,45 255,175" class="fig-forma"/>
+  <path d="M72 152.5 A28 28 0 0 1 76 175"/>
+  <path d="M125 62.5 A28 28 0 0 1 153 61.5"/>
+  <path d="M228 175 A28 28 0 0 0 236 155"/>
+  <text x="34" y="192" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="140" y="32" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="268" y="192" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text>
+  <text x="212" y="110" text-anchor="middle" font-size="15">a</text>
+  <text x="150" y="196" text-anchor="middle" font-size="15">b</text>
+  <text x="86" y="100" text-anchor="middle" font-size="15">c</text>
+  <text x="150" y="234" text-anchor="middle" font-size="14" class="fig-nota">a : sen A = b : sen B = c : sen C</text></svg><figcaption class="fig-titulo">Ley de senos: dos lados y un ángulo no siempre bastan</figcaption></figure><figure class="lecc-figura"><svg viewBox="0 0 300 250" role="img" aria-label="Ley de cosenos: conoce los tres lados, o dos lados y el ángulo comprendido"><polygon points="50,180 250,180 120,55" class="fig-forma"/>
+  <path d="M93.9 74.1 A34 34 0 0 0 146.1 74.1" class="fig-acento"/>
+  <text x="120" y="94" text-anchor="middle" font-size="15" class="fig-acento-texto">C</text>
+  <text x="196" y="118" text-anchor="middle" font-size="15">a</text>
+  <text x="72" y="112" text-anchor="middle" font-size="15">b</text>
+  <text x="150" y="202" text-anchor="middle" font-size="15">c</text>
+  <text x="34" y="196" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="264" y="196" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="150" y="234" text-anchor="middle" font-size="14" class="fig-nota">c² = a² + b² − 2 · a · b · cos C</text></svg><figcaption class="fig-titulo">Ley de cosenos: conoce los tres lados, o dos lados y el ángulo comprendido</figcaption></figure><h4 class="lecc-h4">Ángulos de una línea recta y del triángulo isósceles</h4><p>En un triángulo isósceles, el vértice es el ángulo comprendido entre los dos lados iguales, y los dos ángulos de la base son iguales. Si conoces el vértice, cada base vale (180 menos el vértice) ÷ 2.</p><div class="lecc-nota">Truco parano perder tiempo: si el triángulo es rectángulo, el otro ángulo se obtiene con la relación de la suma a 180°; si es isósceles, primero reparte los ángulos de la base.</div><figure class="lecc-figura"><svg viewBox="0 0 300 240" role="img" aria-label="Dos rectas paralelas cortadas por una transversal dan segmentos proporcionales"><path d="M30 55 L270 55" class="fig-acento"/>
+  <path d="M30 175 L270 175" class="fig-acento"/>
+  <path d="M80 25 L250 205" class="fig-acento"/>
+  <path d="M60 55 L173 175" class="fig-acento"/>
+  <path d="M78 48 L84 48 M81 45 L81 51" class="fig-medida"/>
+  <path d="M114 122 L120 122 M117 119 L117 125" class="fig-medida"/>
+  <text x="84" y="44" text-anchor="middle" font-size="15">a</text>
+  <text x="140" y="100" text-anchor="middle" font-size="15">b</text>
+  <text x="100" y="140" text-anchor="middle" font-size="15">c</text>
+  <text x="197" y="196" text-anchor="middle" font-size="15">d</text>
+  <text x="100" y="47" text-anchor="middle" font-size="13" class="fig-etiqueta">A</text>
+  <text x="52" y="47" text-anchor="middle" font-size="13" class="fig-etiqueta">C</text>
+  <text x="232" y="170" text-anchor="middle" font-size="13" class="fig-etiqueta">B</text>
+  <text x="165" y="170" text-anchor="middle" font-size="13" class="fig-etiqueta">D</text>
+  <text x="150" y="232" text-anchor="middle" font-size="14" class="fig-nota">a : b = c : d</text></svg><figcaption class="fig-titulo">Dos rectas paralelas cortadas por una transversal dan segmentos proporcionales</figcaption></figure><figure class="lecc-figura"><svg viewBox="0 0 340 230" role="img" aria-label="Dos triángulos semejantes tienen los lados proporcionales"><polygon points="40,175 110,55 190,175" class="fig-forma"/>
+  <polygon points="240,175 285,105 330,175" class="fig-forma fig-relleno-2"/>
+  <path d="M65.9 154.4 A26 26 0 0 1 76 175"/>
+  <path d="M265 150.6 A20 20 0 0 1 273 175"/>
+  <text x="115" y="198" text-anchor="middle" font-size="15">a</text>
+  <text x="76" y="96" text-anchor="middle" font-size="15">b</text>
+  <text x="222" y="90" text-anchor="middle" font-size="15">c</text>
+  <text x="285" y="198" text-anchor="middle" font-size="15">a′</text>
+  <text x="252" y="130" text-anchor="middle" font-size="15">b′</text>
+  <text x="322" y="130" text-anchor="middle" font-size="15">c′</text>
+  <text x="24" y="190" text-anchor="middle" font-size="13" class="fig-etiqueta">A</text>
+  <text x="110" y="42" text-anchor="middle" font-size="13" class="fig-etiqueta">B</text>
+  <text x="204" y="190" text-anchor="middle" font-size="13" class="fig-etiqueta">C</text>
+  <text x="228" y="190" text-anchor="middle" font-size="13" class="fig-etiqueta">A′</text>
+  <text x="285" y="92" text-anchor="middle" font-size="13" class="fig-etiqueta">B′</text>
+  <text x="344" y="190" text-anchor="middle" font-size="13" class="fig-etiqueta">C′</text>
+  <text x="170" y="222" text-anchor="middle" font-size="14" class="fig-nota">dos ángulos iguales y un lado proporcional: A = A′ y B = B′</text></svg><figcaption class="fig-titulo">Dos triángulos semejantes tienen los lados proporcionales</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>En un triángulo rectángulo, un cateto de 12 cm es adyacente a un ángulo agudo de 53°. Halla el otro cateto, la hipotenusa y el otro ángulo.</p><h4 class="lecc-h4">Método de la tangente, el más corto cuando se pide el cateto opuesto</h4><ul class="lecc-ul"><li>Respecto a 53°, el cateto adyacente es 12 y el cateto opuesto es el que busco.</li><li>Tangente = opuesto ÷ adyacente, así que el opuesto = 12 × tangente de 53° = 12 × 1,3270 = <strong>15,92 cm</strong>.</li></ul><h4 class="lecc-h4">Método de Pitágoras, que no necesita ninguna función</h4><ul class="lecc-ul"><li>Con los dos catetos, la hipotenusa sale directa: raíz de (12² + 15,92²) = raíz de (144 + 253,4) = raíz de 397,4 = <strong>19,93 cm</strong>.</li><li>El otro ángulo agudo es 180° − 90° − 53° = <strong>37°</strong>.</li></ul><h4 class="lecc-h4">Método del seno y el coseno, como control cruzado</h4><ul class="lecc-ul"><li>Seno de 53° debe ser opuesto ÷ hipotenusa: 15,92 ÷ 19,93 = 0,7988, y el seno de 53° es 0,7986. La diferencia es solo redondeo.</li><li>Coseno de 53° debe ser adyacente ÷ hipotenusa: 12 ÷ 19,93 = 0,6021, y el coseno de 53° es 0,6018. También coincide.</li><li>Para el ángulo de 37° los papeles se invierten: su seno es 12 ÷ 19,93 = 0,6021, que es el 0,6018 del seno de 37°, y su coseno es 15,92 ÷ 19,93 = 0,7988.</li><li>Por último, 53° + 37° + 90° = 180°, como tiene que ser en cualquier triángulo.</li></ul><div class="lecc-nota">Antes de elegir la función, escribe siempre de qué lado está el cateto conocido respecto al ángulo dado: adyacente u opuesto. Ese es el paso que decide si usas coseno, seno o tangente.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Dibuja el triángulo y rotula cateto opuesto, adyacente e hipotenusa <strong>antes</strong> de escribir cualquier fórmula. Con el dibujo hecho, la elección de la razón correcta es automática, y si no te sale el número, sabes que el error está en la elección y no en la cuenta.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-3-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-teorema-de-pitagoras-y-angulos-especiales.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-identidades-trigonometricas-basicas.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-3-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

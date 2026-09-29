@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combinatoria simple — Razonamiento Matemático</title>
+  <meta name="description" content="Contar METODOS de seleccion mediante el principio multiplicativo y las permutaciones, distinguiendo orden y repeticion." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="razonamiento-matematico">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Razonamiento Matemático</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Estadística y probabilidad</a> <span class="mx-2 opacity-50">/</span>
+          <span>Combinatoria simple</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-brain"></i></div>
+            <h1 class="articulo-titulo">Combinatoria simple</h1>
+            <p class="articulo-modulo">Módulo 4 · Estadística y probabilidad</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Contar METODOS de seleccion mediante el principio multiplicativo y las permutaciones, distinguiendo orden y repeticion.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">Que es un metodo de seleccion</h4><p>Es una forma ordenada de lograr algo. Se cuenta con estas herramientas:</p><h4 class="lecc-h4">El principio multiplicativo</h4><p>Si una eleccion se hace en etapas, los metodos totales son el producto de las posibilidades de cada etapa.</p><ul class="lecc-ul"><li>**total = posibilidades de la etapa 1 * de la etapa 2 * ...**</li><li>Ejemplo: 3 shirts y 4 pantaloneros dan 3 * 4 = 12 combinaciones.</li></ul><h4 class="lecc-h4">Las permutaciones</h4><p>Cuando <strong>el orden importa</strong>, se usa el factorial.</p><ul class="lecc-ul"><li>**permutaciones de n elementos = n! = n * (n - 1) * ... * 1**</li><li>Ejemplo: 5! = 5 * 4 * 3 * 2 * 1 = 120.</li><li>Si solo se eligen algunos: <strong>n! / (n - k)!</strong></li></ul><h4 class="lecc-h4">Combinaciones</h4><p>Cuando <strong>el orden no importa</strong>, se divide entre el factorial de lo elegido.</p><ul class="lecc-ul"><li>**combinaciones de n elementos tomando k = n! / (k! * (n - k)!)**</li></ul><h4 class="lecc-h4">La pregunta que decide</h4><ul class="lecc-ul"><li>Si cambiar el orden cambia el resultado, es permutacion.</li><li>Si cambiar el orden no cambia nada, es combinacion.</li></ul><div class="lecc-nota">Un error frecuente es tratar como permutacion un caso donde el orden no importa. Tres personas en una foto y tres personas en una mesa_redonda son problemas distintos, y por eso el segundo se divide entre el factorial del numero de personas.</div><h4 class="lecc-h4">Con y sin repeticion</h4><ul class="lecc-ul"><li><strong>Con repeticion</strong>: los elementos pueden repetirse, y el total es n elevado a k.</li><li><strong>Sin repeticion</strong>: cada elemento se usa una sola vez.</li></ul>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>De 5 personas, de quantas maneras se puede elegir una comision de 3.</p><h4 class="lecc-h4">Metodo 1: decidir el tipo de problema</h4><ul class="lecc-ul"><li>El orden en que se elige a las personas no importa.</li><li>Que una persona sea la primera o la tercera no cambia la comision.</li><li>Entonces es una <strong>combinacion</strong>, no una permutacion.</li></ul><h4 class="lecc-h4">Metodo 2: el factorial de 5</h4><ul class="lecc-ul"><li>5! = 5 * 4 * 3 * 2 * 1 = 120</li></ul><h4 class="lecc-h4">Metodo 3: el factorial de 3 y de 2</h4><ul class="lecc-ul"><li>3! = 6</li><li>(5 - 3)! = 2! = 2</li></ul><h4 class="lecc-h4">Metodo 4: dividir</h4><ul class="lecc-ul"><li>120 / (6 * 2) = 120 / 12 = 10</li><li>Conclusiones: se pueden formar 10 comisiones.</li></ul><h4 class="lecc-h4">Metodo 5: comprobar por el principio multiplicativo</h4><ul class="lecc-ul"><li>Para la primera silla hay 5 opciones, para la segunda quedan 4, para la tercera quedan 3.</li><li>5 * 4 * 3 = 60 formas ordenadas.</li><li>Cada comision se conto 6 veces, una por cada orden posible: 3! = 6.</li><li>60 / 6 = 10. Coincide.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de calcular, escribe una frase que diga si el orden importa. Esa sola decision evita elegir entre permutacion y combinacion, que es el unico punto realmente dificil del tema.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="razonamiento-matematico-3-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-eventos-compuestos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="index.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "razonamiento-matematico-3-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

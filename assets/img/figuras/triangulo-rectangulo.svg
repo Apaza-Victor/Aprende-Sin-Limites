@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <polygon points="40,160 40,40 240,160" class="fig-forma"/>
+  <path d="M40 144 L56 144 L56 160" class="fig-acento"/>
+  <text x="140" y="184" text-anchor="middle" font-size="16">a</text>
+  <text x="26" y="106" text-anchor="middle" font-size="16">b</text>
+  <text x="152" y="90" text-anchor="middle" font-size="16">c</text>
+  <text x="26" y="176" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="26" y="44" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="252" y="176" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text>
+</svg>

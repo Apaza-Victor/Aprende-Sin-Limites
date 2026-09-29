@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matemática — Aprende Sin Límites</title>
+  <meta name="description" content="Domina números, álgebra, geometría y trigonometría con teoría clara y ejemplos resueltos paso a paso." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../index.html"><i class="bi bi-stars"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCurso"
+        aria-controls="navCurso" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navCurso">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../index.html"><i class="bi bi-house-door"></i> Inicio</a>
+          <span class="mx-2 opacity-50">/</span>
+          <span>Matemática</span>
+        </nav>
+
+        <header class="cabecera-curso tarjeta p-4 p-lg-5 mb-4">
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <div class="icono flex-shrink-0"><i class="bi bi-calculator"></i></div>
+            <div>
+              <h1 class="mb-0">Matemática</h1>
+              <p class="col-mut mb-2 mt-1">Domina números, álgebra, geometría y trigonometría con teoría clara y ejemplos resueltos paso a paso.</p>
+              <div class="d-flex flex-wrap gap-2"><span class="chip d-inline-block">Aritmética</span><span class="chip d-inline-block">Álgebra</span><span class="chip d-inline-block">Geometría</span><span class="chip d-inline-block">Trigonometría</span></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="tarjeta p-4 reveal">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div><i class="bi bi-graph-up-arrow" style="color: var(--acento);"></i></div>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between small">
+                <span class="col-mut">Progreso del curso</span>
+                <span id="contadorCurso" class="fw-semibold">0 / 30</span>
+              </div>
+              <div class="progress" style="height: 8px; margin-top: .4rem;">
+                <div id="barraCurso" class="progress-bar" style="width: 0%;" role="progressbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-8">
+            <h4 class="d-flex align-items-center gap-2 mb-3"><i class="bi bi-diagram-3" style="color: var(--acento);"></i> Módulos del curso</h4>
+            <div class="row g-4" id="gridModulos"><div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-collection"></i></div><div><span class="mod-card-kicker">Módulo 1</span><h5 class="mod-card-titulo mb-0">Aritmética y números</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="matematica-0-0" href="modulo-1-aritmetica-y-numeros/01-operaciones-basicas-y-jerarquia.html"><span class="minificha-num">1</span><span class="minificha-txt">Operaciones básicas y jerarquía</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-0-1" href="modulo-1-aritmetica-y-numeros/02-divisibilidad-y-numeros-primos.html"><span class="minificha-num">2</span><span class="minificha-txt">Divisibilidad y números primos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-0-2" href="modulo-1-aritmetica-y-numeros/03-mcm-y-mcd.html"><span class="minificha-num">3</span><span class="minificha-txt">MCM y MCD</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-0-3" href="modulo-1-aritmetica-y-numeros/04-fracciones-y-decimales.html"><span class="minificha-num">4</span><span class="minificha-txt">Fracciones y decimales</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-0-4" href="modulo-1-aritmetica-y-numeros/05-regla-de-tres-y-porcentajes.html"><span class="minificha-num">5</span><span class="minificha-txt">Regla de tres y porcentajes</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-1-aritmetica-y-numeros/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-map"></i></div><div><span class="mod-card-kicker">Módulo 2</span><h5 class="mod-card-titulo mb-0">Álgebra</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="matematica-1-0" href="modulo-2-algebra/01-expresiones-algebraicas.html"><span class="minificha-num">1</span><span class="minificha-txt">Expresiones algebraicas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-1-1" href="modulo-2-algebra/02-productos-notables.html"><span class="minificha-num">2</span><span class="minificha-txt">Productos notables</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-1-2" href="modulo-2-algebra/03-ecuaciones-de-primer-grado.html"><span class="minificha-num">3</span><span class="minificha-txt">Ecuaciones de primer grado</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-1-3" href="modulo-2-algebra/04-ecuaciones-cuadraticas.html"><span class="minificha-num">4</span><span class="minificha-txt">Ecuaciones cuadráticas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-1-4" href="modulo-2-algebra/05-sistemas-de-ecuaciones.html"><span class="minificha-num">5</span><span class="minificha-txt">Sistemas de ecuaciones</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-2-algebra/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-layers"></i></div><div><span class="mod-card-kicker">Módulo 3</span><h5 class="mod-card-titulo mb-0">Geometría</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="matematica-2-0" href="modulo-3-geometria/01-angulos-y-rectas.html"><span class="minificha-num">1</span><span class="minificha-txt">Ángulos y rectas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-2-1" href="modulo-3-geometria/02-triangulos.html"><span class="minificha-num">2</span><span class="minificha-txt">Triángulos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-2-2" href="modulo-3-geometria/03-poligonos-y-cuadrilateros.html"><span class="minificha-num">3</span><span class="minificha-txt">Polígonos y cuadriláteros</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-2-3" href="modulo-3-geometria/04-circunferencia-y-circulo.html"><span class="minificha-num">4</span><span class="minificha-txt">Circunferencia y círculo</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-2-4" href="modulo-3-geometria/05-perimetros-y-areas.html"><span class="minificha-num">5</span><span class="minificha-txt">Perímetros y áreas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-3-geometria/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-compass"></i></div><div><span class="mod-card-kicker">Módulo 4</span><h5 class="mod-card-titulo mb-0">Trigonometría</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="matematica-3-0" href="modulo-4-trigonometria/01-razones-trigonometricas.html"><span class="minificha-num">1</span><span class="minificha-txt">Razones trigonométricas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-3-1" href="modulo-4-trigonometria/02-teorema-de-pitagoras-y-angulos-especiales.html"><span class="minificha-num">2</span><span class="minificha-txt">Teorema de Pitágoras y ángulos especiales</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-3-2" href="modulo-4-trigonometria/03-resolucion-de-triangulos.html"><span class="minificha-num">3</span><span class="minificha-txt">Resolución de triángulos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-3-3" href="modulo-4-trigonometria/04-identidades-trigonometricas-basicas.html"><span class="minificha-num">4</span><span class="minificha-txt">Identidades trigonométricas básicas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-3-4" href="modulo-4-trigonometria/05-alturas-y-distancias.html"><span class="minificha-num">5</span><span class="minificha-txt">Alturas y distancias</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-4-trigonometria/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-diagram-3"></i></div><div><span class="mod-card-kicker">Módulo 5</span><h5 class="mod-card-titulo mb-0">Funciones y sucesiones</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="matematica-4-0" href="modulo-5-funciones-y-sucesiones/01-concepto-de-funcion-y-dominio-y-recorrido.html"><span class="minificha-num">1</span><span class="minificha-txt">Concepto de función y dominio y recorrido</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-4-1" href="modulo-5-funciones-y-sucesiones/02-funciones-lineales-cuadraticas-y-de-proporcionalidad.html"><span class="minificha-num">2</span><span class="minificha-txt">Funciones lineales, cuadráticas y de proporcionalidad</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-4-2" href="modulo-5-funciones-y-sucesiones/03-funciones-exponenciales-y-logaritmicas.html"><span class="minificha-num">3</span><span class="minificha-txt">Funciones exponenciales y logarítmicas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-4-3" href="modulo-5-funciones-y-sucesiones/04-sucesiones-progresiones-aritmeticas-y-geometricas.html"><span class="minificha-num">4</span><span class="minificha-txt">Sucesiones, progresiones aritméticas y geométricas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-4-4" href="modulo-5-funciones-y-sucesiones/05-numeros-reales-intervalos-y-logaritmos-en-la-recta.html"><span class="minificha-num">5</span><span class="minificha-txt">Números reales, intervalos y logaritmos en la recta</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-5-funciones-y-sucesiones/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-lightning-charge"></i></div><div><span class="mod-card-kicker">Módulo 6</span><h5 class="mod-card-titulo mb-0">Estadística y probabilidad</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="matematica-5-0" href="modulo-6-estadistica-y-probabilidad/01-variables-datos-y-como-se-distribuyen.html"><span class="minificha-num">1</span><span class="minificha-txt">Variables, datos y cómo se distribuyen</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-5-1" href="modulo-6-estadistica-y-probabilidad/02-desviacion-tipica-cuanto-se-dispersan-los-datos.html"><span class="minificha-num">2</span><span class="minificha-txt">Desviación típica: cuánto se dispersan los datos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-5-2" href="modulo-6-estadistica-y-probabilidad/03-probabilidad-espacio-muestral-y-eventos.html"><span class="minificha-num">3</span><span class="minificha-txt">Probabilidad: espacio muestral y eventos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-5-3" href="modulo-6-estadistica-y-probabilidad/04-probabilidad-condicional-e-independencia.html"><span class="minificha-num">4</span><span class="minificha-txt">Probabilidad condicional e independencia</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="matematica-5-4" href="modulo-6-estadistica-y-probabilidad/05-combinatoria-y-distribuciones-binomiale-y-normal.html"><span class="minificha-num">5</span><span class="minificha-txt">Combinatoria y distribuciones binomiale y normal</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-6-estadistica-y-probabilidad/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div></div>
+          </div>
+          <aside class="col-lg-4">
+            <div class="tarjeta p-4 reveal">
+              <h5 class="d-flex align-items-center gap-2"><i class="bi bi-signpost-2" style="color: var(--acento);"></i> Ruta de estudio</h5>
+              <ol class="ruta-estudio mt-3 mb-0"><li class="reveal"><span class="paso-num">1</span><span class="paso-txt">Refuerza primero operaciones y fracciones: son la base de todo.</span></li><li class="reveal"><span class="paso-num">2</span><span class="paso-txt">Avanza a álgebra y ecuaciones dominando el despeje y la factorización.</span></li><li class="reveal"><span class="paso-num">3</span><span class="paso-txt">Cierra con geometría y trigonometría practicando con figuras reales.</span></li></ol>
+            </div>
+          </aside>
+        </div>
+
+        <div class="tarjeta p-4 mt-4 reveal">
+          <h5 class="d-flex align-items-center gap-2"><i class="bi bi-puzzle" style="color: var(--acento);"></i> Recursos recomendados</h5>
+          <ul class="lista-recursos mt-3 mb-0"><li class="d-flex gap-2 mb-2"><i class="bi bi-box-arrow-up-right" style="color:var(--acento);"></i><div><a href="https://es.khanacademy.org/math" target="_blank" rel="noopener">Khan Academy — Matemáticas en Español</a><div class="col-mut small">Videos y práctica ilimitada por tema.</div></div></li><li class="d-flex gap-2 mb-2"><i class="bi bi-box-arrow-up-right" style="color:var(--acento);"></i><div><a href="https://proyectodescartes.org" target="_blank" rel="noopener">Proyecto Descartes — Matemática</a><div class="col-mut small">Actividades interactivas para cada tópico.</div></div></li><li class="d-flex gap-2 mb-2"><i class="bi bi-info-circle" style="color:var(--acento);"></i><div><span>Calculadoras y tablas</span><div class="col-mut small">Ten a mano tablas de factorización y fórmulas. Siempre útil en exámenes</div></div></li></ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../secciones/recursos.html">Recursos</a>
+          <a href="../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+  <script>
+    var CLAVES = ["matematica-0-0","matematica-0-1","matematica-0-2","matematica-0-3","matematica-0-4","matematica-1-0","matematica-1-1","matematica-1-2","matematica-1-3","matematica-1-4","matematica-2-0","matematica-2-1","matematica-2-2","matematica-2-3","matematica-2-4","matematica-3-0","matematica-3-1","matematica-3-2","matematica-3-3","matematica-3-4","matematica-4-0","matematica-4-1","matematica-4-2","matematica-4-3","matematica-4-4","matematica-5-0","matematica-5-1","matematica-5-2","matematica-5-3","matematica-5-4"];
+    var KEY = "asl-progreso";
+    function leer() { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; } }
+    function pintar() {
+      var estados = leer(), hechas = 0;
+      CLAVES.forEach(function (k) { if (estados[k]) hechas++; });
+      var contador = document.getElementById("contadorCurso");
+      if (contador) contador.textContent = hechas + " / " + CLAVES.length;
+      var barra = document.getElementById("barraCurso");
+      if (barra && CLAVES.length) barra.style.width = Math.round((hechas / CLAVES.length) * 100) + "%";
+      var fichas = document.querySelectorAll(".minificha-link[data-clave]");
+      fichas.forEach(function (f) {
+        if (estados[f.getAttribute("data-clave")]) f.classList.add("hecha");
+        else f.classList.remove("hecha");
+      });
+    }
+    document.addEventListener("DOMContentLoaded", pintar);
+    document.addEventListener("DOMContentLoaded", function () {
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

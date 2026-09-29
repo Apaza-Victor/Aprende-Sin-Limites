@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo funciona una prueba de admisión — Admisión Universitaria</title>
+  <meta name="description" content="Comprender cómo se estructura una prueba de admisión, qué mide cada sección, cómo se puntúa y qué penalizaciones suele aplicar la universidad." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Estrategia y diagnóstico</a> <span class="mx-2 opacity-50">/</span>
+          <span>Cómo funciona una prueba de admisión</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Cómo funciona una prueba de admisión</h1>
+            <p class="articulo-modulo">Módulo 1 · Estrategia y diagnóstico</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Comprender cómo se estructura una prueba de admisión, qué mide cada sección, cómo se puntúa y qué penalizaciones suele aplicar la universidad.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La prueba de admisión no es un examen de lo que estudiaste, sino una medición de lo que puedes hacer con un tiempo límite. Casi todas las universidades usan una estructura parecida: una sección de <strong>razonamiento verbal</strong>, una de <strong>razonamiento matemático</strong> o cuantitativo, una de <strong>comprensión lectora y conocimiento general</strong>, y en muchas ocasiones una <strong>prueba de escritura</strong>. Cada sección tiene su propio puntaje, su propio tiempo y su propia ponderación.</p><h4 class="lecc-h4">Lo que la prueba realmente mide</h4><ul class="lecc-ul"><li><strong>Velocidad sostenida</strong>: la diferencia entre dos postulantes suele estar en cuántos ítems resuelves por minuto, no en cuánto saben.</li><li><strong>Precisión bajo presión</strong>: responder rápido y equivocado es peor que dejar en blanco, porque las respuestas incorrectas suelen descontar.</li><li><strong>Toma de decisiones</strong>: hay ítems de mucha dificultad que consumen tiempo y puntaje a la vez.</li><li><strong>Estabilidad emocional</strong>: quien se bloquea a mitad de prueba pierde el resto, y por eso el manejo del tiempo importa tanto como el conocimiento.</li></ul><h4 class="lecc-h4">La penalización cambia la estrategia</h4><p>Si tu examen descuenta por error, la ecuación cambia: un ítem de probabilidad de acierto del 25 % tiene valor esperado negativo y conviene <strong>dejarlo en blanco</strong>. En cambio, si no hay penalización, adivinar siempre suma. Antes de estudiar, averigua la fórmula de puntaje: define si conviene arriesgar.</p><figure class="lecc-figura"><svg viewBox="0 0 360 230" role="img" aria-label="No todos los bloques pesan igual: mira la proporcion antes de estudiar."><text x="180" y="18" text-anchor="middle" class="fig-titulo">Como se reparte una prueba de admision</text>
+
+  <text x="14" y="43" class="fig-nota" font-size="12">Razonamiento matematico</text>
+  <rect x="14" y="48" width="176" height="18" rx="5" class="fig-destac"/>
+  <text x="198" y="62" class="fig-destac-txt" font-size="12">40 %</text>
+
+  <text x="14" y="89" class="fig-nota" font-size="12">Razonamiento verbal</text>
+  <rect x="14" y="94" width="154" height="18" rx="5" class="fig-ok"/>
+  <text x="176" y="108" class="fig-ok-txt" font-size="12">35 %</text>
+
+  <text x="14" y="135" class="fig-nota" font-size="12">Conocimiento general</text>
+  <rect x="14" y="140" width="66" height="18" rx="5" class="fig-apoyo"/>
+  <text x="88" y="154" class="fig-apoyo-txt" font-size="12">15 %</text>
+
+  <text x="14" y="181" class="fig-nota" font-size="12">Prueba escrita</text>
+  <rect x="14" y="186" width="44" height="18" rx="5" class="fig-apoyo"/>
+  <text x="66" y="200" class="fig-apoyo-txt" font-size="12">10 %</text>
+
+  <text x="180" y="222" text-anchor="middle" class="fig-nota" font-size="12">Reparte tu tiempo de estudio con la misma proporcion.</text></svg><figcaption class="fig-titulo">No todos los bloques pesan igual: mira la proporcion antes de estudiar.</figcaption></figure><h4 class="lecc-h4">Ponderaciones</h4><p>Las secciones no valen lo mismo. Si el razonamiento matemático pesa el 40 % y el verbal el 25 %, una hora extra de álgebra rinde el doble que una de vocabulario. Ponderar por eso es la decisión de estudio más rentable que puedes tomar.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Dos postulantes responden un examen con la misma estructura: 40 ítems de razonamiento verbal, 40 de matemático y 20 de comprensión lectora, en 120 minutos, con penalización de un punto por error. Ambos hacen 24 aciertos en verbal, 22 en matemático y 18 en lectora. El primero cree que va bien; el segundo cree que va mal.</p><h4 class="lecc-h4">Método 1: comparar el puntaje neto con la meta</h4><ul class="lecc-ul"><li>Primero: 24 − 4 = 20 netos en verbal, 22 − 6 = 16 en matemático y 18 − 2 = 16 en lectora.</li><li>La meta es 22 netos por sección: en lectora faltan 4 puntos, en matemática va justa y en verbal hay 2 de holgura. La brecha está en comprensión lectora.</li></ul><h4 class="lecc-h4">Método 2: comparar el valor esperado de arriesgar</h4><ul class="lecc-ul"><li>En matemático, un ítem en blanco vale 0 y acertar vale 1, pero cada error descuenta 1, así que solo conviene intentarlo con probabilidad de acierto mayor que 0,5.</li><li>Ese postulante hizo 22 de 40, es decir un 55 %, apenas por encima del umbral. Corregir el ritmo y leer bien los enunciados sube ese porcentaje más que estudiar fórmulas nuevas.</li></ul><h4 class="lecc-h4">Método 3: comparar el tiempo por sección</h4><ul class="lecc-ul"><li>Si el examen dura 120 minutos y el postulante dedica 70 al verbal, 40 al matemático y 10 a lectora, está repartiendo mal.</li><li>El peso de la lectura es 20 de 100 ítems, y con solo 10 minutos no alcanza: está perdiendo la sección con peor relación entre dificultad y puntaje.</li></ul><div class="lecc-nota">Los tres métodos apuntan a lo mismo: el punto de botella no es el conocimiento, es el reparto del tiempo y el control del error. Estudiar más álgebra no habría movido ni un punto en esta situación.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de estudiar, lee la hoja de instrucciones del examen y busca la fórmula de puntaje. Es la primera decisión estratégica del proceso y determina cómo vas a responder el resto.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-0-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="index.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-plan-de-estudio-realista.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-0-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

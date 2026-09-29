@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Grecia y Roma en la misma linea de tiempo</text>
+
+  <rect x="60" y="64" width="180" height="30" rx="7" class="fig-ok"/>
+  <text x="150" y="85" text-anchor="middle" class="fig-ok-txt" font-size="13">Grecia</text>
+
+  <rect x="20" y="104" width="300" height="30" rx="7" class="fig-destac"/>
+  <text x="170" y="125" text-anchor="middle" class="fig-destac-txt" font-size="13">Roma</text>
+
+  <line x1="20" y1="150" x2="340" y2="150" class="fig-medida"/>
+  <line x1="20" y1="144" x2="20" y2="156" class="fig-medida"/>
+  <line x1="60" y1="144" x2="60" y2="156" class="fig-medida"/>
+  <line x1="240" y1="144" x2="240" y2="156" class="fig-medida"/>
+  <line x1="320" y1="144" x2="320" y2="156" class="fig-medida"/>
+
+  <text x="20" y="176" text-anchor="start" class="fig-nota" font-size="11">753 a.C.</text>
+  <text x="60" y="176" text-anchor="start" class="fig-nota" font-size="11">500 a.C.</text>
+  <text x="320" y="176" text-anchor="end" class="fig-nota" font-size="11">476 d.C.</text>
+
+  <text x="180" y="200" text-anchor="middle" class="fig-nota" font-size="12">Roma existio mas tiempo y en un territorio mucho mayor.</text>
+</svg>

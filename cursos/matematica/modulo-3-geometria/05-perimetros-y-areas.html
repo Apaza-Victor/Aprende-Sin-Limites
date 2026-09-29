@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perímetros y áreas — Matemática</title>
+  <meta name="description" content="Calcular perímetros y áreas de figuras planas, y resolver problemas de áreas sombreadas y figuras compuestas." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Geometría</a> <span class="mx-2 opacity-50">/</span>
+          <span>Perímetros y áreas</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Perímetros y áreas</h1>
+            <p class="articulo-modulo">Módulo 3 · Geometría</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Calcular perímetros y áreas de figuras planas, y resolver problemas de áreas sombreadas y figuras compuestas.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El <strong>perímetro</strong> es la longitud total del contorno de una figura, y el <strong>área</strong> es la superficie que ocupa. No deben confundirse: una figura puede tener el mismo perímetro y áreas muy distintas.</p><h4 class="lecc-h4">Fórmulas que debes tener a mano</h4><ul class="lecc-ul"><li>Triángulo: perímetro = suma de lados; área = base × altura ÷ 2.</li><li>Cuadrado: perímetro = 4l; área = l².</li><li>Rectángulo: perímetro = 2(b + h); área = b × h.</li><li>Paralelogramo: área = base × altura.</li><li>Trapecio: área = (B + b) × h ÷ 2, con B la base mayor y b la menor.</li><li>Círculo: perímetro = 2πr; área = πr².</li><li>Rombo: área = diagonal mayor × diagonal menor ÷ 2.</li></ul><figure class="lecc-figura"><svg viewBox="0 0 300 250" role="img" aria-label="Cilindro: el área total es la lateral más las dos bases"><ellipse cx="150" cy="55" rx="70" ry="22" class="fig-forma"/>
+  <path d="M80 55 L80 185" class="fig-acento"/>
+  <path d="M220 55 L220 185" class="fig-acento"/>
+  <path d="M80 185 A70 22 0 0 0 220 185" class="fig-acento"/>
+  <path d="M150 55 L220 55" class="fig-dato"/>
+  <path d="M40 55 L40 185" class="fig-dato"/>
+  <path d="M34 55 L46 55 M34 185 L46 185"/>
+  <text x="188" y="46" text-anchor="middle" font-size="15">r</text>
+  <text x="30" y="126" text-anchor="middle" font-size="15">h</text>
+  <text x="150" y="240" text-anchor="middle" font-size="13" class="fig-nota">V = π · r² · h   ·   A = 2πr(r + h)</text></svg><figcaption class="fig-titulo">Cilindro: el área total es la lateral más las dos bases</figcaption></figure><figure class="lecc-figura"><svg viewBox="0 0 300 250" role="img" aria-label="Cono: su volumen es la tercera parte del cilindro equivalente"><path d="M75 190 L150 25" class="fig-acento"/>
+  <path d="M225 190 L150 25" class="fig-acento"/>
+  <path d="M75 190 A75 20 0 0 0 225 190" class="fig-acento"/>
+  <path d="M150 25 L150 190" class="fig-dato"/>
+  <path d="M150 190 L225 190" class="fig-dato"/>
+  <circle cx="150" cy="25" r="3" fill="currentColor" stroke="none"/>
+  <text x="142" y="112" text-anchor="middle" font-size="15">h</text>
+  <text x="192" y="182" text-anchor="middle" font-size="15">r</text>
+  <text x="100" y="98" text-anchor="middle" font-size="15">g</text>
+  <text x="164" y="22" text-anchor="middle" font-size="13" class="fig-etiqueta">vértice</text>
+  <text x="150" y="240" text-anchor="middle" font-size="13" class="fig-nota">V = π · r² · h : 3   ·   g es la generatriz</text></svg><figcaption class="fig-titulo">Cono: su volumen es la tercera parte del cilindro equivalente</figcaption></figure><figure class="lecc-figura"><svg viewBox="0 0 300 250" role="img" aria-label="Esfera: el área de la superficie y el volumen salen de un solo radio"><circle cx="150" cy="120" r="80" class="fig-forma"/>
+  <ellipse cx="150" cy="120" rx="80" ry="26" class="fig-dato"/>
+  <ellipse cx="150" cy="120" rx="26" ry="80" class="fig-dato"/>
+  <path d="M150 120 L230 120" class="fig-acento"/>
+  <circle cx="150" cy="120" r="3" fill="currentColor" stroke="none"/>
+  <text x="192" y="110" text-anchor="middle" font-size="15">r</text>
+  <text x="150" y="110" text-anchor="middle" font-size="14" class="fig-etiqueta">O</text>
+  <text x="150" y="22" text-anchor="middle" font-size="13" class="fig-nota">ecuador</text>
+  <text x="188" y="130" text-anchor="middle" font-size="13" class="fig-nota">meridiano</text>
+  <text x="150" y="240" text-anchor="middle" font-size="13" class="fig-nota">V = 4π · r³ : 3   ·   A = 4π · r²</text></svg><figcaption class="fig-titulo">Esfera: el área de la superficie y el volumen salen de un solo radio</figcaption></figure><figure class="lecc-figura"><svg viewBox="0 0 300 250" role="img" aria-label="Prisma rectangular: el volumen es base por altura"><polygon points="50,190 170,190 170,70 50,70" class="fig-forma"/>
+  <path d="M50 70 L100 40 L220 40 L220 160 L170 190 M100 40 L100 160 L170 190" class="fig-dato"/>
+  <path d="M100 160 L220 160" class="fig-dato"/>
+  <text x="110" y="212" text-anchor="middle" font-size="15">a</text>
+  <text x="184" y="130" text-anchor="middle" font-size="15">b</text>
+  <text x="150" y="196" text-anchor="middle" font-size="15">c</text>
+  <text x="150" y="240" text-anchor="middle" font-size="13" class="fig-nota">V = a · b · c</text></svg><figcaption class="fig-titulo">Prisma rectangular: el volumen es base por altura</figcaption></figure><h4 class="lecc-h4">Figuras compuestas</h4><p>Cuando una figura se arma con varias piezas, hay dos caminos: <strong>sumar</strong> las áreas si las piezas están pegadas, o <strong>restar</strong> un hueco si una pieza está dentro de otra. En el segundo caso, calcula primero el área grande, luego la del hueco, y réstalas.</p><div class="lecc-nota">La altura no siempre es el lado. En un triángulo rectángulo, en un rombo o en un paralelogramo, la altura es una perpendicular que muchas veces no es ninguno de los lados que ves.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un terreno es un trapecio de bases 30 m y 18 m y altura 12 m, con lados laterales de 10 m y 14 m. Halla el área y el perímetro.</p><h4 class="lecc-h4">Método de la fórmula del trapecio</h4><ul class="lecc-ul"><li>Área: A = (B + b) × h ÷ 2 = (30 + 18) × 12 ÷ 2 = 48 × 6 = <strong>288 m²</strong>.</li><li>Perímetro: P = 30 + 18 + 10 + 14 = <strong>72 m</strong>.</li></ul><h4 class="lecc-h4">Método de la descomposición en figuras conocidas</h4><ul class="lecc-ul"><li>Corto el trapecio con una vertical por la base menor y obtengo un rectángulo de 18 × 12 = 216 m² más dos triángulos rectángulos.</li><li>La base de cada triángulo es (30 − 18) ÷ 2 = 6 y la altura es 12, así que cada uno vale 6 × 12 ÷ 2 = 36 m².</li><li>Total 216 + 36 + 36 = <strong>288 m²</strong>, exactamente lo que dio la fórmula.</li></ul><h4 class="lecc-h4">Método del control con longitudes racionales y con el costo</h4><ul class="lecc-ul"><li>El perímetro se puede repasar como base más base, 30 + 18 = 48, más los dos laterales, 10 + 14 = 24, y 48 + 24 = 72, la misma cifra.</li><li>Si se quiere cercar con alambre a 8 soles el metro, el costo es 72 × 8 = <strong>576 soles</strong>.</li><li>Y si se quiere sembrar, el área de 288 m² es la superficie real por la que hay que pagar.</li></ul><div class="lecc-nota">Si la fórmula y la descomposición dieran resultados distintos, casi siempre el error está en repartir la diferencia entre las bases, porque esa diferencia es lo que forma los dos triángulos.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Si el enunciado mezcla área y perímetro, subraya cuál pide cada uno antes de calcular, porque es la trampa más común. Y cuando la figura se compone de varias piezas, siempre conviene buscar una segunda vía de cálculo para comprobar.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-2-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-circunferencia-y-circulo.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-4-trigonometria/01-razones-trigonometricas.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-2-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

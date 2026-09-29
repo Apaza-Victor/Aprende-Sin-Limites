@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo 4 · Aplicación en exámenes — Aprende Sin Límites</title>
+  <meta name="description" content="Mejora tu vocabulario, comprensión lectora y precisión en analogías, sinónimos y conectores lógicos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="razonamiento-verbal">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html">
+        <i class="bi bi-stars"></i> Aprende Sin Límites
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMod"
+        aria-controls="navMod" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMod">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a>
+          <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Razonamiento Verbal</a>
+          <span class="mx-2 opacity-50">/</span>
+          <span>Módulo 4 · Aplicación en exámenes</span>
+        </nav>
+
+        <div class="titulo-curso mb-4 d-flex align-items-center gap-3">
+          <div class="icono"><i class="bi bi-compass"></i></div>
+          <div>
+            <h1 class="mb-0">Módulo 4 · Aplicación en exámenes</h1>
+            <p class="col-mut mb-0">5 lecciones</p>
+          </div>
+        </div>
+
+        <div class="tarjeta p-4 reveal">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div><i class="bi bi-check2-circle" style="color: var(--acento);"></i></div>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between small">
+                <span class="col-mut">Lecciones completadas</span>
+                <span id="contadorLecciones" class="fw-semibold">0 / 5</span>
+              </div>
+              <div class="progress" style="height: 6px; margin-top: .35rem;">
+                <div id="barraProgreso" class="progress-bar" style="width: 0%;" role="progressbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-lg-8">
+            <h4 class="d-flex align-items-center gap-2 mb-3"><i class="bi bi-journal-text" style="color: var(--acento);"></i> Lecciones del módulo</h4>
+            <div class="row g-3" id="gridLecciones">
+              <div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">1</span><div><h5 class="lecc-titulo mb-1"><a href="01-estrategia-frente-a-textos-largos.html">Estrategia frente a textos largos</a></h5><p class="col-mut small lecc-obj mb-0">Leer textos extensos en examenes reales, dividirlos en bloques y responder sin quedarte sin tiempo.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="01-estrategia-frente-a-textos-largos.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckrazonamiento-verbal30" data-clave="razonamiento-verbal-3-0" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckrazonamiento-verbal30">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">2</span><div><h5 class="lecc-titulo mb-1"><a href="02-eliminacion-de-alternativas.html">Eliminación de alternativas</a></h5><p class="col-mut small lecc-obj mb-0">Descartar alternativas por técnicas de eliminación, sin necesidad de acertar la respuesta correcta a la primera.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="02-eliminacion-de-alternativas.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckrazonamiento-verbal31" data-clave="razonamiento-verbal-3-1" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckrazonamiento-verbal31">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">3</span><div><h5 class="lecc-titulo mb-1"><a href="03-velocidad-lectora.html">Velocidad lectora</a></h5><p class="col-mut small lecc-obj mb-0">Aumentar la velocidad de lectura sin perder comprensión, aplicando técnicas de lectura rápida y controlando el tiempo.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="03-velocidad-lectora.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckrazonamiento-verbal32" data-clave="razonamiento-verbal-3-2" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckrazonamiento-verbal32">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">4</span><div><h5 class="lecc-titulo mb-1"><a href="04-vocabulario-para-el-examen-parte-1.html">Vocabulario para el examen (parte 1)</a></h5><p class="col-mut small lecc-obj mb-0">Reconocer las palabras que más se repiten en los examenes de comprensión y deducir su significado por el contexto.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="04-vocabulario-para-el-examen-parte-1.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckrazonamiento-verbal33" data-clave="razonamiento-verbal-3-3" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckrazonamiento-verbal33">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">5</span><div><h5 class="lecc-titulo mb-1"><a href="05-vocabulario-para-el-examen-parte-2.html">Vocabulario para el examen (parte 2)</a></h5><p class="col-mut small lecc-obj mb-0">Consolidar el vocabulario de examen con una segunda tanda de palabras, usando el mismo método de grupos y funciones.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="05-vocabulario-para-el-examen-parte-2.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckrazonamiento-verbal34" data-clave="razonamiento-verbal-3-4" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckrazonamiento-verbal34">Marcar como completada</label></div></div></article></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="tarjeta p-4 reveal">
+              <h5 class="d-flex align-items-center gap-2"><i class="bi bi-signpost-2" style="color: var(--acento);"></i> Ruta del curso</h5>
+              <div class="ruta mt-3">
+                <a class="paso" href="../modulo-1-sinonimia-y-vocabulario/index.html"><span class="paso-num">1</span><span class="paso-txt">Módulo 1 · Sinonimia y vocabulario</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso" href="../modulo-2-semantica-y-precision/index.html"><span class="paso-num">2</span><span class="paso-txt">Módulo 2 · Semántica y precisión</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso" href="../modulo-3-comprension-de-lectura/index.html"><span class="paso-num">3</span><span class="paso-txt">Módulo 3 · Comprensión de lectura</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso active" href="../modulo-4-aplicacion-en-examenes/index.html"><span class="paso-num">4</span><span class="paso-txt">Módulo 4 · Aplicación en exámenes</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-6">
+        <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+        <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="me-3" href="../index.html">Volver a Razonamiento Verbal</a>
+        <a class="me-3" href="../../../index.html">Inicio</a>
+        <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+        <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+        <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+        <a href="../../../secciones/faq.html">Preguntas</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVES = ["razonamiento-verbal-3-0","razonamiento-verbal-3-1","razonamiento-verbal-3-2","razonamiento-verbal-3-3","razonamiento-verbal-3-4"];
+      var claveModulo = "razonamiento-verbal-3";
+      var KEY = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; } }
+      function pintar() {
+        var estados = leer(), hechas = 0;
+        CLAVES.forEach(function (k) { if (estados[k]) hechas++; });
+        var contador = document.getElementById("contadorLecciones");
+        if (contador) contador.textContent = hechas + " / " + CLAVES.length;
+        var barra = document.getElementById("barraProgreso");
+        if (barra && CLAVES.length) barra.style.width = Math.round((hechas / CLAVES.length) * 100) + "%";
+        var checks = document.querySelectorAll(".checkbox-leccion[data-clave]");
+        checks.forEach(function (c) {
+          c.checked = !!estados[c.getAttribute("data-clave")];
+          var card = c.closest(".lecc-card");
+          if (card) card.classList.toggle("hecha", c.checked);
+        });
+      }
+      pintar();
+      document.addEventListener("change", function (e) {
+        var c = e.target;
+        if (c && c.classList && c.classList.contains("checkbox-leccion") && c.hasAttribute("data-clave")) {
+          var estados = leer();
+          if (c.checked) estados[c.getAttribute("data-clave")] = true; else delete estados[c.getAttribute("data-clave")];
+          localStorage.setItem(KEY, JSON.stringify(estados));
+          pintar();
+        }
+      });
+      document.getElementById("anioAuto").textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Leer un grafico de barras sinumniendolo</text>
+
+  <line x1="52" y1="40" x2="52" y2="176" class="fig-medida"/>
+  <line x1="52" y1="176" x2="332" y2="176" class="fig-medida"/>
+
+  <text x="52" y="34" text-anchor="end" class="fig-nota" font-size="12">60 %</text>
+  <text x="52" y="110" text-anchor="end" class="fig-nota" font-size="12">30 %</text>
+
+  <rect x="70" y="86" width="42" height="90" rx="5" class="fig-ok"/>
+  <text x="91" y="78" text-anchor="middle" class="fig-ok-txt" font-size="12">45 %</text>
+  <text x="91" y="192" text-anchor="middle" class="fig-nota" font-size="12">Lunes</text>
+
+  <rect x="128" y="116" width="42" height="60" rx="5" class="fig-ok"/>
+  <text x="149" y="108" text-anchor="middle" class="fig-ok-txt" font-size="12">30 %</text>
+  <text x="149" y="192" text-anchor="middle" class="fig-nota" font-size="12">Martes</text>
+
+  <rect x="186" y="56" width="42" height="120" rx="5" class="fig-destac"/>
+  <text x="207" y="48" text-anchor="middle" class="fig-destac-txt" font-size="12">60 %</text>
+  <text x="207" y="192" text-anchor="middle" class="fig-nota" font-size="12">Miercoles</text>
+
+  <rect x="244" y="136" width="42" height="40" rx="5" class="fig-ok"/>
+  <text x="265" y="128" text-anchor="middle" class="fig-ok-txt" font-size="12">20 %</text>
+  <text x="265" y="192" text-anchor="middle" class="fig-nota" font-size="12">Jueves</text>
+
+  <text x="18" y="216" class="fig-nota" font-size="12">1. El eje vertical es el porcentaje y el horizontal, el dia.</text>
+  <text x="18" y="234" class="fig-nota" font-size="12">2. La barra mas alta es la mayor, no la de color distinto.</text>
+</svg>

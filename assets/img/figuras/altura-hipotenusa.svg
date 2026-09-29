@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240">
+  <polygon points="50,180 50,50 250,180" class="fig-forma"/>
+  <path d="M50 180 L109 88.6" class="fig-acento"/>
+  <path d="M50 144 L66 144 L66 162"/>
+  <circle cx="109" cy="88.6" r="3" fill="currentColor" stroke="none"/>
+  <text x="150" y="200" text-anchor="middle" font-size="15">a</text>
+  <text x="36" y="118" text-anchor="middle" font-size="15">b</text>
+  <text x="168" y="106" text-anchor="middle" font-size="15">c</text>
+  <text x="78" y="142" text-anchor="middle" font-size="15" class="fig-acento-texto">h</text>
+  <text x="76" y="60" text-anchor="middle" font-size="15">p</text>
+  <text x="190" y="126" text-anchor="middle" font-size="15">q</text>
+  <text x="122" y="82" text-anchor="middle" font-size="13" class="fig-etiqueta">H</text>
+  <text x="150" y="232" text-anchor="middle" font-size="13" class="fig-nota">c = p + q   ·   c · h = a · b</text>
+</svg>

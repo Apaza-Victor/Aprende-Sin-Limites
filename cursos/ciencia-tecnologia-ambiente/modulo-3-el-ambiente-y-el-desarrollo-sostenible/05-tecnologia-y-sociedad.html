@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tecnología y sociedad — Ciencia, Tecnología y Ambiente</title>
+  <meta name="description" content="Valorar la tecnología de forma crítica, distinguiendo el progreso real de la publicidad y sus efectos en la sociedad." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="ciencia-tecnologia-ambiente">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Ciencia, Tecnología y Ambiente</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · El ambiente y el desarrollo sostenible</a> <span class="mx-2 opacity-50">/</span>
+          <span>Tecnología y sociedad</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-leaf"></i></div>
+            <h1 class="articulo-titulo">Tecnología y sociedad</h1>
+            <p class="articulo-modulo">Módulo 3 · El ambiente y el desarrollo sostenible</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Valorar la tecnología de forma crítica, distinguiendo el progreso real de la publicidad y sus efectos en la sociedad.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">La idea de fondo</h4><p>La tecnología es el conjunto de herramientas y métodos que las personas crean para resolver problemas. Es neutra en si misma: lo que decide si mejora o daña no es la herramienta, sino como se usa y quien se beneficia.</p><h4 class="lecc-h4">Dos caras de la misma herramienta</h4><p>Casi toda tecnología tiene un doble filo. Ejemplos reales:</p><ol class="lecc-ol"><li><strong>El autopista</strong>: acelera el transporte, pero rompe los pueblos de su recorrido.</li><li><strong>El antibiótico</strong>: cura, y su uso excesivo fabrica bacterias resistentes.</li><li><strong>El teléfono</strong>: conecta a las personas, y también genera dependencia y aislamiento.</li><li><strong>La maquinaria agrícola</strong>: produce más, y deja a campos sin trabajo.</li><li><strong>La energía nuclear</strong>: da electricidad limpia, y deja residuos que duran milenios.</li></ol><div class="lecc-nota">La pregunta clave es: para quien es la mejora y a quien le cuesta? La respuesta suele ser distinta para cada grupo.</div><h4 class="lecc-h4">Las cuatro etapas de una tecnología</h4><ol class="lecc-ol"><li><strong>Invención</strong>: alguien idea el principio. Casi nunca funciona.</li><li><strong>Desarrollo</strong>: se mejora hasta que sirve de verdad.</li><li><strong>Difusión</strong>: se extiende a la sociedad.</li><li><strong>Impacto</strong>: los efectos que weren't previstos aparecen.</li></ol><div class="lecc-nota">Los efectos importantes suelen llegar en la cuarta etapa, décadas después. Por eso la evaluación de una tecnología nueva debe ser prudente.</div><h4 class="lecc-h4">La huella tecnológica</h4><p>Todo lo que usamos tiene una historia antes de llegar a tus manos.</p><ol class="lecc-ol"><li><strong>Extracción</strong>: se saca la materia prima.</li><li><strong>Producción</strong>: se fabrica en una fábrica.</li><li><strong>Transporte</strong>: se lleva hasta donde se usa.</li><li><strong>Uso</strong>: la usas.</li><li><strong>Residuo</strong>: la desechas.</li></ol><div class="lecc-nota">Casi todo el impacto ambiental está en las etapas uno y dos, no en el uso. Cambiar la bombilla en casa ayuda menos que mejorar como se fabrica.</div><h4 class="lecc-h4">La brecha digital</h4><p>El acceso a la tecnología no es igual para todos.</p><ol class="lecc-ol"><li><strong>Conectividad</strong>: hay zonas sin red.</li><li><strong>Habilidades</strong>: saber usarla es otra barrera.</li><li><strong>Coste</strong>: muchos servicios requieren un dispositivo caro.</li><li><strong>Idioma</strong>: la información muchas veces está en inglés.</li></ol><div class="lecc-nota">Una herramienta digital que solo entiende un grupo, excluye a los demas. Eso no es un problema de la persona, es del sistema.</div><h4 class="lecc-h4">La ciencia y la opinión</h4><p>En un debate sobre tecnología hay que separar lo que se sabe de lo que se opina.</p><ul class="lecc-ul"><li>Hecho medido: una cifra publicada, un dato observado.</li><li>Interpretación: una lectura posible del dato.</li><li>Opinión: una preferencia que se puede discutir.</li></ul><div class="lecc-nota">Cuando alguien dice que una tecnología es buena o mala sin dar datos, está opinando. Preguntale por el número.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Analicemos un caso real: los tabletas digitales en los ajustes de una escuela.</p><h4 class="lecc-h4">1. Que promete la tecnología</h4><ul class="lecc-ul"><li>Tabletas para todas las clases, con materiales interactivos.</li><li>Conclusión: la promesa es mejorar la comprensión de los contenidos.</li></ul><h4 class="lecc-h4">2. Que datos hay</h4><ul class="lecc-ul"><li>Un estudio de tres años en una ciudad encontro mejores resultados en matemáticas.</li><li>Un estudio de igual tamaño en otra región no encontro diferencias.</li><li>Conclusión: la evidencia es mixta, no uniforme.</li></ul><h4 class="lecc-h4">3. Aplicar las cuatro etapas</h4><ul class="lecc-ul"><li>Invención: la idea del tableta educativo.</li><li>Desarrollo: se mejoro el contenido y la duración de la batería.</li><li>Difusión: el gobierno compro miles y los repartió entre los centros.</li><li>Conclusión: estamos en la etapa de difusión, no de impacto. El impacto se medirá en unos anos.</li></ul><h4 class="lecc-h4">4. Mirar la brecha</h4><ul class="lecc-ul"><li>En la ciudad grande hay wifi y hay quien repara los equipos.</li><li>En la zona rural no hay conexión y no hay taller.</li><li>Conclusión: la misma compra mejora a unos y perjudica a otros.</li></ul><h4 class="lecc-h4">5. Mirar la huella</h4><ul class="lecc-ul"><li>La fabricación consume agua, tierra y metales, y casi todo ocurre lejos del aula.</li><li>Conclusión: la huella de está tecnología no está en la tableta del alumno, está en la fábrica.</li></ul><h4 class="lecc-h4">Conclusión</h4><ul class="lecc-ul"><li>Conclusión: la tecnología no es buena ni mala por definición. Es una herramienta con un coste, y el mismo modelo puede servir a unos y perjudicar a otros.</li><li>Ojo: decir que funciona porque funcionó en un lugar es el sesgo de aceptar un solo estudio.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Cuando analices una tecnología, separa siempre el hecho medido de la opinión, y pregunta quien gana y quien paga. Son las dos preguntas que nadie hace.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="ciencia-tecnologia-ambiente-2-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-desarrollo-sostenible.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="index.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "ciencia-tecnologia-ambiente-2-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250">
+  <path d="M75 190 L150 25" class="fig-acento"/>
+  <path d="M225 190 L150 25" class="fig-acento"/>
+  <path d="M75 190 A75 20 0 0 0 225 190" class="fig-acento"/>
+  <path d="M150 25 L150 190" class="fig-dato"/>
+  <path d="M150 190 L225 190" class="fig-dato"/>
+  <circle cx="150" cy="25" r="3" fill="currentColor" stroke="none"/>
+  <text x="142" y="112" text-anchor="middle" font-size="15">h</text>
+  <text x="192" y="182" text-anchor="middle" font-size="15">r</text>
+  <text x="100" y="98" text-anchor="middle" font-size="15">g</text>
+  <text x="164" y="22" text-anchor="middle" font-size="13" class="fig-etiqueta">vértice</text>
+  <text x="150" y="240" text-anchor="middle" font-size="13" class="fig-nota">V = π · r² · h : 3   ·   g es la generatriz</text>
+</svg>

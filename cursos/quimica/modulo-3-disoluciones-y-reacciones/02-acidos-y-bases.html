@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ácidos y bases — Química</title>
+  <meta name="description" content="Diferenciar las definiciones de Arrhenius y de Bronsted-Lowry para identificar un ácido o una base, escribir el par conjugado de cada especie, y ordenar la fuerza de ácidos y bases con la escala de pKa." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Disoluciones y reacciones</a> <span class="mx-2 opacity-50">/</span>
+          <span>Ácidos y bases</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">Ácidos y bases</h1>
+            <p class="articulo-modulo">Módulo 3 · Disoluciones y reacciones</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Diferenciar las definiciones de Arrhenius y de Bronsted-Lowry para identificar un ácido o una base, escribir el par conjugado de cada especie, y ordenar la fuerza de ácidos y bases con la escala de pKa.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Un ácido es una sustancia capaz de ceder protones, y una base es capaz de captarlos. La definición que mejor explica el 90 % de los ejercicios es la de <strong>Bronsted-Lowry</strong>: ácido es quien dona H⁺ y base es quien lo acepta.</p><h4 class="lecc-h4">Las dos definiciones</h4><ul class="lecc-ul"><li><strong>Arrhenius</strong>: un ácido produce H₃O⁺ en agua y una base produce OH⁻. Es cómoda, pero no explica por qué el amoníaco es una base si no contiene OH⁻.</li><li><strong>Bronsted-Lowry</strong>: más general y la que se usa en la prueba. NH₃ + H₂O → NH₄⁺ + OH⁻ muestra al NH₃ aceptando un H⁺ del agua.</li></ul><h4 class="lecc-h4">Pares conjugados</h4><p>Todo ácido, al ceder H⁺, se convierte en su <strong>base conjugada</strong>, y toda base, al aceptar H⁺, se convierte en su <strong>ácido conjugado</strong>. Son pares porque difieren en un solo H⁺.</p><ul class="lecc-ul"><li>HCl / Cl⁻</li><li>H₂O / OH⁻</li><li>NH₄⁺ / NH₃</li><li>H₂CO₃ / HCO₃⁻</li></ul><div class="lecc-nota">La reacción entre un ácido y una base produce siempre los dos conjugados a la vez. Si en el producto no aparece el ácido conjugado de la base, es que te falta un reactivo o sobró uno.</div><h4 class="lecc-h4">Fuertes y débiles</h4><p>Un ácido fuerte se ioniza <strong>completamente</strong> en agua: HCl, HNO₃, H₂SO₄ y HClO₄. Un ácido débil solo se ioniza parcialmente y establece un equilibrio: HCN, CH₃COOH, H₂CO₃, H₃PO₄. Lo mismo con las bases: NaOH y KOH son fuertes, y el NH₃ es débil.</p><h4 class="lecc-h4">La escala de pKa</h4><p>El pKa mide la fuerza de un ácido: <strong>cuanto más bajo es el pKa, más fuerte es el ácido</strong>. Esto da un criterio para predecir el sentido de una reacción.</p><ul class="lecc-ul"><li>HCl pKa ≈ −7, H₂SO₄ pKa ≈ −3, H₃O⁺ pKa ≈ −1,7, CH₃COOH pKa ≈ 4,8, H₂CO₃ pKa ≈ 6,3, H₂O pKa 15,7, NH₄⁺ pKa 9,2.</li></ul><p>La reacción favorece siempre al lado del ácido y la base <strong>más débiles</strong>. Por eso HCl reacciona con agua (H₂O es un ácido más débil), y CH₃COOH no reacciona con Cl⁻ (HCl es mucho más fuerte).</p><h4 class="lecc-h4">Pares más relevantes</h4><ul class="lecc-ul"><li>H₃O⁺ / H₂O: la reacción más importante, la que define el pH.</li><li>H₂O / OH⁻: la neutralización del agua con una base.</li><li>NH₄⁺ / NH₃: la disolución de amoníaco en agua.</li><li>H₂CO₃ / HCO₃⁻: el sistema tampón de la sangre.</li></ul>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se completan los pares conjugados y se predice el sentido de: HCl + CH₃COO⁻ → Cl⁻ + CH₃COOH, y de NH₃ + H₂O → NH₄⁺ + OH⁻.</p><h4 class="lecc-h4">Método 1: identificar quién dona el H⁺</h4><ul class="lecc-ul"><li>En la primera reacción, el HCl parte con un H⁺ en el H, así que dona. El CH₃COO⁻, que solo tiene el esqueleto CH₃COO, acepta.</li><li>Base conjugada del HCl: al perder H⁺ queda <strong>Cl⁻</strong>.</li><li>Ácido conjugado del CH₃COO⁻: al ganar H⁺ queda <strong>CH₃COOH</strong>.</li><li>En la segunda, el NH₃ no tiene H⁺ que donar, así que acepta del H₂O. El H₂O dona y queda <strong>OH⁻</strong>, y el NH₃ queda <strong>NH₄⁺</strong>.</li></ul><h4 class="lecc-h4">Método 2: predecir el sentido con el pKa</h4><ul class="lecc-ul"><li>Primera reacción: ácido a la izquierda HCl (pKa −7) y ácido a la derecha CH₃COOH (pKa 4,8).</li><li>La reacción va del ácido más fuerte al más débil, así que está <strong>muy desplazada a la derecha</strong>: HCl es fuerte y reacciona por completo con el acetato.</li><li>Segunda reacción: el H₂O tiene pKa 15,7 y el NH₄⁺ tiene 9,2. Como 9,2 es menor que 15,7, el sentido favorecido es <strong>hacia la izquierda</strong>.</li><li>Por eso el amoníaco es una base débil: en agua solo se ioniza un poco, y la mayor parte queda como NH₃ sin reaccionar.</li></ul><h4 class="lecc-h4">Método 3: comprobar con la basicidad</h4><ul class="lecc-ul"><li>Un ion con carga negativa, como el acetato, es la base conjugada de un ácido, así que el par es ácido/base en ese orden: CH₃COOH es el ácido y CH₃COO⁻ la base.</li><li>Un cation como el NH₄⁺ es un ácido conjugado, porque le falta un H⁺ para ser neutro.</li><li>Regla de carga: en un par ácido-base conjugado, si uno es neutro el otro es −1, y si uno es +1 el otro es neutro.</li></ul><div class="lecc-nota">Todos los pasos apuntan a lo mismo: en la reacción escrita hay un ácido y una base a cada lado, y lo único que hace el sistema es <strong>intercambiar un H⁺ entre ellos</strong>.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Para hallar el par conjugado no pienses en la fórmula: tacha el H⁺ y ya está. Si el ejercicio te da el ácido, el conjugado es la misma especie sin un hidrógeno; si te da la base, es la misma con un hidrógeno más.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-2-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-concentraciones-de-disoluciones.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-ph-y-neutralizacion.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-2-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

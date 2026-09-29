@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ensayo completo y autoevaluación — Admisión Universitaria</title>
+  <meta name="description" content="Escribir un ensayo entero en tiempo limitado y autoevaluarlo con una rúbrica clara, reescribiendo lo que peor te haya salido." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 6 · Ensayo y simulación final</a> <span class="mx-2 opacity-50">/</span>
+          <span>Ensayo completo y autoevaluación</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Ensayo completo y autoevaluación</h1>
+            <p class="articulo-modulo">Módulo 6 · Ensayo y simulación final</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Escribir un ensayo entero en tiempo limitado y autoevaluarlo con una rúbrica clara, reescribiendo lo que peor te haya salido.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Un ensayo completo se evalúa en bloque, no frase por frase, y por eso los errores de estructura pesan más que los de estilo. Escribir un buen ensayo en tiempo limitado consiste en decidir el orden antes de escribir la primera frase, y en sostener ese orden aunque el desarrollo se ponga difícil.</p><h4 class="lecc-h4">El plan de cuatro pasos antes de escribir</h4><ol class="lecc-ol"><li><strong>Leer el enunciado y subrayar el verbo</strong>: comparar, justificar, evaluar, proponer. El verbo define la forma del texto.</li><li><strong>Escribir la tesis en una frase</strong>: la posición que defenderás.</li><li><strong>Anotar tres argumentos en dos palabras cada uno</strong>: si no puedes resumirlos en dos palabras, aún no sabes cuáles son.</li><li><strong>Decidir el orden</strong>: del más fuerte al más débil, o del más general al más particular.</li></ol><p>Este plan toma seis minutos y es la diferencia entre un texto que se sostiene y uno que se dispersa.</p><h4 class="lecc-h4">La rúbrica de autoevaluación</h4><p>Evalúa tu ensayo con cinco criterios, en ese orden, y no con una impresión general:</p><ol class="lecc-ol"><li><strong>Tesis</strong>: ¿está en la introducción y es defendible con dos razones?</li><li><strong>Desarrollo</strong>: ¿cada párrafo tiene afirmación, explicación, evidencia y remate?</li><li><strong>Proporción</strong>: ¿la introducción y la conclusión ocupan menos de un cuarto del texto?</li><li><strong>Remate de párrafo</strong>: ¿el último párrafo retoma la tesis o introduce algo nuevo?</li><li><strong>Precisión</strong>: ¿puedo citar de memoria la fuente de cada dato?</li></ol><p>Pon un número del uno al cinco en cada criterio. Tu puntaje real es el más bajo, no el promedio, porque un criterio en uno arrastra todo lo demás.</p><h4 class="lecc-h4">Los tres defectos de un ensayo escrito con prisa</h4><ol class="lecc-ol"><li><strong>Introducción de tres párrafos</strong>: se dedica más espacio a presentar el tema que a defender la tesis, y el corrector lo lee como falta de control del tiempo.</li><li><strong>Párrafos sin evidencia</strong>: son opiniones bien redactadas, y no sustentan nada.</li><li><strong>Conclusión nueva</strong>: el cierre introduce un argumento que no apareció antes, y el texto se contradice solo.</li></ol><p>Los tres se detectan con la rúbrica en dos minutos, y son la diferencia entre un 5 y un 7.</p><h4 class="lecc-h4">Escribir y reescribir por separado</h4><p>En la prueba no hay tiempo de reescribir, así que hay que escribir para no necesitarlo. La estrategia es escribir el párrafo más difícil en el medio, no al final: al principio y al final vas rápido porque ya sabes qué vas a decir.</p><p>Si te queda tiempo, nunca reescribas la introducción: reescribe el remate del último párrafo, que es donde más se nota la falta de tiempo.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un postulante tiene 60 minutos para un ensayo de 400 palabras sobre &quot;las prensas sociales&quot;. Su borrador tiene cinco párrafos: dos de contexto histórico, uno de tesis, uno de desarrollo y ninguno de conclusión.</p><h4 class="lecc-h4">Método 1: evaluar la proporción</h4><ul class="lecc-ul"><li>Primero: de cinco párrafos, dos son de contexto. Eso es el 40 % del texto dedicado a presentar, y la rúbrica dice que la introducción y la conclusión no deben pasar del 25 %.</li><li>El defecto no es lo que dice el contexto, es el espacio que ocupa.</li></ul><h4 class="lecc-h4">Método 2: revisar el desarrollo</h4><ul class="lecc-ul"><li>Segundo: hay un solo párrafo de desarrollo para una tesis. Con un solo párrafo no hay argumentación: hay una afirmación, y la tesis queda sin sostén.</li><li>La regla práctica de tres argumentos exige al menos tres párrafos, o uno con tres movimientos internos claramente marcados.</li></ul><h4 class="lecc-h4">Método 3: reescribir el plan, no el texto</h4><ul class="lecc-ul"><li>Tercero: el arreglo no es añadir texto, es redistribuir. Los dos párrafos de contexto se reducen a tres frases dentro de la introducción, y el espacio liberado se llena con dos párrafos de desarrollo y uno de conclusión.</li><li>El total de palabras se mantiene en 400, pero la estructura cambia por completo.</li></ul><div class="lecc-nota">La autoevaluación no invasó a reescribir el ensayo: invasó a decidir dónde iba cada párrafo antes de escribir. Por eso el resultado es mejor con el mismo número de palabras.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Escribe la tesis y los tres argumentos en el margen de la hoja antes de empezar. Si al terminar el párrafo tres no usaste todos, te sobró argumentación, y la conclusión está a medio hacer.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-5-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-fuentes-y-honestidad-academica.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-7-cierre-gestion-y-logistica/01-las-dos-semanas-antes-de-la-prueba.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-5-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

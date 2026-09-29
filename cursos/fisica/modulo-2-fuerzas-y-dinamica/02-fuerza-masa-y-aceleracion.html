@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuerza, masa y aceleración — Física</title>
+  <meta name="description" content="Usar la segunda ley de Newton para resolver gráficos y tablas y saber cuándo aplicar cada una, con el criterio de elección explícito." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Fuerzas y dinámica</a> <span class="mx-2 opacity-50">/</span>
+          <span>Fuerza, masa y aceleración</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Fuerza, masa y aceleración</h1>
+            <p class="articulo-modulo">Módulo 2 · Fuerzas y dinámica</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Usar la segunda ley de Newton para resolver gráficos y tablas y saber cuándo aplicar cada una, con el criterio de elección explícito.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La segunda ley de Newton ya se conoce. Lo que añade esta lección es la habilidad de pasarla a otros formatos, sobre todo gráficas y tablas, que es como aparecen en casi todos los exámenes.</p><h4 class="lecc-h4">La misma igualdad en tres formatos</h4><p>F neta = m · a admite tres lecturas equivalentes, y elegir la correcta es el 90 % del problema:</p><ul class="lecc-ul"><li>Con la fuerza conocida y la masa conocida, se despeja la aceleración.</li><li>Con la aceleración conocida y la masa conocida, se despeja la fuerza.</li><li>Con la fuerza conocida y la aceleración conocida, se despeja la masa.</li></ul><p>La masa nunca cambia en el problema. Eso significa que, para un mismo cuerpo, la fuerza y la aceleración son proporcionales: si la fuerza se duplica, la aceleración se duplica. Si la aceleración se triplica, la fuerza se triplica, y no hay ninguna operación intermedia.</p><h4 class="lecc-h4">Lectura de una gráfica de fuerza contra tiempo</h4><p>La fuerza no es constante en la mayoría de los ejercicios. Cuando la fuerza varía:</p><ul class="lecc-ul"><li>La aceleración en cada instante es a(t) = F(t)/m.</li><li>La velocidad es el área bajo la curva de aceleración contra tiempo, sumada a la velocidad inicial.</li><li>Si la fuerza se grafica contra distancia, el trabajo es el área bajo esa curva.</li></ul><p>El error clásico es dividir el eje de la fuerza en segmentos y promediar sin pensar. Promediar la fuerza sirve solo si la fuerza varía linealmente con el tiempo, y en ese caso la aceleración promedio es correcta. Si la curva es una hipérbola o tiene escalones, promediar es incorrecto y hay que integrar por partes.</p><h4 class="lecc-h4">Lectura de una tabla</h4><p>Cuando el enunciado trae una tabla, hay que buscar el instante, no la fila entera. En una tabla de fuerza contra tiempo, la aceleración de cada intervalo es el cambio de velocidad dividido por el intervalo, no la velocidad misma. Y si la velocidad se mantiene constante en un tramo, la fuerza neta en ese tramo es cero, aunque la fricción siga existiendo: lo que la equilibra es la normal, no una fuerza horizontal.</p><h4 class="lecc-h4">La pendiente y el área</h4><p>Dos ideas que resuelven la mitad de los ítems de gráficas:</p><ul class="lecc-ul"><li>En la gráfica v contra t, la pendiente es la aceleración y el área es el desplazamiento.</li><li>En la gráfica a contra t, el área es el cambio de velocidad, y en la gráfica F contra t, el área es el impulso.</li></ul><p>Recordar cuál es pendiente y cuál es área evita confundir el 60 % de los errores de estos ejercicios, porque ambos se calculan &quot;dividiendo&quot; pero dan magnitudes distintas.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un cuerpo de 4 kg parte del reposo. Durante los primeros 3 s recibe una fuerza constante de 16 N. Luego la fuerza cae a 0 durante 2 s, y en el segundo 5 a 10 N. ¿Cuál es la velocidad al final de cada tramo y cuál es la velocidad a los 10 segundos?</p><h4 class="lecc-h4">Método 1: tramo por tramo con la segunda ley</h4><ul class="lecc-ul"><li>Primero: en el tramo 1, a = 16/4 = 4 m/s², y partiendo del reposo la velocidad a los 3 s es 4 · 3 = 12 m/s.</li><li>Segundo: en el tramo 2 la fuerza neta es cero, así que la aceleración es cero y la velocidad se mantiene en 12 m/s los 2 s siguientes. En este tramo el cuerpo solo tiene fricción y normal, que se anulan.</li><li>Tercero: en el tramo 3, a = 10/4 = 2,5 m/s², y durante 5 s suma 2,5 · 5 = 12,5 m/s.</li><li>Cuarto: la velocidad final es 12 + 12,5 = 24,5 m/s.</li></ul><h4 class="lecc-h4">Método 2: integrar el área bajo la curva</h4><ul class="lecc-ul"><li>Quinto: dibujo F contra t. El área es un rectángulo de 3 s por 16 N, 48 N·s, más otro rectángulo de 5 s por 10 N, 50 N·s. El tramo con fuerza cero no aporta área.</li><li>Sexto: la suma es 98 N·s, que es el impulso total. Por el teorema impulso-momento, el cambio de velocidad es 98 entre 4 = 24,5 m/s.</li><li>Séptimo: como partía del reposo, la velocidad final es la misma que su cambio, 24,5 m/s.</li></ul><h4 class="lecc-h4">Método 3: verificar la coherencia de cada tramo</h4><ul class="lecc-ul"><li>Octavo: comparo los dos métodos en el segundo 5. El método 1 da 12 m/s, y el método 2 con el rectángulo inicial da 48 entre 4 = 12 m/s. Coinciden.</li><li>Noveno: hago una comprobación de magnitudes. Si la fuerza hubiera sido de 8 N en el tramo 1, la velocidad sería la mitad, y eso se ve solo con mirar la proporción.</li></ul><div class="lecc-nota">El insight es que los dos métodos no son alternativas: el primero sirve para ver el detalle de cada tramo y el segundo para comprobar el total en un solo paso. Con gráfica en el examen, conviene aplicar siempre los dos.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>En una gráfica de fuerza contra tiempo no promedies la fuerza salvo que la dependencia sea lineal. Dibuja las áreas: es más lento, pero es el único procedimiento que nunca falla.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-1-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-las-leyes-de-newton.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-fuerza-de-rozamiento.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-1-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

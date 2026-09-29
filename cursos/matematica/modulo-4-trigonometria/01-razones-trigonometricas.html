@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Razones trigonométricas — Matemática</title>
+  <meta name="description" content="Definir las seis razones trigonométricas, relacionarlas con lados de triángulos rectángulos y conocer sus signos por cuadrante." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Trigonometría</a> <span class="mx-2 opacity-50">/</span>
+          <span>Razones trigonométricas</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Razones trigonométricas</h1>
+            <p class="articulo-modulo">Módulo 4 · Trigonometría</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Definir las seis razones trigonométricas, relacionarlas con lados de triángulos rectángulos y conocer sus signos por cuadrante.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>En un triángulo rectángulo, los lados tienen nombres fijos: el <strong>cateto opuesto</strong> es el que está frente al ángulo que studias, el <strong>cateto adyacente</strong> es el otro cateto, y la <strong>hipotenusa</strong> es el lado mayor, opuesto al ángulo recto. La trigonometría relaciona los ángulos con las razones entre estos lados.</p><h4 class="lecc-h4">Las seis razones</h4><ul class="lecc-ul"><li>seno de α = cateto opuesto ÷ hipotenusa</li><li>coseno de α = cateto adyacente ÷ hipotenusa</li><li>tangente de α = cateto opuesto ÷ cateto adyacente</li></ul><p>Los inversos se llaman cosecante, secante y cotangente, y son el inverso de cada razón: por ejemplo, la secante de α es 1 dividido por el coseno.</p><h4 class="lecc-h4">Relaciones fundamentales</h4><p>En todo triángulo rectángulo, sin importar el ángulo, se cumple:</p><ul class="lecc-ul"><li>seno² + coseno² = 1</li><li>1 + tangente² = secante²</li><li>1 + cotangente² = cosecante²</li></ul><h4 class="lecc-h4">Signos por cuadrante</h4><p>En el primer cuadrante (0° a 90°) todas las razones son positivas. Al pasar al segundo, seno y cosecante siguen siendo positivas, pero coseno, tangente, secante y cotangente se vuelven negativas. En el tercero happens lo mismo que en el primero, y en el cuarto igual que en el segundo.</p><div class="lecc-nota">En un triángulo rectángulo los ángulos siempre están entre 0° y 90°, así que todas las razones dan positivas. Los signos solo importan en el círculo unitario.</div><figure class="lecc-figura"><svg viewBox="0 0 300 200" role="img" aria-label="El seno, el coseno y la tangente se definen sobre el triángulo rectángulo"><polygon points="40,160 40,40 240,160" class="fig-forma"/>
+  <path d="M40 144 L56 144 L56 160" class="fig-acento"/>
+  <text x="140" y="184" text-anchor="middle" font-size="16">a</text>
+  <text x="26" y="106" text-anchor="middle" font-size="16">b</text>
+  <text x="152" y="90" text-anchor="middle" font-size="16">c</text>
+  <text x="26" y="176" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="26" y="44" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="252" y="176" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text></svg><figcaption class="fig-titulo">El seno, el coseno y la tangente se definen sobre el triángulo rectángulo</figcaption></figure><figure class="lecc-figura"><svg viewBox="0 0 320 260" role="img" aria-label="En el primer cuadrante el seno y el coseno son positivos"><path d="M40 220 L280 220" class="fig-dato"/>
+  <path d="M160 220 L160 20" class="fig-acento"/>
+  <path d="M160 20 A200 200 0 0 1 292.8 90" class="fig-dato"/>
+  <circle cx="160" cy="220" r="3" fill="currentColor" stroke="none"/>
+  <path d="M160 220 L249.3 120" class="fig-acento"/>
+  <path d="M160 220 L247.5 70" class="fig-dato"/>
+  <text x="256" y="126" font-size="14" class="fig-acento-texto">30°</text>
+  <text x="256" y="70" font-size="14" class="fig-nota">45°</text>
+  <circle cx="160" cy="20" r="3.5" fill="currentColor" stroke="none"/>
+  <text x="160" y="12" text-anchor="middle" font-size="13" class="fig-etiqueta">90°</text>
+  <text x="160" y="242" text-anchor="middle" font-size="13" class="fig-nota">en el primer cuadrante el seno y el coseno son positivos</text>
+  <text x="34" y="200" font-size="14" class="fig-etiqueta">180°</text>
+  <text x="292" y="214" font-size="14" class="fig-etiqueta">0°</text></svg><figcaption class="fig-titulo">En el primer cuadrante el seno y el coseno son positivos</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>En un triángulo rectángulo, el cateto opuesto a α mide 6 y la hipotenusa 10. Halla seno, coseno y tangente de α.</p><h4 class="lecc-h4">Método de la definición, con Pitágoras para el cateto que falta</h4><ul class="lecc-ul"><li>Seno = cateto opuesto ÷ hipotenusa = 6/10 = <strong>0,6</strong>.</li><li>El otro cateto sale de Pitágoras: a² + 6² = 10², de donde a² = 100 − 36 = 64 y a = <strong>8</strong>.</li><li>Coseno = cateto adyacente ÷ hipotenusa = 8/10 = <strong>0,8</strong>.</li><li>Tangente = cateto opuesto ÷ cateto adyacente = 6/8 = <strong>0,75</strong>.</li></ul><h4 class="lecc-h4">Método de la razón de lados, que evita la cuenta intermedia</h4><ul class="lecc-ul"><li>Los lados 6, 8 y 10 son un múltiplo de 3-4-5, así que la razón del triángulo es 3 : 4 : 5.</li><li>En esa razón, seno = 3/5 = 0,6, coseno = 4/5 = 0,8 y tangente = 3/4 = 0,75.</li><li>Los tres valores salen sin despejar nada, y coinciden con el método 1.</li></ul><h4 class="lecc-h4">Método del control con la relación fundamental</h4><ul class="lecc-ul"><li>Seno² + coseno² tiene que dar 1: 0,36 + 0,64 = <strong>1</strong>. La relación se cumple, así que los dos valores son coherentes entre sí.</li><li>Además, como el seno es 0,6 y el coseno es 0,8, la tangente no puede ser otra que 0,6 ÷ 0,8 = 0,75, que es lo que obtuve.</li></ul><div class="lecc-nota">En un triángulo rectángulo las tres razones no se eligen por separado: el seno y el coseno quedan encadenados por la relación fundamental, y la tangente es el cociente de los dos.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Identifica primero el cateto opuesto y el adyacente, y escribe a qué ángulo te refieres. Confundir opuesto con adyacente es el error más común: intercambiandolos, el seno y el coseno quedan cambiados y todo el resultado se va al revés.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-3-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-3-geometria/05-perimetros-y-areas.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-teorema-de-pitagoras-y-angulos-especiales.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-3-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

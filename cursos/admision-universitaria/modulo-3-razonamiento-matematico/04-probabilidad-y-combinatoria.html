@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Probabilidad y combinatoria — Admisión Universitaria</title>
+  <meta name="description" content="Calcular probabilidades de eventos simples y compuestos, y aplicar los principios de adición y multiplicación a problemas de conteo y elecciones." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Razonamiento matemático</a> <span class="mx-2 opacity-50">/</span>
+          <span>Probabilidad y combinatoria</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Probabilidad y combinatoria</h1>
+            <p class="articulo-modulo">Módulo 3 · Razonamiento matemático</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Calcular probabilidades de eventos simples y compuestos, y aplicar los principios de adición y multiplicación a problemas de conteo y elecciones.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La probabilidad y el conteo aparecen en bloque pequeño, pero cada ítem vale lo mismo que un problema de álgebra. La buena noticia es que la mayoría usa solo tres ideas: casos totales, casos favorables y la regla de la suma.</p><h4 class="lecc-h4">Tres reglas que resuelven el 90 %</h4><ol class="lecc-ol"><li><strong>Probabilidad de un evento simple</strong>: casos favorables entre casos totales, y el total se calcula multiplicando si hay opciones independientes.</li><li><strong>Al menos uno</strong>: se calcula por el complemento, &quot;1 menos la probabilidad de que ninguno&quot;. Es la técnica que más se olvida.</li><li><strong>Y versus o</strong>: &quot;y&quot; restringe, &quot;o&quot; suma. La confusion entre ambos cambia por completo el resultado.</li></ol><h4 class="lecc-h4">El error de la &quot;casca de favorable&quot;</h4><p>Un problema dice: &quot;se saca una bola de una urna con 3 rojas, 2 azules y 1 verde. ¿Probabilidad de que sea azul o verde?&quot;. Casos favorables son 2 + 1 = 3; total 6; resultado 1/2.</p><p>Si alguien cuenta solo las azules y dice 2 de 6, falló en el &quot;o&quot;. El mismo error, invertido, aparece en &quot;roja y azul&quot;, donde la respuesta no es 4 de 6 sino 0, porque una sola bola no puede ser de dos colores a la vez.</p><h4 class="lecc-h4">El resto y las bolas que regresan</h4><p>Cuando se saca una bola y se devuelve, los casos se multiplican: dos extracciones con reemplazo dan 6 × 6 casos. Sin reemplazo, son 6 × 5, y el segundo cambio es lo que casi nadie aplica. La palabra clave en el enunciado es &quot;devuelve&quot; o &quot;repone&quot;, y decide si multiplicas por 6 o por 5.</p><h4 class="lecc-h4">Probabilidad condicional: solo una idea</h4><p>&quot;La probabilidad de aprobar dado que estudiaste 10 horas&quot; no es &quot;probabilidad de aprobar&quot; dividida por &quot;probabilidad de estudiar&quot;. Es una constatación distinta: cuenta los casos de la primera fila y luego qué parte de ellos son estudio. La fórmula es: casos donde ocurre A y B, dividido por casos donde ocurre B.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>En un grupo de 30 estudiantes, 18 estudian matemáticas, 15 estudian física, y 10 estudian ambas. Si se elige un estudiante al azar, ¿cuál es la probabilidad de que estudie matemáticas o física?</p><h4 class="lecc-h4">Método 1: por conteo directo</h4><ul class="lecc-ul"><li>Primero: los que estudian matemáticas o física son los de matemáticas, más los de física, menos los que están en ambos: 18 + 15 − 10 = 23.</li><li>La probabilidad es 23 de 30.</li></ul><h4 class="lecc-h4">Método 2: por la regla de la suma</h4><ul class="lecc-ul"><li>Segundo: probabilidad de matemáticas es 18/30, de física 15/30, y de ambas 10/30. La suma es 18/30 + 15/30 − 10/30 = 23/30.</li><li>Es el mismo 23, expresado de otra forma. La resta de 10/30 es justamente lo que muchos olvidan.</li></ul><h4 class="lecc-h4">Método 3: contar los que no estudian ninguna</h4><ul class="lecc-ul"><li>Tercero: los que no estudian ninguna son 30 − 23 = 7. Probabilidad de alguna: 1 − 7/30 = 23/30.</li><li>El método del complemento sirve de comprobación: si 1 − 7/30 da lo mismo, el conteo directo era correcto.</li></ul><div class="lecc-nota">La respuesta 23/30 aparece en los tres métodos, pero cada uno te hace ver una parte distinta de la misma situación. Saber cuál usar en la prueba es lo que separa el acierto del casi.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Ante cualquier &quot;o&quot;, cuenta primero los que están en los dos conjuntos y réstalos una sola vez. Ese es el 80 % de los errores de estos ítems.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-2-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-algebra-ecuaciones-y-sistemas.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-razonamiento-con-figuras-y-series.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-2-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

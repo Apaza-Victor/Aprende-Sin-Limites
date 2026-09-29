@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Predicado nominal o verbal</text>
+
+  <text x="18" y="48" class="fig-sub">Como se decide</text>
+  <rect x="14" y="58" width="150" height="52" rx="9" class="fig-apoyo"/>
+  <text x="89" y="80" text-anchor="middle" class="fig-titulo" font-size="12.5">1. El nucleo es</text>
+  <text x="89" y="98" text-anchor="middle" class="fig-titulo" font-size="12.5">un verbo copulativo?</text>
+
+  <rect x="196" y="58" width="150" height="52" rx="9" class="fig-zona"/>
+  <text x="271" y="80" text-anchor="middle" class="fig-sub" font-size="12">ser, estar, parecer,</text>
+  <text x="271" y="98" text-anchor="middle" class="fig-sub" font-size="12">permanecer, quedar, resultar</text>
+
+  <line x1="164" y1="84" x2="192" y2="84" class="fig-flecha"/>
+
+  <rect x="14" y="126" width="158" height="66" rx="9" class="fig-ok"/>
+  <text x="93" y="148" text-anchor="middle" class="fig-ok-txt" font-size="13">SI: predicado nominal</text>
+  <text x="26" y="168" class="fig-nota" font-size="11.5">lo que sigue es el</text>
+  <text x="26" y="184" class="fig-nota" font-size="11.5">atributo: dice como es</text>
+
+  <rect x="188" y="126" width="158" height="66" rx="9" class="fig-destac"/>
+  <text x="267" y="148" text-anchor="middle" class="fig-destac-txt" font-size="13">NO: predicado verbal</text>
+  <text x="200" y="168" class="fig-nota" font-size="11.5">lo que sigue es</text>
+  <text x="200" y="184" class="fig-nota" font-size="11.5">complemento: cuenta un suceso</text>
+
+  <rect x="14" y="206" width="332" height="42" rx="9" class="fig-zona"/>
+  <text x="30" y="224" class="fig-sub">La casa es grande  (nominal, porque grande califica a la casa)</text>
+  <text x="30" y="242" class="fig-sub">La casa fue construida en 1920  (verbal, porque cuenta un suceso)</text>
+</svg>

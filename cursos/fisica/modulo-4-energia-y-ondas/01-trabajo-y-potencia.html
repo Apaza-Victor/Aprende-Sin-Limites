@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajo y potencia — Física</title>
+  <meta name="description" content="Calcular trabajo (W = F·d·cos θ) y potencia (P = W/t) comprobando unidades y verificando el resultado con un segundo camino de cálculo." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Energía y ondas</a> <span class="mx-2 opacity-50">/</span>
+          <span>Trabajo y potencia</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Trabajo y potencia</h1>
+            <p class="articulo-modulo">Módulo 4 · Energía y ondas</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Calcular trabajo (W = F·d·cos θ) y potencia (P = W/t) comprobando unidades y verificando el resultado con un segundo camino de cálculo.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El trabajo mide la transferencia de energía que ocurre cuando una fuerza actúa mientras algo se desplaza. Es la primera vez que una fórmula de física conecta fuerza, distancia y energía, y esa conexión organiza todo el módulo.</p><h4 class="lecc-h4">La definición y sus tres condiciones</h4><p>W = F · d · cos θ, donde θ es el ángulo entre la fuerza y el desplazamiento. Las tres palabras que hay que leer en esa fórmula son:</p><ul class="lecc-ul"><li><strong>Fuerza</strong>: si vale cero, no hay trabajo, por muy grande que sea el desplazamiento.</li><li><strong>Desplazamiento</strong>: si vale cero, tampoco hay trabajo. Por eso un empuje vertical contra el suelo no mueve la caja y no hace trabajo.</li><li><strong>Coseno del ángulo</strong>: separa el caso útil del inútil. Coseno de 0 grados vale 1, y el trabajo es máximo; coseno de 90 grados vale cero, y el empuje es enteramente perpendicular; por encima de 90 grados el coseno es negativo, y el trabajo es negativo.</li></ul><h4 class="lecc-h4">Trabajo positivo, negativo y nulo</h4><ul class="lecc-ul"><li><strong>Positivo</strong>: la fuerza tiene componente en el sentido del movimiento. Acelera al cuerpo, y la energía cinética aumenta. Ejemplo: empujar una bicicleta hacia adelante mientras rueda.</li><li><strong>Negativo</strong>: la fuerza se opone al movimiento. Frena al cuerpo, y la energía cinética disminuye. Ejemplo: los frenos, o la fricción.</li><li><strong>Nulo</strong>: la fuerza es perpendicular al movimiento, o no hay desplazamiento. Ejemplo: el peso de un bloque que se desliza horizontalmente.</li></ul><p>Ese signo es la clave conceptual del curso: la energía no se crea ni se destruye, se transfiere. Un cuerpo que frena pierde energía cinética, y esa energía aparece en otro lado, casi siempre como calor.</p><h4 class="lecc-h4">La potencia es la rapidez del trabajo</h4><p>La potencia mide cuánto trabajo se hace por unidad de tiempo: P = W/t. Se expresa en vatios, y 1 vatio es 1 joule por segundo. La fórmula admite una lectura menos conocida, P = F · v, que se obtiene sustituyendo d = v · t, y que tiene una lectura interesante: si la fuerza y la rapidez se mantienen, la potencia es la misma. Un motor que entrega la misma potencia puede dar un par grande a baja velocidad o un par pequeño a alta velocidad.</p><p>Y esa es la razón de las transmisiones de un automóvil: bajan la velocidad para entregar un par mucho mayor en las subidas.</p><h4 class="lecc-h4">Trabajo y energía</h4><p>La utilidad del trabajo es que conecta con la energía cinética. El teorema trabajo-energía dice que el trabajo neto sobre un cuerpo es igual al cambio de su energía cinética:</p><ul class="lecc-ul"><li>Trabajo total positivo, energía cinética aumenta.</li><li>Trabajo total negativo, energía cinética disminuye.</li><li>Trabajo total cero, la rapidez no cambia.</li></ul><p>Esa igualdad es la que permite resolver problemas sin usar la segunda ley, y suele ser el camino más corto cuando el enunciado da velocidades y busca una distancia.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una persona empuja un escritorio de 40 kg a lo largo de 6 m del suelo con una fuerza de 200 N en la misma dirección del movimiento. La fricción es de 50 N. ¿Qué trabajo realiza la persona, cuál es el trabajo de la fricción y cuánto increase la energía cinética del escritorio?</p><h4 class="lecc-h4">Método 1: el trabajo de cada fuerza por separado</h4><ul class="lecc-ul"><li>Primero: la persona empuja en el sentido del movimiento, así que el ángulo es 0 grados y el coseno vale 1. Su trabajo es 200 · 6 = 1200 J.</li><li>Segundo: la fricción se opone al movimiento, de modo que su ángulo es 180 grados y su coseno vale menos uno. Su trabajo es 50 · 6 con el signo cambiado, es decir menos 300 J.</li><li>Tercero: la gravedad y la normal no aportan trabajo, porque son perpendiculares al desplazamiento horizontal.</li></ul><h4 class="lecc-h4">Método 2: el trabajo neto</h4><ul class="lecc-ul"><li>Cuarto: el trabajo neto es la diferencia, 1200 menos 300 = 900 J.</li><li>Quinto: por el teorema trabajo-energía, ese trabajo neto es igual al cambio de la energía cinética. El escritorio gana 900 J de energía cinética.</li></ul><h4 class="lecc-h4">Método 3: comprobarlo con la segunda ley</h4><ul class="lecc-ul"><li>Sexto: la fuerza neta es 200 − 50 = 150 N, y la aceleración es 150 entre 40 = 3,75 m/s².</li><li>Séptimo: partiendo del reposo, la energía cinética final es un medio de m por v al cuadrado, y como v = a · t, el resultado coincide con los 900 J del método anterior.</li><li>Octavo: la comprobación confirma que la suma de trabajos por fuerza da el mismo resultado que la fuerza neta aplicada al camino completo.</li></ul><div class="lecc-nota">El resultado a retener es que el trabajo de la fricción siempre resta. Declarar el signo de la fricción al principio evita el error más común: reportar 1500 J en lugar de 900 J.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de multiplicar, decide si la fuerza ayuda o estorba y anótalo. El signo del trabajo se decide con esa palabra, y no al final cuando ya hiciste la cuenta.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-3-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-3-estatica-y-equilibrio/05-estabilidad.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-energia-cinetica-y-potencial.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-3-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

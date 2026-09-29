@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salud y prevención — Ciencia, Tecnología y Ambiente</title>
+  <meta name="description" content="Distinguir los tres pilares de la salud y deducir, con criterio, que estilos de vida los rompen." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="ciencia-tecnologia-ambiente">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Ciencia, Tecnología y Ambiente</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · La vida y los seres vivos</a> <span class="mx-2 opacity-50">/</span>
+          <span>Salud y prevención</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-leaf"></i></div>
+            <h1 class="articulo-titulo">Salud y prevención</h1>
+            <p class="articulo-modulo">Módulo 1 · La vida y los seres vivos</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Distinguir los tres pilares de la salud y deducir, con criterio, que estilos de vida los rompen.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">La idea de fondo</h4><p>La salud no es la ausencia de enfermedad: es tener el cuerpo en equilibrio. Ese equilibrio depende de tres pilares, y si uno cae, los otros dos se sostienen con dificultad.</p><h4 class="lecc-h4">Pilar 1: alimentacion</h4><ul class="lecc-ul"><li>Que necesita el cuerpo: proteínas para construir, carbohidratos para dar energía, grasas para reservar, vitaminas y minerales para funcionar.</li><li>Que conviene limitar: la sal, el azúcar libre y las grasas procesadas.</li><li>La OMS recomienda menos de cinco gramos de sal al día, y la mayor parte de la población consume el doble.</li><li>La OMS limita también el azúcar libre a menos del diez por ciento de la energía diaria.</li></ul><div class="lecc-nota">Si una pregunta pide opinión, la respuesta no es que la comida sea mala, sino el exceso. La diferencia es de cantidad, no de tipo.</div><h4 class="lecc-h4">Pilar 2: actividad física</h4><ul class="lecc-ul"><li>Que hace: fortalece el corazón y los músculos, mejora el sueño y el ánimo, y regula el azúcar en sangre.</li><li>Cuanto: la OMS recomienda entre 150 y 300 minutos de actividad moderada por semana, más sesiones de fuerza dos veces por semana.</li><li>Ejemplo: caminar treinta minutos a buen paso, cinco días por semana, ya cumple el mínimo.</li></ul><div class="lecc-nota">El error más común es pensar que hace falta el gimnasio. La recomendación oficial cuenta caminar rápido, montar en bici y subir escaleras.</div><h4 class="lecc-h4">Pilar 3: descanso</h4><ul class="lecc-ul"><li>Que hace: el cuerpo se repara mientras duerme, y es cuando se consolida la memoria.</li><li>Cuanto: entre siete y nueve horas en adultos.</li><li>Ejemplo: dormir seis horas de forma sostenida deteriora la atención y el criterio igual que el alcohol.</li></ul><div class="lecc-nota">Dormir bien no es un lujo: es el momento en que el cuerpo hace el trabajo más importante del día.</div><h4 class="lecc-h4">Los determinantes sociales</h4><p>La salud no depende solo de la voluntad. También depende de:</p><ul class="lecc-ul"><li>El agua disponible.</li><li>Los alimentos que se pueden comprar.</li><li>La distancia al centro de salud.</li><li>Los horarios y la carga de trabajo.</li><li>La vivienda y la calidad del aire.</li></ul><div class="lecc-nota">Decir que una enfermedad se debe solo a que la gente no se cuida es falso. Muchas veces no hay alternativa.</div><h4 class="lecc-h4">Factores de riesgo</h4><p>Hay factores que no se cambian y factores que si.</p><ul class="lecc-ul"><li>No se cambian: la edad, el sexo y la herencia genetica.</li><li>Se cambian: el tabaco, el alcohol, la alimentacion, la inactividad y el estrés.</li></ul><p>La medicina preventiva trabaja justamente sobre los que se pueden cambiar.</p><h4 class="lecc-h4">Las dos normas básicas de prevención</h4><ol class="lecc-ol"><li><strong>Vacunarse</strong>: es la forma más barata y eficaz de prevenir enfermedades infecciosas.</li><li><strong>Lavarse las manos</strong>: rompe la cadena de transmisión de las enfermedades.</li></ol><div class="lecc-nota">Para el agua segura basta una regla: beber agua tratada, cocinar bien y conservar los alimentos tapados.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Evaluemos tres casos con los tres pilares.</p><h4 class="lecc-h4">Caso 1: la oficinista</h4><ul class="lecc-ul"><li>Come en un restaurante rápido todos los días, con mucha sal y poca verdura.</li><li>Trabaja ocho horas sentada, sin actividad física.</li><li>Duerme cinco horas porque ve el teléfono hasta tarde.</li><li>Conclusión: los tres pilares están afectados a la vez. Por eso está cansada y tiene la presión alta.</li></ul><h4 class="lecc-h4">Caso 2: el nadador</h4><ul class="lecc-ul"><li>Come bien y duerme ocho horas.</li><li>Se mueve todo el día, pero no hace ejercicios de fuerza.</li><li>Conclusión: el problema no es el alimento ni el descanso. Es que su actividad no cubre todos los grupos musculares.</li></ul><h4 class="lecc-h4">Caso 3: la jubilada</h4><ul class="lecc-ul"><li>Come bien y no fuma.</li><li>Su jubilación le permite dormir bien y caminar a diario.</li><li>Conclusión: los tres pilares funcionan. Su riesgo no viene de su conducta, sino de la edad, que no se puede cambiar.</li></ul><h4 class="lecc-h4">Que se hace en cada caso</h4><ul class="lecc-ul"><li>Caso 1: cambiar un hábito cada vez. Primero el agua, después el sueño, luego el movimiento.</li><li>Caso 2: añadir dos días de fuerza por semana.</li><li>Caso 3: no hay que cambiar la conducta, sino controlar la presión y la visión con más frecuencia.</li></ul><h4 class="lecc-h4">Conclusión</h4><ul class="lecc-ul"><li>Conclusión: los mismos tres pilares explican los tres casos. Lo que cambia es cuales están rotos, no el método.</li><li>Ojo: un caso puede estar bien en un pilar y ser un desastre en el otro. La salud se evalua pilar por pilar, nunca de forma general.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Para responder una pregunta de salud, nombra los tres pilares y dí cuales están rotos. Esa estructura vale igual para una persona que para una comunidad.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="ciencia-tecnologia-ambiente-0-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-el-cuerpo-humano-sistemas.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-2-materia-energia-y-fenomenos/01-la-materia-y-sus-propiedades.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "ciencia-tecnologia-ambiente-0-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

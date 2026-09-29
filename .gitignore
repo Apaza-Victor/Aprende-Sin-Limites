@@ -1,0 +1,23 @@
+# .opencode/
+# Configuracion y skills del editor con el que se escribe el proyecto. Es
+# tooling personal, no parte del sitio, y arrastra 55 MB de node_modules que no
+# tienen nada que ver con el contenido educativo.
+.opencode/
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node (el proyecto no tiene package.json; esto es por si se anade despues)
+node_modules/
+npm-debug.log*
+
+# Los .html de cursos/ y secciones/ SI se versionan a proposito: son el
+# resultado de los generadores y hacen falta para publicar el sitio sin
+# ejecutar Node. No hay nada mas que ignorar.

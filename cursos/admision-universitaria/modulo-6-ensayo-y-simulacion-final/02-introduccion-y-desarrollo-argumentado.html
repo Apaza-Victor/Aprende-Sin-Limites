@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introducción y desarrollo argumentado — Admisión Universitaria</title>
+  <meta name="description" content="Redactar una introducción que enganche y un desarrollo que defienda la tesis con argumentos ordenados, ejemplos pertinentes y transiciones claras." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 6 · Ensayo y simulación final</a> <span class="mx-2 opacity-50">/</span>
+          <span>Introducción y desarrollo argumentado</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Introducción y desarrollo argumentado</h1>
+            <p class="articulo-modulo">Módulo 6 · Ensayo y simulación final</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Redactar una introducción que enganche y un desarrollo que defienda la tesis con argumentos ordenados, ejemplos pertinentes y transiciones claras.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La introducción de un ensayo tiene una función oculta: convertir un tema en una tesis. No es un párrafo de contexto ni una cita de definición, aunque a veces los incluya. Su estructura tiene tres movimientos fijos, y en ese orden.</p><h4 class="lecc-h4">Los tres movimientos de la introducción</h4><ol class="lecc-ol"><li><strong>Presentar el tema</strong>: dos o tres frases que situen el asunto y muestren que tiene en debate. Nada de &quot;desde tiempos antiguos&quot;.</li><li><strong>Acotar el debate</strong>: nombra las dos posturas principales, sin defender ninguna todavía. Esto es lo que la mayoría omite y lo que más se puntúa.</li><li><strong>Emitir la tesis</strong>: tu posición, con un &quot;por tanto&quot; o &quot;sin embargo&quot; que la ligue al movimiento anterior.</li></ol><p>La prueba se corrige con este esquema. Si falta el segundo movimiento, la introducción parece un tema opcional en lugar de un argumento.</p><h4 class="lecc-h4">La frase de definición</h4><p>Definir el término clave es útil, pero solo si la definición te sirve después. Una definición que no usas en el desarrollo es relleno. La prueba útil es: escribe la definición al final del párrafo, y comprueba que al menos un argumento posterior la use. Si no la usa ninguno, bórrala.</p><h4 class="lecc-h4">El primer movimiento de la introducción</h4><p>Presentar el tema no es empezar a hablar del tema: es mostrar que tiene una tensión. La estructura es &quot;mientras X se mantiene, Y continúa siendo cierto, y esa tensión es el objeto de este ensayo&quot;. Con esa frase, el corrector sabe que entiendes qué vas a hacer, y el resto de la introducción se lee sola.</p><h4 class="lecc-h4">La tesis y su relación con el título</h4><p>Si el título dice &quot;Tecnología y autonomía en la educación&quot;, la tesis no puede ser &quot;la tecnología es buena&quot;, porque es más ancha que el título. La tesis debe caer <strong>dentro</strong> del título: &quot;la autonomía que desarrolla el uso temprano de la tecnología mejora el aprendizaje, siempre que venga acompañada de supervisión adulta&quot;. Esa es la diferencia entre un ensayo que responde al enunciado y uno que se desvía.</p><p>El desarrollo es donde se gana o se pierde la nota. La diferencia entre un párrafo de desarrollo y un párrafo decorativo es una sola: el párrafo decorativo habla del tema, el de desarrollo habla de la tesis.</p><h4 class="lecc-h4">La estructura interna de un párrafo de desarrollo</h4><p>Un párrafo de desarrollo tiene cuatro movimientos, y en ese orden:</p><ol class="lecc-ol"><li><strong>Afirmación</strong>: la idea del párrafo, una frase.</li><li><strong>Explicación</strong>: por qué esa idea sostiene la tesis.</li><li><strong>Evidencia</strong>: un ejemplo, un dato o una cita.</li><li><strong>Remate</strong>: una frase que devuelve el control a la tesis.</li></ol><p>Si quitas el movimiento 3, el párrafo es una opinión. Si quitas el 4, es un dato suelto. La prueba corrige párrafo por párrafo, y un párrafo sin el movimiento 4 cuenta como incompleto.</p><h4 class="lecc-h4">La evidencia de calidad y la de relleno</h4><p>Una evidencia buena cumple tres condiciones: es concreta, es relevante para la idea del párrafo y está conectada con ella por una frase. &quot;Según un estudio de 2019&quot; sin decir qué pasa y sin conectarlo es relleno. La frase que conecta es la que el corrector lee: &quot;esto muestra que...&quot;, &quot;a diferencia de...&quot;, &quot;por lo tanto&quot;.</p><h4 class="lecc-h4">Un párrafo, una idea</h4><p>Si necesitas la palabra &quot;además&quot; para unir dos ideas dentro de un párrafo, probablemente sean dos párrafos. La prueba penaliza los párrafos que hacen dos cosas, porque el desarrollo se vuelve difícil de seguir y las ideas se mezclan en la corrección. La señal de alarma es un párrafo de más de seis líneas con dos ideas.</p><h4 class="lecc-h4">El orden del desarrollo</h4><p>Tres órdenes funcionan, y uno falla:</p><ul class="lecc-ul"><li><strong>De lo general a lo particular</strong>: PRESENTAS la idea amplia y luego la aterrizas. Es el más fácil de controlar.</li><li><strong>De lo particular a lo general</strong>: empiezas con un caso y terminas sacando la idea. Es el más efectivo.</li><li><strong>Por fuerza del argumento</strong>: del argumento más débil al más fuerte, terminando con el mejor.</li></ul><p>El que falla es el de alternar: un argumento fuerte, uno débil, uno fuerte. El lector sube y baja, y el efecto se pierde.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un enunciado pide: &quot;Compara la lectura en papel y la lectura en pantalla&quot;.</p><h4 class="lecc-h4">Método 1: presentar el tema con tensión</h4><ul class="lecc-ul"><li>Primero: &quot;Durante años se reopened debate sobre si la lectura en pantalla afecta la comprensión. Mientras los estudios iniciales mostraban ventajas en motivacion, los de laboratorio mostrabanheit pérdidas en comprensión profunda.&quot;</li></ul><h4 class="lecc-h4">Método 2: acotar las dos posturas</h4><ul class="lecc-ul"><li>Segundo: nombro ambas posturas de forma simétrica: por un lado, quien argue que la pantalla mejora el acceso y la motivación; por otro, quien señala que dificulta la comprensión larga.</li><li>No defiendo ninguna todavía, y por eso el párrafo es honesto ySX completo.</li></ul><h4 class="lecc-h4">Método 3: emitir la tesis dentro del título</h4><ul class="lecc-ul"><li>Tercero: &quot;Sin embargo, la diferencia no está en el formato sino en la tarea: la pantalla favorece la lectura exploratoria y el papel favorece la lectura profunda&quot;.</li><li>Esa tesis responde exactamente al &quot;compara&quot; del enunciado y además aporta el criterio con el que se comparará.</li></ul><div class="lecc-nota">La introducción ocupa un párrafo, pero hizo los tres trabajos:presentedó la tensión, delimitó el debate y fijó el criterio de comparación. Ese criterio es lo que hace que el desarrollo no se disperse.</div><p>@@@EJEMPLO</p><p>Un párrafo de desarrollo dice: &quot;La lectura en pantalla permite buscar palabras desconocidas al instante, lo cual aumenta la fluidez. Además, es más cómoda. Este es un beneficio de la lectura digital para los estudiantes.&quot;</p><h4 class="lecc-h4">Método 1: identificar el movimiento 1</h4><ul class="lecc-ul"><li>Primero: la afirmación es &quot;la lectura en pantalla permite buscar palabras desconocidas al instante&quot;. Está clara y es discutible.</li><li>La tesis del ensayo era sobre la relación entre formato y tarea, así que esta afirmación debe conectar con la tarea de explorar, no solo con la comodidad.</li></ul><h4 class="lecc-h4">Método 2: localizar la evidencia</h4><ul class="lecc-ul"><li>Segundo: la evidencia es implícita y nunca se nombra. Un párrafo que dice &quot;aumenta la fluidez&quot; sin decir un dato, un ejemplo o un estudio es un párrafo de opinión.</li><li>La mejora de la evidencia sería una frase como &quot;los estudios con diccionarios integrados registran menos interrupciones durante la lectura exploratoria&quot;.</li></ul><h4 class="lecc-h4">Método 3: detectar el remate ausente</h4><ul class="lecc-ul"><li>Tercero: el cierre &quot;Este es un beneficio&quot; no devuelve el control a la tesis, solo repite. Un remate real sería &quot;y por eso el formato favorece la lectura exploratoria, no la comprensión profunda&quot;.</li><li>Con ese remate, el párrafo se conecta con la tesis y deja de ser un ejemplo suelto.</li></ul><div class="lecc-nota">Los tres métodos muestran el mismo problema: el párrafo tiene una idea buena y la evidencia y el remate que la sostienen. La corrección de mayor impacto es añadir el remate.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Escribe tu introducción en borradores y Léela como si fueras el corrector: si no queda claro en tres frases qué vas a sostener, todavía no está lista. Después de escribir cada párrafo, escribe su primera frase en un margen. Si al leer las cinco primeras frases no se entiende el desarrollo, rehazlo.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-5-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-el-ensayo-estructura-y-tesis.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-conclusion-y-cierre.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-5-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

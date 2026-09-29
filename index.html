@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aprende Sin Límites — Ruta completa de estudio</title>
+  <meta name="description" content="Guía completa y gratuita con 11 cursos, 50 módulos y 242 lecciones de Matemática, Física, Química, Biología, Alfabetización Digital, Historia, Ciencia, Tecnología y Ambiente, Razonamiento Matemático, Razonamiento Verbal, Comunicación y Admisión universitaria para prepararte sin límites." />
+  <script>
+  /* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+     no aparezca un instante en el tema contrario. La clave es la misma que usa
+     ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+  (function () {
+    var t;
+    try {
+      t = localStorage.getItem("asl-tema");
+    } catch (e) {
+      t = null;
+    }
+    if (t !== "claro" && t !== "oscuro") {
+      /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+         se usa el oscuro, que es el tema por defecto del sitio. */
+      t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+        ? "claro"
+        : "oscuro";
+    }
+    document.documentElement.setAttribute("data-tema", t);
+  })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="index.html">
+        <i class="bi bi-stars fs-5"></i> Aprende Sin Límites
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal"
+        aria-controls="navPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="badge-grad d-inline-flex align-items-center gap-2 mb-4">
+            <i class="bi bi-rocket-takeoff"></i> Tu camino académico comienza aquí
+          </span>
+          <h1 class="mb-3">
+            Prepara tus <span class="grad-texto">11 cursos clave</span><br />y llega a tu meta
+          </h1>
+          <p class="lead mb-4">
+            Un curso gratuito y organizado de Matemática, Física, Química, Biología, Alfabetización Digital, Historia,
+            Ciencia, Tecnología y Ambiente, Razonamiento Matemático, Razonamiento Verbal, Comunicación y una ruta
+            completa de Admisión Universitaria. Teoría clara, ejemplos resueltos y ruta de estudio paso a paso.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="secciones/cursos.html" class="btn btn-cta">
+              <i class="bi bi-mortarboard me-1"></i> Explorar cursos
+            </a>
+            <a href="secciones/metodo.html" class="btn btn-ghost">
+              <i class="bi bi-compass me-1"></i> Ver método
+            </a>
+          </div>
+          <div class="row g-3">
+            <div class="col-4">
+              <div class="stat">
+                <div class="numero">11</div>
+                <div class="leyenda">Cursos completos</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat">
+                <div class="numero">50</div>
+                <div class="leyenda">Módulos temáticos</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat">
+                <div class="numero">242</div>
+                <div class="leyenda">Lecciones guiadas</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="tarjeta curso-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="icono"><i class="bi bi-journal-check"></i></div>
+              <div>
+                <h5 class="mb-0">Tu objetivo</h5>
+                <small class="col-mut">Admisión, exámenes o repaso</small>
+              </div>
+            </div>
+            <div class="ruta">
+              <div class="paso">
+                <h5><i class="bi bi-1-circle me-2"></i>Diagnostica</h5>
+                <p>Identifica tu nivel con un repaso inicial por curso.</p>
+              </div>
+              <div class="paso">
+                <h5><i class="bi bi-2-circle me-2"></i>Estudia por módulos</h5>
+                <p>Avanza en orden con marcas de progreso automáticas.</p>
+              </div>
+              <div class="paso">
+                <h5><i class="bi bi-3-circle me-2"></i>Practica y repasa</h5>
+                <p>Refuerza con recursos externos y simulacros frecuentes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== CURSOS ===== -->
+    <section id="cursos" class="seccion">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="etiqueta">Catálogo</span>
+          <h2 class="titulo-seccion mt-1">Elige tu curso y empieza hoy</h2>
+          <p class="col-mut mx-auto" style="max-width: 44rem;">
+            Cada curso está dividido en módulos y lecciones con objetivos claros. Usa el buscador para filtrar.
+          </p>
+          <a class="btn btn-ghost btn-sm mt-2" href="secciones/cursos.html">
+            <i class="bi bi-box-arrow-up-right me-1"></i> Abrir la página de cursos
+          </a>
+          <div class="mx-auto mt-4 buscador-hero" style="max-width: 30rem;">
+            <div class="input-group input-group-lg">
+              <span class="input-group-text bg-transparent text-light border-0"><i class="bi bi-search"></i></span>
+              <input type="search" id="buscadorCursos" class="form-control bg-transparent text-light border-0"
+                placeholder="Buscar un curso o área…" aria-label="Buscar cursos" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Admisión universitaria -->
+          <div class="col-md-6 col-xl-4" data-curso="admision-universitaria">
+            <article class="tarjeta curso-card reveal" data-busqueda="admision universitaria estrategia diagnostico ensayo examen ingreso simulacro prueba tiempo razonamiento verbal matematico escritura conocimiento general">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-mortarboard"></i></div>
+                <div>
+                  <h4 class="mb-1">Admisión Universitaria</h4>
+                  <small class="col-mut">7 módulos · 35 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                Estrategia, razonamiento y escritura para entrar a la universidad: cómo estudiar, cómo rinde el
+                tiempo y cómo responder cada tipo de pregunta.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">Estrategia</span>
+                <span class="chip">Razonamiento verbal</span>
+                <span class="chip">Razonamiento matemático</span>
+                <span class="chip">Escritura</span>
+                <span class="chip">Conocimiento general</span>
+              </div>
+              <a class="link-curso" href="cursos/admision-universitaria/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Matemática -->
+          <div class="col-md-6 col-xl-4" data-curso="matematica">
+            <article class="tarjeta curso-card reveal" data-busqueda="matematica aritmetica algebra geometria trigonometria numeros operaciones">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-calculator"></i></div>
+                <div>
+                  <h4 class="mb-1">Matemática</h4>
+                  <small class="col-mut">6 módulos · 30 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                Domina números, álgebra, geometría y trigonometría con teoría clara y ejemplos resueltos paso a paso.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">Aritmética</span>
+                <span class="chip">Álgebra</span>
+                <span class="chip">Geometría</span>
+                <span class="chip">Trigonometría</span>
+              </div>
+              <a class="link-curso" href="cursos/matematica/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Física -->
+          <div class="col-md-6 col-xl-4" data-curso="fisica">
+            <article class="tarjeta curso-card reveal" data-busqueda="fisica cinematica dinamica estatica energia movimiento leyes newton">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-lightning-charge"></i></div>
+                <div>
+                  <h4 class="mb-1">Física</h4>
+                  <small class="col-mut">7 módulos · 35 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                Comprende el movimiento, las fuerzas, la energía y las ondas desde cero con un enfoque práctico.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">Cinemática</span>
+                <span class="chip">Dinámica</span>
+                <span class="chip">Estática</span>
+                <span class="chip">Energía</span>
+                <span class="chip">Ondas</span>
+              </div>
+              <a class="link-curso" href="cursos/fisica/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Química -->
+          <div class="col-md-6 col-xl-4" data-curso="quimica">
+            <article class="tarjeta curso-card reveal" data-busqueda="quimica moleculas tabla periodica estequiometria orgánica acidos reacciones">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-droplet-fill"></i></div>
+                <div>
+                  <h4 class="mb-1">Química</h4>
+                  <small class="col-mut">4 módulos · 20 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                Aprende la materia, la tabla periódica, las reacciones y la química orgánica con ejemplos reales.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">Materia</span>
+                <span class="chip">Tabla periódica</span>
+                <span class="chip">Estequiometría</span>
+                <span class="chip">Orgánica</span>
+              </div>
+              <a class="link-curso" href="cursos/quimica/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Razonamiento Matemático -->
+          <div class="col-md-6 col-xl-4" data-curso="raz-matematico">
+            <article class="tarjeta curso-card reveal" data-busqueda="razonamiento matematico sucesiones series planteo ecuaciones estadistica probabilidad">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-brain"></i></div>
+                <div>
+                  <h4 class="mb-1">Razonamiento Matemático</h4>
+                  <small class="col-mut">4 módulos · 20 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                Desarrolla tu lógica con sucesiones, series, planteo de ecuaciones y estadística para exámenes de ingreso.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">Sucesiones</span>
+                <span class="chip">Series</span>
+                <span class="chip">Planteo</span>
+                <span class="chip">Probabilidad</span>
+              </div>
+              <a class="link-curso" href="cursos/razonamiento-matematico/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Razonamiento Verbal -->
+          <div class="col-md-6 col-xl-4" data-curso="raz-verbal">
+            <article class="tarjeta curso-card reveal" data-busqueda="razonamiento verbal sinonimos antonimos analogias comprension lectora conectores">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-chat-quote"></i></div>
+                <div>
+                  <h4 class="mb-1">Razonamiento Verbal</h4>
+                  <small class="col-mut">4 módulos · 20 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                Mejora tu vocabulario, comprensión lectora y precisión en analogías, sinónimos y conectores lógicos.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">Sinónimos</span>
+                <span class="chip">Antónimos</span>
+                <span class="chip">Analogías</span>
+                <span class="chip">Comprensión</span>
+              </div>
+              <a class="link-curso" href="cursos/razonamiento-verbal/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Comunicación / Lenguaje -->
+          <div class="col-md-6 col-xl-4" data-curso="comunicacion">
+            <article class="tarjeta curso-card reveal" data-busqueda="comunicacion lenguaje gramatica ortografia literatura redaccion tildacion">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-chat-square-text"></i></div>
+                <div>
+                  <h4 class="mb-1">Comunicación / Lenguaje</h4>
+                  <small class="col-mut">4 módulos · 20 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                Perfecciona gramática, ortografía, tilde diacrítica, redacción y literatura para comunicarte con precisión.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">Gramática</span>
+                <span class="chip">Ortografía</span>
+                <span class="chip">Redacción</span>
+                <span class="chip">Literatura</span>
+              </div>
+              <a class="link-curso" href="cursos/comunicacion/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Historia -->
+          <div class="col-md-6 col-xl-4" data-curso="historia">
+            <article class="tarjeta curso-card reveal" data-busqueda="historia peru prehispanico inca virreinato colonia independencia republica guerra del pacifico universal cronologia">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-flag"></i></div>
+                <div>
+                  <h4 class="mb-1">Historia del Perú y Universal</h4>
+                  <small class="col-mut">4 módulos · 20 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                Recorre el poblamiento de América, el Perú prehispánico, la colonia, la república y los grandes
+                procesos universales con cronología y análisis.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">Perú prehispánico</span>
+                <span class="chip">Colonia</span>
+                <span class="chip">República</span>
+                <span class="chip">Historia universal</span>
+              </div>
+              <a class="link-curso" href="cursos/historia/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Ciencia, Tecnología y Ambiente -->
+          <div class="col-md-6 col-xl-4" data-curso="ciencia-tecnologia-ambiente">
+            <article class="tarjeta curso-card reveal" data-busqueda="ciencia tecnologia ambiente cta biologia quimica fisica ecologia ecosistema desarrollo sostenible">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-diagram-3"></i></div>
+                <div>
+                  <h4 class="mb-1">Ciencia, Tecnología y Ambiente</h4>
+                  <small class="col-mut">3 módulos · 15 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                Estudia los seres vivos, la materia y la energía, los fenómenos naturales y el desarrollo sostenible
+                con experimentos y casos reales.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">Seres vivos</span>
+                <span class="chip">Materia y energía</span>
+                <span class="chip">Fenómenos</span>
+                <span class="chip">Ambiente</span>
+              </div>
+              <a class="link-curso" href="cursos/ciencia-tecnologia-ambiente/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <!-- Biología -->
+          <div class="col-md-6 col-xl-4" data-curso="biologia">
+            <article class="tarjeta curso-card reveal" data-busqueda="biologia biologia celular celula adn genes genetica herencia mendeliana ecologia ecosistema poblacion ambiente fotosintesis respiracion biotecnologia">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-brightness-high"></i></div>
+                <div>
+                  <h4 class="mb-1">Biología</h4>
+                  <small class="col-mut">4 módulos · 17 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                De la célula a los ecosistemas: células y tejidos, fotosíntesis y respiración, genética mendeliana,ADN y biotecnología, ecología, poblaciones y pérdida de biodiversidad.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">La célula</span>
+                <span class="chip">Genética</span>
+                <span class="chip">Ecología</span>
+                <span class="chip">Ambiente</span>
+              </div>
+              <a class="link-curso" href="cursos/biologia/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <!-- Alfabetización Digital -->
+          <div class="col-md-6 col-xl-4" data-curso="alfabetizacion-digital">
+            <article class="tarjeta curso-card reveal" data-busqueda="alfabetizacion digital computadora archivos carpetas respaldo backup seguridad contrasena phishing procesador de textos hojas de calculo excel formulas buscar reemplazar internet busqueda fuentes citas correo nube drive inteligencia artificial">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icono"><i class="bi bi-laptop"></i></div>
+                <div>
+                  <h4 class="mb-1">Alfabetización Digital</h4>
+                  <small class="col-mut">3 módulos · 10 lecciones</small>
+                </div>
+              </div>
+              <p class="col-mut">
+                Ordena tus archivos, crea contraseñas seguras, trabaja con procesador de textos y hojas de cálculo, busca con operadores, cita fuentes y usa el correo y la nube con criterio.
+              </p>
+              <div class="areas-chips mb-4">
+                <span class="chip">Archivos</span>
+                <span class="chip">Seguridad</span>
+                <span class="chip">Ofimática</span>
+                <span class="chip">Internet</span>
+              </div>
+              <a class="link-curso" href="cursos/alfabetizacion-digital/index.html">Ver curso <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MÉTODO ===== -->
+    <section id="metodo" class="seccion" data-curso="matematica">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5 reveal">
+            <span class="etiqueta">Cómo funciona</span>
+            <h2 class="titulo-seccion mt-1">Un método que te acompaña de principio a fin</h2>
+            <p class="col-mut mt-3">
+              No necesitas aprender de memoria. Cada lección sigue la misma estructura para que
+              siempre sepas qué hacer: objetivo, teoría, ejemplo resuelto y consejo.
+            </p>
+            <ul class="lista-checks mt-4">
+              <li><i class="bi bi-check-circle-fill"></i> Orden lógico: cada módulo depende del anterior.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Progreso guardado automáticamente en tu navegador.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Recursos externos gratuitos para practicar más.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Navegación anterior/siguiente en cada lección.</li>
+            </ul>
+            <a class="btn btn-ghost btn-sm mt-4" href="secciones/metodo.html">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Abrir la página del método
+            </a>
+          </div>
+          <div class="col-lg-7">
+            <div class="row g-4">
+              <div class="col-sm-6 reveal">
+                <div class="tarjeta p-4 h-100">
+                  <i class="bi bi-1-circle display-6" style="color: var(--acento);"></i>
+                  <h5 class="mt-3 mb-1">Objetivo claro</h5>
+                  <p class="col-mut mb-0">Sabes exactamente qué lograrás al terminar la lección.</p>
+                </div>
+              </div>
+              <div class="col-sm-6 reveal">
+                <div class="tarjeta p-4 h-100">
+                  <i class="bi bi-2-circle display-6" style="color: var(--acento);"></i>
+                  <h5 class="mt-3 mb-1">Teoría esencial</h5>
+                  <p class="col-mut mb-0">Solo lo necesario, explicado con lenguaje sencillo.</p>
+                </div>
+              </div>
+              <div class="col-sm-6 reveal">
+                <div class="tarjeta p-4 h-100">
+                  <i class="bi bi-3-circle display-6" style="color: var(--acento);"></i>
+                  <h5 class="mt-3 mb-1">Ejemplos resueltos</h5>
+                  <p class="col-mut mb-0">Cada concepto acompañado de un caso paso a paso.</p>
+                </div>
+              </div>
+              <div class="col-sm-6 reveal">
+                <div class="tarjeta p-4 h-100">
+                  <i class="bi bi-4-circle display-6" style="color: var(--acento);"></i>
+                  <h5 class="mt-3 mb-1">Consejos finales</h5>
+                  <p class="col-mut mb-0">Errores comunes y trucos para no caer en ellos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RECURSOS ===== -->
+    <section id="recursos" class="seccion">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="etiqueta">Fuentes abiertas</span>
+          <h2 class="titulo-seccion mt-1">Recursos gratuitos para ampliar cada tema</h2>
+          <a class="btn btn-ghost btn-sm mt-2" href="secciones/recursos.html">
+            <i class="bi bi-box-arrow-up-right me-1"></i> Abrir la página de recursos
+          </a>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="recurso h-100">
+              <h6><i class="bi bi-youtube me-2" style="color: var(--rosa);"></i>Khan Academy en Español</h6>
+              <p>Videos, ejercicios y práctica ilimitada de matemáticas, física y química.</p>
+              <span class="url">es.khanacademy.org</span>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="recurso h-100">
+              <h6><i class="bi bi-globe me-2" style="color: var(--cian);"></i>Razonamiento Verbal y Letras</h6>
+              <p>Listas de vocabulario, comprensión lectora y ortografía explicada.</p>
+              <span class="url">razonamientoverbal.com</span>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="recurso h-100">
+              <h6><i class="bi bi-book me-2" style="color: var(--ambar);"></i>Proyecto Descartes</h6>
+              <p>Material interactivo de ciencias (matemática, física y química) en español.</p>
+              <span class="url">proyectodescartes.org</span>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="recurso h-100">
+              <h6><i class="bi bi-lightbulb me-2" style="color: var(--verde);"></i>Educaplus</h6>
+              <p>Recursos interactivos de ciencias, física y química listos para usar.</p>
+              <span class="url">educaplus.org</span>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="recurso h-100">
+              <h6><i class="bi bi-journal-text me-2" style="color: var(--violeta);"></i>Biblioteca DLE (RAE)</h6>
+              <p>Diccionario y dudas del idioma para reforzar lenguaje y ortografía.</p>
+              <span class="url">dle.rae.es</span>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="recurso h-100">
+              <h6><i class="bi bi-pen-tool me-2" style="color: var(--azul);"></i>Banco de preguntas oficiales</h6>
+              <p>Simulacros y exámenes de admisión pasados de cada universidad.</p>
+              <span class="url">Página oficial de tu institución</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="seccion pb-5">
+      <div class="container contenedor-suave">
+        <div class="text-center mb-5 reveal">
+          <span class="etiqueta">Preguntas frecuentes</span>
+          <h2 class="titulo-seccion mt-1">¿Tienes dudas? Aquí las respondemos</h2>
+          <a class="btn btn-ghost btn-sm mt-2" href="secciones/faq.html">
+            <i class="bi bi-box-arrow-up-right me-1"></i> Abrir la página de preguntas
+          </a>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <article class="tarjeta faq-card h-100 reveal">
+              <span class="faq-ico"><i class="bi bi-compass"></i></span>
+              <h5 class="mt-3 mb-2">¿Por dónde debería empezar?</h5>
+              <p class="col-mut mb-0">
+                Por el curso en el que te sientas más débil. Cada curso es autónomo, pero dentro de él es
+                importante avanzar en orden porque los módulos se apoyan entre sí.
+              </p>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="tarjeta faq-card h-100 reveal">
+              <span class="faq-ico"><i class="bi bi-save"></i></span>
+              <h5 class="mt-3 mb-2">¿Cómo se guarda mi progreso?</h5>
+              <p class="col-mut mb-0">
+                Tus lecciones marcadas se guardan automáticamente en el almacenamiento local de tu navegador,
+                así puedes continuar donde lo dejaste aunque cierres la página.
+              </p>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="tarjeta faq-card h-100 reveal">
+              <span class="faq-ico"><i class="bi bi-clock-history"></i></span>
+              <h5 class="mt-3 mb-2">¿Cuántas horas debo estudiar al día?</h5>
+              <p class="col-mut mb-0">
+                Con 1 a 2 horas diarias constantes es suficiente si distribuyes los cursos a lo largo de la semana.
+                La constancia importa más que la cantidad.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2">
+            <i class="bi bi-stars"></i> Aprende Sin Límites
+          </div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="secciones/cursos.html" class="me-3">Cursos</a>
+          <a href="secciones/metodo.html" class="me-3">Método</a>
+          <a href="secciones/tablas.html" class="me-3">Tablas</a>
+          <a href="secciones/calculadora.html" class="me-3">Calculadora</a>
+          <a href="secciones/recursos.html">Recursos</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/principal.js"></script>
+</body>
+</html>

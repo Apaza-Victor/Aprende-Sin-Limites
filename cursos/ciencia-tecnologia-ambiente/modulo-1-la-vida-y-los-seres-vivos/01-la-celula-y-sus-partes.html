@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La célula y sus partes — Ciencia, Tecnología y Ambiente</title>
+  <meta name="description" content="Identificar las partes de la célula y la función de cada una, que es la base de toda la biología." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="ciencia-tecnologia-ambiente">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Ciencia, Tecnología y Ambiente</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · La vida y los seres vivos</a> <span class="mx-2 opacity-50">/</span>
+          <span>La célula y sus partes</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-leaf"></i></div>
+            <h1 class="articulo-titulo">La célula y sus partes</h1>
+            <p class="articulo-modulo">Módulo 1 · La vida y los seres vivos</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Identificar las partes de la célula y la función de cada una, que es la base de toda la biología.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">La idea de fondo</h4><p>La célula es la unidad mínima de vida: todo lo vivo está formado por células. En un ser humano hay unos treinta mil millones de ellas, y todas nacen de una sola.</p><h4 class="lecc-h4">Las dos grandes categorías</h4><ol class="lecc-ol"><li><strong>Células procariotas</strong>: no tienen núcleo ni orgánulos. Son las bacterias. Son más simples y más antiguas.</li><li><strong>Células eucariotas</strong>: si tienen núcleo y orgánulos. Son las de los animales, las plantas, los hongos y los protistas.</li></ol><div class="lecc-nota">La diferencia que hay que saber de memoria: <strong>núcleo si o núcleo no</strong>.</div><figure class="lecc-figura"><svg viewBox="0 0 360 250" role="img" aria-label="Nucleo, mitocondrias y membrana: cada parte con su funcion."><text x="180" y="18" text-anchor="middle" class="fig-titulo">Partes de la celula y su funcion</text>
+
+  <rect x="24" y="40" width="200" height="150" rx="26" class="fig-zona"/>
+
+  <ellipse cx="96" cy="110" rx="44" ry="34" class="fig-ok"/>
+  <ellipse cx="96" cy="110" rx="16" ry="12" class="fig-destac"/>
+
+  <ellipse cx="185" cy="80" rx="20" ry="10" class="fig-destac"/>
+  <ellipse cx="200" cy="160" rx="20" ry="10" class="fig-destac"/>
+
+  <line x1="224" y1="64" x2="262" y2="64" class="fig-medida"/>
+  <text x="268" y="68" class="fig-etiqueta" font-size="12">Membrana</text>
+
+  <line x1="140" y1="110" x2="262" y2="110" class="fig-medida"/>
+  <text x="268" y="114" class="fig-etiqueta" font-size="12">Nucleo</text>
+
+  <line x1="224" y1="182" x2="262" y2="182" class="fig-medida"/>
+  <text x="268" y="186" class="fig-etiqueta" font-size="12">Citoplasma</text>
+
+  <line x1="200" y1="170" x2="200" y2="198" class="fig-medida"/>
+  <text x="200" y="212" text-anchor="middle" class="fig-acento-texto" font-size="12">Mitocondria</text>
+
+  <text x="180" y="238" text-anchor="middle" class="fig-nota" font-size="12">Cada organelo hace una parte del trabajo de la celula.</text></svg><figcaption class="fig-titulo">Nucleo, mitocondrias y membrana: cada parte con su funcion.</figcaption></figure><h4 class="lecc-h4">Los orgánulos y su función</h4><ol class="lecc-ol"><li><strong>Membrana celular</strong>: envuelve la célula y decide que entra y que sale. Es como una puerta con filtro.</li><li><strong>Núcleo</strong>: guarda el ADN, las instrucciones de todo. Es el centro de mando.</li><li><strong>Citoplasma</strong>: es el líquido interior, y dentro flotan los orgánulos.</li><li><strong>Mitocondrias</strong>: producen la energía. Se les llama la central energética.</li><li><strong>Ribosomas</strong>: fabrican las proteínas.</li><li><strong>Retículo endoplasmático</strong>: transporta lo que se fabrica por dentro de la célula.</li><li><strong>Aparato de Golgi</strong>: empaqueta y envia lo que sale de la célula.</li><li><strong>Lisosomas</strong>: digieren lo que sobra y lo que entra.</li><li><strong>Vacuola</strong>: guarda agua y sustancias de reserva. En las plantas es enorme.</li><li><strong>Pared celular</strong>: da rigidez. Solo la tienen las plantas, los hongos y las bacterias.</li></ol><h4 class="lecc-h4">Las dos células que más se parecen</h4><p>La célula animal y la vegetal se parecen en casi todo. Se diferencian en cuatro cosas:</p><ul class="lecc-ul"><li>La vegetal tiene <strong>pared celular</strong>.</li><li>La vegetal tiene una <strong>vacuola enorme</strong>.</li><li>La vegetal tiene <strong>cloroplastos</strong>, con clorofila, para hacer la fotosíntesis.</li><li>La animal tiene <strong>centriolos</strong>, que ayudan a la división.</li></ul><div class="lecc-nota">La pregunta de examen: *la célula vegetal tiene mitocondrias?* Si, las dos las tienen. Lo único es que además tiene cloroplastos.</div><h4 class="lecc-h4">La teoría celular</h4><p>Fue formulada en el siglo XIX y dice tres cosas:</p><ol class="lecc-ol"><li>Todo lo vivo está formado por células.</li><li>La célula es la unidad básica de la vida.</li><li>Toda célula procede de otra célula.</li></ol>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Pregunta típica: *explica por que las plantas pueden hacer la fotosíntesis y los animales no.*</p><h4 class="lecc-h4">Método 1: identificar el orgánulo</h4><ul class="lecc-ul"><li>La fotosíntesis la hace el cloroplasto.</li></ul><h4 class="lecc-h4">Método 2: ver quien lo tiene</h4><ul class="lecc-ul"><li>El cloroplasto lleva clorofila, que es verde.</li><li>Solo las células vegetales tienen cloroplastos.</li></ul><h4 class="lecc-h4">Método 3: comparar las dos células</h4><ul class="lecc-ul"><li>La célula animal tiene mitocondrias pero no cloroplastos.</li><li>La célula vegetal tiene las dos cosas.</li></ul><h4 class="lecc-h4">Método 4: llegar a la conclusión</h4><ul class="lecc-ul"><li>Conclusión: las plantas pueden hacer la fotosíntesis porque son las únicas que tienen cloroplastos.</li></ul><h4 class="lecc-h4">Método 5: el matiz importante</h4><ul class="lecc-ul"><li>Las dos células tienen mitocondrias.</li><li>Por eso las dos respiran, y por eso las dos tienen energía.</li><li>La diferencia no está en la energía, está en la luz.</li></ul><h4 class="lecc-h4">Conclusión</h4><ul class="lecc-ul"><li>Conclusión: el cloroplasto es la única diferencia que explica la fotosíntesis. Las demas diferencias no afectan a ese proceso.</li><li>Ojo: la mitocondria no es exclusiva de la célula animal. Si una pregunta dice eso, es falsa.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Aprende los órganos por la función y no por el dibujo. Si sabes que hace la mitocondria, la retienes; si memorizas solo el nombre, se te olvida en un mes.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="ciencia-tecnologia-ambiente-0-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="index.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-clasificacion-de-los-seres-vivos.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "ciencia-tecnologia-ambiente-0-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

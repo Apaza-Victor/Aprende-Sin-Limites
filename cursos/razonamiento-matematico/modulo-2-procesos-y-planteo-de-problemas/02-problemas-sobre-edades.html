@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Problemas sobre edades — Razonamiento Matemático</title>
+  <meta name="description" content="Resolver problemas de edades usando una sola incognita y evitando el error de sumar dos veces la edad pedida." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="razonamiento-matematico">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Razonamiento Matemático</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Procesos y planteo de problemas</a> <span class="mx-2 opacity-50">/</span>
+          <span>Problemas sobre edades</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-brain"></i></div>
+            <h1 class="articulo-titulo">Problemas sobre edades</h1>
+            <p class="articulo-modulo">Módulo 2 · Procesos y planteo de problemas</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Resolver problemas de edades usando una sola incognita y evitando el error de sumar dos veces la edad pedida.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">El problema clasico de las edades</h4><p>En estos problemas hay dos edades que estan relacionadas. Si una es el doble, la suma, o la mitad de la otra, la incognita debe ser una sola.</p><h4 class="lecc-h4">Como se plantea</h4><ol class="lecc-ol"><li>Llama <strong>x</strong> a la edad que se pide en el enunciado.</li><li>La otra edad se escribe en funcion de x: si es el doble, 2x; si es la mitad, x/2; si le faltan n anos, x + n.</li><li>La suma de ambas es el dato que da el problema.</li></ol><ul class="lecc-ul"><li><strong>x + 2x = total</strong>, o la forma que corresponda.</li></ul><h4 class="lecc-h4">El error clasico</h4><div class="lecc-nota">Si pides la edad del mayor y escribes x, pero luego planteas x + 2x, estas usando x para el menor.</div><p>La solucion es escribir con claridad a quien representa x antes de plantear. Muchos errores vienen de no declarar esa decision.</p><h4 class="lecc-h4">Edades en el tiempo</h4><p>Cuando el problema dice dentro de n anos o hace n anos, la edad sera x + n o x - n, y el resto de cantidades tambien cambia.</p><ul class="lecc-ul"><li>Si hoy el padre tiene el doble que el hijo, dentro de 10 anos la relacion ya no sera doble.</li><li>Por eso conviene comprobar la respuesta en el presente y en el futuro.</li></ul><h4 class="lecc-h4">Comprobacion</h4><p>Sustituye la edad encontrada en el enunciado original. Si la suma no da el total, la ecuacion esta mal planteada, no mal resuelta.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>La suma de las edades de un padre y su hijo es 54, y el padre tiene el doble que el hijo. Cuantos años tiene cada uno.</p><h4 class="lecc-h4">Metodo 1: elegir la incognita</h4><ul class="lecc-ul"><li>Se pide la edad del hijo, que es la menor.</li><li>x es la edad del hijo.</li></ul><h4 class="lecc-h4">Metodo 2: expresar la otra edad</h4><ul class="lecc-ul"><li>El padre tiene el doble, asi que su edad es 2x.</li></ul><h4 class="lecc-h4">Metodo 3: plantear</h4><ul class="lecc-ul"><li>x + 2x = 54</li><li>3x = 54</li></ul><h4 class="lecc-h4">Metodo 4: resolver y comprobar</h4><ul class="lecc-ul"><li>x = 54 / 3 = 18</li><li>El padre entonces tiene 2 * 18 = 36.</li><li>Comprobacion: 18 + 36 = 54. Correcto.</li><li>Conclusiones: el hijo tiene 18 anos y el padre 36.</li></ul><ul class="lecc-ul"><li>Ojo: el padre tiene 36 anos y el hijo 18, asi que la diferencia es de 18 anos, no de 36.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Declara con una frase cual de las dos edades es x, y despues no cambies el significado. Escribir el nombre de quien representa x en el primer renglon evita la mayoria de los errores de planteo.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="razonamiento-matematico-1-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-planteo-de-ecuaciones.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-mezclas-y-aleaciones.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "razonamiento-matematico-1-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Los generadores escriben siempre LF. Fijarlo aqui evita que en Windows los
+# archivos se guarden con CRLF y cada regeneracion ensucie el diff con cambios
+# que en realidad no existen.
+* text=auto eol=lf
+
+# Los SVG son imagenes de texto pero no se deben tocar: van identicos.
+*.svg -text
+
+# Los .cjs de herramientas/ solo se ejecutan con Node, nunca en el navegador.
+herramientas/*.cjs text eol=lf

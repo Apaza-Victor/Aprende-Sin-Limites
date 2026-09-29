@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polígonos y cuadriláteros — Matemática</title>
+  <meta name="description" content="Resolver problemas de polígonos y cuadriláteros: ángulos internos, lados, diagonales y propiedades de paralelogramos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Geometría</a> <span class="mx-2 opacity-50">/</span>
+          <span>Polígonos y cuadriláteros</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Polígonos y cuadriláteros</h1>
+            <p class="articulo-modulo">Módulo 3 · Geometría</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Resolver problemas de polígonos y cuadriláteros: ángulos internos, lados, diagonales y propiedades de paralelogramos.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Un <strong>polígono</strong> es una figura plana formada por segmentos que se unen dos a dos, sin cruzarse. Recibe nombre según el número de lados.</p><h4 class="lecc-h4">Fórmulas de un polígono de n lados</h4><ul class="lecc-ul"><li>Suma de ángulos interiores: (n − 2) × 180°.</li><li>Cada ángulo interior (en un polígono regular): (n − 2) × 180° ÷ n.</li><li>Número de diagonales: n × (n − 3) ÷ 2. Ojo, no es n − 2: desde cada vértice se pueden trazar n − 3 diagonales, porque dos de los otros vértices son sus vecinos y están unidos por lados.</li><li>Número de triángulos que se forman al trazar todas las diagonales desde un vértice: n − 2.</li></ul><figure class="lecc-figura"><svg viewBox="0 0 300 260" role="img" aria-label="Polígono regular de 6 lados: el apotema une el centro con el punto medio del lado"><polygon points="240,130 195,207.9 105,207.9 60,130 105,52.1 195,52.1" class="fig-forma"/>
+  <path d="M150 130 L82.5 169" class="fig-dato"/>
+  <path d="M225 104 A30 30 0 0 0 225 156" class="fig-acento"/>
+  <circle cx="150" cy="130" r="3" fill="currentColor" stroke="none"/>
+  <text x="150" y="122" text-anchor="middle" font-size="14" class="fig-etiqueta">O</text>
+  <text x="112" y="152" text-anchor="middle" font-size="15" class="fig-acento-texto">a</text>
+  <text x="228" y="80" text-anchor="middle" font-size="15">l</text>
+  <text x="258" y="136" text-anchor="middle" font-size="14" class="fig-nota">ángulo interior</text>
+  <text x="150" y="248" text-anchor="middle" font-size="13" class="fig-nota">a es el apotema: distancia del centro al punto medio del lado</text></svg><figcaption class="fig-titulo">Polígono regular de 6 lados: el apotema une el centro con el punto medio del lado</figcaption></figure><h4 class="lecc-h4">Cuadriláteros importantes</h4><ul class="lecc-ul"><li><strong>Paralelogramo</strong>: los dos lados opuestos son paralelos y iguales. Sus ángulos opuestos son iguales y los consecutivos suman 180°.</li><li><strong>Rectángulo</strong>: es un paralelogramo con cuatro ángulos rectos. Su diagonal divide el rectángulo en dos triángulos congruentes.</li><li><strong>Rombo</strong>: paralelogramo con los cuatro lados iguales. Sus diagonales son perpendiculares y se cortan en el punto medio.</li><li><strong>Cuadrado</strong>: rectángulo y rombo a la vez.</li><li><strong>Trapecio</strong>: un solo par de lados paralelos, que se llaman bases.</li></ul><div class="lecc-nota">En un rombo, el área se puede calcular como el producto de sus diagonales dividido entre 2, aunque no se conozca la base ni la altura.</div><figure class="lecc-figura"><svg viewBox="0 0 300 220" role="img" aria-label="El paralelogramo y sus dos diagonales, que se cortan en el mismo punto"><polygon points="40,170 150,170 210,50 100,50" class="fig-forma"/>
+  <path d="M40 170 L210 50" class="fig-dato"/>
+  <path d="M150 170 L100 50" class="fig-dato"/>
+  <path d="M40 170 A28 28 0 0 0 58 145" class="fig-acento"/>
+  <text x="95" y="192" text-anchor="middle" font-size="15">a</text>
+  <text x="190" y="112" text-anchor="middle" font-size="15">b</text>
+  <text x="106" y="104" text-anchor="middle" font-size="15" class="fig-acento-texto">d₁</text>
+  <text x="152" y="126" text-anchor="middle" font-size="15" class="fig-acento-texto">d₂</text>
+  <text x="22" y="186" text-anchor="middle" font-size="13" class="fig-etiqueta">A</text>
+  <text x="150" y="192" text-anchor="middle" font-size="13" class="fig-etiqueta">B</text>
+  <text x="222" y="50" text-anchor="middle" font-size="13" class="fig-etiqueta">C</text>
+  <text x="100" y="42" text-anchor="middle" font-size="13" class="fig-etiqueta">D</text>
+  <text x="66" y="152" text-anchor="middle" font-size="13" class="fig-nota">A</text>
+  <text x="150" y="214" text-anchor="middle" font-size="13" class="fig-nota">las diagonales se cortan en el mismo punto y se reparten en la misma proporción</text></svg><figcaption class="fig-titulo">El paralelogramo y sus dos diagonales, que se cortan en el mismo punto</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Determina cuántas diagonales tiene un octágono, cuánto suman sus ángulos interiores y cuánto mide cada ángulo si es regular.</p><h4 class="lecc-h4">Método de las fórmulas directas</h4><ul class="lecc-ul"><li>El octógono tiene n = 8 lados, así que desde cada vértice se pueden trazar n − 3 = 5 diagonales.</li><li>Diagonales: n × (n − 3) ÷ 2 = 8 × 5 ÷ 2 = <strong>20 diagonales</strong>.</li><li>Suma de ángulos interiores: (n − 2) × 180° = 6 × 180° = <strong>1 080°</strong>.</li><li>Si es regular, cada ángulo mide 1 080 ÷ 8 = <strong>135°</strong>, un ángulo obtuso, como corresponde a una figura de tantos lados.</li></ul><h4 class="lecc-h4">Método del conteo vértice por vértice, que explica de dónde sale la división entre 2</h4><ul class="lecc-ul"><li>Desde un vértice hay 7 vértices distintos; dos son sus vecinos, unidos por lados, así que quedan 7 − 2 = 5 diagonales, que es exactamente n − 3.</li><li>Sumando los 8 vértices salen 8 × 5 = 40, pero cada diagonal se ha contado dos veces, una desde cada extremo.</li><li>Por eso se divide entre 2: 40 ÷ 2 = <strong>20 diagonales</strong>.</li></ul><h4 class="lecc-h4">Método de los triángulos, para la suma de ángulos</h4><ul class="lecc-ul"><li>Al trazar todas las diagonales desde un vértice, el octógono queda dividido en 8 − 2 = <strong>6 triángulos</strong>.</li><li>Cada triángulo aporta 180°, y 6 × 180° = 1 080°, la misma suma de antes.</li><li>En la figura regular los 6 triángulos son iguales y el ángulo del vértice elegido se reparte en 135° ÷ 6 = 22,5° para cada uno, lo que confirma los 135° de cada ángulo interior.</li></ul><h4 class="lecc-h4">Control con polígonos conocidos</h4><ul class="lecc-ul"><li>Un cuadrado, con n = 4, tiene 4 × 1 ÷ 2 = <strong>2 diagonales</strong>, que es lo que ya sabíamos.</li><li>Un pentágono, con n = 5, tiene 5 × 2 ÷ 2 = <strong>5 diagonales</strong>, que es lo que se ve al contar a mano.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Memoriza las dos fórmulas clave: la suma de interiores (n − 2) × 180 y las diagonales n(n − 3)/2. Con eso resuelves cualquier pregunta de polígonos, y el control con el cuadrado y el triángulo te permite detectar un error al instante. No las confundas: n − 2 es el número de lados que le sobran a un vértice, y de ahí salen los triángulos; n − 3 es el número de vértices a los que puede unirse sin tocar sus vecinos, y de ahí salen las diagonales.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-2-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-triangulos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-circunferencia-y-circulo.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-2-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

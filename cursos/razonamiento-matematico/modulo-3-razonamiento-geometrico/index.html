@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo 3 · Razonamiento geométrico — Aprende Sin Límites</title>
+  <meta name="description" content="Desarrolla tu lógica con sucesiones, series, planteo de ecuaciones y estadística para exámenes de ingreso." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="razonamiento-matematico">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html">
+        <i class="bi bi-stars"></i> Aprende Sin Límites
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMod"
+        aria-controls="navMod" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMod">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a>
+          <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Razonamiento Matemático</a>
+          <span class="mx-2 opacity-50">/</span>
+          <span>Módulo 3 · Razonamiento geométrico</span>
+        </nav>
+
+        <div class="titulo-curso mb-4 d-flex align-items-center gap-3">
+          <div class="icono"><i class="bi bi-layers"></i></div>
+          <div>
+            <h1 class="mb-0">Módulo 3 · Razonamiento geométrico</h1>
+            <p class="col-mut mb-0">5 lecciones</p>
+          </div>
+        </div>
+
+        <div class="tarjeta p-4 reveal">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div><i class="bi bi-check2-circle" style="color: var(--acento);"></i></div>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between small">
+                <span class="col-mut">Lecciones completadas</span>
+                <span id="contadorLecciones" class="fw-semibold">0 / 5</span>
+              </div>
+              <div class="progress" style="height: 6px; margin-top: .35rem;">
+                <div id="barraProgreso" class="progress-bar" style="width: 0%;" role="progressbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-lg-8">
+            <h4 class="d-flex align-items-center gap-2 mb-3"><i class="bi bi-journal-text" style="color: var(--acento);"></i> Lecciones del módulo</h4>
+            <div class="row g-3" id="gridLecciones">
+              <div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">1</span><div><h5 class="lecc-titulo mb-1"><a href="01-secuencias-de-figuras.html">Secuencias de figuras</a></h5><p class="col-mut small lecc-obj mb-0">Descubrir el patron de una secuencia de figuras y deducir la cantidad de elementos que tendra la figura numero n.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="01-secuencias-de-figuras.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckrazonamiento-matematico20" data-clave="razonamiento-matematico-2-0" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckrazonamiento-matematico20">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">2</span><div><h5 class="lecc-titulo mb-1"><a href="02-cortes-y-estacas.html">Cortes y estacas</a></h5><p class="col-mut small lecc-obj mb-0">Resolver problemas de cortes dividiendo un palo o una cuerda en partes iguales y hallando el numero de cortes que se necesitan.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="02-cortes-y-estacas.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckrazonamiento-matematico21" data-clave="razonamiento-matematico-2-1" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckrazonamiento-matematico21">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">3</span><div><h5 class="lecc-titulo mb-1"><a href="03-areas-sombreadas.html">Áreas sombreadas</a></h5><p class="col-mut small lecc-obj mb-0">Calcular el area de regiones sombreadas reconociendo la figura total, la figura blanca y restando.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="03-areas-sombreadas.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckrazonamiento-matematico22" data-clave="razonamiento-matematico-2-2" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckrazonamiento-matematico22">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">4</span><div><h5 class="lecc-titulo mb-1"><a href="04-perimetros-con-logica.html">Perímetros con lógica</a></h5><p class="col-mut small lecc-obj mb-0">Resolver problemas de perimetro usando logica combinatoria en lugar de sumar y restar lados uno por uno.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="04-perimetros-con-logica.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckrazonamiento-matematico23" data-clave="razonamiento-matematico-2-3" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckrazonamiento-matematico23">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">5</span><div><h5 class="lecc-titulo mb-1"><a href="05-razonamiento-con-palitos.html">Razonamiento con palitos</a></h5><p class="col-mut small lecc-obj mb-0">Contar palitos, fichas o monedas en figuras que se construyen a partir de un patron, hallando la cantidad para la figura n.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="05-razonamiento-con-palitos.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckrazonamiento-matematico24" data-clave="razonamiento-matematico-2-4" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckrazonamiento-matematico24">Marcar como completada</label></div></div></article></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="tarjeta p-4 reveal">
+              <h5 class="d-flex align-items-center gap-2"><i class="bi bi-signpost-2" style="color: var(--acento);"></i> Ruta del curso</h5>
+              <div class="ruta mt-3">
+                <a class="paso" href="../modulo-1-habilidades-numericas/index.html"><span class="paso-num">1</span><span class="paso-txt">Módulo 1 · Habilidades numéricas</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso" href="../modulo-2-procesos-y-planteo-de-problemas/index.html"><span class="paso-num">2</span><span class="paso-txt">Módulo 2 · Procesos y planteo de problemas</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso active" href="../modulo-3-razonamiento-geometrico/index.html"><span class="paso-num">3</span><span class="paso-txt">Módulo 3 · Razonamiento geométrico</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso" href="../modulo-4-estadistica-y-probabilidad/index.html"><span class="paso-num">4</span><span class="paso-txt">Módulo 4 · Estadística y probabilidad</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-6">
+        <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+        <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="me-3" href="../index.html">Volver a Razonamiento Matemático</a>
+        <a class="me-3" href="../../../index.html">Inicio</a>
+        <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+        <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+        <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+        <a href="../../../secciones/faq.html">Preguntas</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVES = ["razonamiento-matematico-2-0","razonamiento-matematico-2-1","razonamiento-matematico-2-2","razonamiento-matematico-2-3","razonamiento-matematico-2-4"];
+      var claveModulo = "razonamiento-matematico-2";
+      var KEY = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; } }
+      function pintar() {
+        var estados = leer(), hechas = 0;
+        CLAVES.forEach(function (k) { if (estados[k]) hechas++; });
+        var contador = document.getElementById("contadorLecciones");
+        if (contador) contador.textContent = hechas + " / " + CLAVES.length;
+        var barra = document.getElementById("barraProgreso");
+        if (barra && CLAVES.length) barra.style.width = Math.round((hechas / CLAVES.length) * 100) + "%";
+        var checks = document.querySelectorAll(".checkbox-leccion[data-clave]");
+        checks.forEach(function (c) {
+          c.checked = !!estados[c.getAttribute("data-clave")];
+          var card = c.closest(".lecc-card");
+          if (card) card.classList.toggle("hecha", c.checked);
+        });
+      }
+      pintar();
+      document.addEventListener("change", function (e) {
+        var c = e.target;
+        if (c && c.classList && c.classList.contains("checkbox-leccion") && c.hasAttribute("data-clave")) {
+          var estados = leer();
+          if (c.checked) estados[c.getAttribute("data-clave")] = true; else delete estados[c.getAttribute("data-clave")];
+          localStorage.setItem(KEY, JSON.stringify(estados));
+          pintar();
+        }
+      });
+      document.getElementById("anioAuto").textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

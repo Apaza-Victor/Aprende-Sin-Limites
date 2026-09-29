@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alturas y distancias — Matemática</title>
+  <meta name="description" content="Modelar y resolver problemas de alturas y distancias con triángulos rectángulos, usando las razones trigonométricas." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Trigonometría</a> <span class="mx-2 opacity-50">/</span>
+          <span>Alturas y distancias</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Alturas y distancias</h1>
+            <p class="articulo-modulo">Módulo 4 · Trigonometría</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Modelar y resolver problemas de alturas y distancias con triángulos rectángulos, usando las razones trigonométricas.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Los problemas de <strong>alturas y distancias</strong> son la aplicación más útil de la trigonometría, porque usan un mismo tipo de figura: un triángulo rectángulo, a veces con un ángulo de 90° ya dado y a veces con dos datos que obligan a calcular primero un lado.</p><h4 class="lecc-h4">Los tres pasos que siempre siguen</h4><ol class="lecc-ol"><li><strong>Dibuja</strong> el triángulo y rotula el ángulo recto, la altura y la base.</li><li><strong>Identifica</strong> el cateto opuesto, el adyacente y la hipotenusa <strong>respecto del ángulo que conoces</strong>.</li><li><strong>Elige</strong> la razón: seno si necesitas el cateto opuesto, coseno si necesitas el adyacente, tangente si necesitas el otro cateto y ya conoces uno.</li></ol><h4 class="lecc-h4">Casos que se repiten</h4><ul class="lecc-ul"><li><strong>Altura de una torre o un poste</strong>: casi siempre un triángulo 30-60-90 o 45-45-90, así que se resuelve con razones especiales.</li><li><strong>Distancia hasta un punto inaccesible</strong>: se forma un triángulo con la base conocida y dos ángulos medidos con un teodolito, y la altura se despeja de la tangente.</li><li><strong>Línea de vista a un avión</strong>: se usan dos triángulos y se resta una altura de la otra.</li></ul><div class="lecc-nota">Cuando no hay ángulo recto a la vista, puedes <strong>inventarlo</strong>: traza una perpendicular desde el punto más cercano al suelo. Eso convierte la figura en dos triángulos rectángulos.</div><figure class="lecc-figura"><svg viewBox="0 0 300 240" role="img" aria-label="La altura y las distancias en la circunferencia se apoyan en el radio"><circle cx="150" cy="115" r="88" class="fig-dato"/>
+  <polygon points="67,85 217,58 150,27" class="fig-forma"/>
+  <path d="M150 115 L67 85" class="fig-dato"/>
+  <path d="M150 115 L217 58" class="fig-dato"/>
+  <path d="M150 115 L150 27" class="fig-acento"/>
+  <circle cx="150" cy="115" r="3.5" fill="currentColor" stroke="none"/>
+  <text x="139" y="96" text-anchor="middle" font-size="15" class="fig-acento-texto">R</text>
+  <text x="150" y="133" text-anchor="middle" font-size="14" class="fig-etiqueta">O</text>
+  <text x="222" y="70" text-anchor="middle" font-size="15">c</text>
+  <text x="146" y="72" text-anchor="middle" font-size="15">a</text>
+  <text x="70" y="70" text-anchor="middle" font-size="15">b</text>
+  <text x="52" y="96" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="228" y="48" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="150" y="16" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text>
+  <text x="150" y="232" text-anchor="middle" font-size="13" class="fig-nota">el centro O siempre está a la misma distancia R de los tres vértices</text></svg><figcaption class="fig-titulo">La altura y las distancias en la circunferencia se apoyan en el radio</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Desde el punto más alto de un edificio de 24 m se ve un globo a 30° sobre la horizontal. El globo está sobre un punto situado a 40 m del edificio. ¿A qué altura está el globo y a qué distancia del observador?</p><h4 class="lecc-h4">Método de la tangente, que va directo a la altura</h4><ul class="lecc-ul"><li>La altura que se pide no es el cateto, sino la del edificio más la parte que lo supera. Ese error es el más común de este tema.</li><li>Respecto a 30°, el cateto adyacente son 40 m y el cateto opuesto es lo que el globo supera por encima del tejado.</li><li>Tangente = opuesto ÷ adyacente, así que la parte que supera es 40 × tangente de 30° = 40 × 0,5774 = <strong>23,09 m</strong>.</li><li>Altura total del globo: 24 + 23,09 = <strong>47,09 m</strong>, es decir unos 47,1 m.</li></ul><h4 class="lecc-h4">Método del coseno y del seno, que pasa por la distancia</h4><ul class="lecc-ul"><li>La distancia del observador al globo es la hipotenusa: 40 ÷ coseno de 30° = 40 ÷ 0,8660 = <strong>46,19 m</strong>.</li><li>Con esa distancia, la parte que el globo supera el tejado es seno de 30° por la hipotenusa: 0,5 × 46,19 = <strong>23,10 m</strong>.</li><li>Vuelvo a sumar la altura del edificio: 24 + 23,10 = <strong>47,10 m</strong>.</li></ul><h4 class="lecc-h4">Método del control con Pitágoras</h4><ul class="lecc-ul"><li>En el triángulo pequeño: raíz de (46,19² − 40²) = raíz de (2 133,5 − 1 600) = raíz de 533,5 = <strong>23,10 m</strong>.</li><li>Sumando otra vez los 24 m del edificio se obtiene 47,10 m, el mismo valor que por los otros dos métodos.</li></ul><div class="lecc-nota">Los tres caminos coinciden en 47,1 m. Si en algún punto sale 23,1 m, es que se ha contestado a la pregunta más fácil: a cuánto sube el globo por encima del tejado, y no a qué altura está.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Dibuja siempre la figura antes de escribir la fórmula, aunque el enunciado ya traiga un dibujo. Y comprueba que tu respuesta sea <strong>razonable</strong>: si el problema dice que ves un objeto muy cercano y a 30° sobre la horizontal, la distancia no puede salir enorme. El sentido común detecta errores de signo que ninguna calculadora revela.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-3-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-identidades-trigonometricas-basicas.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-5-funciones-y-sucesiones/01-concepto-de-funcion-y-dominio-y-recorrido.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-3-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

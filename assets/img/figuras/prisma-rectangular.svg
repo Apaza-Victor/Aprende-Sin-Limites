@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250">
+  <polygon points="50,190 170,190 170,70 50,70" class="fig-forma"/>
+  <path d="M50 70 L100 40 L220 40 L220 160 L170 190 M100 40 L100 160 L170 190" class="fig-dato"/>
+  <path d="M100 160 L220 160" class="fig-dato"/>
+  <text x="110" y="212" text-anchor="middle" font-size="15">a</text>
+  <text x="184" y="130" text-anchor="middle" font-size="15">b</text>
+  <text x="150" y="196" text-anchor="middle" font-size="15">c</text>
+  <text x="150" y="240" text-anchor="middle" font-size="13" class="fig-nota">V = a · b · c</text>
+</svg>

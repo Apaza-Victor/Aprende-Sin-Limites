@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250">
+  <polygon points="50,175 140,45 255,175" class="fig-forma"/>
+  <path d="M72 152.5 A28 28 0 0 1 76 175"/>
+  <path d="M125 62.5 A28 28 0 0 1 153 61.5"/>
+  <path d="M228 175 A28 28 0 0 0 236 155"/>
+  <text x="34" y="192" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="140" y="32" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="268" y="192" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text>
+  <text x="212" y="110" text-anchor="middle" font-size="15">a</text>
+  <text x="150" y="196" text-anchor="middle" font-size="15">b</text>
+  <text x="86" y="100" text-anchor="middle" font-size="15">c</text>
+  <text x="150" y="234" text-anchor="middle" font-size="14" class="fig-nota">a : sen A = b : sen B = c : sen C</text>
+</svg>

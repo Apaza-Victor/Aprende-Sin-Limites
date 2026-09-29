@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cambios físicos y químicos — Ciencia, Tecnología y Ambiente</title>
+  <meta name="description" content="Distinguir un cambio físico de uno químico, y deducir cual es usando la pregunta de las propiedades." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="ciencia-tecnologia-ambiente">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Ciencia, Tecnología y Ambiente</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Materia, energía y fenómenos</a> <span class="mx-2 opacity-50">/</span>
+          <span>Cambios físicos y químicos</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-leaf"></i></div>
+            <h1 class="articulo-titulo">Cambios físicos y químicos</h1>
+            <p class="articulo-modulo">Módulo 2 · Materia, energía y fenómenos</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Distinguir un cambio físico de uno químico, y deducir cual es usando la pregunta de las propiedades.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">La idea de fondo</h4><p>Un cambio físico no crea sustancias nuevas. Un cambio químico si. Toda la diferencia está en esa frase.</p><h4 class="lecc-h4">La pregunta que decide</h4><p>Al mirar un cambio, hazte una sola pregunta: <strong>se formaron sustancias nuevas?</strong></p><ul class="lecc-ul"><li>Si la respuesta es si, es un cambio químico.</li><li>Si la respuesta es no, es un cambio físico.</li></ul><div class="lecc-nota">Esa pregunta vale siempre, sin excepciones. Por eso es la única que hay que saberse de memoria.</div><h4 class="lecc-h4">Los cambios físicos</h4><p>No aparece ninguna sustancia nueva. Solo cambia el estado, la forma o el tamaño.</p><ol class="lecc-ol"><li><strong>Cambio de estado</strong>: el hielo se derrite, el agua hierve, el hierro se funde.</li><li><strong>Cambio de forma</strong>: un clavo se dobla, el papel se rasga, la madera se serrucha.</li><li><strong>Cambio de tamaño</strong>: un gas se expande, una tela se encoge al lavarla.</li><li><strong>Separación de mezclas</strong>: destilar, filtrar, centrifugar.</li></ol><div class="lecc-nota">En todos estos casos, la sustancia sigue siendo la misma. El agua que hierba sigue siendo agua al volver a condensarse.</div><h4 class="lecc-h4">Los cambios químicos</h4><p>Aparecen sustancias nuevas, y por eso ya no se puede volver a la original.</p><ol class="lecc-ol"><li><strong>Combustión</strong>: la madera arde y se vuelven cenizas y gas.</li><li><strong>Oxidación</strong>: el hierro se oxida, la manzana cortada se oscurece.</li><li><strong>Acidificación</strong>: cuando un ácido entra en contacto con una base.</li><li><strong>Fermentación</strong>: la levadura convierte el azúcar en alcohol y gas.</li><li><strong>Coccion</strong>: al cocinar, muchas sustancias cambian.</li></ol><div class="lecc-nota">Un buen indicador: si hay de repente un olor, un color o una liberación de gas, casi seguro es químico.</div><h4 class="lecc-h4">Las señales de un cambio químico</h4><ol class="lecc-ol"><li>Cambio de color.</li><li>Liberación de un gas.</li><li>Formación de un solido insoluble, como un precipitado.</li><li>Cambio de olor.</li><li>Liberación o absorción de calor.</li></ol><div class="lecc-nota">Ninguna de están señales funciona por si sola. Un hielo al derretirse también absorbe calor, y eso no lo convierte en cambio químico.</div><h4 class="lecc-h4">Conservación de la masa</h4><p>En una reaccion química, la masa total se conserva. Los átomos no se crean ni se destruyen: se reordenan formando otras sustancias.</p><div class="lecc-nota">Esa es la razón de que una hoja de papel quemada pese menos: el papel entro, pero el gas salió. Si se recoge todo, el peso sigue siendo el mismo.</div><h4 class="lecc-h4">Exotérmicas y endotérmicas</h4><ul class="lecc-ul"><li><strong>Exotérmica</strong>: libera calor. La reaccion calienta el entorno. Ejemplos: la combustión, la oxidación del hierro.</li><li><strong>Endotérmica</strong>: absorbe calor. La reaccion enfria el entorno. Ejemplos: la fotosíntesis, el hielo al derretirse.</li></ul><div class="lecc-nota">Fijate en el nombre: exotérmica significa que el calor sale del sistema. Endotérmica significa que el calor entra. La preposición lo dice todo.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Clasifiquemos siete cambios de la vida diaria.</p><h4 class="lecc-h4">Cambio 1: cortar una manzana</h4><ul class="lecc-ul"><li>Al cortarlo aparecen dos mitades.</li><li>Las dos siguen siendo manzana, con el mismo sabor.</li><li>Conclusión: es un cambio físico.</li></ul><h4 class="lecc-h4">Cambio 2: dejar la manzana cortada al sol</h4><ul class="lecc-ul"><li>Se oscurece y cambia de sabor.</li><li>Aparece una sustancia nueva: el oscurecimiento de la pulpa.</li><li>Conclusión: es un cambio químico, por oxidación.</li></ul><h4 class="lecc-h4">Cambio 3: fundir mantequilla en una sartén</h4><ul class="lecc-ul"><li>Pasa de solido a líquido, pero sigue siendo mantequilla.</li><li>Conclusión: es un cambio físico, de estado.</li></ul><h4 class="lecc-h4">Cambio 4: quemar la mantequilla</h4><ul class="lecc-ul"><li>Se vuelve humo y un líquido oscuro, con olor fuerte.</li><li>Hay sustancias nuevas y no se puede volver a mantequilla.</li><li>Conclusión: es un cambio químico, exotérmico.</li></ul><h4 class="lecc-h4">Cambio 5: hervir agua</h4><ul class="lecc-ul"><li>El agua pasa a gas y sigue siendo agua.</li><li>Conclusión: es un cambio físico. El agua evaporada se puede condensar otra vez.</li></ul><h4 class="lecc-h4">Cambio 6: echar gaseosa al agua</h4><ul class="lecc-ul"><li>Burbujea y se forma un gas que antes no estaba.</li><li>Conclusión: es un cambio químico, aunque a simple vista parezca que solo desaparecen burbujas.</li></ul><h4 class="lecc-h4">Cambio 7: revolver sal en agua</h4><ul class="lecc-ul"><li>La sal se disuelve, y el agua sigue siendo agua. La sal sigue siendo sal.</li><li>Conclusión: es un cambio físico: se separaron las sustancias, pero ninguna se formo.</li></ul><h4 class="lecc-h4">Conclusión</h4><ul class="lecc-ul"><li>Conclusión: el criterio único es si se formaron sustancias nuevas. Todo lo demas, el color, el olor o el burbujeo, solo son pistas.</li><li>Ojo: disolver no es reaccionar. Mucha gente confunde los dos, y no es lo mismo.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Aplica siempre la misma pregunta en el examen: se formo alguna sustancia nueva? Con esa respuesta decides, y no con la apariencia del cambio.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="ciencia-tecnologia-ambiente-1-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-electricidad-y-magnetismo.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-3-el-ambiente-y-el-desarrollo-sostenible/01-contaminacion-ambiental.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "ciencia-tecnologia-ambiente-1-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

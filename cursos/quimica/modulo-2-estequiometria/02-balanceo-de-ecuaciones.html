@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balanceo de ecuaciones — Química</title>
+  <meta name="description" content="Balancear ecuaciones químicas conservando el número de átomos de cada elemento, ajustar reactivos limitantes con coeficientes enteros, y aplicar el método de óxido-reducción cuando los coeficientes no salen de forma directa." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Estequiometría</a> <span class="mx-2 opacity-50">/</span>
+          <span>Balanceo de ecuaciones</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">Balanceo de ecuaciones</h1>
+            <p class="articulo-modulo">Módulo 2 · Estequiometría</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Balancear ecuaciones químicas conservando el número de átomos de cada elemento, ajustar reactivos limitantes con coeficientes enteros, y aplicar el método de óxido-reducción cuando los coeficientes no salen de forma directa.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Una ecuación química solo es correcta si el <strong>número de átomos de cada elemento es el mismo antes y después</strong>. Ese principio, la conservación de la masa, es la ley de Lavoisier y no se puede romper: por eso las reactivos nunca desaparecen, solo se transforman.</p><h4 class="lecc-h4">El método básico</h4><p>Se adjusts primero el elemento que aparece una sola vez, después el que aparece en más de un compuesto, y al final se completan los hidrógenos.</p><ul class="lecc-ul"><li>La estructura es reactivo <strong>flecha</strong> producto, y se balancea con <strong>coeficientes</strong>, nunca con subíndices, salvo que se cambie la fórmula del enunciado.</li><li>Ejemplo paso a paso: C + H₂O → CO + H₂.</li></ul><ol class="lecc-ol"><li>El oxígeno aparece una sola vez a cada lado: coef = 1 a la izquierda y 2 a la derecha, CO se vuelve CO₂.</li><li>El carbono ya está balanceado: 1 = 1.</li><li>A la derecha hay 4 hidrógenos, así que el agua lleva 2: <strong>C + 2 H₂O → CO₂ + 2 H₂</strong>.</li><li>Comprobación: C 1 = 1, H 4 = 4, O 2 = 2.</li></ol><h4 class="lecc-h4">Por qué no se cambian los subíndices</h4><p>Si cambias el subíndice de H₂O a H₂O₂, dejas de describir la misma sustancia. El subíndice es la identidad de la molécula; el coeficiente solo dice cuántas moléculas hay. Esa es la razón de que se ajusten coeficientes.</p><h4 class="lecc-h4">Método de óxido-reducción</h4><p>Cuando los coeficientes no salen de forma directa, se usa el cambio en el número de oxidación. Se identifica el elemento cuyo número de oxidación cambia, se anota a cuánto sube o baja, se pone el mismo número absoluto al otro lado, se ajusta para que el total coincided, se completa el resto con H₂O y H⁺ si es medio ácido, y se comprueba la carga.</p><ul class="lecc-ul"><li>Ejemplo: MnO₄⁻ + Fe²⁺ → Mn²⁺ + Fe³⁺ en medio ácido.</li></ul><p>El Mn baja de +7 a +2, gana 5 electrones; el Fe sube de +2 a +3, pierde 1.</p><p>Se pone 5 en Mn²⁺ y 1 en Fe²⁺, y la carga total a cada lado es +8.</p><p>Completando con H⁺ y H₂O: <strong>MnO₄⁻ + 5 Fe²⁺ + 8 H⁺ → Mn²⁺ + 5 Fe³⁺ + 4 H₂O</strong>.</p><div class="lecc-nota">Cuando las semirreacciones den números decimales, multiplica ambas por el número que borre los decimales y vuelve a sumar. Es el paso que casi todos olvidan.</div><h4 class="lecc-h4">Fracciones</h4><p>Está permitido usar coeficientes fraccionarios, pero en la prueba casi siempre se pide la forma de <strong>enteros mínimos</strong>, y esa es la que se acepta como correcta.</p><figure class="lecc-figura"><svg viewBox="0 0 340 200" role="img" aria-label="Los atomos se reordenan, pero ninguno se crea ni se destruye"><text x="60" y="70" text-anchor="middle" font-size="15" class="fig-acento-texto">reactivos</text>
+  <text x="170" y="70" text-anchor="middle" font-size="22" class="fig-nota">→</text>
+  <text x="255" y="70" text-anchor="middle" font-size="15" class="fig-acento-texto">productos</text>
+  <circle cx="34" cy="118" r="17" class="fig-forma"/>
+  <text x="34" y="123" text-anchor="middle" font-size="14">A</text>
+  <text x="34" y="164" text-anchor="middle" font-size="13" class="fig-nota">se conservan</text>
+  <circle cx="86" cy="118" r="17" class="fig-forma"/>
+  <text x="86" y="123" text-anchor="middle" font-size="14">B</text>
+  <text x="86" y="164" text-anchor="middle" font-size="13" class="fig-nota">se conservan</text>
+  <circle cx="242" cy="118" r="17" class="fig-forma"/>
+  <text x="242" y="123" text-anchor="middle" font-size="14">A</text>
+  <text x="242" y="164" text-anchor="middle" font-size="13" class="fig-nota">se conservan</text>
+  <circle cx="294" cy="118" r="17" class="fig-forma"/>
+  <text x="294" y="123" text-anchor="middle" font-size="14">B</text>
+  <text x="294" y="164" text-anchor="middle" font-size="13" class="fig-nota">se conservan</text>
+  <path d="M60 118 L60 96" class="fig-medida"/>
+  <text x="60" y="188" text-anchor="middle" font-size="14" class="fig-acento-texto">se rompen y se rehacen</text></svg><figcaption class="fig-titulo">Los atomos se reordenan, pero ninguno se crea ni se destruye</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Balancear: Al + H₂SO₄ → Al₂(SO₄)₃ + H₂.</p><h4 class="lecc-h4">Método 1: ajuste directo por elementos</h4><ul class="lecc-ul"><li><strong>Al</strong>: el producto Al₂(SO₄)₃ tiene 2 átomos de Al, así que pongo <strong>2</strong> delante del Al de la izquierda.</li><li><strong>S</strong>: el producto tiene 3 grupos sulfato y cada H₂SO₄ aporta uno, así que <strong>3</strong> H₂SO₄ a la izquierda.</li><li><strong>H</strong>: 3 H₂SO₄ aportan 6 hidrógenos, así que a la derecha van <strong>3</strong> H₂.</li><li><strong>O</strong>: 3 H₂SO₄ aportan 3 × 4 = 12 oxígenos y el producto tiene 12. Cuadra sin tocar nada.</li><li>Ecuación: <strong>2 Al + 3 H₂SO₄ → Al₂(SO₄)₃ + 3 H₂</strong>.</li></ul><h4 class="lecc-h4">Método 2: empezar por el hidrógeno, el orden inverso</h4><ul class="lecc-ul"><li>Si arranco por el H: 3 H₂SO₄ aportan 6 H, así que 3 H₂ a la derecha.</li><li>El producto lleva 3 sulfatos, y eso obliga a 3 H₂SO₄ a la izquierda. El número de H₂SO₄ no cambia por empezar por el H: lo fija el azufre.</li><li>Solo falta el Al, que va 2 a la izquierda.</li><li>Sale la misma ecuación, lo que demuestra que el orden de ajuste no altera el resultado.</li></ul><h4 class="lecc-h4">Método 3: deducir los coeficientes desde la fórmula del producto</h4><ul class="lecc-ul"><li>Al₂(SO₄)₃ lleva 1 átomo de Al por cada 3 sulfatos, así que la razón Al : sulfato es 1 : 3.</li><li>Cada H₂SO₄ aporta un sulfato, luego por cada Al hacen falta 3 H₂SO₄. La razón es 1 : 3.</li><li>El hidrógeno no añade restricciones: 3 H₂SO₄ aportan 6 H y 3 H₂ aportan 6 H, o sea 3 : 3.</li><li>Los coeficientes quedan 2 : 3 : 1 : 3, que es exactamente lo que dieron los métodos anteriores.</li></ul><h4 class="lecc-h4">Comprobación final</h4><p>Al 2 = 2, S 3 = 3, H 6 = 6, O 12 = 12. Todos los elementos cuadran.</p><div class="lecc-nota">El único elemento que de verdad fijó los coeficientes fue el azufre, porque es el que aparece en un solo compuesto de cada lado. Empieza por él y el resto sale solo.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Cuenta los átomos de cada elemento primero, antes de escribir ningún coeficiente. El error más caro es poner un 2 de más en un producto y tener que corregir después el hidrógeno, el oxígeno y la cuenta final.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-1-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-mol-y-masa-molar.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-relaciones-de-masa-entre-reactivos-y-productos.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-1-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

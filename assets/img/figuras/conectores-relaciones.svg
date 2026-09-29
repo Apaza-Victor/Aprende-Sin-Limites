@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280">
+  <defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Los cuatro grupos de conectores</text>
+
+  <rect x="14" y="34" width="158" height="106" rx="10" class="fig-ok"/>
+  <text x="93" y="54" text-anchor="middle" class="fig-ok-txt">Adicion</text>
+  <text x="93" y="74" text-anchor="middle" class="fig-sub">las ideas se suman</text>
+  <text x="26" y="96" class="fig-nota">ademas, asimismo,</text>
+  <text x="26" y="114" class="fig-nota">por otra parte, y, ni</text>
+  <text x="26" y="132" class="fig-nota">se suma</text>
+
+  <rect x="188" y="34" width="158" height="106" rx="10" class="fig-destac"/>
+  <text x="267" y="54" text-anchor="middle" class="fig-destac-txt">Causa y efecto</text>
+  <text x="267" y="74" text-anchor="middle" class="fig-sub">una produce la otra</text>
+  <text x="200" y="96" class="fig-nota">porque, ya que, puesto</text>
+  <text x="200" y="114" class="fig-nota">que, por lo tanto,</text>
+  <text x="200" y="132" class="fig-nota">en consecuencia</text>
+
+  <rect x="14" y="156" width="158" height="106" rx="10" class="fig-mal"/>
+  <text x="93" y="176" text-anchor="middle" class="fig-mal-txt">Oposicion</text>
+  <text x="93" y="196" text-anchor="middle" class="fig-sub">las ideas se contradicen</text>
+  <text x="26" y="218" class="fig-nota">pero, aunque, sin</text>
+  <text x="26" y="236" class="fig-nota">embargo, no obstante,</text>
+  <text x="26" y="254" class="fig-nota">mientras que</text>
+
+  <rect x="188" y="156" width="158" height="106" rx="10" class="fig-apoyo"/>
+  <text x="267" y="176" text-anchor="middle" class="fig-titulo" font-size="13">Orden y tiempo</text>
+  <text x="267" y="196" text-anchor="middle" class="fig-sub">solo ordenan</text>
+  <text x="200" y="218" class="fig-nota">primero, luego, al final,</text>
+  <text x="200" y="236" class="fig-nota">mientras, antes,</text>
+  <text x="200" y="254" class="fig-nota">despues</text>
+</svg>

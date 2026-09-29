@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Qué es la biología y cómo se estudia? — Biología</title>
+  <meta name="description" content="Reconocer los niveles de organización de la materia viva y aplicar el método científico a un problema biológico." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="biologia">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Biología</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · La célula y la vida</a> <span class="mx-2 opacity-50">/</span>
+          <span>¿Qué es la biología y cómo se estudia?</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-brightness-high"></i></div>
+            <h1 class="articulo-titulo">¿Qué es la biología y cómo se estudia?</h1>
+            <p class="articulo-modulo">Módulo 1 · La célula y la vida</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Reconocer los niveles de organización de la materia viva y aplicar el método científico a un problema biológico.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La <strong>biología</strong> es la ciencia que estudia la vida: qué es, cómo se estructura, cómo funciona y cómo se transmite de generación en generación.</p><h4 class="lecc-h4">Los niveles de organización</h4><p>La vida se estudia en una escalera de niveles, y cada uno explica al anterior:</p><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Nivel</th><th>Ejemplo</th><th>Qué aporta el nivel</th></tr></thead><tbody><tr><td>Atómico y molecular</td><td>agua, proteínas, ADN</td><td>las moléculas que construyen todo</td></tr><tr><td>Celular</td><td>bacteria, neurona</td><td>la unidad mínima viva</td></tr><tr><td>Tisular</td><td>músculo, epidermis</td><td>células con el mismo trabajo</td></tr><tr><td>Organo</td><td>corazón, hoja</td><td>tejidos con una función común</td></tr><tr><td>Sistema</td><td>circulatorio, fotosintético</td><td>órganos que se coordinan</td></tr><tr><td>Organismo</td><td>ser humano, roble</td><td>un ser completo</td></tr><tr><td>Población</td><td>todos los lobos de un bosque</td><td>individuos de la misma especie</td></tr><tr><td>Comunidad</td><td>lobos, pastos y hongos</td><td>poblaciones que interactúan</td></tr><tr><td>Ecosistema</td><td>bosque completo</td><td>la comunidad y su ambiente</td></tr></tbody></table></div><h4 class="lecc-h4">Características de la vida</h4><p>Todo ser vivo comparte un conjunto de rasgos, aunque ninguno basta por sí solo:</p><ol class="lecc-ol"><li><strong>Estructura celular</strong>: tiene una o más células.</li><li><strong>Metabolismo</strong>: transforma materia y energía.</li><li><strong>Homeostasis</strong>: mantiene estable su medio interno.</li><li><strong>Crecimiento y desarrollo</strong>: aumenta de tamaño y se diferencia.</li><li><strong>Reproducción</strong>: transmite su información a la descendencia.</li><li><strong>Respuesta a estímulos</strong>: reacciona a cambios del ambiente.</li><li><strong>Adaptación</strong>: su estructura se ajusta al ambiente a lo largo de generaciones.</li></ol><h4 class="lecc-h4">El método científico</h4><p>Un virus no crece ni se reproduce por sí solo, pero sí tiene material genético y evoluciona. Esa excepción es la prueba de que las características se aprenden por separado.</p><p>La ciencia no es un conjunto de conclusiones, sino un proceso que se puede repetir:</p><ol class="lecc-ol"><li><strong>Observación</strong>: describes un fenómeno con precisión.</li><li><strong>Pregunta</strong>: formula algo que se pueda responder.</li><li><strong>Hipótesis</strong>: propone una explicación comprobable.</li><li><strong>Experimento</strong>: la pone a prueba manteniendo una sola variable.</li><li><strong>Análisis</strong>: mira si los datos apoyan la hipótesis.</li><li><strong>Conclusión</strong>: acepta, rechaza o ajusta.</li></ol><div class="lecc-nota">La palabra clave del paso 4 es <strong>una sola variable</strong>. Si cambias la temperatura y el tiempo a la vez, cuando algo ocurra no sabrás qué lo causó.</div><dl class="lecc-glosario"><dt>Biología</dt><dd>Ciencia que estudia a los seres vivos y sus interacciones.</dd><dt>Homeostasis</dt><dd>Capacidad de mantener estable el medio interno.</dd><dt>Adaptación</dt><dd>Característica que favorece la supervivencia y la reproducción.</dd><dt>Hipótesis</dt><dd>Explicación propuesta que se puede poner a prueba.</dd><dt>Variable</dt><dd>Factor que se puede cambiar o medir en un experimento.</dd><dt>Metabolismo</dt><dd>Conjunto de reacciones químicas del metabolism Célula.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un estudiante nota que las plantas del balcón crecen más hacia la ventana. Pregunta si es por la luz o por la temperatura.</p><h4 class="lecc-h4">Hipótesis con una variable</h4><p>«Si la causa es la luz, entonces plantas iluminadas de forma homogénea crecerán igual.»</p><h4 class="lecc-h4">Diseño</h4><ul class="lecc-ul"><li><strong>Variable independiente</strong>: la cantidad de luz (la que él cambia).</li><li><strong>Variable dependiente</strong>: el largo del tallo (la que mide).</li><li><strong>Variables controladas</strong>: tipo de planta, agua, tierra, tiempo.</li></ul><h4 class="lecc-h4">Resultado esperado</h4><p>Las plantas que reciben menos luz se inclinan hacia la ventana, y las del centro crecen rectas. La diferencia no está en la temperatura, que era igual, sino en la dirección de la luz.</p><h4 class="lecc-h4">Conclusión</h4><p>La hipótesis se apoya: el estímulo es la luz, y la respuesta es un crecimiento desigual, un caso de <strong>tropismo</strong>.</p><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Aplica el método científico</h4><ol class="lecc-ol"><li>Observas que un antibiótico mata bacterias. Formula una hipótesis comprobable.</li><li>¿Qué variable pondrías como dependiente si mides el crecimiento de plantas según la cantidad de fertilizante?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p>Podría ser: «Si el antibiótico mata bacterias, entonces una concentración mayor debería reducir más rápido el número de bacterias». La dependiente sería el largo de la planta: lo que se mide para ver si el fertilizante funciona.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Cuando tengas que proponer un experimento, escribe primero las tres variables en una tabla. Si no puedes llenar las tres celdas, todavía no entiendes qué se va a medir.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="biologia-0-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="index.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-la-celula-unidad-de-la-vida.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "biologia-0-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

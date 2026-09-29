@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lectura crítica de la actualidad — Admisión Universitaria</title>
+  <meta name="description" content="Leer noticias y textos de actualidad separando el hecho de la opinión, contrastando fuentes y reconociendo el tratamiento que recibe cada tema." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 5 · Conocimiento general</a> <span class="mx-2 opacity-50">/</span>
+          <span>Lectura crítica de la actualidad</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Lectura crítica de la actualidad</h1>
+            <p class="articulo-modulo">Módulo 5 · Conocimiento general</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Leer noticias y textos de actualidad separando el hecho de la opinión, contrastando fuentes y reconociendo el tratamiento que recibe cada tema.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La actualidad se lee mejor con herramientas de lectura crítica que con método. Pero hay algo que el método no reemplaza: distinguir un hecho nuevo de un hecho viejo que reaparece. La mayoría de los &quot;nuevos&quot; problemas de la actualidad son problemas antiguos con nombres nuevos, y reconocer eso evita muchas reacciones.</p><h4 class="lecc-h4">Las cinco preguntas de una noticia</h4><ol class="lecc-ol"><li><strong>¿Qué pasó?</strong> El hecho, separado de la interpretación.</li><li><strong>¿Quién lo cuenta y por qué?</strong> La fuente y su interés.</li><li><strong>¿Cuándo pasó?</strong> La fecha cambia el significado de un dato.</li><li><strong>¿Qué más se está comparando?</strong> Las noticias siempre comparan, y la comparación es donde está la trampa.</li><li><strong>¿Qué no se dice?</strong> El dato que falta es tan informativo como el que está.</li></ol><p>La cuarta y la quinta son las que casi nadie hace, y son las que la prueba mide.</p><h4 class="lecc-h4">La memoria de corto plazo de los medios</h4><p>Un tema que se menciona una semana no es tendencia. Una tendencia aparece cuando el mismo tema reaparece con datos nuevos a lo largo de semanas. Para una prueba, la diferencia es técnica: si el tema es un hecho puntual, la respuesta es factual; si es un debate abierto, la respuesta debe presentar las dos posturas, y una sola postura siempre está incompleta.</p><h4 class="lecc-h4">Debates y no, optativas</h4><p>Cuando un tema es un debate, la respuesta correcta suele ser la que presenta el mejor argumento de cada lado, no la que elige. Un ítem que dice &quot;explique por qué está en discusión&quot; se contesta con dos razones, una por postura. Un ítem que dice &quot;explique por qué es un problema&quot; se contesta con una.</p><p>Reconocer el formato del ítem es tan importante como conocer el tema, y es mucho más rápido.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un texto afirma: &quot;Una nueva encuesta del 70 % de los jóvenes dice que prefieren el trabajo híbrido. Esto demuestra que el modelo tradicional de oficina ya no tiene sentido.&quot;</p><h4 class="lecc-h4">Método 1: separar dato de conclusión</h4><ul class="lecc-ul"><li>Primero: el dato es una preferencia declarada en una encuesta. La conclusión es que el modelo tradicional &quot;ya no tiene sentido&quot;.</li><li>Una preferencia no demuestra que algo carezca de sentido, y ese salto es el error.</li></ul><h4 class="lecc-h4">Método 2: evaluar el alcance del dato</h4><ul class="lecc-ul"><li>Segundo: un 70 % de los jóvenes de la muestra no es el 70 % de los trabajadores, y menos de todos los trabajadores. La muestra no incluye a quienes no responden encuestas.</li><li>La cifra describe una tendencia, no una necesidad laboral universal.</li></ul><h4 class="lecc-h4">Método 3: identificar el formato de la respuesta</h4><ul class="lecc-ul"><li>Tercero: si el ítem pide evaluar la conclusión, la respuesta correcta es la que señala que una encuesta de preferencias no permite concluir sobre la necesidad de sentido de un modelo.</li><li>Si el ítem pidiera explicar el debate, haría falta presentar la postura de quienes defiende el modelo tradicional, y el texto no lo hace.</li></ul><div class="lecc-nota">Los tres métodos convergen: el texto parte de un dato real y salta a una conclusión que ese dato no soporta. En una prueba, ese salto es la respuesta incorrecta y casi siempre está escrita de forma convincente.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de aceptar una conclusión de actualidad, pregúntate qué tipo de dato la sostendría y búscalo en el texto. Si el dato y la conclusión son de tipos distintos, desconfía.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-4-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-ciudadania-etica-y-derechos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-6-ensayo-y-simulacion-final/01-el-ensayo-estructura-y-tesis.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-4-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

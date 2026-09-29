@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estados de la materia — Química</title>
+  <meta name="description" content="Distinguir los estados sólido, líquido, gaseoso y plasmatico a partir de cómo se ordenan y se mueven sus partículas, relacionarlos con la temperatura, y predecir qué ocurre al calentar o enfriar una sustancia en cada cambio de estado." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Materia y estructura</a> <span class="mx-2 opacity-50">/</span>
+          <span>Estados de la materia</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">Estados de la materia</h1>
+            <p class="articulo-modulo">Módulo 1 · Materia y estructura</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Distinguir los estados sólido, líquido, gaseoso y plasmatico a partir de cómo se ordenan y se mueven sus partículas, relacionarlos con la temperatura, y predecir qué ocurre al calentar o enfriar una sustancia en cada cambio de estado.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La diferencia entre un sólido, un líquido y un gas no está en la cantidad de materia, sino en cómo esa materia está organizada y con cuánta libertad se mueve.</p><h4 class="lecc-h4">Las tres formas de organizar la materia</h4><ul class="lecc-ul"><li><strong>Sólido</strong>: las partículas están muy juntas y ordenadas en una disposición fija. Vibran en su sitio pero no se desplazan. Por eso los sólidos tienen volumen y forma definidos: un hielo no toma la forma del vaso.</li><li><strong>Líquido</strong>: las partículas siguen muy juntas pero pierden la posición fija; se deslizan unas sobre otras. Conservan el volumen pero adoptan la forma del recipiente, como el agua en un vaso.</li><li><strong>Gaseoso</strong>: las partículas están muy separadas y se mueven en línea recta de forma libre, chocando entre sí y contra las paredes. No tienen ni volumen ni forma propios y ocupan todo el espacio disponible.</li></ul><p>Si la energía es tan alta que los átomos se desprenden de sus electrones, aparece un cuarto estado, el <strong>plasma</strong>, que es el de la materia en las estrellas y en los rayos. Es el único estado que se considera el estado fundamental de la materia en el universo.</p><figure class="lecc-figura"><svg viewBox="0 0 360 230" role="img" aria-label="Mismo numero de particulas, distinta separacion: por ahi existe el estado."><text x="180" y="18" text-anchor="middle" class="fig-titulo">Los estados de la materia cambian las particulas</text>
+
+  <rect x="14" y="34" width="104" height="110" rx="12" class="fig-zona"/>
+  <circle cx="40" cy="60" r="9" class="fig-ok"/>
+  <circle cx="66" cy="60" r="9" class="fig-ok"/>
+  <circle cx="92" cy="60" r="9" class="fig-ok"/>
+  <circle cx="40" cy="86" r="9" class="fig-ok"/>
+  <circle cx="66" cy="86" r="9" class="fig-ok"/>
+  <circle cx="92" cy="86" r="9" class="fig-ok"/>
+  <circle cx="40" cy="112" r="9" class="fig-ok"/>
+  <circle cx="66" cy="112" r="9" class="fig-ok"/>
+  <circle cx="92" cy="112" r="9" class="fig-ok"/>
+  <text x="66" y="160" text-anchor="middle" class="fig-ok-txt" font-size="12">Solido</text>
+
+  <rect x="128" y="34" width="104" height="110" rx="12" class="fig-zona"/>
+  <circle cx="146" cy="66" r="9" class="fig-destac"/>
+  <circle cx="172" cy="72" r="9" class="fig-destac"/>
+  <circle cx="196" cy="64" r="9" class="fig-destac"/>
+  <circle cx="150" cy="94" r="9" class="fig-destac"/>
+  <circle cx="176" cy="100" r="9" class="fig-destac"/>
+  <circle cx="200" cy="92" r="9" class="fig-destac"/>
+  <circle cx="146" cy="120" r="9" class="fig-destac"/>
+  <circle cx="172" cy="116" r="9" class="fig-destac"/>
+  <circle cx="198" cy="122" r="9" class="fig-destac"/>
+  <text x="180" y="160" text-anchor="middle" class="fig-destac-txt" font-size="12">Liquido</text>
+
+  <rect x="242" y="34" width="104" height="110" rx="12" class="fig-zona"/>
+  <circle cx="252" cy="58" r="9" class="fig-apoyo"/>
+  <circle cx="290" cy="50" r="9" class="fig-apoyo"/>
+  <circle cx="316" cy="70" r="9" class="fig-apoyo"/>
+  <circle cx="258" cy="92" r="9" class="fig-apoyo"/>
+  <circle cx="300" cy="100" r="9" class="fig-apoyo"/>
+  <circle cx="326" cy="88" r="9" class="fig-apoyo"/>
+  <circle cx="266" cy="120" r="9" class="fig-apoyo"/>
+  <circle cx="300" cy="124" r="9" class="fig-apoyo"/>
+  <circle cx="340" cy="110" r="9" class="fig-apoyo"/>
+  <text x="294" y="160" text-anchor="middle" class="fig-apoyo-txt" font-size="12">Gas</text>
+
+  <text x="180" y="190" text-anchor="middle" class="fig-nota" font-size="12">Cambia cuanto se separan las particulas, no la sustancia.</text>
+  <text x="180" y="212" text-anchor="middle" class="fig-nota" font-size="12">El solido mantiene su forma; el gas ocupa todo el recipiente.</text></svg><figcaption class="fig-titulo">Mismo numero de particulas, distinta separacion: por ahi existe el estado.</figcaption></figure><h4 class="lecc-h4">La teoría cinética</h4><p>La explicación de por qué cambia el estado es la teoría cinética. Las partículas están siempre en movimiento y esa energía se llama <strong>energía cinética</strong>, que es proporcional a la temperatura. Al calentar, la temperatura sube, la energía cinética aumenta y las partículas chocan con más fuerza: eso es lo que rompe la red ordenada de un sólido y lo convierte en líquido.</p><p>Los gases, además, tienen energía potencial entre sus partículas prácticamente nula, porque están tan separados que las atracciones casi no actúan. Los líquidos, en cambio, sí tienen fuerzas de cohesión intermoleculares que se vencen al calentar.</p><h4 class="lecc-h4">Los cambios de estado</h4><p>Al pasar de sólido a líquido la sustancia <strong>absorbe</strong> energía (se derrite, y por eso el hielo enfría su entorno). Al pasar de líquido a gas también absorbe energía (se evapora, y por eso el sudor refresca). Al pasar de gas a líquido o de líquido a sólido la sustancia <strong>libera</strong> energía, y por eso la congelación o la condensación calientan un poco.</p><div class="lecc-nota">El error clásico es pedirle energía a la condensación. El rocío no enfría el aire: lo calienta, porque la molécula de agua libera lo que había absorbido al evaporarse.</div><h4 class="lecc-h4">La curva de calentamiento</h4><p>Cuando se calienta una sustancia sólida y se registra la temperatura, aparece un tramo horizontal en el punto de fusión: la temperatura deja de subir aunque entre calor, porque toda la energía se consume en romper la red cristalina. Después hay un tramo en pendiente y luego otro tramo horizontal en el punto de ebullición, donde la energía rompe las atracciones entre moléculas. Solo en las pendiente la temperatura realmente aumenta, porque solo ahí sube la energía cinética.</p><h4 class="lecc-h4">Un dato que se pregunta mucho</h4><p>El <strong>punto de ebullición</strong> es una propiedad intensiva: depende de la sustancia, no de cuánto hay. En cambio los puntos de fusión y ebullición <strong>suben con la presión</strong>, por eso en la cocina el agua hierve a 100 °C y en la cordillera, con menos presión, hierve a menos. En la cordillera, donde la presión atmosférica es menor, el agua hierve por debajo de los 100 °C.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se tienen 200 g de hielo a −10 °C en un recipiente con paredes aisladas, junto a 300 g de agua a 60 °C. Se mezclan y se pide la temperatura final.</p><h4 class="lecc-h4">Método 1: planteo por etapas y balance de energía</h4><ul class="lecc-ul"><li>Primero el hielo se calienta de −10 °C a 0 °C: Q₁ = 200 g × 2,1 J/(g·°C) × 10 °C = 4 200 J.</li><li>Luego se funde: Q₂ = 200 g × 334 J/g = 66 800 J, y el agua resultante queda a 0 °C.</li><li>El agua caliente suelta calor: si al final quedan m gramos de agua tibia, Q₃ = m × 4,2 × (60 − T).</li><li>Balance: 4 200 + 66 800 = m × 4,2 × (60 − T), con m = 200 + m, es decir el agua total sigue siendo 500 g.</li></ul><h4 class="lecc-h4">Método 2: comprobar si hay o no hielo al final</h4><ul class="lecc-ul"><li>Para fundir todo el hielo harían falta 4 200 + 66 800 = 71 000 J.</li><li>El agua caliente puede soltar como mucho 300 × 4,2 × 60 = 75 600 J.</li><li>Como 75 600 &gt; 71 000, el hielo alcanza a fundirse por completo y sobra energía: no queda hielo, la mezcla es líquida.</li><li>La energía sobrante es 75 600 − 71 000 = 4 600 J, que se reparte entre los 500 g de agua.</li></ul><h4 class="lecc-h4">Método 3: resolución por punto de mezcla</h4><ul class="lecc-ul"><li>Como el agua desciende de 60 °C y el agua de fusión parte de 0 °C: se parece a mezclar agua a 0 °C con agua a 60 °C.</li><li>T = (500 × 0 + 300 × 60) / 500 = 36 °C.</li><li>Este resultado solo es válido si se había confirmado que no queda hielo, y el método 2 confirmó exactamente eso. Por eso se usa el 3 como comprobación, no como procedimiento único.</li></ul><div class="lecc-nota">El orden importa: primero decide si queda sólido, y solo después usa la mezcla. Aplicar la fórmula de mezcla sin comprobarlo da un error de hasta 36 °C.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Si el enunciado no da calores específicos ni calor latente, el problema se resuelve solo con balances de energía en unidades coherentes. Nunca mezcles gramos con kilojulios: pasa todo a gramos y a joules, o todo a kilogramos y a kilojulios, y el resultado sale igual.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-0-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="index.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-el-atomo-y-las-particulas-subatomicas.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-0-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Las leyes de Newton — Física</title>
+  <meta name="description" content="Interpretar inercia, masa, aceleración y acción-reacción y saber cuándo aplicar cada una, con el criterio de elección explícito." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Fuerzas y dinámica</a> <span class="mx-2 opacity-50">/</span>
+          <span>Las leyes de Newton</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Las leyes de Newton</h1>
+            <p class="articulo-modulo">Módulo 2 · Fuerzas y dinámica</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Interpretar inercia, masa, aceleración y acción-reacción y saber cuándo aplicar cada una, con el criterio de elección explícito.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Las tres leyes de Newton son el esqueleto de toda la dinámica, y lo que las hace útiles es que dicen cómo pasar de una situación descrita a palabras a una lista de fuerzas que se pueden sumar.</p><h4 class="lecc-h4">Primera ley: la inercia</h4><p>Un cuerpo permanece en reposo o en movimiento rectilíneo uniforme salvo que actúe sobre él una fuerza neta. La inercia es la tendencia a conservar el estado, y depende de la masa: un bloque de madera sobre un trineo se mueve más difícil de detener que una hoja de papel, porque su masa es mayor.</p><p>Lo importante es la palabra &quot;neta&quot;. Si dos fuerzas de igual magnitud en sentidos opuestos actúan sobre un cuerpo, este no se mueve, y desde el punto de vista de la primera ley la fuerza neta es cero.</p><h4 class="lecc-h4">Segunda ley: la que más se usa</h4><p>La fuerza neta sobre un cuerpo de masa m produce una aceleración inversamente proporcional a la masa: F neta = m · a. Esta ley es bidireccional y ahí está su potencia:</p><ul class="lecc-ul"><li>Si conoces la fuerza y la masa, calculas la aceleración.</li><li>Si conoces la aceleración y la masa, calculas la fuerza.</li><li>Si conoces la fuerza y la aceleración, calculas la masa.</li></ul><p>Fíjate en el orden inverso: a = F/m y F = m · a son la misma igualdad leída al revés. Un error frecuente es dividir donde hay que multiplicar, y el resultado es una aceleración demasiado pequeña.</p><p>Cuando la fuerza varía en el tiempo, la segunda ley se escribe F neta = m · dv/dt. En un examen eso se lee como: la pendiente de la gráfica velocidad-tiempo multiplicada por la masa es la fuerza.</p><h4 class="lecc-h4">Tercera ley: acción y reacción</h4><p>A toda acción corresponde una reacción de igual magnitud, sentido contrario y que actúa sobre un cuerpo distinto. La palabra decisiva es &quot;distinto&quot;: la fuerza que yo empujo hacia la pared no frena mi avance, porque la reacción acts sobre la pared, no sobre mí.</p><ul class="lecc-ul"><li>Empujo la pared: la pared me empuja a mí, con la misma fuerza.</li><li>Un cohete no funciona porque el aire lo empuja, sino porque expulsa gases hacia atrás y el gas empuja el cohete hacia adelante.</li><li>Por eso dos personas con igual masa intercambian aceleraciones simétricas al empujarse, y la suma de sus fuerzas sobre cada una no es cero: son fuerzas sobre cuerpos distintos.</li></ul><h4 class="lecc-h4">El diagrama de cuerpo libre</h4><p>Es la herramienta que más resultados garantiza. Consiste en dibujar el cuerpo solo, y dibujar sobre él todas las fuerzas que actúan:</p><ul class="lecc-ul"><li>Las tres que nunca se olvidan: peso hacia abajo, normal hacia arriba y la fuerza que el enunciado menciona.</li><li>Las fuerzas que se olvidan: fricción, tensión de una cuerda, empuje del agua, resistencia del aire. Si el enunciado las nombra o el contexto las exige, entran.</li><li>Se dibujan vectores con longitud proporcional a la magnitud, y solo entonces se eligen ejes y se escriben ecuaciones.</li></ul><p>Un cuerpo libre bien dibujado hace que la segunda ley sea mecánica, porque la única dificultad real del tema es acertar la lista de fuerzas.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un bloque de 5 kg se empuja horizontalmente con una fuerza constante de 30 N sobre una superficie horizontal. La fricción tiene un valor de 10 N. ¿Cuál es la aceleración del bloque y con qué rapidez se mueve a los 4 segundos si parte del reposo?</p><h4 class="lecc-h4">Método 1: dibujar y sumar fuerzas</h4><ul class="lecc-ul"><li>Primero: hago el diagrama de cuerpo libre. El peso, 5 · 9,8 = 49 N, hacia abajo, y la normal de 49 N hacia arriba se anulan porque no hay movimiento vertical.</li><li>Segundo: horizontalmente solo hay dos fuerzas, los 30 N del empuje hacia la derecha y los 10 N de fricción hacia la izquierda. La fuerza neta es 30 − 10 = 20 N en el sentido del empuje.</li><li>Tercero: por la segunda ley, la aceleración es F neta entre m = 20 entre 5 = 4 m/s², hacia la derecha.</li></ul><h4 class="lecc-h4">Método 2: ir directo a la ecuación por ejes</h4><ul class="lecc-ul"><li>Cuarto: en el eje horizontal, m · a = F aplicada − F fricción, o sea 5a = 30 − 10 = 20, de donde a = 4 m/s².</li><li>Quinto: en el eje vertical, m · a vale cero porque no hay aceleración vertical: 0 = 49 − 49. Escribir la ecuación vertical aunque no lo pidas es un buen control de coherencia.</li></ul><h4 class="lecc-h4">Método 3: comprobar con la velocidad</h4><ul class="lecc-ul"><li>Sexto: como parte del reposo, la rapidez a los 4 s es a · t = 4 · 4 = 16 m/s, unos 57,6 km/h.</li><li>Séptimo: observo la coherencia. Si la fricción fuera de 30 N, la fuerza neta sería cero y el bloque nunca se movería, que es justo lo que predice el criterio de equilibrio de la primera ley.</li></ul><div class="lecc-nota">El resultado que hay que retener no es 4 m/s² sino la lista de fuerzas. Cambia el empuje a 10 N y el bloque no se mueve; cambia la masa a 10 kg y la aceleración baja a 2 m/s². La lista explica ambos casos.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Nunca sumes fuerzas de cuerpos distintos. Las 30 N y las 10 N de fricción actúan sobre el bloque y se suman entre sí; la reacción de la superficie es un par distinto y no entra en esa suma.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-1-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-1-movimiento-y-cinematica/05-movimiento-circular-uniforme.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-fuerza-masa-y-aceleracion.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-1-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

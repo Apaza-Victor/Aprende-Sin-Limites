@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hojas de cálculo: fórmulas y referencias — Alfabetización Digital</title>
+  <meta name="description" content="Escribir fórmulas con referencias relativas y absolutas, y usar SUMAR, PROMEDIO y funciones básicas para analizar datos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="alfabetizacion-digital">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Alfabetización Digital</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Documentos y hojas de cálculo</a> <span class="mx-2 opacity-50">/</span>
+          <span>Hojas de cálculo: fórmulas y referencias</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-laptop"></i></div>
+            <h1 class="articulo-titulo">Hojas de cálculo: fórmulas y referencias</h1>
+            <p class="articulo-modulo">Módulo 2 · Documentos y hojas de cálculo</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Escribir fórmulas con referencias relativas y absolutas, y usar SUMAR, PROMEDIO y funciones básicas para analizar datos.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Una hoja de cálculo es una calculadora con memoria. La diferencia está en que las fórmulas se repiten solas.</p><figure class="lecc-figura"><svg viewBox="0 0 360 260" role="img" aria-label="Referencias relativas (A1) y absolutas ($A$1) en la misma fórmula"><text x="180" y="18" text-anchor="middle" class="fig-titulo">Una formula arrastrada llega a donde haga falta</text>
+
+  <text x="86" y="40" text-anchor="middle" class="fig-sub">Columna A</text>
+  <text x="180" y="40" text-anchor="middle" class="fig-sub">Columna B</text>
+  <text x="286" y="40" text-anchor="middle" class="fig-sub">Columna C</text>
+
+  <rect x="18" y="48" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="50" y="63" text-anchor="middle" class="fig-etiqueta" font-size="11">A1 · 3</text>
+  <rect x="90" y="48" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="122" y="63" text-anchor="middle" class="fig-etiqueta" font-size="11">B1 · 5</text>
+  <rect x="162" y="48" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="194" y="63" text-anchor="middle" class="fig-etiqueta" font-size="11">C1</text>
+  <text x="238" y="63" class="fig-ok-txt" font-size="11">A1 * B1</text>
+  <text x="238" y="78" class="fig-nota" font-size="10">= 15</text>
+
+  <rect x="18" y="76" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="50" y="91" text-anchor="middle" class="fig-etiqueta" font-size="11">A2 · 4</text>
+  <rect x="90" y="76" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="122" y="91" text-anchor="middle" class="fig-etiqueta" font-size="11">B2 · 2</text>
+  <rect x="162" y="76" width="64" height="22" rx="4" class="fig-ok"/>
+  <text x="194" y="91" text-anchor="middle" class="fig-ok-txt" font-size="11">C2</text>
+  <text x="238" y="91" class="fig-ok-txt" font-size="11">A2 * B2</text>
+  <text x="238" y="106" class="fig-nota" font-size="10">= 8</text>
+
+  <rect x="18" y="104" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="50" y="119" text-anchor="middle" class="fig-etiqueta" font-size="11">A3 · 6</text>
+  <rect x="90" y="104" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="122" y="119" text-anchor="middle" class="fig-etiqueta" font-size="11">B3 · 7</text>
+  <rect x="162" y="104" width="64" height="22" rx="4" class="fig-ok"/>
+  <text x="194" y="119" text-anchor="middle" class="fig-ok-txt" font-size="11">C3</text>
+  <text x="238" y="119" class="fig-ok-txt" font-size="11">A3 * B3</text>
+  <text x="238" y="134" class="fig-nota" font-size="10">= 42</text>
+
+  <rect x="18" y="132" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="50" y="147" text-anchor="middle" class="fig-etiqueta" font-size="11">A4 · 1</text>
+  <rect x="90" y="132" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="122" y="147" text-anchor="middle" class="fig-etiqueta" font-size="11">B4 · 9</text>
+  <rect x="162" y="132" width="64" height="22" rx="4" class="fig-ok"/>
+  <text x="194" y="147" text-anchor="middle" class="fig-ok-txt" font-size="11">C4</text>
+  <text x="238" y="147" class="fig-ok-txt" font-size="11">A4 * B4</text>
+  <text x="238" y="162" class="fig-nota" font-size="10">= 9</text>
+
+  <rect x="14" y="176" width="332" height="70" rx="9" class="fig-zona"/>
+  <text x="26" y="198" class="fig-sub" font-size="12">Copia A1*B1 y suelta en C2: las referencias bajan solas</text>
+  <text x="26" y="220" class="fig-ok-txt" font-size="12">C5 = SUMA(C1:C4) = 15 + 8 + 42 + 9 = 74</text>
+  <text x="26" y="240" class="fig-mal-txt" font-size="11">Si escribes 15 en cada celda, el dia que cambie un dato todo esta mal.</text></svg><figcaption class="fig-titulo">Referencias relativas (A1) y absolutas ($A$1) en la misma fórmula</figcaption></figure><h4 class="lecc-h4">La estructura de una fórmula</h4><p>Toda fórmula empieza con <strong>=</strong>. Después van la función, el rango y los argumentos separados por punto y coma o coma.</p><div class="lecc-codigo"><pre><code>=SUMAR(A1:A10)
+=PROMEDIO(B2:B6)
+=SI(C1&gt;=60;&quot;aprueba&quot;;&quot;reprobó&quot;)
+</code></pre></div><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Función</th><th>Qué hace</th></tr></thead><tbody><tr><td>SUMA</td><td>suma un rango</td></tr><tr><td>PROMEDIO</td><td>calcula la media aritmética</td></tr><tr><td>CONTAR</td><td>cuenta celdas con números</td></tr><tr><td>MÁXIMO, MÍNIMO</td><td>mayor y menor valor</td></tr><tr><td>SI</td><td>decide según una condición</td></tr></tbody></table></div><h4 class="lecc-h4">Referencias relativas y absolutas</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Referencia</th><th>Al copiar la fórmula hacia abajo</th></tr></thead><tbody><tr><td>`A1`</td><td>cambia: pasa a `A2`, `A3`</td></tr><tr><td>`$A$1`</td><td>no cambia: sigue siendo `$A$1`</td></tr><tr><td>`$A1`</td><td>la columna queda fija, la fila cambia</td></tr><tr><td>`A$1`</td><td>la fila queda fija, la columna cambia</td></tr></tbody></table></div><p>El signo <strong>$</strong> es la clave. Con `$` se fija una coordenada.</p><dl class="lecc-glosario"><dt>Hoja de cálculo</dt><dd>Programa para organizar datos en filas y columnas.</dd><dt>Fórmula</dt><dd>Expresión que empieza con = y calcula un resultado.</dd><dt>Rango</dt><dd>Rectángulo de celdas, como `B2:B15`.</dd><dt>Referencia relativa</dt><dd>Dirección que cambia al copiar la fórmula.</dd><dt>Referencia absoluta</dt><dd>Dirección con $ que no cambia al copiar.</dd><dt>Fila</dt><dd>Línea horizontal de la hoja.</dd><dt>Columna</dt><dd>Línea vertical de la hoja.</dd></dl><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Crea una fórmula</h4><ol class="lecc-ol"><li>¿Cómo sumarías las celdas de `C2` a `C11`?</li><li>¿Qué se necesita para que la celda `B1` no cambie al arrastrar?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p>`=SUMA(C2:C11)`. Para fijar `B1` se escribe `$B$1`; con un solo `$` en `$B1` se fija la columna pero la fila seguiría cambiando.</p></details></div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una lista de 20 estudiantes tiene sus notas en `B2:B21`, y en `B22` se calcula el promedio.</p><h4 class="lecc-h4">Fórmula del promedio</h4><div class="lecc-codigo"><pre><code>=PROMEDIO(B2:B21)
+</code></pre></div><p>Al copiarla a `C22` pasa a `=PROMEDIO(C2:C21)`: la referencia es relativa y se ajusta a la columna nueva.</p><h4 class="lecc-h4">Fijar el número de aprobados</h4><p>Supongamos que el total de alumno es 20 y está en `E1`. Para multiplicar cada nota por ese total sin que la referencia cambie:</p><div class="lecc-codigo"><pre><code>=B2*$E$1
+</code></pre></div><p>Al copiar a `B3` queda `=B3*$E$1`: el total sigue apuntando a `E1` porque el signo <strong>$</strong> lo protege.</p><h4 class="lecc-h4">Un resumen completo</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Celda</th><th>Fórmula</th><th>Resultado</th></tr></thead><tbody><tr><td>B22</td><td>`=PROMEDIO(B2:B21)`</td><td>media de las 20 notas</td></tr><tr><td>C1</td><td>`=MAX(B2:B21)`</td><td>mejor nota</td></tr><tr><td>C2</td><td>`=MIN(B2:B21)`</td><td>peor nota</td></tr><tr><td>C3</td><td>`=CONTAR(B2:B21)`</td><td>cuántos datos hay</td></tr></tbody></table></div><div class="lecc-nota">La diferencia entre un usuario que pelea con la hoja y otro que resuelve en cinco minutos está en decidir usar `$`. Cada vez que copies una fórmula, pregúntate si el dato debe moverse o permanecer fijo.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Para ver el resultado de una fórmula sin tocarla, selecciona la celda y lee la barra de fórmulas; ahí aparece exactamente lo que escribiste.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="alfabetizacion-digital-1-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-buscar-reemplazar-y-corregir-en-lote.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-3-internet-fuentes-y-trabajo-en-la-nube/01-buscar-en-internet-sin-perder-tiempo.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "alfabetizacion-digital-1-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

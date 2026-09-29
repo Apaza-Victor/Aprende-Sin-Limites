@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Deducir una palabra con pistas del texto</text>
+
+  <defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <rect x="10" y="36" width="150" height="48" rx="10" class="fig-zona"/>
+  <text x="85" y="58" text-anchor="middle" class="fig-titulo" font-size="12">Pista 1: contexto</text>
+  <text x="85" y="76" text-anchor="middle" class="fig-nota" font-size="12">"El rio bajaba turbio"</text>
+
+  <rect x="10" y="100" width="150" height="48" rx="10" class="fig-zona"/>
+  <text x="85" y="122" text-anchor="middle" class="fig-titulo" font-size="12">Pista 2: sintaxis</text>
+  <text x="85" y="140" text-anchor="middle" class="fig-nota" font-size="12">"en el fondo habia ..."</text>
+
+  <line x1="162" y1="60" x2="192" y2="86" class="fig-flecha"/>
+  <line x1="162" y1="124" x2="192" y2="98" class="fig-flecha"/>
+
+  <rect x="196" y="36" width="154" height="112" rx="12" class="fig-ok"/>
+  <text x="273" y="60" text-anchor="middle" class="fig-ok-txt" font-size="12">Significado deducido</text>
+  <text x="273" y="88" text-anchor="middle" class="fig-ok-txt" font-size="13">sedimento</text>
+  <text x="273" y="110" text-anchor="middle" class="fig-apoyo-txt" font-size="12">material que se deposita</text>
+  <text x="273" y="128" text-anchor="middle" class="fig-apoyo-txt" font-size="12">en el fondo del rio</text>
+
+  <text x="180" y="196" text-anchor="middle" class="fig-nota" font-size="12">Con dos pistas basta: no necesitas el diccionario para responder.</text>
+</svg>

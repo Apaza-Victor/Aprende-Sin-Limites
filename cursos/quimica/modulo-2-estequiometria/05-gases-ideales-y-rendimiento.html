@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gases ideales y rendimiento — Química</title>
+  <meta name="description" content="Aplicar la ecuación de los gases ideales PV = nRT con las unidades correctas, deducir las leyes de presión y temperatura a volumen y cantidad constantes, y calcular el rendimiento de una reacción junto con la pureza de los reactivos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Estequiometría</a> <span class="mx-2 opacity-50">/</span>
+          <span>Gases ideales y rendimiento</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">Gases ideales y rendimiento</h1>
+            <p class="articulo-modulo">Módulo 2 · Estequiometría</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Aplicar la ecuación de los gases ideales PV = nRT con las unidades correctas, deducir las leyes de presión y temperatura a volumen y cantidad constantes, y calcular el rendimiento de una reacción junto con la pureza de los reactivos.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Los gases se describen con cuatro variables: presión P, volumen V, cantidad de sustancia n y temperatura T. La ecuación que las une es <strong>PV = nRT</strong>, con R = 0,082 atm·L/(mol·K).</p><h4 class="lecc-h4">Las unidades que hay que respetar</h4><p>R solo funciona si las unidades son coherentes:</p><ul class="lecc-ul"><li>Con R = 0,082: P en <strong>atm</strong>, V en <strong>litros</strong>, T en <strong>kelvin</strong>.</li><li>Con R = 8,314: P en <strong>pascales</strong>, V en <strong>metros cúbicos</strong>, T en kelvin. Con litros el resultado sale con unidades mezcladas y no cuadra.</li><li>Con R = 0,082: 1 atm = 760 mmHg.</li></ul><div class="lecc-nota">La temperatura va <strong>siempre en kelvin</strong>: T(K) = T(°C) + 273. Olvidar el 273 es el error más común de todo el tema y produce respuestas que se van a cero o se salen de escala.</div><h4 class="lecc-h4">Las tres leyes que se deducen de la ecuación</h4><ul class="lecc-ul"><li><strong>Ley de Boyle</strong>: a T y n constantes, P·V = constante. Si duplicas el volumen, la presión se reduce a la mitad.</li><li><strong>Ley de Charles</strong>: a P y n constantes, V/T = constante, y el cociente se expresa en kelvin.</li><li><strong>Ley de Gay-Lussac</strong>: a V y n constantes, P/T = constante.</li><li><strong>Ley general</strong>: P₁V₁/T₁ = P₂V₂/T₂, que es la que se usa cuando cambian varias a la vez.</li></ul><h4 class="lecc-h4">Volumen molar</h4><p>Un mol de cualquier gas ideal ocupa 22,4 L en condiciones normales (0 °C y 1 atm). En condiciones ambientales, unos 24 L. La densidad de un gas se obtiene con d = PM/(RT), y por eso el gas más pesado de una pareja es siempre el más denso a igual temperatura y presión.</p><h4 class="lecc-h4">Rendimiento y pureza</h4><p>El rendimiento teórico se calcula como en la lección anterior, y el real es el que da el enunciado. El porcentaje de rendimiento es real entre teórico por 100. Si un gas se recoge sobre agua, la presión medida es la del gas más la del vapor de agua, y hay que restar la presión del vapor para obtener la del gas: P_gas = P_total − P_vapor.</p><h4 class="lecc-h4">Valor esperado</h4><p>Si hay un rendimiento del 85 %, el rendimiento real es 0,85 veces el teórico. Multiplicar al final y no al principio evita arrastrar el error por toda la cadena.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un recipiente de 5 L contiene un gas a 2 atm y 27 °C. Se calienta hasta 127 °C manteniendo el volumen constante. ¿Cuál es la presión final? Luego se deja escapar gas hasta que la presión sea 1 atm, manteniendo la temperatura. ¿Cuántos moles se han perdido?</p><h4 class="lecc-h4">Método 1: ley de Gay-Lussac a volumen constante</h4><ul class="lecc-ul"><li>V y n constantes, así que P₁/T₁ = P₂/T₂.</li><li>T₁ = 27 + 273 = 300 K, T₂ = 127 + 273 = 400 K.</li><li>P₂ = 2 × 400/300 = <strong>2,67 atm</strong>.</li></ul><h4 class="lecc-h4">Método 2: con la ecuación de los gases ideales</h4><ul class="lecc-ul"><li>n = P₁V₁/(RT₁) = 2 × 5 / (0,082 × 300) = 10 / 24,6 = 0,4065 mol.</li><li>Como el volumen no cambia y tampoco n, P₂ = nRT₂/V = 0,4065 × 0,082 × 400 / 5 = 2,67 atm.</li><li>El resultado coincide con el método 1, lo que confirma la conversión a kelvin.</li></ul><h4 class="lecc-h4">Método 3: cálculo de los moles perdidos</h4><ul class="lecc-ul"><li>A 400 K y 1 atm en 5 L: n = 1 × 5 / (0,082 × 400) = 5 / 32,8 = 0,1524 mol.</li><li>Los moles perdidos son 0,4065 − 0,1524 = <strong>0,254 mol</strong>.</li><li>La comprobación: como la presión bajó de 2,67 a 1,00, el gas quedó en algo más de un tercio, y en efecto 0,1524/0,4065 = 0,375.</li></ul><div class="lecc-nota">Si el enunciado pidiera el volumen que ocupan esos 0,254 mol a 400 K, sería 0,254 × 0,082 × 400 = 8,3 L, mayor que el recipiente: el gas se ha ido, no se ha comprimido.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Convierte siempre la temperatura a kelvin antes de tocar la ecuación, y escribe el 273 explícitamente en el papel. Si el resultado te da una presión negativa, casi siempre es que la temperatura quedó en grados.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-1-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-reactivo-limitante.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-3-disoluciones-y-reacciones/01-concentraciones-de-disoluciones.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-1-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

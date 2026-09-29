@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250">
+  <circle cx="150" cy="120" r="90" class="fig-dato"/>
+  <path d="M166 209 L65 89" class="fig-acento"/>
+  <path d="M166 209 L195 42" class="fig-acento"/>
+  <path d="M150 120 L65 89" class="fig-dato"/>
+  <path d="M150 120 L195 42" class="fig-dato"/>
+  <path d="M112.4 106.3 A40 40 0 0 1 170 85.4" class="fig-acento"/>
+  <path d="M146.7 186.2 A30 30 0 0 1 170.9 179.4" class="fig-acento"/>
+  <circle cx="150" cy="120" r="3" fill="currentColor" stroke="none"/>
+  <text x="150" y="106" text-anchor="middle" font-size="14" class="fig-etiqueta">O</text>
+  <text x="164" y="126" text-anchor="middle" font-size="14" class="fig-acento-texto">2α</text>
+  <text x="128" y="180" text-anchor="middle" font-size="14" class="fig-acento-texto">α</text>
+  <text x="150" y="244" text-anchor="middle" font-size="13" class="fig-nota">ángulo central = 2 · ángulo inscrito que abarcan el mismo arco</text>
+</svg>

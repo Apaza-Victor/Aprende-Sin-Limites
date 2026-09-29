@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250">
+  <circle cx="150" cy="120" r="80" class="fig-forma"/>
+  <ellipse cx="150" cy="120" rx="80" ry="26" class="fig-dato"/>
+  <ellipse cx="150" cy="120" rx="26" ry="80" class="fig-dato"/>
+  <path d="M150 120 L230 120" class="fig-acento"/>
+  <circle cx="150" cy="120" r="3" fill="currentColor" stroke="none"/>
+  <text x="192" y="110" text-anchor="middle" font-size="15">r</text>
+  <text x="150" y="110" text-anchor="middle" font-size="14" class="fig-etiqueta">O</text>
+  <text x="150" y="22" text-anchor="middle" font-size="13" class="fig-nota">ecuador</text>
+  <text x="188" y="130" text-anchor="middle" font-size="13" class="fig-nota">meridiano</text>
+  <text x="150" y="240" text-anchor="middle" font-size="13" class="fig-nota">V = 4π · r³ : 3   ·   A = 4π · r²</text>
+</svg>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Razonamiento Verbal — Aprende Sin Límites</title>
+  <meta name="description" content="Mejora tu vocabulario, comprensión lectora y precisión en analogías, sinónimos y conectores lógicos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="razonamiento-verbal">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../index.html"><i class="bi bi-stars"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCurso"
+        aria-controls="navCurso" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navCurso">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../index.html"><i class="bi bi-house-door"></i> Inicio</a>
+          <span class="mx-2 opacity-50">/</span>
+          <span>Razonamiento Verbal</span>
+        </nav>
+
+        <header class="cabecera-curso tarjeta p-4 p-lg-5 mb-4">
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <div class="icono flex-shrink-0"><i class="bi bi-chat-quote"></i></div>
+            <div>
+              <h1 class="mb-0">Razonamiento Verbal</h1>
+              <p class="col-mut mb-2 mt-1">Mejora tu vocabulario, comprensión lectora y precisión en analogías, sinónimos y conectores lógicos.</p>
+              <div class="d-flex flex-wrap gap-2"><span class="chip d-inline-block">Sinónimos</span><span class="chip d-inline-block">Antónimos</span><span class="chip d-inline-block">Analogías</span><span class="chip d-inline-block">Comprensión</span></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="tarjeta p-4 reveal">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div><i class="bi bi-graph-up-arrow" style="color: var(--acento);"></i></div>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between small">
+                <span class="col-mut">Progreso del curso</span>
+                <span id="contadorCurso" class="fw-semibold">0 / 20</span>
+              </div>
+              <div class="progress" style="height: 8px; margin-top: .4rem;">
+                <div id="barraCurso" class="progress-bar" style="width: 0%;" role="progressbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-8">
+            <h4 class="d-flex align-items-center gap-2 mb-3"><i class="bi bi-diagram-3" style="color: var(--acento);"></i> Módulos del curso</h4>
+            <div class="row g-4" id="gridModulos"><div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-collection"></i></div><div><span class="mod-card-kicker">Módulo 1</span><h5 class="mod-card-titulo mb-0">Sinonimia y vocabulario</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-0-0" href="modulo-1-sinonimia-y-vocabulario/01-sinonimos.html"><span class="minificha-num">1</span><span class="minificha-txt">Sinónimos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-0-1" href="modulo-1-sinonimia-y-vocabulario/02-antonimos.html"><span class="minificha-num">2</span><span class="minificha-txt">Antónimos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-0-2" href="modulo-1-sinonimia-y-vocabulario/03-terminos-excluidos.html"><span class="minificha-num">3</span><span class="minificha-txt">Términos excluidos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-0-3" href="modulo-1-sinonimia-y-vocabulario/04-series-verbales.html"><span class="minificha-num">4</span><span class="minificha-txt">Series verbales</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-0-4" href="modulo-1-sinonimia-y-vocabulario/05-familia-de-palabras.html"><span class="minificha-num">5</span><span class="minificha-txt">Familia de palabras</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-1-sinonimia-y-vocabulario/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-map"></i></div><div><span class="mod-card-kicker">Módulo 2</span><h5 class="mod-card-titulo mb-0">Semántica y precisión</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-1-0" href="modulo-2-semantica-y-precision/01-analogias.html"><span class="minificha-num">1</span><span class="minificha-txt">Analogías</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-1-1" href="modulo-2-semantica-y-precision/02-conectores-logicos.html"><span class="minificha-num">2</span><span class="minificha-txt">Conectores lógicos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-1-2" href="modulo-2-semantica-y-precision/03-plan-de-redaccion.html"><span class="minificha-num">3</span><span class="minificha-txt">Plan de redacción</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-1-3" href="modulo-2-semantica-y-precision/04-oraciones-eliminadas.html"><span class="minificha-num">4</span><span class="minificha-txt">Oraciones eliminadas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-1-4" href="modulo-2-semantica-y-precision/05-terminos-contextuales.html"><span class="minificha-num">5</span><span class="minificha-txt">Términos contextuales</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-2-semantica-y-precision/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-layers"></i></div><div><span class="mod-card-kicker">Módulo 3</span><h5 class="mod-card-titulo mb-0">Comprensión de lectura</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-2-0" href="modulo-3-comprension-de-lectura/01-idea-principal.html"><span class="minificha-num">1</span><span class="minificha-txt">Idea principal</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-2-1" href="modulo-3-comprension-de-lectura/02-comprension-literal.html"><span class="minificha-num">2</span><span class="minificha-txt">Comprensión literal</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-2-2" href="modulo-3-comprension-de-lectura/03-comprension-inferencial.html"><span class="minificha-num">3</span><span class="minificha-txt">Comprensión inferencial</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-2-3" href="modulo-3-comprension-de-lectura/04-lectura-critica.html"><span class="minificha-num">4</span><span class="minificha-txt">Lectura crítica</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-2-4" href="modulo-3-comprension-de-lectura/05-textos-comparativos-y-estructuras.html"><span class="minificha-num">5</span><span class="minificha-txt">Textos comparativos y estructuras</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-3-comprension-de-lectura/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-compass"></i></div><div><span class="mod-card-kicker">Módulo 4</span><h5 class="mod-card-titulo mb-0">Aplicación en exámenes</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-3-0" href="modulo-4-aplicacion-en-examenes/01-estrategia-frente-a-textos-largos.html"><span class="minificha-num">1</span><span class="minificha-txt">Estrategia frente a textos largos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-3-1" href="modulo-4-aplicacion-en-examenes/02-eliminacion-de-alternativas.html"><span class="minificha-num">2</span><span class="minificha-txt">Eliminación de alternativas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-3-2" href="modulo-4-aplicacion-en-examenes/03-velocidad-lectora.html"><span class="minificha-num">3</span><span class="minificha-txt">Velocidad lectora</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-3-3" href="modulo-4-aplicacion-en-examenes/04-vocabulario-para-el-examen-parte-1.html"><span class="minificha-num">4</span><span class="minificha-txt">Vocabulario para el examen (parte 1)</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="razonamiento-verbal-3-4" href="modulo-4-aplicacion-en-examenes/05-vocabulario-para-el-examen-parte-2.html"><span class="minificha-num">5</span><span class="minificha-txt">Vocabulario para el examen (parte 2)</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-4-aplicacion-en-examenes/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div></div>
+          </div>
+          <aside class="col-lg-4">
+            <div class="tarjeta p-4 reveal">
+              <h5 class="d-flex align-items-center gap-2"><i class="bi bi-signpost-2" style="color: var(--acento);"></i> Ruta de estudio</h5>
+              <ol class="ruta-estudio mt-3 mb-0"><li class="reveal"><span class="paso-num">1</span><span class="paso-txt">Amplía vocabulario con listas diarias de sinónimos y antónimos.</span></li><li class="reveal"><span class="paso-num">2</span><span class="paso-txt">Practica analogías y conectores para entrenar la lógica del lenguaje.</span></li><li class="reveal"><span class="paso-num">3</span><span class="paso-txt">Cierra con comprensión lectora cronometrada: la que más puntos da.</span></li></ol>
+            </div>
+          </aside>
+        </div>
+
+        <div class="tarjeta p-4 mt-4 reveal">
+          <h5 class="d-flex align-items-center gap-2"><i class="bi bi-puzzle" style="color: var(--acento);"></i> Recursos recomendados</h5>
+          <ul class="lista-recursos mt-3 mb-0"><li class="d-flex gap-2 mb-2"><i class="bi bi-box-arrow-up-right" style="color:var(--acento);"></i><div><a href="https://razonamientoverbal.com" target="_blank" rel="noopener">Razonamiento Verbal en línea</a><div class="col-mut small">Ejercicios y bancos de preguntas clasificados.</div></div></li><li class="d-flex gap-2 mb-2"><i class="bi bi-info-circle" style="color:var(--acento);"></i><div><span>Lectura diaria</span><div class="col-mut small">Lee un artículo de opinión y resume en 3 líneas. Hábito recomendado</div></div></li><li class="d-flex gap-2 mb-2"><i class="bi bi-box-arrow-up-right" style="color:var(--acento);"></i><div><a href="https://dle.rae.es" target="_blank" rel="noopener">Diccionario RAE</a><div class="col-mut small">Consulta el significado preciso de cada término.</div></div></li></ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../secciones/recursos.html">Recursos</a>
+          <a href="../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+  <script>
+    var CLAVES = ["razonamiento-verbal-0-0","razonamiento-verbal-0-1","razonamiento-verbal-0-2","razonamiento-verbal-0-3","razonamiento-verbal-0-4","razonamiento-verbal-1-0","razonamiento-verbal-1-1","razonamiento-verbal-1-2","razonamiento-verbal-1-3","razonamiento-verbal-1-4","razonamiento-verbal-2-0","razonamiento-verbal-2-1","razonamiento-verbal-2-2","razonamiento-verbal-2-3","razonamiento-verbal-2-4","razonamiento-verbal-3-0","razonamiento-verbal-3-1","razonamiento-verbal-3-2","razonamiento-verbal-3-3","razonamiento-verbal-3-4"];
+    var KEY = "asl-progreso";
+    function leer() { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; } }
+    function pintar() {
+      var estados = leer(), hechas = 0;
+      CLAVES.forEach(function (k) { if (estados[k]) hechas++; });
+      var contador = document.getElementById("contadorCurso");
+      if (contador) contador.textContent = hechas + " / " + CLAVES.length;
+      var barra = document.getElementById("barraCurso");
+      if (barra && CLAVES.length) barra.style.width = Math.round((hechas / CLAVES.length) * 100) + "%";
+      var fichas = document.querySelectorAll(".minificha-link[data-clave]");
+      fichas.forEach(function (f) {
+        if (estados[f.getAttribute("data-clave")]) f.classList.add("hecha");
+        else f.classList.remove("hecha");
+      });
+    }
+    document.addEventListener("DOMContentLoaded", pintar);
+    document.addEventListener("DOMContentLoaded", function () {
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

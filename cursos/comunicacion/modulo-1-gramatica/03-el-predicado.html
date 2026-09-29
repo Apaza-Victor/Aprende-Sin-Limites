@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El predicado — Comunicación / Lenguaje</title>
+  <meta name="description" content="Reconocer el predicado verbal y el nominal por su verbo, y colocar correctamente los dos puntos de la oracion, que es donde se fallan las tildes." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="comunicacion">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Comunicación / Lenguaje</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Gramática</a> <span class="mx-2 opacity-50">/</span>
+          <span>El predicado</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-chat-square-text"></i></div>
+            <h1 class="articulo-titulo">El predicado</h1>
+            <p class="articulo-modulo">Módulo 1 · Gramática</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Reconocer el predicado verbal y el nominal por su verbo, y colocar correctamente los dos puntos de la oracion, que es donde se fallan las tildes.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">Que es el predicado</h4><p>El predicado es <strong>todo lo que se dice del sujeto</strong>, y se divide en dos partes:</p><ol class="lecc-ol"><li><strong>El nucleo del predicado</strong>: el verbo, que es lo unico imprescindible.</li><li><strong>Los modificadores del predicado</strong>: el resto, que completa el sentido.</li></ol><p>Si el nucleo es un verbo copulativo, el predicado es <strong>nominal</strong>. Si es cualquier otro verbo, es <strong>verbal</strong>.</p><h4 class="lecc-h4">Los verbos copulativos</h4><p>Seis verbos, y solo seis, pueden ser nucleo de un predicado nominal: <strong>ser, estar, parecer, permanecer, quedar y resultar</strong>.</p><p>Estos verbos no expresan accion: enlazan el sujeto con una cualidad.</p><h4 class="lecc-h4">Nominal o verbal: la prueba</h4><ul class="lecc-ul"><li><strong>Predicado nominal</strong>: *La casa <strong>es</strong> grande.* El nucleo es <strong>es</strong>, que es copulativo. Lo que sigue, grande, es el <strong>atributo</strong>: dice como es la casa.</li><li><strong>Predicado verbal</strong>: *La casa <strong>fue construida</strong> en 1920.* El nucleo es <strong>construir</strong>, que no es copulativo. Lo que sigue, en 1920, es un <strong>complemento</strong>: cuenta lo que le paso a la casa.</li></ul><p>La diferencia esta en una sola pregunta: <strong>la frase que acompana al verbo describe al sujeto o cuenta un suceso?</strong></p><div class="lecc-nota">Si describe al sujeto, es atributo y el predicado es nominal. Si cuenta un suceso, es complemento y el predicado es verbal.</div><h4 class="lecc-h4">Los dos puntos de la oracion</h4><ol class="lecc-ol"><li><strong>Los dos puntos de los signos</strong> van antes de la coma y la exclamacion que cierran una enumeracion o una cita.</li><li><strong>Los dos puntos de la puntuacion</strong> separan un enunciado completo de su explicacion.</li></ol><h4 class="lecc-h4">El error tipico</h4><p>Se escribe dos puntos antes de punto y coma. No es correcto: los dos puntos de puntuacion van seguidos de una oracion completa, y el punto y coma separa miembros de una misma oracion.</p><figure class="lecc-figura"><svg viewBox="0 0 360 260" role="img" aria-label="Solo seis verbos pueden ser nucleo de un predicado nominal"><defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Predicado nominal o verbal</text>
+
+  <text x="18" y="48" class="fig-sub">Como se decide</text>
+  <rect x="14" y="58" width="150" height="52" rx="9" class="fig-apoyo"/>
+  <text x="89" y="80" text-anchor="middle" class="fig-titulo" font-size="12.5">1. El nucleo es</text>
+  <text x="89" y="98" text-anchor="middle" class="fig-titulo" font-size="12.5">un verbo copulativo?</text>
+
+  <rect x="196" y="58" width="150" height="52" rx="9" class="fig-zona"/>
+  <text x="271" y="80" text-anchor="middle" class="fig-sub" font-size="12">ser, estar, parecer,</text>
+  <text x="271" y="98" text-anchor="middle" class="fig-sub" font-size="12">permanecer, quedar, resultar</text>
+
+  <line x1="164" y1="84" x2="192" y2="84" class="fig-flecha"/>
+
+  <rect x="14" y="126" width="158" height="66" rx="9" class="fig-ok"/>
+  <text x="93" y="148" text-anchor="middle" class="fig-ok-txt" font-size="13">SI: predicado nominal</text>
+  <text x="26" y="168" class="fig-nota" font-size="11.5">lo que sigue es el</text>
+  <text x="26" y="184" class="fig-nota" font-size="11.5">atributo: dice como es</text>
+
+  <rect x="188" y="126" width="158" height="66" rx="9" class="fig-destac"/>
+  <text x="267" y="148" text-anchor="middle" class="fig-destac-txt" font-size="13">NO: predicado verbal</text>
+  <text x="200" y="168" class="fig-nota" font-size="11.5">lo que sigue es</text>
+  <text x="200" y="184" class="fig-nota" font-size="11.5">complemento: cuenta un suceso</text>
+
+  <rect x="14" y="206" width="332" height="42" rx="9" class="fig-zona"/>
+  <text x="30" y="224" class="fig-sub">La casa es grande  (nominal, porque grande califica a la casa)</text>
+  <text x="30" y="242" class="fig-sub">La casa fue construida en 1920  (verbal, porque cuenta un suceso)</text></svg><figcaption class="fig-titulo">Solo seis verbos pueden ser nucleo de un predicado nominal</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Oraciones para analizar: *La casa es grande. La casa fue construida en mil novecientos veinte.*</p><h4 class="lecc-h4">Metodo 1: buscar el verbo</h4><ul class="lecc-ul"><li>En la primera oracion, el verbo es una forma de ser.</li><li>En la segunda, el verbo es construir, en forma pasiva.</li></ul><h4 class="lecc-h4">Metodo 2: aplicar la prueba de quien</h4><ul class="lecc-ul"><li>Quien es grande: la casa. Es el sujeto.</li><li>El nucleo es una forma de ser, que es copulativo, asi que el predicado es nominal. Grande es el atributo.</li><li>En mil novecientos veinte cuenta un suceso, no una cualidad de la casa. Por eso es complemento y el predicado es verbal.</li></ul><h4 class="lecc-h4">Metodo 3: los dos puntos</h4><p>En una enumeracion: Traer lapiz, cuaderno y calculadora. Aqui no hacen falta dos puntos.</p><p>En una explicacion: Solo hay una salida: la de la izquierda. Aqui si hacen falta, porque introducen una consecuencia o una aclaracion.</p><h4 class="lecc-h4">Metodo 4: el error a evitar</h4><ul class="lecc-ul"><li>Mal: Traer lapiz, cuaderno; y calculadora.</li><li>Bien: Traer lapiz, cuaderno y calculadora.</li><li>Los dos puntos nunca van antes de un punto y coma.</li></ul><h4 class="lecc-h4">Conclusion</h4><ul class="lecc-ul"><li>Conclusion: el predicado se clasifica por su verbo, y la frase que lo acompana decide si es nominal o verbal.</li><li>Ojo: los dos verbos mas frecuentes, ser y estar, siempre hacen de nucleo nominal.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Memoriza los seis verbos copulativos en una sola linea y veras la mitad de los ejercicios de predicado. Es la lista mas rentable del curso.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="comunicacion-0-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-la-oracion-y-el-sujeto.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-el-verbo.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "comunicacion-0-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

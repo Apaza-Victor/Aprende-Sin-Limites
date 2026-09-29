@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250">
+  <polygon points="50,180 250,180 120,55" class="fig-forma"/>
+  <path d="M93.9 74.1 A34 34 0 0 0 146.1 74.1" class="fig-acento"/>
+  <text x="120" y="94" text-anchor="middle" font-size="15" class="fig-acento-texto">C</text>
+  <text x="196" y="118" text-anchor="middle" font-size="15">a</text>
+  <text x="72" y="112" text-anchor="middle" font-size="15">b</text>
+  <text x="150" y="202" text-anchor="middle" font-size="15">c</text>
+  <text x="34" y="196" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="264" y="196" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="150" y="234" text-anchor="middle" font-size="14" class="fig-nota">c² = a² + b² − 2 · a · b · cos C</text>
+</svg>

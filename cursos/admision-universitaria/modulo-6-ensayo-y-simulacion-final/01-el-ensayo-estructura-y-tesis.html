@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El ensayo: estructura y tesis — Admisión Universitaria</title>
+  <meta name="description" content="Planificar un ensayo eligiendo un tema acotado, formulando una tesis defendible y repartiendo el espacio disponible entre todas sus partes." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 6 · Ensayo y simulación final</a> <span class="mx-2 opacity-50">/</span>
+          <span>El ensayo: estructura y tesis</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">El ensayo: estructura y tesis</h1>
+            <p class="articulo-modulo">Módulo 6 · Ensayo y simulación final</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Planificar un ensayo eligiendo un tema acotado, formulando una tesis defendible y repartiendo el espacio disponible entre todas sus partes.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La sección de lenguaje en una prueba de admisión no evalúa escritura creativa: evalúa la argumentación escrita bajo condiciones de tiempo. Casi siempre hay un solo ítem, pero ese ítem puede mover tu puntaje más que diez problemas de álgebra, porque no admite respuesta parcial. O aciertas la estructura o no.</p><h4 class="lecc-h4">Las cuatro cosas que evalúa el corrector</h4><ol class="lecc-ol"><li><strong>Tesis</strong>: una afirmación clara que se puede defender, ni vaga ni objetiva.</li><li><strong>Desarrollo</strong>: argumentos que la sostienen, no ejemplos sueltos.</li><li><strong>Coherencia</strong>: que cada párrafo siga a la anterior y todas lleven a la misma conclusión.</li><li><strong>Manejo del lenguaje</strong>: frases que se entiendan a la primera, sin ambigüedad ni?style.</li></ol><p>El corrector no busca que escribas bonito. Busca que argumentes.</p><figure class="lecc-figura"><svg viewBox="0 0 360 240" role="img" aria-label="Una tesis que nadie puede discutir no es una tesis: es una opinion."><text x="180" y="18" text-anchor="middle" class="fig-titulo">Tesis debil frente a tesis defendible</text>
+
+  <defs>
+    <marker id="punta-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <rect x="14" y="36" width="152" height="120" rx="12" class="fig-mal"/>
+  <text x="90" y="62" text-anchor="middle" class="fig-mal-txt" font-size="13">Tesis debil</text>
+  <text x="90" y="90" text-anchor="middle" class="fig-apoyo-txt" font-size="12">"La tecnologia es</text>
+  <text x="90" y="110" text-anchor="middle" class="fig-apoyo-txt" font-size="12">buena."</text>
+  <text x="90" y="140" text-anchor="middle" class="fig-nota" font-size="12">nadie puede discrepar</text>
+
+  <line x1="170" y1="96" x2="190" y2="96" class="fig-flecha-ok"/>
+
+  <rect x="194" y="36" width="152" height="120" rx="12" class="fig-ok"/>
+  <text x="270" y="62" text-anchor="middle" class="fig-ok-txt" font-size="13">Tesis defendible</text>
+  <text x="270" y="86" text-anchor="middle" class="fig-apoyo-txt" font-size="12">"La tecnologia cambia</text>
+  <text x="270" y="106" text-anchor="middle" class="fig-apoyo-txt" font-size="12">el trabajo de rutina</text>
+  <text x="270" y="126" text-anchor="middle" class="fig-apoyo-txt" font-size="12">y crea riesgos</text>
+  <text x="270" y="146" text-anchor="middle" class="fig-apoyo-txt" font-size="12">digitales."</text>
+
+  <text x="180" y="186" text-anchor="middle" class="fig-nota" font-size="12">La buena tesis se puede probar, refutar y sostener con datos.</text></svg><figcaption class="fig-titulo">Una tesis que nadie puede discutir no es una tesis: es una opinion.</figcaption></figure><h4 class="lecc-h4">Cómo se construye una tesis defendible</h4><p>Una tesis mala dice &quot;la tecnología es buena o mala según se use&quot;. No se puede defender, porque no dice qué hay que defender. Una tesis buena dice &quot;las redes sociales reducen la comunicación presencial entre adolescentes, y eso afecta su aprendizaje&quot;. Se puede defender, se puede discutir y se puede ampliar con evidencia.</p><p>El filtro: <strong>¿puedo dar dos razones distintas que la sostengan?</strong> Si no puedo, mi tesis es demasiado vaga.</p><h4 class="lecc-h4">La diferencia entre discutir y describir</h4><p>Describir es enumerar: &quot;el libro tiene tres partes, la primera trata sobre historia&quot;. Argumentar es relacionar: &quot;la estructura del libro refleja su tesis, porque pone la conclusión al final y fuerza al lector a recorrer la evidencia&quot;. La prueba busca siempre la segunda versión. Enumera primero, relaciona después: esa es la fórmula.</p><h4 class="lecc-h4">La frase de tesis y su ubicación</h4><p>La tesis aparece al final de la introducción, una vez que ya presentaste el tema y los dos lados. Ese lugar no es un capricho: es donde el lector tiene el contexto para evaluarla. Escribirla al principio obliga a repetir la evidencia; escribirla al final, a retomarla.</p><h4 class="lecc-h4">Errores que descendsan puntos sin que lo notes</h4><ul class="lecc-ul"><li><strong>Generalización sin evidencia</strong>: afirmar &quot;siempre&quot; o &quot;nunca&quot; y no sostenerlo.</li><li><strong>Salto lógico</strong>: pasar de una premisa a una conclusión que no se sigue.</li><li><strong>Repetición</strong>: decir lo mismo con otras palabras y contarlo como desarrollo.</li><li><strong>Ambigüedad</strong>: usar un sustantivo abstracto sin decir a quién se refiere.</li><li><strong>Salto de tono</strong>: empezar con opinión personal en lugar de con el tema.</li></ul><p>Los cinco son evitables solo con una revisión de tres minutos.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un enunciado pide: &quot;¿Es necesario que los jóvenes aprendan a usar la tecnología sin ayuda de adultos? Justifica tu respuesta.&quot;</p><h4 class="lecc-h4">Método 1: formular la tesis en una frase</h4><ul class="lecc-ul"><li>Primero: &quot;Es necesario, porque la independencia tecnológica se traslada a otros campos del aprendizaje&quot;.</li><li>Filtro de calidad: puedo dar dos razones distintas, la independencia y la transferencia a otras áreas. Pasa.</li></ul><h4 class="lecc-h4">Método 2: organizar el desarrollo</h4><ul class="lecc-ul"><li>Segundo: párrafo uno define qué significa independencia tecnológica y da un ejemplo concreto de qué se logra sin ayuda.</li><li>Párrafo dos desarrolla la transferencia con un caso: quien resuelve un problema solo aprende a preguntar mejor. Párrafo tres reconoce el límite: la supervisión no sobra en la primera etapa.</li></ul><h4 class="lecc-h4">Método 3: cerrar sin repetir</h4><ul class="lecc-ul"><li>Tercero: la conclusión no repite la tesis, la interpreta. &quot;La ayuda adulta no desaparece, cambia de función: deja de resolver y pasa a preguntar&quot;.</li><li>Esa frase distingue un ensayo de una paráfrasis, y es lo que el corrector busca en la conclusión.</li></ul><div class="lecc-nota">El enunciado no pide opinión, pide justificación. Los tres métodos apuntan a lo mismo: la nota sube por la estructura, no por el adjetivo.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Escribe la frase de tesis antes de nada y consérvala visible mientras redactas. Si al final no la puedes encontrar en tu texto, tu desarrollo no la sostuvo.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-5-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-5-conocimiento-general/05-lectura-critica-de-la-actualidad.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-introduccion-y-desarrollo-argumentado.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-5-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

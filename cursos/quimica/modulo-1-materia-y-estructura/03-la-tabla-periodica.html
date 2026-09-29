@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La tabla periódica — Química</title>
+  <meta name="description" content="Ubicar un elemento en la tabla periódica a partir de Z, leer su período y grupo, identificar la familia a la que pertenece, y justificar el comportamiento de el radio atómico, la energía de ionización y la electronegatividad al bajar o al avanzar en un período." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Materia y estructura</a> <span class="mx-2 opacity-50">/</span>
+          <span>La tabla periódica</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">La tabla periódica</h1>
+            <p class="articulo-modulo">Módulo 1 · Materia y estructura</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Ubicar un elemento en la tabla periódica a partir de Z, leer su período y grupo, identificar la familia a la que pertenece, y justificar el comportamiento de el radio atómico, la energía de ionización y la electronegatividad al bajar o al avanzar en un período.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La tabla periódica es un mapa de la periodicidad: los elementos están ordenados por Z y, al hacerlo así, la química se repite en filas y columnas.</p><h4 class="lecc-h4">Cómo leer la posición</h4><ul class="lecc-ul"><li><strong>Grupo</strong>: la columna vertical. Va de 1 a 18. Los grupos 1, 2 y 13 a 18 se llaman grupos principales, y del 3 al 12 grupos de transición.</li><li><strong>Período</strong>: la fila horizontal. Va de 1 a 7. Un período nuevo se empieza cuando aparece un electrón en un subnivel nuevo (s, p, d o f).</li><li><strong>Familias</strong> con nombre propio: grupo 1, los alcalinos; grupo 2, los alcalinotérreos; grupo 17, los halógenos; grupo 18, los gases nobles; grupos 3 a 12, las familias de transición como el hierro, el cobre o el oro.</li></ul><h4 class="lecc-h4">Las tres tendencias que se preguntan</h4><ul class="lecc-ul"><li><strong>Radio atómico</strong>: al avanzar en un período el radio <strong>disminuye</strong>, porque los electrones entran en la misma capa mientras el núcleo gana protones y atrae más fuerte. Al bajar en un grupo el radio <strong>aumenta</strong>, porque cada fila agrega una capa nueva, más lejos del núcleo.</li><li><strong>Energía de ionización</strong> (la energía para quitarle un electrón): al avanzar en un período <strong>aumenta</strong>; al bajar en un grupo <strong>disminuye</strong>. Explica por qué el cesio es más reactivo que el litio, porque necesita menos energía para ceder su electrón externo.</li><li><strong>Electronegatividad</strong> (la atracción del átomo por los electrones del enlace): al avanzar en un período <strong>aumenta</strong> y al bajar en un grupo <strong>disminuye</strong>. El flúor es el elemento más electronegativo y el gas noble es el menos, porque su carga está completa.</li></ul><div class="lecc-nota">Recuerda que las tres tendencias van en sentido contrario: si el radio baja, la energía de ionización sube. Y la explicación siempre es la misma, la relación entre el número de protones y la cantidad de capas.</div><h4 class="lecc-h4">Familias que tienen configuración estable</h4><p>Los gases nobles del grupo 18 tienen la capa más externa completa, por eso no forman enlaces en condiciones normales y se llaman inertes. Los gases nobles no son cero: el xenón y el kriptón forman compuestos con flúor y oxígeno, así que «inerte» es una simplificación de aula, no una verdad absoluta.</p><h4 class="lecc-h4">Familias de transición</h4><p>Los elementos de transición tienen orbitales d que se llenan parcialmente. Por eso forman varios iones de distinto número de oxidación, son buenos catalizadores y producen colores característicos, como el azul del sulfato de cobre y el rojo del cobre metálico.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se comparan el sodio (Na), el rubidio (Rb), el cloro (Cl) y el bromo (Br), y se pide explicar cuál es más reactivo y por qué.</p><h4 class="lecc-h4">Método 1: comparar dentro del mismo grupo</h4><ul class="lecc-ul"><li>Na y Rb son del grupo 1, los alcalinos.</li><li>El radio atómico del Rb es mayor: tiene 5 capas frente a 3 del Na.</li><li>Con más capas, el electrón externo está más lejos y la atracción del núcleo sobre él es menor, así que la energía de ionización es menor.</li><li>Con menos energía para quitar ese electrón, el Rb lo pierde antes y es <strong>más reactivo</strong> que el Na.</li></ul><h4 class="lecc-h4">Método 2: comparar los halógenos entre sí</h4><ul class="lecc-ul"><li>Cl y Br son del grupo 17, y aquí la tendencia <strong>se invierte</strong> respecto de los alcalinos.</li><li>El Br tiene más capas, así que su electrón externo está más lejos del núcleo y el átomo lo atrae con menos fuerza.</li><li>Por eso el Br <strong>acepta</strong> un electrón con más dificultad que el Cl: el Cl es el oxidante más fuerte y el <strong>más reactivo</strong>.</li><li>En los halógenos el más reactivo es el <strong>más arriba</strong>, y el orden es F₂ &gt; Cl₂ &gt; Br₂ &gt; I₂.</li></ul><h4 class="lecc-h4">Método 3: comparar radio y electronegatividad como un todo</h4><ul class="lecc-ul"><li>El radio atómico en función de Z sigue la orden Na (186 pm) &lt; Rb (265 pm) y Cl (99 pm) &lt; Br (114 pm).</li><li>La electronegatividad sigue la orden contraria: Cl (3,16) &gt; Br (2,96) y Na (0,93) &lt; Rb (0,82).</li><li>Al bajar en un grupo, el radio gana y la electronegatividad pierde, pero eso no significa lo mismo para las dos familias.</li></ul><div class="lecc-nota">La conclusión general: en un período el más reactivo es el extremo derecho, el halógeno. Al bajar en un grupo, la reactividad <strong>aumenta</strong> en los metales, como Na y Rb, y <strong>disminuye</strong> en los no metales, como Cl y Br.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Para no memorizar, arrastra una sola frase a toda pregunta de tendencias: al avanzar a la derecha aumenta la carga del núcleo sin cambiar el número de capas, y al bajar se agregan capas. De esa frase salen las tres tendencias sin excepción.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-0-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-el-atomo-y-las-particulas-subatomicas.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-enlaces-quimicos.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-0-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

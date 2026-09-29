@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 270">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Por que cayo el imperio inca</text>
+
+  <defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="36" width="320" height="48" rx="10" class="fig-zona"/>
+  <text x="180" y="55" text-anchor="middle" class="fig-titulo" font-size="13">1. Guerra civil en el imperio</text>
+  <text x="180" y="73" text-anchor="middle" class="fig-nota" font-size="12">Atahualpa y Huascar se enfrentaban por el trono</text>
+
+  <line x1="180" y1="86" x2="180" y2="100" class="fig-flecha"/>
+
+  <rect x="20" y="104" width="320" height="48" rx="10" class="fig-zona"/>
+  <text x="180" y="123" text-anchor="middle" class="fig-titulo" font-size="13">2. Alianzas con enemigos del inca</text>
+  <text x="180" y="141" text-anchor="middle" class="fig-nota" font-size="12">Nobles costeños y de la sierra achetaron su lado</text>
+
+  <line x1="180" y1="154" x2="180" y2="168" class="fig-flecha"/>
+
+  <rect x="20" y="172" width="320" height="48" rx="10" class="fig-destac"/>
+  <text x="180" y="191" text-anchor="middle" class="fig-destac-txt" font-size="13">3. Cajamarca, 1532</text>
+  <text x="180" y="209" text-anchor="middle" class="fig-destac-txt" font-size="12">El ultimo inca es capturado y el mando se rompe</text>
+
+  <text x="180" y="244" text-anchor="middle" class="fig-nota" font-size="12">La conquista no fue solo militar: primero dividieron el imperio.</text>
+  <text x="180" y="264" text-anchor="middle" class="fig-nota" font-size="12">Por eso el papel de Cajamarca importa mas que el de la batalla.</text>
+</svg>

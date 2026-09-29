@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240">
+  <circle cx="150" cy="115" r="88" class="fig-dato"/>
+  <polygon points="67,85 217,58 150,27" class="fig-forma"/>
+  <path d="M150 115 L67 85" class="fig-dato"/>
+  <path d="M150 115 L217 58" class="fig-dato"/>
+  <path d="M150 115 L150 27" class="fig-acento"/>
+  <circle cx="150" cy="115" r="3.5" fill="currentColor" stroke="none"/>
+  <text x="139" y="96" text-anchor="middle" font-size="15" class="fig-acento-texto">R</text>
+  <text x="150" y="133" text-anchor="middle" font-size="14" class="fig-etiqueta">O</text>
+  <text x="222" y="70" text-anchor="middle" font-size="15">c</text>
+  <text x="146" y="72" text-anchor="middle" font-size="15">a</text>
+  <text x="70" y="70" text-anchor="middle" font-size="15">b</text>
+  <text x="52" y="96" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="228" y="48" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="150" y="16" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text>
+  <text x="150" y="232" text-anchor="middle" font-size="13" class="fig-nota">el centro O siempre está a la misma distancia R de los tres vértices</text>
+</svg>

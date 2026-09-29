@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Histograma y caja: las dos cuentan lo mismo</text>
+
+  <text x="14" y="42" class="fig-sub">Histograma</text>
+  <line x1="14" y1="180" x2="346" y2="180" class="fig-flecha"/>
+  <rect x="26" y="120" width="34" height="60" class="fig-apoyo"/>
+  <rect x="64" y="76" width="34" height="104" class="fig-ok"/>
+  <rect x="102" y="52" width="34" height="128" class="fig-ok"/>
+  <rect x="140" y="88" width="34" height="92" class="fig-apoyo"/>
+  <rect x="178" y="116" width="34" height="64" class="fig-apoyo"/>
+  <rect x="216" y="140" width="34" height="40" class="fig-forma"/>
+  <text x="43" y="112" text-anchor="middle" class="fig-apoyo-txt" font-size="11">2</text>
+  <text x="81" y="68" text-anchor="middle" class="fig-ok-txt" font-size="11">4</text>
+  <text x="119" y="44" text-anchor="middle" class="fig-ok-txt" font-size="11">5</text>
+  <text x="157" y="80" text-anchor="middle" class="fig-apoyo-txt" font-size="11">3</text>
+  <text x="195" y="108" text-anchor="middle" class="fig-apoyo-txt" font-size="11">2</text>
+  <text x="233" y="132" text-anchor="middle" class="fig-forma-txt" font-size="11">1</text>
+  <text x="180" y="198" text-anchor="middle" class="fig-nota">la altura de cada barra es la frecuencia</text>
+  <text x="180" y="214" text-anchor="middle" class="fig-nota">no la frecuencia acumulada</text>
+
+  <line x1="14" y1="226" x2="346" y2="226" class="fig-flecha"/>
+  <text x="180" y="248" text-anchor="middle" class="fig-sub">Caja de los cinco numeros</text>
+  <line x1="40" y1="244" x2="320" y2="244" class="fig-medida"/>
+  <line x1="40" y1="234" x2="40" y2="254" class="fig-medida"/>
+  <line x1="320" y1="234" x2="320" y2="254" class="fig-medida"/>
+  <rect x="120" y="234" width="120" height="20" class="fig-zona"/>
+  <line x1="100" y1="234" x2="100" y2="254" class="fig-destac"/>
+  <line x1="180" y1="234" x2="180" y2="254" class="fig-destac"/>
+  <line x1="240" y1="234" x2="240" y2="254" class="fig-destac"/>
+  <text x="40" y="266" text-anchor="middle" class="fig-nota" font-size="10">min</text>
+  <text x="100" y="266" text-anchor="middle" class="fig-nota" font-size="10">Q1</text>
+  <text x="180" y="266" text-anchor="middle" class="fig-nota" font-size="10">mediana</text>
+  <text x="240" y="266" text-anchor="middle" class="fig-nota" font-size="10">Q3</text>
+  <text x="320" y="266" text-anchor="middle" class="fig-nota" font-size="10">max</text>
+</svg>

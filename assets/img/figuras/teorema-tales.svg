@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240">
+  <path d="M30 55 L270 55" class="fig-acento"/>
+  <path d="M30 175 L270 175" class="fig-acento"/>
+  <path d="M80 25 L250 205" class="fig-acento"/>
+  <path d="M60 55 L173 175" class="fig-acento"/>
+  <path d="M78 48 L84 48 M81 45 L81 51" class="fig-medida"/>
+  <path d="M114 122 L120 122 M117 119 L117 125" class="fig-medida"/>
+  <text x="84" y="44" text-anchor="middle" font-size="15">a</text>
+  <text x="140" y="100" text-anchor="middle" font-size="15">b</text>
+  <text x="100" y="140" text-anchor="middle" font-size="15">c</text>
+  <text x="197" y="196" text-anchor="middle" font-size="15">d</text>
+  <text x="100" y="47" text-anchor="middle" font-size="13" class="fig-etiqueta">A</text>
+  <text x="52" y="47" text-anchor="middle" font-size="13" class="fig-etiqueta">C</text>
+  <text x="232" y="170" text-anchor="middle" font-size="13" class="fig-etiqueta">B</text>
+  <text x="165" y="170" text-anchor="middle" font-size="13" class="fig-etiqueta">D</text>
+  <text x="150" y="232" text-anchor="middle" font-size="14" class="fig-nota">a : b = c : d</text>
+</svg>

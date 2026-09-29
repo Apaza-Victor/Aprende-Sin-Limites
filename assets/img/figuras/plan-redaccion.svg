@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250">
+  <defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Estructura de la respuesta escrita</text>
+
+  <rect x="30" y="34" width="300" height="52" rx="10" class="fig-ok"/>
+  <text x="46" y="56" class="fig-ok-txt">1. Introduccion</text>
+  <text x="46" y="76" class="fig-sub">define el tema o responde directo en una frase</text>
+
+  <line x1="180" y1="86" x2="180" y2="102" class="fig-flecha"/>
+
+  <rect x="30" y="104" width="300" height="72" rx="10" class="fig-destac"/>
+  <text x="46" y="126" class="fig-destac-txt">2. Desarrollo</text>
+  <text x="46" y="146" class="fig-sub">va de lo general a lo particular</text>
+  <text x="46" y="164" class="fig-sub">un parrafo por idea, con un ejemplo</text>
+
+  <line x1="180" y1="176" x2="180" y2="192" class="fig-flecha"/>
+
+  <rect x="30" y="194" width="300" height="52" rx="10" class="fig-ok"/>
+  <text x="46" y="216" class="fig-ok-txt">3. Conclusion</text>
+  <text x="46" y="236" class="fig-sub">sintetiza o cierra, no introduce nada nuevo</text>
+</svg>

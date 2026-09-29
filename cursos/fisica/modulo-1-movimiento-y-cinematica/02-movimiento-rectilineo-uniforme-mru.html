@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movimiento rectilíneo uniforme (MRU) — Física</title>
+  <meta name="description" content="Resolver problemas de velocidad constante usando d = v·t y saber cuándo aplicar cada una, con el criterio de elección explícito." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Movimiento y cinemática</a> <span class="mx-2 opacity-50">/</span>
+          <span>Movimiento rectilíneo uniforme (MRU)</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Movimiento rectilíneo uniforme (MRU)</h1>
+            <p class="articulo-modulo">Módulo 1 · Movimiento y cinemática</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Resolver problemas de velocidad constante usando d = v·t y saber cuándo aplicar cada una, con el criterio de elección explícito.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El movimiento rectilíneo uniforme es el caso más simple y el mejor para exponer un error de razonamiento muy común: creer que una fórmula describe un caso particular cuando en realidad resume una regularidad.</p><h4 class="lecc-h4">Qué significa &quot;uniforme&quot;</h4><p>MRU significa dos cosas a la vez, y basta con que se entienda una sola cosa para que la definición se entienda:</p><ul class="lecc-ul"><li><strong>Rectilíneo</strong>: la trayectoria es una línea recta. No hay giros ni curvas.</li><li><strong>Uniforme</strong>: la rapidez no cambia. La aceleración es cero en todo el trayecto.</li></ul><p>De la segunda se deduce lo primero: si la velocidad es constante y la trayectoria es recta, la posición crece linealmente con el tiempo. Un reloj y una cinta métrica bastan para medirlo, y por eso es el movimiento que se puede verificar con un experimento sencillo.</p><h4 class="lecc-h4">La fórmula y su lectura</h4><p>La relación es d = v · t, donde d es la distancia recorrida, v la rapidez y t el tiempo. Pero la fórmula no es una receta, es una proporción: d está en la misma razón con t que con v. De ahí salen todas las variantes:</p><ul class="lecc-ul"><li>v = d / t, para hallar la rapidez.</li><li>t = d / v, para hallar el tiempo.</li></ul><p>Si dos de las tres cantidades se conocen, la tercera queda determinada. Ese es el criterio para saber si un problema está bien planteado, y muchos enunciados de examen no dan más que eso.</p><h4 class="lecc-h4">Movimiento con dos tramos</h4><p>Un caso muy frecuente es el de ir y volver, o el de cambiar de velocidad en un punto. Ahí la fórmula única se queda corta y hay que dividir el trayecto:</p><ul class="lecc-ul"><li>Tramo 1 con v1 durante t1: d1 = v1 · t1.</li><li>Tramo 2 con v2 durante t2: d2 = v2 · t2.</li><li>La distancia total es d1 + d2, y el tiempo total es t1 + t2.</li></ul><p>El error clásico es aplicar v · t con la velocidad final sobre el tiempo total. Funciona solo si la velocidad no cambió.</p><h4 class="lecc-h4">Rapidez media</h4><p>La rapidez media no es la promedio de las rapideces de cada tramo, salvo que ambos tramos duren lo mismo. La definición correcta divide la distancia total entre el tiempo total, que es un promedio ponderado por el tiempo. Si recorres 10 km en 1 hora y 20 km en 3 horas, tu rapidez media no es (10+20)/2, es 30/4 = 7,5 km/h. Notar la diferencia evita creer que un tramo rápido &quot;arrastra&quot; el promedio más allá de lo posible.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un camión recorre 120 km con rapidez constante de 60 km/h durante las primeras 2 horas, y luego 90 km con una rapidez constante de 45 km/h. ¿Cuánto tarda cada tramo, cuál es la distancia total, cuánto tiempo empuja el total y cuál es la rapidez media?</p><h4 class="lecc-h4">Método 1: despejar el tiempo de cada tramo</h4><ul class="lecc-ul"><li>Primero: en el tramo 1, t = d / v = 120 km entre 60 km/h = 2 horas. Cuadra con lo que dice el enunciado, lo cual confirma que la velocidad de ese tramo era de 60 km/h.</li><li>Segundo: en el tramo 2, t = 90 km entre 45 km/h = 2 horas también.</li><li>Tercero: los dos tramos duraron lo mismo, 4 horas en total, y la distancia total es 210 km.</li></ul><h4 class="lecc-h4">Método 2: comprobar la rapidez media como promedio simple</h4><ul class="lecc-ul"><li>Cuarto: como ambos tramos duraron 2 horas cada uno, el promedio simple de las velocidades sí es válido: (60 + 45) entre 2 = 52,5 km/h.</li><li>Quinto: verifico con la definición estricta, distancia total entre tiempo total: 210 km entre 4 h = 52,5 km/h. Coincide, porque los pesos son iguales.</li></ul><h4 class="lecc-h4">Método 3: usar el caso contrario para entender por qué importa</h4><ul class="lecc-ul"><li>Sexto: si en cambio recorre 10 km en 1 hora y 20 km en 3 horas, el promedio simple daría 15 km/h, pero el resultado real es 30 km entre 4 horas, 7,5 km/h.</li><li>Séptimo: la diferencia es enorme. En ese caso el tramo lento pesa más porque dura más tiempo, y el promedio se acerca a él.</li></ul><div class="lecc-nota">El resultado 52,5 aparece por dos caminos distintos y eso lo convierte en confiable. La lección no es el número, es saber cuándo el promedio simple es lícito y cuándo es un error.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Nunca sumes velocidades de tramos distintos. Suma distancias y suma tiempos por separado, y divide al final. Es la regla que evita el error más común del tema.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-0-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-magnitudes-y-unidades.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-movimiento-rectilineo-uniformemente-variado-mruv.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-0-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

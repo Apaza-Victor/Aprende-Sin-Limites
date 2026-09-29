@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidrocarburos — Química</title>
+  <meta name="description" content="Reconocer la estructura de los alcanos, alquenos, alquinos e hidrocarburos aromáticos, aplicar la regla del carbono terciario y la del carbono cuaternario, y calcular el índice de insaturación de una fórmula molecular." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Química orgánica</a> <span class="mx-2 opacity-50">/</span>
+          <span>Hidrocarburos</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">Hidrocarburos</h1>
+            <p class="articulo-modulo">Módulo 4 · Química orgánica</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Reconocer la estructura de los alcanos, alquenos, alquinos e hidrocarburos aromáticos, aplicar la regla del carbono terciario y la del carbono cuaternario, y calcular el índice de insaturación de una fórmula molecular.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Los hidrocarburos contienen <strong>solo carbono e hidrógeno</strong>, y se clasifican según el tipo de enlace entre los carbonos.</p><h4 class="lecc-h4">Las cuatro familias</h4><ul class="lecc-ul"><li><strong>Alcanos</strong>: enlaces simples, fórmula general <strong>CₙH₂ₙ₊₂</strong>. Son los únicos que se llaman por su número de carbonos: metano, etano, propano, butano. A partir de C₅ las ramificaciones dan nombres como 2-metilbutano, y en C₆ aparece el isómero más famoso del mundo: el benceno, que en realidad es aromático.</li><li><strong>Alquenos</strong>: un doble enlace, <strong>CₙH₂ₙ</strong>. El eteno o etileno es el más simple y es la base del polietileno.</li><li><strong>Alquinos</strong>: un triple enlace, <strong>CₙH₂ₙ₋₂</strong>. El etino o acetileno, HC≡CH, arde con llama muy caliente y por eso se usa en oxyacetileno para cortar metal.</li><li><strong>Aromáticos</strong>: contienen un anillo de seis carbonos con enlaces alternados, como el benceno C₆H₆. No se comportan como los alquenos: el anillo es plano y estable, y por eso el benceno no puede representarse como un ciclo con tres dobles enlaces alternados, porque en el anillo todos los enlaces son equivalentes.</li></ul><h4 class="lecc-h4">Hibridación y geometría</h4><ul class="lecc-ul"><li><strong>sp³</strong>: cuatro enlaces sigma, ángulos de 109,5°. Metano, alcanos, aminas, alcoholes.</li><li><strong>sp²</strong>: tres enlaces, geometría trigonal plana de 120°. Alquenos, carbonilo, aromáticos.</li><li><strong>sp</strong>: dos enlaces, lineal de 180°. Alquinos, nitrógeno del cianuro.</li></ul><h4 class="lecc-h4">El índice de insaturación</h4><p>La fórmula <strong>(2C + 2 − H)/2</strong> dice cuántos anillos o enlaces múltiples tiene un compuesto, suponiendo que no hay oxígeno, nitrógeno ni halógenos.</p><ul class="lecc-ul"><li>C₆H₆: (2·6 + 2 − 6)/2 = 4. El benceno tiene 3 dobles enlaces más 1 anillo, y 3 + 1 = 4. Correcto.</li><li>C₂H₆: (4 + 2 − 6)/2 = 0. Es un alcano, sin insaturación.</li><li>Si hay oxígeno, no cuenta: el etanol C₂H₆O sigue dando (4 + 2 − 6)/2 = 0.</li><li>Si hay nitrógeno, se suma: una amina con C₂H₇N da (4 + 2 + 1 − 7)/2 = 0.</li></ul><div class="lecc-nota">El índice de insaturación resuelve de inmediato el caso más frecuente del examen: se pide la fórmula molecular sabiendo que hay un anillo o un doble enlace, y basta con despejar el hidrógeno que falta.</div><h4 class="lecc-h4">Aromaticidad</h4><p>Un anillo es aromático si es plano, cíclico, conjugado, y tiene 4n + 2 electrones π con n entero. El benceno cumple 6 = 4(1) + 2, y el ciclooctatetraeno no, porque tiene 8 electrones y sería inestable en forma plana: se pliega en una forma de bañera para dejar de ser aromático.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se pide el índice de insaturación de C₈H₁₀, de C₂H₄ y de C₅H₁₂, y se deduce la fórmula de un alqueno con 7 carbonos.</p><h4 class="lecc-h4">Método 1: aplicar la fórmula</h4><ul class="lecc-ul"><li>C₈H₁₀: (2·8 + 2 − 10)/2 = 8/2 = <strong>4</strong>.</li><li>C₂H₄: (2·2 + 2 − 4)/2 = 2/2 = <strong>1</strong>, que corresponde a un doble enlace: es el eteno.</li><li>C₅H₁₂: (2·5 + 2 − 12)/2 = 0, o sea un alcano, y en efecto el pentano es C₅H₁₂.</li></ul><h4 class="lecc-h4">Método 2: comprobar con la fórmula general</h4><ul class="lecc-ul"><li>Un alcano de 8 carbonos sería C₈H₁₈. El compuesto tiene 8 hidrógenos menos, es decir 4 pares, que son 4 insaturaciones.</li><li>Una forma de verlas: si 4 son dobles enlaces, queda C₈H₁₀, que corresponde al octatetraeno; si una es un anillo, queda C₈H₁₀, y en un anillo de 8 hay 2 dobles enlaces, es decir <strong>cicloocta-1,3-dieno</strong>.</li></ul><h4 class="lecc-h4">Método 3: deducir la fórmula de un alqueno</h4><ul class="lecc-ul"><li>La fórmula general es CₙH₂ₙ, así que con 7 carbonos es <strong>C₇H₁₄</strong>.</li><li>Control con la fórmula del índice: (2·7 + 2 − 14)/2 = 1, y un alqueno tiene exactamente una insaturación.</li><li>Si fuera un alcino de 7 carbonos, la fórmula sería C₇H₁₂, con índice (14 + 2 − 12)/2 = 2, que son las dos insaturaciones del triple enlace.</li></ul><div class="lecc-nota">Todos los casos confirman la misma regla: cada hidrógeno respecto de un alcano es media insaturación, y una insaturación es un doble enlace o un anillo.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Cuenta primero los carbonos y aplica la fórmula, sin LEER la estructura. La tentación es dibujar el compuesto, y para una fórmula sola eso no hace falta: el índice de insaturación da la respuesta en cuatro operaciones.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-3-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-3-disoluciones-y-reacciones/05-equilibrio-quimico.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-grupos-funcionales.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-3-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

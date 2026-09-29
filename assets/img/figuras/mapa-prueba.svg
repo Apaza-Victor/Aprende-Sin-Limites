@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Como se reparte una prueba de admision</text>
+
+  <text x="14" y="43" class="fig-nota" font-size="12">Razonamiento matematico</text>
+  <rect x="14" y="48" width="176" height="18" rx="5" class="fig-destac"/>
+  <text x="198" y="62" class="fig-destac-txt" font-size="12">40 %</text>
+
+  <text x="14" y="89" class="fig-nota" font-size="12">Razonamiento verbal</text>
+  <rect x="14" y="94" width="154" height="18" rx="5" class="fig-ok"/>
+  <text x="176" y="108" class="fig-ok-txt" font-size="12">35 %</text>
+
+  <text x="14" y="135" class="fig-nota" font-size="12">Conocimiento general</text>
+  <rect x="14" y="140" width="66" height="18" rx="5" class="fig-apoyo"/>
+  <text x="88" y="154" class="fig-apoyo-txt" font-size="12">15 %</text>
+
+  <text x="14" y="181" class="fig-nota" font-size="12">Prueba escrita</text>
+  <rect x="14" y="186" width="44" height="18" rx="5" class="fig-apoyo"/>
+  <text x="66" y="200" class="fig-apoyo-txt" font-size="12">10 %</text>
+
+  <text x="180" y="222" text-anchor="middle" class="fig-nota" font-size="12">Reparte tu tiempo de estudio con la misma proporcion.</text>
+</svg>

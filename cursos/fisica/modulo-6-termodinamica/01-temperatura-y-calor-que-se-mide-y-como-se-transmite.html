@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temperatura y calor: qué se mide y cómo se transmite — Física</title>
+  <meta name="description" content="Diferenciar temperatura de calor, leer escalas y describir los tres mecanismos de transmisión del calor." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 6 · Termodinámica</a> <span class="mx-2 opacity-50">/</span>
+          <span>Temperatura y calor: qué se mide y cómo se transmite</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Temperatura y calor: qué se mide y cómo se transmite</h1>
+            <p class="articulo-modulo">Módulo 6 · Termodinámica</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Diferenciar temperatura de calor, leer escalas y describir los tres mecanismos de transmisión del calor.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La <strong>temperatura</strong> mide el estado de agitación de las partículas: es intensive, quiere decir que no depende de cuánta sustancia haya. El <strong>calor</strong> es energía que se transfiere entre dos cuerpos a distinta temperatura, y es extensive: depende de la masa.</p><h4 class="lecc-h4">Escalas y conversiones</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Escala</th><th>Cero</th><th>Punto fijo notable</th></tr></thead><tbody><tr><td>Celsius</td><td>hielo en agua</td><td>100 °C al hervir</td></tr><tr><td>Fahrenheit</td><td>32 °F</td><td>212 °F al hervir</td></tr><tr><td>Kelvin</td><td>cero absoluto</td><td>0 K, imposible de alcanzar</td></tr></tbody></table></div><p>La conversión más usada es:</p><div class="formula">T<sub>K</sub> = T<sub><sup>\</sup>circ C</sub> + 273.15</div><p>El cero absoluto es <span class="formula formula-linea">-273.15<span class="cmd"> </span><sup>\</sup>circ C</span>, y por eso en el laboratorio se dice que una mezcla se enfría hasta ese punto: es el límite físico, no una meta práctica.</p><figure class="lecc-figura"><svg viewBox="0 0 360 260" role="img" aria-label="La temperatura se lee en un termómetro; el calor es el flujo entre sistemas"><text x="180" y="18" text-anchor="middle" class="fig-titulo">Maquina termica: el calor tambien se ordena</text>
+
+  <rect x="20" y="34" width="96" height="66" rx="10" class="fig-zona"/>
+  <text x="68" y="58" text-anchor="middle" class="fig-sub">Fuente caliente</text>
+  <text x="68" y="78" text-anchor="middle" class="fig-dato">Qh</text>
+  <line x1="34" y1="92" x2="34" y2="86" class="fig-flecha"/>
+  <line x1="52" y1="92" x2="52" y2="86" class="fig-flecha"/>
+  <line x1="70" y1="92" x2="70" y2="86" class="fig-flecha"/>
+  <line x1="88" y1="92" x2="88" y2="86" class="fig-flecha"/>
+
+  <rect x="150" y="34" width="96" height="66" rx="10" class="fig-ok"/>
+  <text x="198" y="58" text-anchor="middle" class="fig-sub">Motor</text>
+  <text x="198" y="78" text-anchor="middle" class="fig-ok-txt">trabajo W</text>
+  <line x1="198" y1="100" x2="198" y2="176" class="fig-flecha-ok" marker-end="url(#punta-ok)"/>
+  <text x="208" y="140" class="fig-ok-txt" font-size="11">W sale</text>
+
+  <defs>
+    <marker id="punta-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <rect x="150" y="180" width="96" height="52" rx="10" class="fig-destac"/>
+  <text x="198" y="202" text-anchor="middle" class="fig-sub">Sumidero frio</text>
+  <text x="198" y="222" text-anchor="middle" class="fig-destac-txt">Qc</text>
+
+  <line x1="116" y1="60" x2="148" y2="60" class="fig-flecha"/>
+  <text x="132" y="48" text-anchor="middle" class="fig-apoyo-txt" font-size="11">Qh</text>
+  <line x1="148" y1="200" x2="118" y2="200" class="fig-flecha"/>
+  <text x="132" y="190" text-anchor="middle" class="fig-nota" font-size="11">Qc</text>
+
+  <rect x="268" y="34" width="76" height="198" rx="10" class="fig-forma"/>
+  <text x="306" y="58" text-anchor="middle" class="fig-sub">Rendimiento</text>
+  <text x="306" y="88" text-anchor="middle" class="fig-ok-txt" font-size="13">W</text>
+  <line x1="288" y1="98" x2="324" y2="98" class="fig-medida"/>
+  <text x="306" y="120" text-anchor="middle" class="fig-destac-txt" font-size="13">Qh - Qc</text>
+  <text x="306" y="150" text-anchor="middle" class="fig-nota" font-size="11">siempre menor</text>
+  <text x="306" y="168" text-anchor="middle" class="fig-nota" font-size="11">que 1</text>
+  <text x="306" y="196" text-anchor="middle" class="fig-mal-txt" font-size="11">Qh = Qc:</text>
+  <text x="306" y="212" text-anchor="middle" class="fig-mal-txt" font-size="11">rendimiento 0</text></svg><figcaption class="fig-titulo">La temperatura se lee en un termómetro; el calor es el flujo entre sistemas</figcaption></figure><h4 class="lecc-h4">Los tres caminos del calor</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Mecanismo</th><th>Cómo viaja</th><th>Necesita material</th><th>Ejemplo</th></tr></thead><tbody><tr><td>Conducción</td><td>por contacto entre partículas</td><td>sí</td><td>mango de una olla caliente</td></tr><tr><td>Convección</td><td>con el movimiento del fluido</td><td>sí</td><td>agua hirviendo en una olla</td></tr><tr><td>Radiación</td><td>por ondas electromagnéticas</td><td>no</td><td>calor del sol, lámpara incandescente</td></tr></tbody></table></div><p>La radiación es la única que funciona en el vacío. Por eso el calor del Sol llega a la Tierra sin que ningún material los una, y por eso la ventana de cristal deja pasar la luz y frena parte del calor.</p><dl class="lecc-glosario"><dt>Temperatura</dt><dd>Medida de la agitación de las partículas; no depende de la cantidad de sustancia.</dd><dt>Calor</dt><dd>Energía que se transfiere entre cuerpos a distinta temperatura.</dd><dt>Conducción</dt><dd>Transmisión del calor por contacto, sin movimiento de la materia.</dd><dt>Convección</dt><dd>Transmisión del calor por el movimiento del fluido.</dd><dt>Radiación</dt><dd>Transmisión del calor por ondas electromagnéticas, sin medio material.</dd><dt>Grado Kelvin</dt><dd>Unidad del SI de temperatura; su cero es el cero absoluto.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un bloque de 2 kg de aluminio a 80 °C se pone en contacto con 3 kg de agua a 20 °C. ¿Cuál es la temperatura final?</p><h4 class="lecc-h4">Datos</h4><div class="formula">c<sub>al</sub> = 900 <span class="cmd"> </span><span class="fn-txt">J/(kg·°C)</span>,       c<sub>agua</sub> = 4200 <span class="cmd"> </span><span class="fn-txt">J/(kg·°C)</span></div><h4 class="lecc-h4">Planteo: el calor que deja el uno es el que entra en el otro</h4><div class="formula">m<sub>al</sub> c<sub>al</sub> (80 - T) = m<sub>agua</sub> c<sub>agua</sub> (T - 20)</div><div class="formula">1800 (80 - T) = 12600 (T - 20)</div><h4 class="lecc-h4">Despejamos</h4><div class="formula">144000 - 1800T = 12600T - 252000</div><div class="formula">396000 = 14400T ⇒ T = 27.5<span class="cmd"> </span><sup>\</sup>circ C</div><h4 class="lecc-h4">Comprobación de sentido</h4><p>La final está cerca de los 20 °C y no cerca de los 80 °C. Tiene sentido: el agua tiene una capacidad calorífica mucho mayor, así que absorbe mucho calor sin calentarse casi.</p><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Comprueba el resultado</h4><ol class="lecc-ol"><li>Si los dos cuerpos fueran de la misma sustancia y la misma masa, ¿qué temperatura final habría?</li><li>¿Por qué el agua se enfría más despacio que el aceite en un radiador?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p>Habría una temperatura final de 50 °C, la media de las dos. El agua se enfría más despacio porque para bajar un grado necesita sacar mucho más energía: su capacidad calorífica por kilo es unas cuatro veces mayor que la del aceite.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>En cualquier problema de intercambio de calor, escribe primero la igualdad «lo que pierde uno es lo que gana el otro» antes de sustituir números. Si te queda un signo raro, el error está en esa ecuación, no en la aritmética.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-5-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-5-optica-y-ondas-electromagneticas/05-espectro-electromagnetico-y-aplicaciones.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-primera-ley-de-la-termodinamica-y-trabajo.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-5-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

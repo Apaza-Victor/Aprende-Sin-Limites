@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo 2 · Razonamiento verbal — Aprende Sin Límites</title>
+  <meta name="description" content="Estrategia, razonamiento y escritura para entrar a la universidad: cómo estudiar, cómo rinde el tiempo y cómo responder cada tipo de pregunta." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html">
+        <i class="bi bi-stars"></i> Aprende Sin Límites
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMod"
+        aria-controls="navMod" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMod">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a>
+          <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a>
+          <span class="mx-2 opacity-50">/</span>
+          <span>Módulo 2 · Razonamiento verbal</span>
+        </nav>
+
+        <div class="titulo-curso mb-4 d-flex align-items-center gap-3">
+          <div class="icono"><i class="bi bi-map"></i></div>
+          <div>
+            <h1 class="mb-0">Módulo 2 · Razonamiento verbal</h1>
+            <p class="col-mut mb-0">5 lecciones</p>
+          </div>
+        </div>
+
+        <div class="tarjeta p-4 reveal">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div><i class="bi bi-check2-circle" style="color: var(--acento);"></i></div>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between small">
+                <span class="col-mut">Lecciones completadas</span>
+                <span id="contadorLecciones" class="fw-semibold">0 / 5</span>
+              </div>
+              <div class="progress" style="height: 6px; margin-top: .35rem;">
+                <div id="barraProgreso" class="progress-bar" style="width: 0%;" role="progressbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-lg-8">
+            <h4 class="d-flex align-items-center gap-2 mb-3"><i class="bi bi-journal-text" style="color: var(--acento);"></i> Lecciones del módulo</h4>
+            <div class="row g-3" id="gridLecciones">
+              <div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">1</span><div><h5 class="lecc-titulo mb-1"><a href="01-comprension-literal-e-inferencial.html">Comprensión literal e inferencial</a></h5><p class="col-mut small lecc-obj mb-0">Distinguir lo que un texto afirma literalmente de lo que solo permite inferir, y responder sin extrapolar más allá de la información dada.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="01-comprension-literal-e-inferencial.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckadmision-universitaria10" data-clave="admision-universitaria-1-0" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckadmision-universitaria10">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">2</span><div><h5 class="lecc-titulo mb-1"><a href="02-idea-principal-y-estructura-del-texto.html">Idea principal y estructura del texto</a></h5><p class="col-mut small lecc-obj mb-0">Identificar la idea principal, las ideas secundarias y la estructura de un texto, separándolas de los detalles de apoyo que distraen.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="02-idea-principal-y-estructura-del-texto.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckadmision-universitaria11" data-clave="admision-universitaria-1-1" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckadmision-universitaria11">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">3</span><div><h5 class="lecc-titulo mb-1"><a href="03-vocabulario-en-contexto.html">Vocabulario en contexto</a></h5><p class="col-mut small lecc-obj mb-0">Deducir el significado de palabras desconocidas a partir del contexto, los prefijos, los sufijos y las relaciones de sentido dentro del texto.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="03-vocabulario-en-contexto.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckadmision-universitaria12" data-clave="admision-universitaria-1-2" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckadmision-universitaria12">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">4</span><div><h5 class="lecc-titulo mb-1"><a href="04-analogias-y-relaciones-de-palabras.html">Analogías y relaciones de palabras</a></h5><p class="col-mut small lecc-obj mb-0">Resolver analogías identificando la relación que hay dentro de cada par y buscando la opción que la repita con la misma estructura.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="04-analogias-y-relaciones-de-palabras.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckadmision-universitaria13" data-clave="admision-universitaria-1-3" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckadmision-universitaria13">Marcar como completada</label></div></div></article></div>
+<div class="col-12 col-md-6"><article class="tarjeta lecc-card h-100 reveal"><div class="d-flex align-items-start gap-3"><span class="lecc-num flex-shrink-0">5</span><div><h5 class="lecc-titulo mb-1"><a href="05-oraciones-incompletas-y-coherencia.html">Oraciones incompletas y coherencia</a></h5><p class="col-mut small lecc-obj mb-0">Completar oraciones eligiendo la alternativa que mantiene la coherencia lógica y la concordancia, y descartar las que introducen una contradicción.</p></div></div><div class="lecc-pie mt-auto"><a class="btn btn-sm btn-cta lecc-entrar" href="05-oraciones-incompletas-y-coherencia.html">Ver lección <i class="bi bi-arrow-right"></i></a><div class="form-check lecc-check m-0"><input class="form-check-input checkbox-leccion" type="checkbox" id="ckadmision-universitaria14" data-clave="admision-universitaria-1-4" title="Marcar como completada"><label class="form-check-label visually-hidden" for="ckadmision-universitaria14">Marcar como completada</label></div></div></article></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="tarjeta p-4 reveal">
+              <h5 class="d-flex align-items-center gap-2"><i class="bi bi-signpost-2" style="color: var(--acento);"></i> Ruta del curso</h5>
+              <div class="ruta mt-3">
+                <a class="paso" href="../modulo-1-estrategia-y-diagnostico/index.html"><span class="paso-num">1</span><span class="paso-txt">Módulo 1 · Estrategia y diagnóstico</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso active" href="../modulo-2-razonamiento-verbal/index.html"><span class="paso-num">2</span><span class="paso-txt">Módulo 2 · Razonamiento verbal</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso" href="../modulo-3-razonamiento-matematico/index.html"><span class="paso-num">3</span><span class="paso-txt">Módulo 3 · Razonamiento matemático</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso" href="../modulo-4-comprension-y-produccion-escrita/index.html"><span class="paso-num">4</span><span class="paso-txt">Módulo 4 · Comprensión y producción escrita</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso" href="../modulo-5-conocimiento-general/index.html"><span class="paso-num">5</span><span class="paso-txt">Módulo 5 · Conocimiento general</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso" href="../modulo-6-ensayo-y-simulacion-final/index.html"><span class="paso-num">6</span><span class="paso-txt">Módulo 6 · Ensayo y simulación final</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+<a class="paso" href="../modulo-7-cierre-gestion-y-logistica/index.html"><span class="paso-num">7</span><span class="paso-txt">Módulo 7 · Cierre, gestión y logística</span><i class="bi bi-chevron-right ms-auto paso-go"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-6">
+        <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+        <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="me-3" href="../index.html">Volver a Admisión Universitaria</a>
+        <a class="me-3" href="../../../index.html">Inicio</a>
+        <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+        <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+        <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+        <a href="../../../secciones/faq.html">Preguntas</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVES = ["admision-universitaria-1-0","admision-universitaria-1-1","admision-universitaria-1-2","admision-universitaria-1-3","admision-universitaria-1-4"];
+      var claveModulo = "admision-universitaria-1";
+      var KEY = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; } }
+      function pintar() {
+        var estados = leer(), hechas = 0;
+        CLAVES.forEach(function (k) { if (estados[k]) hechas++; });
+        var contador = document.getElementById("contadorLecciones");
+        if (contador) contador.textContent = hechas + " / " + CLAVES.length;
+        var barra = document.getElementById("barraProgreso");
+        if (barra && CLAVES.length) barra.style.width = Math.round((hechas / CLAVES.length) * 100) + "%";
+        var checks = document.querySelectorAll(".checkbox-leccion[data-clave]");
+        checks.forEach(function (c) {
+          c.checked = !!estados[c.getAttribute("data-clave")];
+          var card = c.closest(".lecc-card");
+          if (card) card.classList.toggle("hecha", c.checked);
+        });
+      }
+      pintar();
+      document.addEventListener("change", function (e) {
+        var c = e.target;
+        if (c && c.classList && c.classList.contains("checkbox-leccion") && c.hasAttribute("data-clave")) {
+          var estados = leer();
+          if (c.checked) estados[c.getAttribute("data-clave")] = true; else delete estados[c.getAttribute("data-clave")];
+          localStorage.setItem(KEY, JSON.stringify(estados));
+          pintar();
+        }
+      });
+      document.getElementById("anioAuto").textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

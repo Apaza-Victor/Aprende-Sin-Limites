@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triángulos — Matemática</title>
+  <meta name="description" content="Aplicar las propiedades de los triángulos, clasificar por ángulos y lados, y usar el teorema de la bisagra y el teorema de Pitágoras." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Geometría</a> <span class="mx-2 opacity-50">/</span>
+          <span>Triángulos</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Triángulos</h1>
+            <p class="articulo-modulo">Módulo 3 · Geometría</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Aplicar las propiedades de los triángulos, clasificar por ángulos y lados, y usar el teorema de la bisagra y el teorema de Pitágoras.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Un <strong>triángulo</strong> tiene tres lados y tres ángulos. Su <strong>perímetro</strong> es la suma de los lados y su <strong>área</strong> es la base por la altura dividida entre 2.</p><h4 class="lecc-h4">Clasificación por ángulos</h4><ul class="lecc-ul"><li><strong>Acutángulo</strong>: los tres ángulos son menores de 90°.</li><li><strong>Rectángulo</strong>: tiene un ángulo de 90°.</li><li><strong>Obtusángulo</strong>: tiene un ángulo mayor de 90°.</li></ul><figure class="lecc-figura"><svg viewBox="0 0 300 210" role="img" aria-label="Triángulo acutángulo: sus tres ángulos son menores de 90°"><polygon points="50,170 150,40 268,170" class="fig-forma"/>
+  <path d="M65.9 149.4 A26 26 0 0 1 76 170"/>
+  <path d="M134.1 60.6 A26 26 0 0 1 167.5 59.2"/>
+  <path d="M242 170 A26 26 0 0 0 250.5 151"/>
+  <text x="212" y="118" text-anchor="middle" font-size="16">a</text>
+  <text x="159" y="192" text-anchor="middle" font-size="16">b</text>
+  <text x="86" y="96" text-anchor="middle" font-size="16">c</text>
+  <text x="34" y="186" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="150" y="28" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="276" y="186" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text>
+  <text x="150" y="206" text-anchor="middle" font-size="13" class="fig-nota">los tres ángulos son menores de 90°</text></svg><figcaption class="fig-titulo">Triángulo acutángulo: sus tres ángulos son menores de 90°</figcaption></figure><figure class="lecc-figura"><svg viewBox="0 0 300 210" role="img" aria-label="Triángulo obtusángulo: un ángulo es mayor de 90°"><polygon points="40,170 120,120 270,170" class="fig-forma"/>
+  <path d="M94.5 135.9 A30 30 0 0 1 148.5 129.5" class="fig-acento"/>
+  <text x="205" y="152" text-anchor="middle" font-size="16">a</text>
+  <text x="155" y="192" text-anchor="middle" font-size="16">b</text>
+  <text x="70" y="148" text-anchor="middle" font-size="16">c</text>
+  <text x="26" y="186" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="120" y="100" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="284" y="186" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text>
+  <text x="188" y="98" text-anchor="middle" font-size="13" class="fig-nota">B &gt; 90°</text></svg><figcaption class="fig-titulo">Triángulo obtusángulo: un ángulo es mayor de 90°</figcaption></figure><h4 class="lecc-h4">Clasificación por lados</h4><ul class="lecc-ul"><li><strong>Equilátero</strong>: los tres lados iguales, entonces los tres ángulos miden 60°.</li><li><strong>Isósceles</strong>: dos lados iguales, entonces los dos ángulos opuestos son iguales.</li><li><strong>Escaleno</strong>: los tres lados distintos.</li></ul><figure class="lecc-figura"><svg viewBox="0 0 300 200" role="img" aria-label="Triángulo rectángulo: el lado mayor es la hipotenusa"><polygon points="40,160 40,40 240,160" class="fig-forma"/>
+  <path d="M40 144 L56 144 L56 160" class="fig-acento"/>
+  <text x="140" y="184" text-anchor="middle" font-size="16">a</text>
+  <text x="26" y="106" text-anchor="middle" font-size="16">b</text>
+  <text x="152" y="90" text-anchor="middle" font-size="16">c</text>
+  <text x="26" y="176" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="26" y="44" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="252" y="176" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text></svg><figcaption class="fig-titulo">Triángulo rectángulo: el lado mayor es la hipotenusa</figcaption></figure><h4 class="lecc-h4">Propiedades que conviene memorizar</h4><ul class="lecc-ul"><li>La suma de los ángulos interiores de cualquier triángulo es <strong>180°</strong>.</li><li>En un triángulo isósceles, el ángulo comprendido entre los dos lados iguales es el <strong>vértice</strong>.</li><li>El lado mayor se opone al ángulo mayor.</li><li><strong>Teorema de la bisagra</strong>: en dos triángulos con dos lados iguales, es mayor el que tiene el tercer lado mayor.</li></ul><figure class="lecc-figura"><svg viewBox="0 0 300 240" role="img" aria-label="La mediana une un vértice con el punto medio del lado opuesto"><polygon points="50,185 140,40 250,185" class="fig-forma"/>
+  <path d="M140 40 L140 185" class="fig-acento"/>
+  <path d="M110 140 L170 140" class="fig-dato"/>
+  <circle cx="140" cy="136.7" r="4" fill="currentColor" stroke="none"/>
+  <text x="152" y="112" text-anchor="middle" font-size="15" class="fig-acento-texto">mₐ</text>
+  <text x="150" y="204" text-anchor="middle" font-size="15">a</text>
+  <text x="196" y="112" text-anchor="middle" font-size="15">b</text>
+  <text x="78" y="112" text-anchor="middle" font-size="15">c</text>
+  <text x="140" y="30" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="36" y="200" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="262" y="200" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text>
+  <text x="140" y="232" text-anchor="middle" font-size="13" class="fig-nota">el baricentro G está a 2/3 de la mediana desde el vértice</text></svg><figcaption class="fig-titulo">La mediana une un vértice con el punto medio del lado opuesto</figcaption></figure><h4 class="lecc-h4">Teorema de Pitágoras</h4><p>En un triángulo <strong>rectángulo</strong>, la suma de los cuadrados de los catetos es igual al cuadrado de la hipotenusa: a² + b² = c². Solo se aplica en triángulos rectángulos, y la hipotenusa es siempre el lado más largo, el que está frente al ángulo de 90°.</p><div class="lecc-nota">Error frecuente: aplicar Pitágoras a un triángulo que no es rectángulo. Si no hay ángulo recto, la relación no se cumple.</div><figure class="lecc-figura"><svg viewBox="0 0 300 240" role="img" aria-label="La altura al hipotenusa parte el triángulo en dos triángulos semejantes"><polygon points="50,180 50,50 250,180" class="fig-forma"/>
+  <path d="M50 180 L109 88.6" class="fig-acento"/>
+  <path d="M50 144 L66 144 L66 162"/>
+  <circle cx="109" cy="88.6" r="3" fill="currentColor" stroke="none"/>
+  <text x="150" y="200" text-anchor="middle" font-size="15">a</text>
+  <text x="36" y="118" text-anchor="middle" font-size="15">b</text>
+  <text x="168" y="106" text-anchor="middle" font-size="15">c</text>
+  <text x="78" y="142" text-anchor="middle" font-size="15" class="fig-acento-texto">h</text>
+  <text x="76" y="60" text-anchor="middle" font-size="15">p</text>
+  <text x="190" y="126" text-anchor="middle" font-size="15">q</text>
+  <text x="122" y="82" text-anchor="middle" font-size="13" class="fig-etiqueta">H</text>
+  <text x="150" y="232" text-anchor="middle" font-size="13" class="fig-nota">c = p + q   ·   c · h = a · b</text></svg><figcaption class="fig-titulo">La altura al hipotenusa parte el triángulo en dos triángulos semejantes</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>En un triángulo rectángulo, un cateto mide 9 y la hipotenusa 15. Halla el otro cateto y los dos ángulos agudos.</p><h4 class="lecc-h4">Método del teorema de Pitágoras</h4><ul class="lecc-ul"><li>9² + b² = 15², o sea 81 + b² = 225, así que b² = 144 y <strong>b = 12</strong>.</li><li>Como 81 + 144 = 225, la cuenta queda cerrada.</li></ul><h4 class="lecc-h4">Método de las ternas pitagóricas, que da el resultado sin despejar nada</h4><ul class="lecc-ul"><li>Las ternas clásicas son 3-4-5, 5-12-13 y 8-15-17.</li><li>La hipotenusa 15 aparece en 8-15-17 y también en el múltiplo 3 de 3-4-5, que es 9-12-15.</li><li>Como ya conozco un cateto, 9, el otro tiene que ser <strong>12</strong>, sin hacer ninguna cuenta.</li></ul><h4 class="lecc-h4">Método de las razones trigonométricas, para los ángulos</h4><ul class="lecc-ul"><li>El ángulo opuesto al cateto de 9 cumple seno = 9/15 = 0,6, y el arco seno de 0,6 da <strong>36,9°</strong>.</li><li>El ángulo opuesto al cateto de 12 cumple coseno = 9/15 = 0,6, y el arco coseno da <strong>53,1°</strong>.</li><li>Control: 36,9° + 53,1° = 90°, que es lo que tienen que sumar los dos ángulos agudos de un triángulo rectángulo.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Ordena siempre los lados de menor a mayor antes de aplicar Pitágoras, porque el lado mayor es necesariamente la hipotenusa. Y reconoce las ternas pitagóricas clásicas (3-4-5, 5-12-13, 8-15-17, 7-24-25): si los números son múltiplos de alguna, la respuesta sale sin hacer cuentas.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-2-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-angulos-y-rectas.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-poligonos-y-cuadrilateros.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-2-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

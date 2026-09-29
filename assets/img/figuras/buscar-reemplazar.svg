@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Buscar y reemplazar: el atajo que ahorra horas</text>
+
+  <text x="14" y="42" class="fig-sub">Antes</text>
+  <rect x="14" y="52" width="332" height="70" rx="9" class="fig-zona"/>
+  <text x="26" y="74" class="fig-nota" font-size="12">El Sr. Perez pago 50 soles y luego pago 20 soles.</text>
+  <text x="26" y="94" class="fig-nota" font-size="12">Despues el Sr. Perez pago 80 soles.</text>
+  <text x="26" y="114" class="fig-mal-txt" font-size="11">3 veces hay que cambiar a mano si el nombre cambia</text>
+
+  <rect x="14" y="132" width="332" height="46" rx="9" class="fig-acento"/>
+  <text x="180" y="150" text-anchor="middle" class="fig-acento-texto" font-size="12">Buscar: Perez     Reemplazar: Ramirez     Reemplazar todo</text>
+  <text x="180" y="170" text-anchor="middle" class="fig-acento-texto" font-size="12">Atajo: Control + H</text>
+
+  <text x="14" y="204" class="fig-sub">Despues</text>
+  <rect x="14" y="214" width="332" height="42" rx="9" class="fig-ok"/>
+  <text x="26" y="232" class="fig-ok-txt" font-size="12">El Sr. Ramirez pago 50 soles y luego pago 20 soles.</text>
+  <text x="26" y="250" class="fig-ok-txt" font-size="12">Despues el Sr. Ramirez pago 80 soles.</text>
+</svg>

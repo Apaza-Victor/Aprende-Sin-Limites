@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuerza centrípeta — Física</title>
+  <meta name="description" content="Aplicar la fuerza que mantiene el movimiento circular eligiendo la versión de la fórmula que corresponde a los datos dados." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Fuerzas y dinámica</a> <span class="mx-2 opacity-50">/</span>
+          <span>Fuerza centrípeta</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Fuerza centrípeta</h1>
+            <p class="articulo-modulo">Módulo 2 · Fuerzas y dinámica</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Aplicar la fuerza que mantiene el movimiento circular eligiendo la versión de la fórmula que corresponde a los datos dados.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La fuerza centrípeta es el caso donde la segunda ley de Newton se aplica con una aceleración que apunta siempre al centro. Entender por qué aparece es la clave, porque evita tratarla como un tipo de fuerza misterioso.</p><h4 class="lecc-h4">No es una fuerza nueva</h4><p>La fuerza centrípeta es el nombre que se le da a la fuerza neta cuando el resultado es una aceleración dirigida hacia el centro. No aparece en el diagrama de cuerpo libre de un cuerpo en movimiento circular uniforme, porque la única fuerza real es la que produce el giro.</p><ul class="lecc-ul"><li>En un objeto atado a una cuerda y describiendo un círculo horizontal, la fuerza real es la tensión de la cuerda, y por eso debe apuntar hacia el centro.</li><li>En un auto en una curva, la fuerza real es la fricción lateral entre neumáticos y asfalto, y su dirección es hacia el interior de la curva.</li><li>En un satélite, la fuerza real es la gravedad, que apunta al centro de la Tierra, y por eso los satélites caen alrededor en lugar de caer al suelo.</li><li>En la órbita, la velocidad apunta tangente a la trayectoria, y la aceleración apunta al centro. Si desapareciera la gravedad, el satélite saldría en línea recta con la velocidad que tenía. Eso es lo que es una órbita: caída continua alrededor de la Tierra.</li></ul><h4 class="lecc-h4">Las dos formas de la fórmula</h4><p>Con la rapidez lineal v y el radio r, la aceleración centrípeta es v²/r. Con la rapidez angular ω, es ω² · r. Ambas son la misma ley, y se eligen según el dato que brinde el enunciado.</p><p>La fuerza que la produce es F = m · a, o sea m·v²/r o m·ω²·r. Nótese que la aceleración aumenta con el radio si se mantiene ω, y disminuye con el radio si se mantiene v. Esa diferencia explica por qué las curvas de radio grande son más cómodas a velocidad moderada, y por qué un autódromo con radios amplios permite curvas más rápidas.</p><p>##-banked curves? Better: Tres casos que se preguntan</p><ul class="lecc-ul"><li><strong>Radio pequeño y misma velocidad</strong>: la aceleración es enorme y la fuerza necesaria también. Es el caso peligroso.</li><li><strong>Misma velocidad y radio grande</strong>: la fuerza baja a la cuarta parte si el radio se duplica, porque a = v²/r. ese dato conviene memorizarlo.</li><li><strong>Periódico dado</strong>: se usa a = 4π²r/T², y aparece en los problemas de satellites y de rotación de la Tierra.</li></ul>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un coche recorre una curva circular de radio 80 m a 12 m/s. ¿Cuál es su aceleración centrípeta, qué fuerza lateral exerts sobre un auto de 1300 kg, y qué radio necesitaría para reducir esa aceleración a la mitad a la misma rapidez?</p><h4 class="lecc-h4">Método 1: aceleración y fuerza con la vía de la rapidez</h4><ul class="lecc-ul"><li>Primero: la aceleración centrípeta es v²/r = 12²/80 = 144/80 = 1,8 m/s².</li><li>Segundo: la fuerza lateral que exerts es m·a = 1300 · 1,8 = 2340 N, y es la fricción entre neumáticos y asfalto, dirigida hacia el centro de la curva.</li></ul><h4 class="lecc-h4">Método 2: rehacerlo con la rapidez angular</h4><ul class="lecc-ul"><li>Tercero: la rapidez angular es ω = v/r = 12/80 = 0,15 rad/s.</li><li>Cuarto: con la segunda forma, a = ω² · r = 0,0225 · 80 = 1,8 m/s². La misma aceleración por el otro camino.</li></ul><h4 class="lecc-h4">Método 3: buscar el radio que reduce la aceleración</h4><ul class="lecc-ul"><li>Quinto: quiero la mitad de 1,8, o sea 0,9 m/s², con la misma rapidez de 12 m/s.</li><li>Sexto: de v²/r = 0,9 despejo r = 144/0,9 = 160 m. El radio debe duplicarse, y tiene sentido: reducir a la mitad la aceleración exige duplicar el radio.</li></ul><div class="lecc-nota">El resultado útil es la proporción, no el 1,8. Duplicar el radio divide por cuatro la fuerza lateral, y eso explica por qué las autopistas tienen radios tan amplios en sus curvas.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Si el enunciado da el periodo y el radio, usa directamente a = 4π²r/T². Si da la rapidez lineal, v²/r es más rápida y evita pasos intermedios.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-1-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-plano-inclinado.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-3-estatica-y-equilibrio/01-momento-de-una-fuerza-torque.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-1-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

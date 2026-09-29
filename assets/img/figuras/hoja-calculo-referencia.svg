@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Una formula arrastrada llega a donde haga falta</text>
+
+  <text x="86" y="40" text-anchor="middle" class="fig-sub">Columna A</text>
+  <text x="180" y="40" text-anchor="middle" class="fig-sub">Columna B</text>
+  <text x="286" y="40" text-anchor="middle" class="fig-sub">Columna C</text>
+
+  <rect x="18" y="48" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="50" y="63" text-anchor="middle" class="fig-etiqueta" font-size="11">A1 · 3</text>
+  <rect x="90" y="48" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="122" y="63" text-anchor="middle" class="fig-etiqueta" font-size="11">B1 · 5</text>
+  <rect x="162" y="48" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="194" y="63" text-anchor="middle" class="fig-etiqueta" font-size="11">C1</text>
+  <text x="238" y="63" class="fig-ok-txt" font-size="11">A1 * B1</text>
+  <text x="238" y="78" class="fig-nota" font-size="10">= 15</text>
+
+  <rect x="18" y="76" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="50" y="91" text-anchor="middle" class="fig-etiqueta" font-size="11">A2 · 4</text>
+  <rect x="90" y="76" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="122" y="91" text-anchor="middle" class="fig-etiqueta" font-size="11">B2 · 2</text>
+  <rect x="162" y="76" width="64" height="22" rx="4" class="fig-ok"/>
+  <text x="194" y="91" text-anchor="middle" class="fig-ok-txt" font-size="11">C2</text>
+  <text x="238" y="91" class="fig-ok-txt" font-size="11">A2 * B2</text>
+  <text x="238" y="106" class="fig-nota" font-size="10">= 8</text>
+
+  <rect x="18" y="104" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="50" y="119" text-anchor="middle" class="fig-etiqueta" font-size="11">A3 · 6</text>
+  <rect x="90" y="104" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="122" y="119" text-anchor="middle" class="fig-etiqueta" font-size="11">B3 · 7</text>
+  <rect x="162" y="104" width="64" height="22" rx="4" class="fig-ok"/>
+  <text x="194" y="119" text-anchor="middle" class="fig-ok-txt" font-size="11">C3</text>
+  <text x="238" y="119" class="fig-ok-txt" font-size="11">A3 * B3</text>
+  <text x="238" y="134" class="fig-nota" font-size="10">= 42</text>
+
+  <rect x="18" y="132" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="50" y="147" text-anchor="middle" class="fig-etiqueta" font-size="11">A4 · 1</text>
+  <rect x="90" y="132" width="64" height="22" rx="4" class="fig-zona"/>
+  <text x="122" y="147" text-anchor="middle" class="fig-etiqueta" font-size="11">B4 · 9</text>
+  <rect x="162" y="132" width="64" height="22" rx="4" class="fig-ok"/>
+  <text x="194" y="147" text-anchor="middle" class="fig-ok-txt" font-size="11">C4</text>
+  <text x="238" y="147" class="fig-ok-txt" font-size="11">A4 * B4</text>
+  <text x="238" y="162" class="fig-nota" font-size="10">= 9</text>
+
+  <rect x="14" y="176" width="332" height="70" rx="9" class="fig-zona"/>
+  <text x="26" y="198" class="fig-sub" font-size="12">Copia A1*B1 y suelta en C2: las referencias bajan solas</text>
+  <text x="26" y="220" class="fig-ok-txt" font-size="12">C5 = SUMA(C1:C4) = 15 + 8 + 42 + 9 = 74</text>
+  <text x="26" y="240" class="fig-mal-txt" font-size="11">Si escribes 15 en cada celda, el dia que cambie un dato todo esta mal.</text>
+</svg>

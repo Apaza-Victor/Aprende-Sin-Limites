@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Series verbales — Razonamiento Verbal</title>
+  <meta name="description" content="Completar series verbales de analogía, haciendo la relación entre los primeros términos y aplicándola a los últimos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="razonamiento-verbal">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Razonamiento Verbal</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Sinonimia y vocabulario</a> <span class="mx-2 opacity-50">/</span>
+          <span>Series verbales</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-chat-quote"></i></div>
+            <h1 class="articulo-titulo">Series verbales</h1>
+            <p class="articulo-modulo">Módulo 1 · Sinonimia y vocabulario</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Completar series verbales de analogía, haciendo la relación entre los primeros términos y aplicándola a los últimos.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">Qué es una serie verbal</h4><p>Es un ejercicio donde varios términos siguen una relación y hay que completar el siguiente. La relación no es de significado, sino de <strong>posición dentro de la secuencia</strong>.</p><h4 class="lecc-h4">Los pasos, siempre en este orden</h4><ol class="lecc-ol"><li>Escribe los términos en fila, con su número de orden.</li><li>Mira la relación entre el término 1 y el 2.</li><li>Mira si la misma relación aparece entre el 2 y el 3.</li><li>Extiende la relación al término que falta.</li></ol><div class="lecc-nota">Si la relación del 1 al 2 <strong>no</strong> es la misma que la del 2 al 3, la serie está mal planteada o hay un término mal puesto. No hay que forzar una relación distinta para cada par.</div><h4 class="lecc-h4">Las relaciones más frecuentes</h4><ul class="lecc-ul"><li><strong>Aritmética</strong>: la diferencia entre términos es constante. Se aplica la formula de sucesiones.</li><li><strong>Geométrica</strong>: el cociente entre términos es constante.</li><li><strong>De alternancia</strong>: se repite un ciclo de dos o tres términos.</li><li><strong>De suma de dígitos</strong>: cada término se obtiene sumando las cifras del anterior.</li><li><strong>De lectura invertida</strong>: los términos se leen al revés y asi forman otra serie.</li></ul><h4 class="lecc-h4">Series de letras</h4><p>Cuando los términos son letras, la posición en el alfabeto es el número que falta.</p><ul class="lecc-ul"><li>A son 1, B son 2, y asi sucesivamente hasta la Z, que son 26.</li><li>Convertir letra en número es el primer paso de cualquier serie alfabética.</li></ul><h4 class="lecc-h4">El error típico</h4><p>Tratar la serie de palabras como si el significado tuviera algo que ver. La relación es formal, no semántica.</p><figure class="lecc-figura"><svg viewBox="0 0 360 230" role="img" aria-label="La serie sigue una regla: el distractor rompe el patrón"><defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+    <marker id="punta-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">La serie marca la respuesta</text>
+
+  <rect x="16" y="40" width="46" height="34" rx="8" class="fig-ok"/>
+  <text x="39" y="62" text-anchor="middle" class="fig-ok-txt">1</text>
+  <rect x="86" y="40" width="46" height="34" rx="8" class="fig-ok"/>
+  <text x="109" y="62" text-anchor="middle" class="fig-ok-txt">3</text>
+  <rect x="156" y="40" width="46" height="34" rx="8" class="fig-ok"/>
+  <text x="179" y="62" text-anchor="middle" class="fig-ok-txt">5</text>
+  <rect x="226" y="40" width="46" height="34" rx="8" class="fig-ok"/>
+  <text x="249" y="62" text-anchor="middle" class="fig-ok-txt">7</text>
+  <rect x="296" y="40" width="46" height="34" rx="8" class="fig-destac"/>
+  <text x="319" y="62" text-anchor="middle" class="fig-destac-txt">?</text>
+
+  <line x1="62" y1="57" x2="84" y2="57" class="fig-flecha-ok"/>
+  <line x1="132" y1="57" x2="154" y2="57" class="fig-flecha-ok"/>
+  <line x1="202" y1="57" x2="224" y2="57" class="fig-flecha-ok"/>
+  <line x1="272" y1="57" x2="294" y2="57" class="fig-flecha-ok"/>
+
+  <text x="180" y="98" text-anchor="middle" class="fig-nota">los numeros impares siguen de dos en dos</text>
+
+  <rect x="16" y="118" width="158" height="94" rx="10" class="fig-ok"/>
+  <text x="95" y="140" text-anchor="middle" class="fig-ok-txt" font-size="13">Si hay distractor</text>
+  <text x="28" y="164" class="fig-nota">Se descarta la opcion</text>
+  <text x="28" y="182" class="fig-nota">que rompe la regla, aunque</text>
+  <text x="28" y="200" class="fig-nota">suene verosimil.</text>
+
+  <rect x="188" y="118" width="156" height="94" rx="10" class="fig-destac"/>
+  <text x="266" y="140" text-anchor="middle" class="fig-destac-txt" font-size="13">Si no hay distractor</text>
+  <text x="200" y="164" class="fig-nota">Se continua la serie hasta</text>
+  <text x="200" y="182" class="fig-nota">llenar todos los huecos, y la</text>
+  <text x="200" y="200" class="fig-nota">ultima casilla es la respuesta.</text></svg><figcaption class="fig-titulo">La serie sigue una regla: el distractor rompe el patrón</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se pide completar la serie: 2, 4, 8, 16, x</p><h4 class="lecc-h4">Método 1: escribir la fila</h4><ul class="lecc-ul"><li>Término 1 vale 2.</li><li>Término 2 vale 4.</li><li>Término 3 vale 8.</li><li>Término 4 vale 16.</li></ul><h4 class="lecc-h4">Método 2: la relación entre los primeros</h4><ul class="lecc-ul"><li>De 2 a 4 se multiplica por 2.</li></ul><h4 class="lecc-h4">Método 3: comprobar que la relación se repite</h4><ul class="lecc-ul"><li>De 4 a 8 se multiplica por 2.</li><li>De 8 a 16 se multiplica por 2.</li><li>La relación es constante, así que la serie es geométrica.</li></ul><h4 class="lecc-h4">Método 4: extender</h4><ul class="lecc-ul"><li>16 * 2 = 32.</li><li>Conclusiones: el término que falta es 32.</li></ul><h4 class="lecc-h4">Método 5: la vía alternativa</h4><ul class="lecc-ul"><li>Si en cambió se hubieran restado 2 cada vez, la serie sería 20, 18, 16, x y el faltante sería 14.</li><li>Por eso hay que verificar la relación con dos pares antes de responder.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Verifica la relación con dos pares, no con uno solo. Si el patrón se cumple en el par uno al dos y en el dos al tres, la respuesta casi siempre es correcta; si solo se cumple una vez, es una trampa.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="razonamiento-verbal-0-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-terminos-excluidos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-familia-de-palabras.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "razonamiento-verbal-0-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

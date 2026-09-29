@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Como se decide la tilde general</text>
+
+  <rect x="70" y="32" width="220" height="36" rx="8" class="fig-zona"/>
+  <text x="180" y="55" text-anchor="middle" class="fig-titulo" font-size="13">1. Separa en silabas y mira la ultima</text>
+
+  <rect x="14" y="80" width="100" height="52" rx="8" class="fig-ok"/>
+  <text x="64" y="102" text-anchor="middle" class="fig-ok-txt" font-size="12.5">AGUDA</text>
+  <text x="64" y="120" text-anchor="middle" class="fig-sub" font-size="11.5">la ultima es larga</text>
+
+  <rect x="130" y="80" width="100" height="52" rx="8" class="fig-apoyo"/>
+  <text x="180" y="102" text-anchor="middle" class="fig-titulo" font-size="12.5">GRAVE</text>
+  <text x="180" y="120" text-anchor="middle" class="fig-sub" font-size="11.5">la ultima es corta</text>
+
+  <rect x="246" y="80" width="100" height="52" rx="8" class="fig-destac"/>
+  <text x="296" y="102" text-anchor="middle" class="fig-destac-txt" font-size="12.5">ESDRUJULA</text>
+  <text x="296" y="120" text-anchor="middle" class="fig-sub" font-size="11.5">antepenultima</text>
+
+  <text x="18" y="152" class="fig-sub">2. Mira como termina la palabra</text>
+
+  <rect x="14" y="160" width="158" height="40" rx="8" class="fig-ok"/>
+  <text x="93" y="178" text-anchor="middle" class="fig-ok-txt" font-size="12">vocal, n o s</text>
+  <text x="93" y="194" text-anchor="middle" class="fig-nota" font-size="11.5">cafe, jamon, crisis</text>
+
+  <rect x="188" y="160" width="158" height="40" rx="8" class="fig-mal"/>
+  <text x="267" y="178" text-anchor="middle" class="fig-mal-txt" font-size="12">otra consonante</text>
+  <text x="267" y="194" text-anchor="middle" class="fig-nota" font-size="11.5">robot, movil, jardin</text>
+
+  <text x="18" y="222" class="fig-sub">3. Aplica la regla</text>
+  <rect x="60" y="222" width="240" height="22" rx="6" class="fig-destac"/>
+  <text x="180" y="238" text-anchor="middle" class="fig-destac-txt" font-size="12">esdrujula: tilde SIEMPRE</text>
+</svg>

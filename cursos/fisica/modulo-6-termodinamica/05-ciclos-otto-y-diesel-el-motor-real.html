@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciclos Otto y Diesel: el motor real — Física</title>
+  <meta name="description" content="Describir las etapas de los motores de combustión interna y calcular su rendimiento a partir de los datos del enunciado." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 6 · Termodinámica</a> <span class="mx-2 opacity-50">/</span>
+          <span>Ciclos Otto y Diesel: el motor real</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Ciclos Otto y Diesel: el motor real</h1>
+            <p class="articulo-modulo">Módulo 6 · Termodinámica</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Describir las etapas de los motores de combustión interna y calcular su rendimiento a partir de los datos del enunciado.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Un motor real no funciona en un solo paso: repite un <strong>ciclo</strong> de cuatro tiempos, y por eso se llama motor de cuatro tiempos.</p><h4 class="lecc-h4">Las cuatro etapas del ciclo Otto</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Etapa</th><th>Qué hace el pistón</th><th>Qué pasa con el gas</th></tr></thead><tbody><tr><td>Admisión</td><td>baja, entra mezcla</td><td>se mezcla aire con combustible</td></tr><tr><td>Compresión</td><td>sube, se cierra la válvula</td><td>aumenta presión y temperatura</td></tr><tr><td>Explosión</td><td>baja, la bujía enciende</td><td>se libera energía, el gas se expande</td></tr><tr><td>Escape</td><td>sube, expulsa gases</td><td>vuelve el pistón arriba</td></tr></tbody></table></div><p>La <strong>compresión</strong> es la etapa clave: una relación de compresión mayor da más rendimiento, pero el motor se calienta y se desgasta antes.</p><h4 class="lecc-h4">Ciclo Diesel</h4><p>La diferencia es que en el motor Diesel <strong>solo se comprime aire</strong>, sin chispa. La presión resultante es tan alta que el combustible se enciende al ser inyectado:</p><ol class="lecc-ol"><li>Admisión de aire.</li><li>Compresión fuerte, sin inyección.</li><li>Inyección del combustible, que se enciende solo.</li><li>Expulsión.</li></ol><p>Por eso es más eficiente y más pesado, y por eso se usa en camiones, buses y tractores.</p><h4 class="lecc-h4">Rendimiento desde los datos</h4><p>Cuando el enunciado da calor y trabajo, se usa directamente:</p><div class="formula">η = <span class="frac"><span class="frac-n">W</span><span class="frac-d">Q<sub>h</sub></span></span></div><p>Cuando da solo energías internas de estados, hay que reconstruir el calor y el trabajo con la primera ley en cada etapa.</p><dl class="lecc-glosario"><dt>Ciclo termodinámico</dt><dd>Serie de procesos que devuelve el sistema a su estado inicial.</dd><dt>Admisión</dt><dd>Entrada de la mezcla combustible en la cámara.</dd><dt>Compresión</dt><dd>Reducción del volumen que eleva la presión y la temperatura del gas.</dd><dt>Relación de compresión</dt><dd>Cociente entre el volumen máximo y el mínimo de la cámara.</dd><dt>Ciclo Diesel</dt><dd>Ciclo de combustión por inyección, sin bujía.</dd><dt>Rendimiento térmico</dt><dd>Porcentaje de la energía liberada que se convierte en trabajo.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un motor Otto recibe 2000 J de la mezcla y rechaza 1200 J. Calcula su rendimiento y di si supera a Carnot entre 700 K y 350 K.</p><h4 class="lecc-h4">Trabajo y rendimiento</h4><div class="formula">W = 2000 - 1200 = 800<span class="cmd"> </span><span class="fn-txt">J</span></div><div class="formula">η = <span class="frac"><span class="frac-n">800</span><span class="frac-d">2000</span></span> = 0.40</div><h4 class="lecc-h4">Techo de Carnot</h4><div class="formula">η<sub>Carnot</sub> = 1 - <span class="frac"><span class="frac-n">350</span><span class="frac-d">700</span></span> = 0.50</div><h4 class="lecc-h4">Comparación</h4><p>El motor rinde 40 por ciento y el máximo teórico es 50 por ciento. Cumple la segunda ley, aunque queda margen.</p><div class="lecc-nota">Si alguien afirma un rendimiento del 60 por ciento con esas temperaturas, está violando la segunda ley: no existe ningún motor, por bueno que sea, que supere ese 50 por ciento.</div><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Comprueba el rendimiento</h4><ol class="lecc-ol"><li>¿Qué pasaría si el motor rechazara solo 500 J?</li><li>¿Por qué los motores  más pequeños que los grandes?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p>Rejectando 500 J el trabajo sería 1500 J y el rendimiento 75 por ciento, imposible con esas temperaturas, así que los datos serían inválidos. Los motores grandes gestionan mejor la fricción y el calor residual, por eso su rendimiento sube aunque el gasoil se queme igual.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>En los problemas de motores, escribe siempre las cuatro etapas con el nombre de cada transformación y sus fórmulas. Si dibujas el ciclo en el diagrama P-V, los ángulos (2-2, 1-2, 2-1, 1-1) te dicen qué energía estás calculando.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-5-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-ciclos-gases-ideales-y-transformaciones.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-7-electricidad-y-magnetismo/01-carga-electrica-y-ley-de-coulomb.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-5-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

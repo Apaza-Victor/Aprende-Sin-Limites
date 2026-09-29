@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isomería — Química</title>
+  <meta name="description" content="Distinguir isomería constitucional, de posición y de función, reconocer los estereoisómeros cis-trans y ópticos, relacionar el número de isómeros con el número de carbonos, y asignar la configuración R o S mediante las reglas de prioridad CIP." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Química orgánica</a> <span class="mx-2 opacity-50">/</span>
+          <span>Isomería</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">Isomería</h1>
+            <p class="articulo-modulo">Módulo 4 · Química orgánica</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Distinguir isomería constitucional, de posición y de función, reconocer los estereoisómeros cis-trans y ópticos, relacionar el número de isómeros con el número de carbonos, y asignar la configuración R o S mediante las reglas de prioridad CIP.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Los isómeros son compuestos con la <strong>misma fórmula molecular</strong> pero distinta estructura. La clasificación se hace según qué cambia.</p><h4 class="lecc-h4">Los tres niveles</h4><ul class="lecc-ul"><li><strong>Isomería constitucional</strong>: cambia el esqueleto o la posición del grupo funcional. El butano y el isobutano son constitucionales; el propan-1-ol y el propan-2-ol, de posición, que es un caso particular.</li><li><strong>Isomería de función</strong>: mismo número de carbonos, distinto grupo funcional. El etanol C₂H₆O y el éter dimetílico C₂H₆O son isómeros de función. La fórmula del metanal, del etanol y del dimetiléter es la misma, C₁H₄O, y son tres isómeros de función.</li><li><strong>Estereoisomería</strong>: misma conectividad, distinta disposición espacial. Solo aparece si hay un doble enlace o un carbono asimétrico.</li></ul><h4 class="lecc-h4">Carbono asimétrico</h4><p>Un carbono es asimétrico, o quiral, si está unido a <strong>cuatro sustituyentes distintos</strong>. Un ejemplo es el segundo carbono del 2-butanol, unido a –CH₃, –CH₂CH₃, –OH y –H.</p><p>Con un carbono asimétrico hay dos isómeros, que son <strong>enantiómeros</strong> y se llaman <strong>enantiómeros R y S</strong>. Los dos tienen las mismas propiedades físicas, menos el giro de la luz polarizada, que es exactamente igual y de signo contrario: por eso se llaman enantiómeros ópticos.</p><p>Su importancia es biológica: las enzimas son quirales y reaccionan solo con un enantiómero. Esa asimetría es la causa de que la vida sea quiral.</p><h4 class="lecc-h4">Cis-trans</h4><p>Aparece en el doble enlace cuando cada carbono tiene dos sustituyentes distintos, y en los anillos cuando los sustituyentes pueden quedar arriba o abajo.</p><ul class="lecc-ul"><li><strong>cis</strong>: los sustituyentes más pesados del mismo lado. En el ácido oleico están juntos, y por eso la molécula se dobla; en el ácido elaídico están en lados opuestos y la molécula queda recta.</li><li><strong>trans</strong>: en lados opuestos. El ácido elaídico es el isómero del oleico.</li><li>El <strong>ácido oleico</strong> y el <strong>elaídico</strong> tienen la misma fórmula, C₁₈H₃₄O₂, y solo se diferencian en la configuración del doble enlace: el oleico funde cerca de 13 °C y es líquido a temperatura ambiente, mientras que el elaídico funde cerca de 45 °C y es sólido.</li></ul><h4 class="lecc-h4">Cuántos isómeros tiene un alcano</h4><p>Los alcanos CnH2n+2 siguen la serie 1, 1, 1, 2, 3, 5, 9, 18, 35... para n = 1, 2, 3, 4, 5, 6, 7, 8, 9. Memorizar estos nueve valores resuelve de inmediato cualquier pregunta de cuántos isómeros tiene un alcano, y es una de las listas más rentables del examen.</p><div class="lecc-nota">La cuenta de carbonos asimétricos va por 2ⁿ para n carbonos asimétricos distintos, menos las simetrías, que bajan el total. Con dos asimétricos: 2² = 4 isómeros, que son dos pares de enantiómeros.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se pide el número de isómeros del pentano, los isómeros del C₄H₁₀O y la configuración del 2-butanol con las prioridades CIP.</p><h4 class="lecc-h4">Método 1: isómeros constitutionales del pentano</h4><ul class="lecc-ul"><li>C₅H₁₂ tiene tres isómeros constitutionales: <strong>pentano</strong>, <strong>2-metilbutano</strong> y <strong>2,2-dimetilpropano</strong>.</li><li>El método para contarlos: se escribe el alcano de cadena larga, se cuenta la posición del primer carbono ramificado, se reduce el número de ramificaciones y se repite.</li></ul><h4 class="lecc-h4">Método 2: isómeros del C₄H₁₀O</h4><ul class="lecc-ul"><li><strong>Alcoholes</strong>: butan-1-ol, butan-2-ol, 2-metilpropan-1-ol y 2-metilpropan-2-ol. Son cuatro.</li><li><strong>Éteres</strong>: 1-metoxipropano y 2-metoxipropano. Son dos.</li><li><strong>Total: 6 isómeros</strong>, cuatro de función alcohol y dos de función éter, y esta separación es justamente la isomería de función.</li><li>No hay isómeros cíclicos posibles: C₄H₁₀O ya está saturado, así que los seis isómeros son acíclicos.</li></ul><h4 class="lecc-h4">Método 3: CIP en el 2-butanol</h4><ul class="lecc-ul"><li>Las cuatro prioridades son: –OH (1), –CH₂CH₃ (2), –CH₃ (3), –H (4), por número atómico del primer átomo: O, C, C, H.</li><li>Entre los dos carbonos, el etilo gana porque en la segunda esfera tiene C, H, H frente a H, H, H del metilo.</li><li>Con el H PRIORITARIO 4 hacia atrás, la secuencia 1 → 2 → 3 va en sentido horario, así que es <strong>R</strong>.</li><li>Si el H estuviera hacia el observador, la configuración se invierte y sería S.</li></ul><div class="lecc-nota">La comprobación clave: el 2-butanol tiene un carbono asimétrico, así que da exactamente <strong>dos</strong> isómeros, R y S. Si el ejercicio pidiera cuatro, estarías contando mal: el error viene de tomar el carbono del CH₃ como si fuera asimétrico, y no lo es porque tiene tres hidrógenos iguales.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de contar isómeros, haz el esqueleto completo con todos los carbonos y marca con un asterisco los que tengan cuatro sustituyentes distintos. Contar sobre el esqueleto dibujado evita la mitad de los errores.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-3-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-alcoholes-y-acidos-organicos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-polimeros.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-3-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

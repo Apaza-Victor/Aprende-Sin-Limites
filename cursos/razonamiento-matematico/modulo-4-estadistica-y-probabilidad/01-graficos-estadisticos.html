@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gráficos estadísticos — Razonamiento Matemático</title>
+  <meta name="description" content="Leer graficos estadisticos, comparar categorias y extraer porcentajes e interpretaciónes a partir de los datos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="razonamiento-matematico">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Razonamiento Matemático</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Estadística y probabilidad</a> <span class="mx-2 opacity-50">/</span>
+          <span>Gráficos estadísticos</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-brain"></i></div>
+            <h1 class="articulo-titulo">Gráficos estadísticos</h1>
+            <p class="articulo-modulo">Módulo 4 · Estadística y probabilidad</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Leer graficos estadisticos, comparar categorias y extraer porcentajes e interpretaciónes a partir de los datos.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">Tres tipos de grafico que debes reconocer</h4><ul class="lecc-ul"><li><strong>De barras</strong>: compara cantidades entre categorias. El eje vertical es la frecuencia.</li><li><strong>Circular</strong>: muestra partes de un todo. Todos los sectores suman 100 por ciento.</li><li><strong>De lineas</strong>: muestra como cambia una magnitud a lo largo del tiempo.</li></ul><figure class="lecc-figura"><svg viewBox="0 0 360 250" role="img" aria-label="Leyendo el eje y la escala antes que las barras, el grafico deja de suponer."><text x="180" y="18" text-anchor="middle" class="fig-titulo">Leer un grafico de barras sinumniendolo</text>
+
+  <line x1="52" y1="40" x2="52" y2="176" class="fig-medida"/>
+  <line x1="52" y1="176" x2="332" y2="176" class="fig-medida"/>
+
+  <text x="52" y="34" text-anchor="end" class="fig-nota" font-size="12">60 %</text>
+  <text x="52" y="110" text-anchor="end" class="fig-nota" font-size="12">30 %</text>
+
+  <rect x="70" y="86" width="42" height="90" rx="5" class="fig-ok"/>
+  <text x="91" y="78" text-anchor="middle" class="fig-ok-txt" font-size="12">45 %</text>
+  <text x="91" y="192" text-anchor="middle" class="fig-nota" font-size="12">Lunes</text>
+
+  <rect x="128" y="116" width="42" height="60" rx="5" class="fig-ok"/>
+  <text x="149" y="108" text-anchor="middle" class="fig-ok-txt" font-size="12">30 %</text>
+  <text x="149" y="192" text-anchor="middle" class="fig-nota" font-size="12">Martes</text>
+
+  <rect x="186" y="56" width="42" height="120" rx="5" class="fig-destac"/>
+  <text x="207" y="48" text-anchor="middle" class="fig-destac-txt" font-size="12">60 %</text>
+  <text x="207" y="192" text-anchor="middle" class="fig-nota" font-size="12">Miercoles</text>
+
+  <rect x="244" y="136" width="42" height="40" rx="5" class="fig-ok"/>
+  <text x="265" y="128" text-anchor="middle" class="fig-ok-txt" font-size="12">20 %</text>
+  <text x="265" y="192" text-anchor="middle" class="fig-nota" font-size="12">Jueves</text>
+
+  <text x="18" y="216" class="fig-nota" font-size="12">1. El eje vertical es el porcentaje y el horizontal, el dia.</text>
+  <text x="18" y="234" class="fig-nota" font-size="12">2. La barra mas alta es la mayor, no la de color distinto.</text></svg><figcaption class="fig-titulo">Leyendo el eje y la escala antes que las barras, el grafico deja de suponer.</figcaption></figure><h4 class="lecc-h4">Como se lee un grafico de barras</h4><ol class="lecc-ol"><li>Mira la escala del eje vertical y cuanto vale cada intervalo.</li><li>Localiza la barra y sube hasta la linea de valor.</li><li>Si la barra esta entre dos lineas, interpola.</li></ol><div class="lecc-nota">La pregunta mas frecuente de este tema no es un calculo sino una interpretacion: cual es la categoria mayor, cual es la menor, o cuanto mas tiene una que otra. Se responde leyendo, no operando.</div><h4 class="lecc-h4">Sectores de un grafico circular</h4><ul class="lecc-ul"><li>El angulo del sector es proporcional al porcentaje.</li><li>**porcentaje = angulo / 360 * 100**</li><li>**angulo = porcentaje * 360 / 100**</li><li>Ejemplo de referencia: la mitad del circulo son 180 grados, es decir 50 por ciento.</li></ul><h4 class="lecc-h4">Frecuencias acumuladas</h4><p>Cuando el grafico muestra datos agrupados en intervalos, la frecuencia acumulada suma los intervalos anteriores.</p><ul class="lecc-ul"><li>Sirve para responder cuantas personas hay por debajo de un valor.</li></ul><p>Un error frecuente es sumar los sectores en lugar de multiplicar. Recuerda que el angulo sale de multiplicar el porcentaje por 3,6.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>En un grafico circular, un sector de 90 grados corresponde a la categoria A. Que porcentaje representa y cuanto valdria un sector de 216 grados.</p><h4 class="lecc-h4">Metodo 1: el porcentaje de 90 grados</h4><ul class="lecc-ul"><li>porcentaje = 90 / 360 * 100</li><li>90 / 360 = 0,25</li><li>0,25 * 100 = 25 por ciento.</li><li>Conclusiones: la categoria A es el 25 por ciento del total.</li></ul><h4 class="lecc-h4">Metodo 2: el sector de 216 grados</h4><ul class="lecc-ul"><li>porcentaje = 216 / 360 * 100</li><li>216 / 360 = 0,6</li><li>0,6 * 100 = 60 por ciento.</li></ul><h4 class="lecc-h4">Metodo 3: comprobar</h4><ul class="lecc-ul"><li>Si A es el 25 por ciento, el resto es 75 por ciento.</li><li>75 por ciento de 360 grados son 270 grados, y 360 - 90 = 270. Coincide.</li><li>Conclusiones: 216 grados equivalen al 60 por ciento.</li></ul><ul class="lecc-ul"><li>Ojo: un sector de 216 grados es mas de la mitad del circulo, asi que 60 por ciento es lo logico.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de responder, identifica que tipo de grafico tienes. Si es circular, todo se reduce a multiplicar por 3,6 para ir de porcentaje a grados, y dividir entre 3,6 para el camino inverso.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="razonamiento-matematico-3-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-3-razonamiento-geometrico/05-razonamiento-con-palitos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-promedios.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "razonamiento-matematico-3-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

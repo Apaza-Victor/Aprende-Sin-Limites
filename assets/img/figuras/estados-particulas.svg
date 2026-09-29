@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Los estados de la materia cambian las particulas</text>
+
+  <rect x="14" y="34" width="104" height="110" rx="12" class="fig-zona"/>
+  <circle cx="40" cy="60" r="9" class="fig-ok"/>
+  <circle cx="66" cy="60" r="9" class="fig-ok"/>
+  <circle cx="92" cy="60" r="9" class="fig-ok"/>
+  <circle cx="40" cy="86" r="9" class="fig-ok"/>
+  <circle cx="66" cy="86" r="9" class="fig-ok"/>
+  <circle cx="92" cy="86" r="9" class="fig-ok"/>
+  <circle cx="40" cy="112" r="9" class="fig-ok"/>
+  <circle cx="66" cy="112" r="9" class="fig-ok"/>
+  <circle cx="92" cy="112" r="9" class="fig-ok"/>
+  <text x="66" y="160" text-anchor="middle" class="fig-ok-txt" font-size="12">Solido</text>
+
+  <rect x="128" y="34" width="104" height="110" rx="12" class="fig-zona"/>
+  <circle cx="146" cy="66" r="9" class="fig-destac"/>
+  <circle cx="172" cy="72" r="9" class="fig-destac"/>
+  <circle cx="196" cy="64" r="9" class="fig-destac"/>
+  <circle cx="150" cy="94" r="9" class="fig-destac"/>
+  <circle cx="176" cy="100" r="9" class="fig-destac"/>
+  <circle cx="200" cy="92" r="9" class="fig-destac"/>
+  <circle cx="146" cy="120" r="9" class="fig-destac"/>
+  <circle cx="172" cy="116" r="9" class="fig-destac"/>
+  <circle cx="198" cy="122" r="9" class="fig-destac"/>
+  <text x="180" y="160" text-anchor="middle" class="fig-destac-txt" font-size="12">Liquido</text>
+
+  <rect x="242" y="34" width="104" height="110" rx="12" class="fig-zona"/>
+  <circle cx="252" cy="58" r="9" class="fig-apoyo"/>
+  <circle cx="290" cy="50" r="9" class="fig-apoyo"/>
+  <circle cx="316" cy="70" r="9" class="fig-apoyo"/>
+  <circle cx="258" cy="92" r="9" class="fig-apoyo"/>
+  <circle cx="300" cy="100" r="9" class="fig-apoyo"/>
+  <circle cx="326" cy="88" r="9" class="fig-apoyo"/>
+  <circle cx="266" cy="120" r="9" class="fig-apoyo"/>
+  <circle cx="300" cy="124" r="9" class="fig-apoyo"/>
+  <circle cx="340" cy="110" r="9" class="fig-apoyo"/>
+  <text x="294" y="160" text-anchor="middle" class="fig-apoyo-txt" font-size="12">Gas</text>
+
+  <text x="180" y="190" text-anchor="middle" class="fig-nota" font-size="12">Cambia cuanto se separan las particulas, no la sustancia.</text>
+  <text x="180" y="212" text-anchor="middle" class="fig-nota" font-size="12">El solido mantiene su forma; el gas ocupa todo el recipiente.</text>
+</svg>

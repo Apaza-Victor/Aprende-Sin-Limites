@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Amplitud y longitud de onda</text>
+
+  <line x1="16" y1="110" x2="344" y2="110" class="fig-medida"/>
+
+  <path d="M 16 110 C 46 50 76 50 106 110 C 136 170 166 170 196 110 C 226 50 256 50 286 110 C 306 150 330 150 344 110" class="fig-acento" fill="none" stroke-width="2.2"/>
+
+  <line x1="106" y1="110" x2="106" y2="58" class="fig-medida"/>
+  <text x="112" y="54" class="fig-acento-texto" font-size="12">amplitud</text>
+
+  <line x1="16" y1="196" x2="196" y2="196" class="fig-medida"/>
+  <line x1="16" y1="190" x2="16" y2="202" class="fig-medida"/>
+  <line x1="196" y1="190" x2="196" y2="202" class="fig-medida"/>
+  <text x="106" y="186" text-anchor="middle" class="fig-acento-texto" font-size="12">una longitud de onda (lambda)</text>
+
+  <text x="180" y="222" text-anchor="middle" class="fig-nota" font-size="12">El sonido viaja por un medio; la luz tambien puede cruzar el vacio.</text>
+</svg>

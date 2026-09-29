@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El átomo y las partículas subatómicas — Química</title>
+  <meta name="description" content="Distinguir protones, neutrones y electrones por su carga, masa y ubicación, calcular el número másico a partir de Z y A, reconocer isótopos e isóbaros, y ordenar electrones por número cuántico en los orbitales." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Materia y estructura</a> <span class="mx-2 opacity-50">/</span>
+          <span>El átomo y las partículas subatómicas</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">El átomo y las partículas subatómicas</h1>
+            <p class="articulo-modulo">Módulo 1 · Materia y estructura</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Distinguir protones, neutrones y electrones por su carga, masa y ubicación, calcular el número másico a partir de Z y A, reconocer isótopos e isóbaros, y ordenar electrones por número cuántico en los orbitales.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Toda la química se apoya en una sola partícula: el átomo. Un átomo es esencialmente neutro porque tiene igual número de protones que de electrones, así que su carga neta es cero.</p><ul class="lecc-ul"><li><strong>Protón (p⁺)</strong>: carga +1, en el núcleo. Es lo que define la identidad del elemento: el número atómico Z es el número de protones.</li><li><strong>Neutrón (n⁰)</strong>: carga 0, también en el núcleo. Aporta masa y no participa en los enlaces, lo que explica que el isótopo más común de cada elemento tenga un número másico redondeado.</li><li><strong>Electrón (e⁻)</strong>: carga −1, en la región externa llamada nube electrónica. Es el único que participa en los enlaces y el que explica la conductividad eléctrica.</li></ul><h4 class="lecc-h4">Números que resumen un átomo</h4><p>El <strong>número atómico Z</strong> es el número de protones y coincide con el número de electrones en un átomo neutro. El <strong>número másico A</strong> es la suma de protones y neutrones. Con ambos, el número de neutrones es A − Z. La <strong>configuración electrónica</strong> es la lista de orbitales y el número de electrones en cada uno, y como los electrones son los únicos que cambian al formar enlaces, es el dato que explica las reactividades.</p><h4 class="lecc-h4">Familias de átomos</h4><p>Un <strong>isótopo</strong> tiene el mismo Z y distinto A: difieren en neutrones. El carbono tiene ¹²C, 13C y 14C, y el último es el que se usa para fechar restos arqueológicos. Un <strong>isóbaro</strong> tiene el mismo A y distinto Z, como ¹⁴C (Z = 6) y ¹⁴N (Z = 7). Los iones son átomos que han ganado o perdido electrones: si ganan, son aniones y llevan carga negativa.</p><h4 class="lecc-h4">Los cuatro números cuánticos</h4><p>Cada electrón se describe con cuatro valores:</p><ul class="lecc-ul"><li><strong>n</strong>, el número cuántico principal, indica el nivel de energía y va de 1 a 7.</li><li><strong>l</strong>, el orbital, con valores de 0 a n−1, y su nombre es s, p, d o f según l = 0, 1, 2 o 3.</li><li><strong>m</strong>, el momento magnético, que va de −l a +l y dice en qué orientación está el orbital.</li><li><strong>s</strong>, el espín, que solo puede ser +1/2 o −1/2, y por eso cada orbital admite como máximo dos electrones, que se aparean con espines opuestos.</li></ul><h4 class="lecc-h4">El orden de llenado</h4><p>Los electrones ocupan primero los orbitales de menor energía, siguiendo el principio de Aufbau: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p. Cada subnivel tiene un número fijo de orbitales (s = 1, p = 3, d = 5), así que admite 2, 6 y 10 electrones respectivamente. La <strong>regla de Hund</strong> dice que dentro de un subnivel los electrones ocupan primero los orbitales vacíos uno a uno con espines paralelos, y solo se aparean cuando todos están ocupados.</p><figure class="lecc-figura"><svg viewBox="0 0 320 240" role="img" aria-label="Capas electronicas alrededor del nucleo"><circle cx="160" cy="120" r="82" class="fig-forma"/>
+  <circle cx="160" cy="120" r="52" class="fig-dato"/>
+  <circle cx="160" cy="120" r="7" class="fig-relleno-2"/>
+  <circle cx="160" cy="68" r="5" class="fig-relleno-2"/>
+  <circle cx="160" cy="172" r="5" class="fig-relleno-2"/>
+  <circle cx="115" cy="146" r="5" class="fig-relleno-2"/>
+  <circle cx="205" cy="146" r="5" class="fig-relleno-2"/>
+  <circle cx="115" cy="94" r="5" class="fig-relleno-2"/>
+  <circle cx="205" cy="94" r="5" class="fig-relleno-2"/>
+  <text x="160" y="120" text-anchor="middle" font-size="14" class="fig-acento-texto">núcleo</text>
+  <text x="160" y="46" text-anchor="middle" font-size="14" class="fig-nota">primera capa</text>
+  <text x="160" y="216" text-anchor="middle" font-size="14" class="fig-nota">segunda capa</text>
+  <text x="160" y="16" text-anchor="middle" font-size="15" class="fig-acento-texto">modelo de capas</text>
+  <text x="292" y="60" text-anchor="middle" font-size="13" class="fig-nota">electrón</text></svg><figcaption class="fig-titulo">Capas electronicas alrededor del nucleo</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se da el elemento 26 con número másico 56 y se pide su configuración, su isóbaro y su isótono.</p><h4 class="lecc-h4">Método 1: configuración por conteo directo</h4><ul class="lecc-ul"><li>Z = 26 electrons, número másico 56.</li><li>Reparto siguiendo Aufbau: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶.</li><li>Suma: 2+2+6+2+6+2+6 = 26. Cuadra.</li><li>Neutrones: 56 − 26 = 30.</li></ul><h4 class="lecc-h4">Método 2: leer las filas de la tabla periódica</h4><ul class="lecc-ul"><li>El elemento 26 es el hierro, que está en el periodo 4 y en el grupo 8.</li><li>Su valencia se lee en la capa más externa: 4s² 3d⁶, así que tiene 8 electrones de valencia, lo que explica que pueda perder 2 o ganar 6.</li><li>Como el 4s se llena antes que el 3d aunque se escriba después, Fe⁺ pierde primero el electrón de 4s, no el de 3d. Ese detalle se pregunta mucho.</li></ul><h4 class="lecc-h4">Método 3: identificar isóbaros e isótonos por conteo</h4><ul class="lecc-ul"><li>Isóbaros: mismo A = 56 y distinto Z. Hay que buscar elementos cuyo isótopo más común tenga A = 56: el hierro (Z = 26) con el ⁵⁶Fe, y también el manganeso (Z = 25) con el ⁵⁵Mn, que se acerca pero no llega.</li><li>El ejercicio da un solo A, así que el isóbaro que se busca es el que tiene A = 56 con Z distinto de 26. Ninguno de los elementos habituales de la tabla cumple eso con A = 56, porque el único isótopo de masa 56 que es abundante es el del hierro.</li><li>Isótonos: mismo número de neutrones = 30, o sea A = Z + 30. Para el nitrógeno, Z = 7, sale A = 37: el ³⁷N tiene 30 neutrones.</li><li>Para el azufre, Z = 16, sale A = 46: el ⁴⁶S tendría 30 neutrones, pero el isótopo del azufre con 30 neutrones no es el ³⁶S, que solo tiene 20.</li><li>Comprobación: ⁵⁶₂₆Fe tiene 56 − 26 = 30 neutrones, y el ³⁷₇N tiene 37 − 7 = 30. Los dos son isótonos del hierro.</li></ul><div class="lecc-nota">El isóbaro se busca con el mismo número másico; el isótono, con el mismo número de neutrones. La fórmula del isótono es A = Z + N, y ese es el error más común de este ítem.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Cuando el enunciado diga «isóbaro» y te den A y Z, despeja el número de neutrones primero y luego compara. A − Z te da el dato que decide, y comparar A solo es error si el ejercicio pedía isótonos.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-0-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-estados-de-la-materia.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-la-tabla-periodica.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-0-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

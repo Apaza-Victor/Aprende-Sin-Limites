@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genética humana y biotecnología — Biología</title>
+  <meta name="description" content="Explicar la herencia de los grupos sanguíneos y el daltonismo, y valorar las aplicaciones y riesgos de la ingeniería genética." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="biologia">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Biología</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 2 · Genética y herencia</a> <span class="mx-2 opacity-50">/</span>
+          <span>Genética humana y biotecnología</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-brightness-high"></i></div>
+            <h1 class="articulo-titulo">Genética humana y biotecnología</h1>
+            <p class="articulo-modulo">Módulo 2 · Genética y herencia</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Explicar la herencia de los grupos sanguíneos y el daltonismo, y valorar las aplicaciones y riesgos de la ingeniería genética.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La genética humana sigue las mismas reglas que los guisantes, aunque hay que recordar dos cosas: los caracteres pueden ser multifactoriales y el ambiente también pesa.</p><h4 class="lecc-h4">Herencia ligada al cromosoma X</h4><p>El daltonismo y la hemofilia se deben a alelos recesivos del cromosoma X. Un varón (XY) necesita un solo alelo para manifestaciones, por eso son mucho más frecuentes en varones.</p><figure class="lecc-figura"><svg viewBox="0 0 360 260" role="img" aria-label="La cadena de transmisión de un rasgo recesivo se parece a una cadena de eslabones: si falta uno, no aparece"><text x="180" y="18" text-anchor="middle" class="fig-titulo">Cadena y red alimenticia: la energia se pierde</text>
+
+  <defs>
+    <marker id="punta-alimento" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <rect x="14" y="150" width="66" height="34" rx="9" class="fig-ok"/>
+  <text x="47" y="171" text-anchor="middle" class="fig-ok-txt" font-size="12">Pasto</text>
+  <text x="47" y="200" text-anchor="middle" class="fig-nota" font-size="10">productor</text>
+
+  <line x1="80" y1="164" x2="112" y2="164" class="fig-flecha-ok" marker-end="url(#punta-alimento)"/>
+  <line x1="80" y1="172" x2="112" y2="212" class="fig-flecha-ok" marker-end="url(#punta-alimento)"/>
+
+  <rect x="112" y="146" width="72" height="34" rx="9" class="fig-apoyo"/>
+  <text x="148" y="167" text-anchor="middle" class="fig-apoyo-txt" font-size="12">Conejo</text>
+  <rect x="112" y="212" width="72" height="34" rx="9" class="fig-apoyo"/>
+  <text x="148" y="233" text-anchor="middle" class="fig-apoyo-txt" font-size="12">Grillo</text>
+
+  <line x1="184" y1="158" x2="216" y2="98" class="fig-flecha-ok" marker-end="url(#punta-alimento)"/>
+  <line x1="184" y1="226" x2="216" y2="102" class="fig-flecha-ok" marker-end="url(#punta-alimento)"/>
+
+  <rect x="216" y="78" width="72" height="34" rx="9" class="fig-destac"/>
+  <text x="252" y="99" text-anchor="middle" class="fig-destac-txt" font-size="12">Zorro</text>
+
+  <line x1="288" y1="88" x2="316" y2="60" class="fig-flecha-ok" marker-end="url(#punta-alimento)"/>
+  <line x1="288" y1="102" x2="316" y2="76" class="fig-flecha-ok" marker-end="url(#punta-alimento)"/>
+
+  <rect x="288" y="40" width="60" height="34" rx="9" class="fig-zona"/>
+  <text x="318" y="61" text-anchor="middle" class="fig-nota" font-size="12">Halcon</text>
+
+  <text x="47" y="122" text-anchor="middle" class="fig-ok-txt" font-size="11">1000 J</text>
+  <text x="148" y="140" text-anchor="middle" class="fig-apoyo-txt" font-size="11">100 J</text>
+  <text x="252" y="72" text-anchor="middle" class="fig-destac-txt" font-size="11">10 J</text>
+  <text x="318" y="34" text-anchor="middle" class="fig-nota" font-size="11">1 J</text>
+
+  <line x1="14" y1="254" x2="346" y2="254" class="fig-medida"/>
+  <text x="180" y="228" text-anchor="middle" class="fig-nota" font-size="11">La flecha va del que se come al que come: 10 por ciento pasa al siguiente nivel.</text></svg><figcaption class="fig-titulo">La cadena de transmisión de un rasgo recesivo se parece a una cadena de eslabones: si falta uno, no aparece</figcaption></figure><h4 class="lecc-h4">Grupos sanguíneos</h4><p>El sistema ABO tiene tres alelos: <span class="formula formula-linea">I<sup>A</sup></span>, <span class="formula formula-linea">I<sup>B</sup></span> e <span class="formula formula-linea">i</span>. La relación entre A y B es de codominancia.</p><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Fenotipo</th><th>Genotipos posibles</th></tr></thead><tbody><tr><td>A</td><td><span class="formula formula-linea">I<sup>A</sup> I<sup>A</sup></span> o <span class="formula formula-linea">I<sup>A</sup> i</span></td></tr><tr><td>B</td><td><span class="formula formula-linea">I<sup>B</sup> I<sup>B</sup></span> o <span class="formula formula-linea">I<sup>B</sup> i</span></td></tr><tr><td>AB</td><td><span class="formula formula-linea">I<sup>A</sup> I<sup>B</sup></span></td></tr><tr><td>O</td><td><span class="formula formula-linea">ii</span></td></tr></tbody></table></div><p>AB y O: una madre AB no puede tener un hijo O, porque no tiene alelo <span class="formula formula-linea">i</span>.</p><h4 class="lecc-h4">Multifactoriales</h4><p>La altura, el peso o la presión arterial no dependen de un solo gen: suman muchos genes pequeños más el ambiente. Por eso sus variaciones se distribuyen de forma continua, sin tres categorías.</p><h4 class="lecc-h4">Ingeniería genética y biotecnología</h4><p>Las técnicas actuales permiten aislar genes, cortar ADN con enzimas de restricción, unir fragmentos e introducir material genético en un organismo o producirlo en un biorreactor.</p><dl class="lecc-glosario"><dt>Gen recesivo ligado al X</dt><dd>Se manifiesta sobre todo en varones, porque basta un alelo.</dd><dt>Codominancia</dt><dd>Los dos alelos se expresan a la vez, como en el grupo AB.</dd><dt>Genética multifactorial</dt><dd>Rasgo que depende de muchos genes y del ambiente.</dd><dt>Enzima de restricción</dt><dd>Proteína que corta el ADN en puntos concretos.</dd><dt>Transgénico</dt><dd>Organismo que recibió ADN de otra especie.</dd><dt>Terapia génica</dt><dd>Introducir genes para corregir una enfermedad.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una mujer de grupo AB tiene un hijo de grupo O. ¿Es posible? ¿Qué tipo de padres tienen un hijo O?</p><h4 class="lecc-h4">¿Puede ocurrir?</h4><p>No. El hijo O tiene genotipo <span class="formula formula-linea">ii</span>, así que recibió un alelo <span class="formula formula-linea">i</span> de cada padre. La madre AB es <span class="formula formula-linea">I<sup>A</sup> I<sup>B</sup></span> y no tiene alelo <span class="formula formula-linea">i</span>, por lo tanto no puede tener un hijo O.</p><h4 class="lecc-h4">¿Qué padres sí pueden?</h4><p>Cualquier combinación donde ambos padres porten <span class="formula formula-linea">i</span>: A heterocigoto por B heterocigoto, uno de cada uno, u O por A heterocigoto.</p><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Padres</th><th>Hijos posibles</th></tr></thead><tbody><tr><td>AB × O</td><td>solo A y solo B</td></tr><tr><td>A (I^i) × B (I^i)</td><td>A, B, AB y O</td></tr><tr><td>O × O</td><td>solo O</td></tr></tbody></table></div><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Resuelve problemas de herencia</h4><ol class="lecc-ol"><li>Un hombre daltónico y una mujer portadora: ¿qué porcentaje de hijos varones será daltónicos?</li><li>¿Por qué una hija de un hombre daltónico no es daltónica salvo que su madre sea portadora o daltónica?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p>El 50 por ciento de los varones, porque el varón recibe su único X de la madre, y la mitad de sus X llevan el alelo. La hija recibe del padre su X con el alelo, pero el alelo es recesivo, así que no se manifiesta si la madre le da un X normal; por eso la hija es portadora y no daltónica.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>En los problemas de herencia ligada al X, empieza siempre por el cromosoma del varón: si tiene el rasgo, su único X lleva el alelo, y eso obliga a la madre a portarlo. Ese es el atajo que resuelve la mitad de los ejercicios.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="biologia-1-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-herencia-mendeliana.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-3-ecologia-y-ambiente/01-ecosistemas-y-niveles-troficos.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "biologia-1-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

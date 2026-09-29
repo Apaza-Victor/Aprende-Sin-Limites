@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recursos naturales — Ciencia, Tecnología y Ambiente</title>
+  <meta name="description" content="Distinguir los recursos que se renuevan de los que no, y explicar por que esa distinción decide como se usan." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="ciencia-tecnologia-ambiente">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Ciencia, Tecnología y Ambiente</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · El ambiente y el desarrollo sostenible</a> <span class="mx-2 opacity-50">/</span>
+          <span>Recursos naturales</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-leaf"></i></div>
+            <h1 class="articulo-titulo">Recursos naturales</h1>
+            <p class="articulo-modulo">Módulo 3 · El ambiente y el desarrollo sostenible</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Distinguir los recursos que se renuevan de los que no, y explicar por que esa distinción decide como se usan.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">La idea de fondo</h4><p>Un recurso natural es algo de la naturaleza que las personas usan para vivir o producir. No todos son iguales: algunos se reponen solos y otros no. Esa distinción lo cambia todo, porque un recurso que no se repone se gasta para siempre.</p><h4 class="lecc-h4">Los dos grandes grupos</h4><p>### Renovables</p><p>Se reponen en un tiempo corto comparados con la velocidad de uso.</p><ol class="lecc-ol"><li><strong>Sol, viento y agua de lluvia</strong>: se reponen de forma continua.</li><li><strong>Bosques y maderas</strong>: si se corta menos de lo que crece, se recuperan.</li><li><strong>Peces y fauna</strong>: se renuevan si no se pesca más de lo que se reproduce.</li><li><strong>Suelos fértiles</strong>: se regeneran, pero tardan decenas de años.</li></ol><p>### No renovables</p><p>Se formaron en el planeta hace millones de años y se agotan.</p><ol class="lecc-ol"><li><strong>Petróleo, gas y carbón</strong>: proceden de materia orgánica antigua.</li><li><strong>Minerales</strong>: hierro, cobre, oro, bauxita.</li><li><strong>Combustible nuclear</strong>: uranio.</li></ol><div class="lecc-nota">El agua es un caso especial: se renueva por el ciclo del agua, pero si se extrae más rápido de lo que vuelve, se agota igual. Renovable no significa infinito.</div><h4 class="lecc-h4">La huella de cada recurso</h4><p>Un recurso deja siempre una huella, y esa huella es el costo real.</p><ol class="lecc-ol"><li><strong>Carbón</strong>: deja gases de efecto invernadero.</li><li><strong>Petróleo</strong>: deja derrames y aire sucio.</li><li><strong>Minerales a cielo abierto</strong>: deja el paisaje destrozado y metal pesado en el agua.</li><li><strong>Central hidroeléctrica</strong>: altera el río y el ciclo de los peces.</li><li><strong>Cultivo intensivo</strong>: agota el suelo y depende de petróleo para la maquinaria.</li></ol><div class="lecc-nota">No hay recurso limpio. La pregunta correcta no es si se contamina, sino cuanta contaminación genera por la energía que produce.</div><h4 class="lecc-h4">El agua como recurso crítico</h4><ul class="lecc-ul"><li>Solo el dos por ciento del agua del planeta es dulce, y de ese, casi todo está congelado o es subterráneo.</li><li>El agua dulce realmente accesible es una fracción muy pequeña.</li><li>La agricultura usa la mayor parte del agua dulce disponible, más que la industria y las ciudades juntas.</li></ul><div class="lecc-nota">Por eso un campo de golf en un país seco puede tener más impacto en el agua que todas las casas de una ciudad.</div><h4 class="lecc-h4">Los recursos que se renuevan rápido</h4><ol class="lecc-ol"><li><strong>La Biomasa</strong>: residuos de cosecha, ramas, lodos de depuradora. Puede convertirse en biogas.</li><li><strong>El sol</strong>: llega gratis y no se agota mientras exista la atmósfera.</li><li><strong>El viento y las mareas</strong>: se aprovechan con turbinas.</li></ol><div class="lecc-nota">Usar biomasa tiene un truco: si quemas madera de un árbol que vuelve a crecer, el carbono vuelve al ciclo. Si quemas madera de un bosque antiguo, no.</div><h4 class="lecc-h4">Tres reglas de uso responsable</h4><ol class="lecc-ol"><li><strong>Usar más lento de lo que se repone</strong>: es la regla que protege a los renovables.</li><li><strong>Reutilizar antes que reemplazar</strong>: alarga la vida del recurso.</li><li><strong>Reciclar para recuperar materiales</strong>, no para quemarlos.</li></ol><div class="lecc-nota">El reciclaje no salva por si solo. Reciclar el papel y seguir con el talón es mejor que nada, pero el mejor residuo es el que nunca se produjo.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Comparamos la huella de dos formas de obtener energía para una ciudad.</p><h4 class="lecc-h4">Opcion A: central a carbón</h4><ul class="lecc-ul"><li>El recurso es no renovable, y hay una cantidad finita en el planeta.</li><li>Al quemar, se libera el carbono que llevaba millones de anos guardado.</li><li>Además deja cenizas y gases que contaminan el aire.</li><li>Conclusión: recurso no renovable, con alta huella.</li></ul><h4 class="lecc-h4">Opcion B: campo solar</h4><ul class="lecc-ul"><li>El recurso es el sol, que se repone cada día y no se agota.</li><li>Durante su fabricación hay impacto, sobre todo en la minería del silicio.</li><li>Una vez en marcha, no emite gases.</li><li>Conclusión: recurso renovable, con huella concentrada en la fabricación.</li></ul><h4 class="lecc-h4">Comparación justa</h4><ul class="lecc-ul"><li>La central a carbón contamina mientras funciona. La solar contamina cuando se fabrica.</li><li>La central consume el recurso de forma definitiva. La solar no consume el sol de forma apreciable.</li></ul><h4 class="lecc-h4">El punto clave</h4><ul class="lecc-ul"><li>Conclusión: la solar no es limpia en sentido absoluto, pero su costo ambiental está concentrado y es recuperable; el del carbón es continuo y se acumula en la atmósfera.</li><li>Ojo: decir que la solar no tiene impacto es falso. Lo que no tiene impacto es decir que es inocua.</li></ul><h4 class="lecc-h4">Conclusión</h4><ul class="lecc-ul"><li>Conclusión: al comparar dos recursos, no los juzgues por si son naturales o artificiales. Juzgalos por si se reponen, por la huella que dejan y por si esa huella se puede limpiar.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>En cualquier pregunta sobre recursos, responde en este orden: si se repone, cuanta huella deja y si el daño es reversible. Con eso completas la respuesta.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="ciencia-tecnologia-ambiente-2-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-contaminacion-ambiental.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-cambio-climatico.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "ciencia-tecnologia-ambiente-2-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

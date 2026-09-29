@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Partes de la celula y su funcion</text>
+
+  <rect x="24" y="40" width="200" height="150" rx="26" class="fig-zona"/>
+
+  <ellipse cx="96" cy="110" rx="44" ry="34" class="fig-ok"/>
+  <ellipse cx="96" cy="110" rx="16" ry="12" class="fig-destac"/>
+
+  <ellipse cx="185" cy="80" rx="20" ry="10" class="fig-destac"/>
+  <ellipse cx="200" cy="160" rx="20" ry="10" class="fig-destac"/>
+
+  <line x1="224" y1="64" x2="262" y2="64" class="fig-medida"/>
+  <text x="268" y="68" class="fig-etiqueta" font-size="12">Membrana</text>
+
+  <line x1="140" y1="110" x2="262" y2="110" class="fig-medida"/>
+  <text x="268" y="114" class="fig-etiqueta" font-size="12">Nucleo</text>
+
+  <line x1="224" y1="182" x2="262" y2="182" class="fig-medida"/>
+  <text x="268" y="186" class="fig-etiqueta" font-size="12">Citoplasma</text>
+
+  <line x1="200" y1="170" x2="200" y2="198" class="fig-medida"/>
+  <text x="200" y="212" text-anchor="middle" class="fig-acento-texto" font-size="12">Mitocondria</text>
+
+  <text x="180" y="238" text-anchor="middle" class="fig-nota" font-size="12">Cada organelo hace una parte del trabajo de la celula.</text>
+</svg>

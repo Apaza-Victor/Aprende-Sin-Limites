@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Celula animal frente a celula vegetal</text>
+
+  <text x="88" y="40" text-anchor="middle" class="fig-sub">Animal</text>
+  <ellipse cx="88" cy="140" rx="74" ry="92" class="fig-ok"/>
+  <ellipse cx="88" cy="140" rx="58" ry="76" class="fig-zona"/>
+  <ellipse cx="88" cy="140" rx="26" ry="24" class="fig-destac"/>
+  <text x="88" y="145" text-anchor="middle" class="fig-destac-txt" font-size="11">nucleo</text>
+  <ellipse cx="52" cy="106" rx="9" ry="6" class="fig-forma"/>
+  <ellipse cx="120" cy="180" rx="9" ry="6" class="fig-forma"/>
+  <text x="88" y="248" text-anchor="middle" class="fig-nota" font-size="11">pared: no</text>
+  <text x="88" y="228" text-anchor="middle" class="fig-nota" font-size="11">cloroplastos: no</text>
+
+  <line x1="180" y1="40" x2="180" y2="252" class="fig-medida"/>
+
+  <text x="272" y="40" text-anchor="middle" class="fig-sub">Vegetal</text>
+  <rect x="204" y="52" width="136" height="176" rx="10" class="fig-ok"/>
+  <rect x="214" y="62" width="116" height="156" rx="8" class="fig-zona"/>
+  <rect x="200" y="46" width="144" height="12" rx="5" class="fig-destac"/>
+  <text x="272" y="55" text-anchor="middle" class="fig-destac-txt" font-size="10">pared celular</text>
+  <ellipse cx="272" cy="140" rx="24" ry="22" class="fig-destac"/>
+  <text x="272" y="144" text-anchor="middle" class="fig-destac-txt" font-size="10">nucleo</text>
+  <ellipse cx="238" cy="96" rx="13" ry="8" class="fig-forma"/>
+  <ellipse cx="306" cy="188" rx="13" ry="8" class="fig-forma"/>
+  <text x="238" y="82" text-anchor="middle" class="fig-ok-txt" font-size="10">cloroplasto</text>
+  <text x="318" y="204" text-anchor="middle" class="fig-ok-txt" font-size="10">cloroplasto</text>
+  <text x="272" y="248" text-anchor="middle" class="fig-nota" font-size="11">todo lo de la animal, mas pared, cloroplastos y vacuola grande</text>
+</svg>

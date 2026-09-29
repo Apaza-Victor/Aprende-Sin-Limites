@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Estructura de un texto argumentativo</text>
+
+  <defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <rect x="80" y="36" width="200" height="34" rx="9" class="fig-apoyo"/>
+  <text x="180" y="58" text-anchor="middle" class="fig-titulo" font-size="13">Introduccion: planteo el tema</text>
+
+  <line x1="180" y1="70" x2="180" y2="88" class="fig-flecha"/>
+
+  <rect x="30" y="92" width="300" height="84" rx="12" class="fig-zona"/>
+  <text x="180" y="114" text-anchor="middle" class="fig-titulo" font-size="13">Desarrollo</text>
+
+  <rect x="48" y="124" width="124" height="40" rx="8" class="fig-ok"/>
+  <text x="110" y="148" text-anchor="middle" class="fig-ok-txt" font-size="12">Tesis + evidencia</text>
+
+  <rect x="188" y="124" width="124" height="40" rx="8" class="fig-ok"/>
+  <text x="250" y="148" text-anchor="middle" class="fig-ok-txt" font-size="12">Refutacion</text>
+
+  <line x1="180" y1="176" x2="180" y2="194" class="fig-flecha"/>
+
+  <rect x="80" y="198" width="200" height="34" rx="9" class="fig-destac"/>
+  <text x="180" y="220" text-anchor="middle" class="fig-destac-txt" font-size="13">Conclusion: cierro con la idea</text>
+
+  <text x="180" y="242" text-anchor="middle" class="fig-nota" font-size="12">Cuatro parrafos: uno de entrada, dos de defensa y uno de cierre.</text>
+</svg>

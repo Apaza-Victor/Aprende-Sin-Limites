@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Dos resistencias en serie y en paralelo</text>
+
+  <text x="16" y="40" class="fig-sub">En serie</text>
+  <rect x="16" y="52" width="30" height="24" rx="6" class="fig-ok"/>
+  <text x="31" y="69" text-anchor="middle" class="fig-ok-txt" font-size="11">R1</text>
+  <line x1="46" y1="64" x2="76" y2="64" class="fig-flecha"/>
+  <rect x="76" y="52" width="30" height="24" rx="6" class="fig-ok"/>
+  <text x="91" y="69" text-anchor="middle" class="fig-ok-txt" font-size="11">R2</text>
+  <line x1="106" y1="64" x2="150" y2="64" class="fig-flecha"/>
+  <line x1="150" y1="64" x2="150" y2="40" class="fig-flecha"/>
+  <line x1="150" y1="40" x2="178" y2="40" class="fig-flecha"/>
+  <rect x="178" y="28" width="16" height="24" rx="3" class="fig-destac"/>
+  <line x1="194" y1="40" x2="212" y2="40" class="fig-flecha"/>
+  <line x1="212" y1="40" x2="212" y2="88" class="fig-flecha"/>
+  <line x1="212" y1="88" x2="150" y2="88" class="fig-flecha"/>
+  <line x1="150" y1="88" x2="46" y2="88" class="fig-flecha"/>
+  <line x1="46" y1="88" x2="46" y2="64" class="fig-flecha"/>
+  <text x="110" y="106" text-anchor="middle" class="fig-nota" font-size="11">la misma corriente por las dos</text>
+  <text x="110" y="122" text-anchor="middle" class="fig-ok-txt" font-size="11">R = R1 + R2</text>
+
+  <line x1="16" y1="140" x2="344" y2="140" class="fig-medida"/>
+
+  <text x="16" y="160" class="fig-sub">En paralelo</text>
+  <rect x="16" y="196" width="30" height="24" rx="6" class="fig-ok"/>
+  <text x="31" y="213" text-anchor="middle" class="fig-ok-txt" font-size="11">R1</text>
+  <rect x="16" y="230" width="30" height="24" rx="6" class="fig-ok"/>
+  <text x="31" y="247" text-anchor="middle" class="fig-ok-txt" font-size="11">R2</text>
+  <line x1="0" y1="208" x2="16" y2="208" class="fig-flecha"/>
+  <line x1="0" y1="242" x2="16" y2="242" class="fig-flecha"/>
+  <line x1="46" y1="208" x2="60" y2="208" class="fig-flecha"/>
+  <line x1="46" y1="242" x2="60" y2="242" class="fig-flecha"/>
+  <line x1="60" y1="208" x2="60" y2="242" class="fig-flecha"/>
+  <line x1="60" y1="208" x2="90" y2="208" class="fig-flecha"/>
+  <line x1="60" y1="242" x2="90" y2="242" class="fig-flecha"/>
+  <line x1="90" y1="208" x2="90" y2="242" class="fig-flecha"/>
+  <line x1="90" y1="208" x2="120" y2="208" class="fig-flecha"/>
+  <line x1="90" y1="242" x2="120" y2="242" class="fig-flecha"/>
+  <line x1="120" y1="208" x2="120" y2="242" class="fig-flecha"/>
+  <text x="70" y="188" text-anchor="middle" class="fig-nota" font-size="11">misma tension en las dos</text>
+  <text x="70" y="176" text-anchor="middle" class="fig-ok-txt" font-size="11">1/R = 1/R1 + 1/R2</text>
+
+  <rect x="170" y="164" width="174" height="90" rx="9" class="fig-zona"/>
+  <text x="257" y="184" text-anchor="middle" class="fig-sub">Que cambia de verdad</text>
+  <text x="180" y="204" class="fig-nota" font-size="11">Serie: las resistencias suman.</text>
+  <text x="180" y="220" class="fig-nota" font-size="11">Paralelo: la equivalente es menor</text>
+  <text x="180" y="236" class="fig-nota" font-size="11">que la menor de las dos.</text>
+  <text x="180" y="250" class="fig-destac-txt" font-size="11">Serie para limitar, paralelo para alimentar.</text>
+</svg>

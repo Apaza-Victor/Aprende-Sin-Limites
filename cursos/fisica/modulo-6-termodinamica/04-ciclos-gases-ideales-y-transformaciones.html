@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciclos, gases ideales y transformaciones — Física</title>
+  <meta name="description" content="Aplicar la ley de los gases ideales en transformaciones a temperatura, presión o volumen constante." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 6 · Termodinámica</a> <span class="mx-2 opacity-50">/</span>
+          <span>Ciclos, gases ideales y transformaciones</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Ciclos, gases ideales y transformaciones</h1>
+            <p class="articulo-modulo">Módulo 6 · Termodinámica</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Aplicar la ley de los gases ideales en transformaciones a temperatura, presión o volumen constante.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Para un gas ideal, el estado queda descrito por tres variables y una sola relación:</p><div class="formula">PV = nRT</div><ul class="lecc-ul"><li><span class="formula formula-linea">P</span>: presión en pascales.</li><li><span class="formula formula-linea">V</span>: volumen en metros cúbicos.</li><li><span class="formula formula-linea">n</span>: cantidad de sustancia en moles.</li><li><span class="formula formula-linea">T</span>: temperatura <strong>absoluta</strong> en kelvin.</li><li><span class="formula formula-linea">R = 8.314<span class="cmd"> </span><span class="fn-txt">J/(mol·K)</span></span></li></ul><p>Si dos estados del mismo gas ideal tienen los mismos moles, se puede dividir una ecuación por la otra:</p><div class="formula"><span class="frac"><span class="frac-n">P<sub>1</sub> V<sub>1</sub></span><span class="frac-d">T<sub>1</sub></span></span> = <span class="frac"><span class="frac-n">P<sub>2</sub> V<sub>2</sub></span><span class="frac-d">T<sub>2</sub></span></span></div><p>Esta forma es la que resuelve casi todos los ejercicios: no necesitas conocer los moles.</p><h4 class="lecc-h4">Tres transformaciones típicas</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Nombre</th><th>Qué se mantiene</th><th>Relación</th><th>Curva en P-V</th></tr></thead><tbody><tr><td>Isotérmica</td><td>temperatura</td><td><span class="formula formula-linea">P<sub>1</sub> V<sub>1</sub> = P<sub>2</sub> V<sub>2</sub></span></td><td>hipérbola</td></tr><tr><td>Isobárica</td><td>presión</td><td><span class="formula formula-linea">V/T = cte</span></td><td>recta horizontal</td></tr><tr><td>Isocórica</td><td>volumen</td><td><span class="formula formula-linea">P/T = cte</span></td><td>recta vertical</td></tr></tbody></table></div><h4 class="lecc-h4">Escala Kelvin obligatoria</h4><p>Una mezcla de gases a presión constante de <span class="formula formula-linea">100<span class="cmd"> </span><span class="fn-txt">kPa</span></span>, que pasa de 27 °C a 127 °C:</p><div class="formula">T<sub>1</sub> = 300<span class="cmd"> </span><span class="fn-txt">K</span>,       T<sub>2</sub> = 400<span class="cmd"> </span><span class="fn-txt">K</span></div><p>El volumen final es <span class="formula formula-linea">V<sub>2</sub> = V<sub>1</sub> × 400/300 = 1.33<span class="cmd"> </span>V<sub>1</sub></span>. Con grados, 127/27 daría 4.7 veces, que es absurdo.</p><dl class="lecc-glosario"><dt>Gas ideal</dt><dd>Modelo donde el volumen de las moléculas es despreciable y no interactúan.</dd><dt>Presión</dt><dd>Fuerza por unidad de superficie; en un gas es el efecto de los choques.</dd><dt>Transformación isotérmica</dt><dd>A temperatura constante; el producto P·V no cambia.</dd><dt>Transformación isobárica</dt><dd>A presión constante; el volumen es proporcional a la temperatura.</dd><dt>Transformación isocórica</dt><dd>A volumen constante; la presión es proporcional a la temperatura.</dd><dt>Volumen molar</dt><dd>Volumen que ocupa un mol; 22,4 L a 0 °C y 1 atm.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un gas ocupa 2 L a 200 kPa. ¿Qué volumen ocupa a 600 kPa si la temperatura no cambia?</p><h4 class="lecc-h4">Detectamos la transformación</h4><p>La temperatura es constante, así que es <strong>isotérmica</strong> y aplicamos la ley de Boyle:</p><div class="formula">P<sub>1</sub> V<sub>1</sub> = P<sub>2</sub> V<sub>2</sub></div><h4 class="lecc-h4">Despejamos el volumen final</h4><div class="formula">V<sub>2</sub> = <span class="frac"><span class="frac-n">P<sub>1</sub> V<sub>1</sub></span><span class="frac-d">P<sub>2</sub></span></span> = <span class="frac"><span class="frac-n">200 × 2</span><span class="frac-d">600</span></span> = 0.67<span class="cmd"> </span><span class="fn-txt">L</span></div><h4 class="lecc-h4">Ejercicio con temperatura</h4><p>Ahora el gas se calienta de 300 K a 450 K manteniendo la presión:</p><div class="formula">V<sub>2</sub> = V<sub>1</sub> <span class="frac"><span class="frac-n">T<sub>2</sub></span><span class="frac-d">T<sub>1</sub></span></span> = 2 × <span class="frac"><span class="frac-n">450</span><span class="frac-d">300</span></span> = 3<span class="cmd"> </span><span class="fn-txt">L</span></div><div class="lecc-nota">Si triplicas la temperatura absoluta a presión constante, el volumen se triplica exactamente. Y si triplicas la presión a temperatura constante, el volumen se divide entre tres: son el mismo hecho contado al revés.</div><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Aplica la ley de los gases</h4><ol class="lecc-ol"><li>Un gas a 27 °C y 1 atm cambia a 54 °C. ¿Cuánto cambia su volumen a presión constante?</li><li>Un globo se hincha de 2 L a 6 L sin cambiar de temperatura. ¿Qué pasa con la presión?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p>El volumen se multiplica por 300/327 = 0.92, así que se encoge un poco, porque los 27 °C son 300 K y 54 °C son 327 K, no el doble. La presión se reduce a la tercera parte, porque <span class="formula formula-linea">P<sub>2</sub> = P<sub>1</sub> V<sub>1</sub>/V<sub>2</sub> = 1/3</span>.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de elegir fórmula, tacha mentalmente lo que el enunciado dice que no cambia. Si dice «la temperatura no cambia», es isotérmica; si dice «a presión constante», es isobárica. Leer la palabra clave ahorra el error de fórmula.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-5-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-segunda-ley-entropia-y-maquinas-termicas.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-ciclos-otto-y-diesel-el-motor-real.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-5-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

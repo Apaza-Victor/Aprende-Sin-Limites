@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El ensayo — Comunicación / Lenguaje</title>
+  <meta name="description" content="Escribir un ensayo completo con tesis, argumentos, pruebas y conclusion, y evitar los dos errores que lo hacen fracasar." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="comunicacion">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Comunicación / Lenguaje</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Redacción</a> <span class="mx-2 opacity-50">/</span>
+          <span>El ensayo</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-chat-square-text"></i></div>
+            <h1 class="articulo-titulo">El ensayo</h1>
+            <p class="articulo-modulo">Módulo 3 · Redacción</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Escribir un ensayo completo con tesis, argumentos, pruebas y conclusion, y evitar los dos errores que lo hacen fracasar.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">Que es un ensayo</h4><p>Un ensayo es un texto argumentativo en el que una persona expone su opinion sobre un tema y la defiende con razones. Se escribe en primera persona y en lenguaje formal.</p><h4 class="lecc-h4">Las cuatro partes, en orden</h4><ol class="lecc-ol"><li><strong>Introduccion</strong>: presenta el tema y anuncia la tesis. Ocupa un parrafo.</li><li><strong>Desarrollo</strong>: dos o tres argumentos, cada uno en su propio parrafo, con su prueba.</li><li><strong>Conclusion</strong>: resume lo dicho y añade una reflexion propia. No propone ideas nuevas.</li></ol><h4 class="lecc-h4">La tesis, que es lo unico imprescindible</h4><p>La tesis es <strong>una sola oracion</strong> que dice que piensas y por que. Tiene que ser una afirmacion, no un tema.</p><ul class="lecc-ul"><li>Tema: *el Handball en la escuela de secundaria*.</li><li>Tesis mala: *el Handball es un deporte.* Es una afirmacion, pero no dice nada que se pueda discutir.</li><li>Tesis buena: *el Handball es mas adecuado que el futbol para la escuela, porque se juega en equipo y el riesgo de lesion es menor.*</li></ul><div class="lecc-nota">La diferencia entre tema y tesis es la diferencia entre el titulo y el primer parrafo. Si tu tesis se puede poner en un cartel, es demasiado vaga.</div><h4 class="lecc-h4">Los dos errores que hacen fracasar un ensayo</h4><ol class="lecc-ol"><li><strong>La definicion al principio</strong>: empezar con *el deporte es una actividad fisica* no es argumentar. Empieza por la tesis.</li><li><strong>La bibliografia como un bloque</strong>: citar cinco autores al final no sustituye a tus argumentos. Las fuentes van dentro del texto, conectadas con tu idea.</li></ol><h4 class="lecc-h4">La cita que si funciona</h4><p>Se cita con una frase breve, seguida de tu comentario. *Como dice el profesor: no se aprende jugando, se aprendiendo jugando.* Eso es una cita. Lo que no es una cita es pegar un parrafo entero de un libro sin decir por que lo pones.</p><h4 class="lecc-h4">El estilo</h4><ul class="lecc-ul"><li>Primera persona: *creo, pienso, estimo*.</li><li>Lenguaje formal, sin coloquios.</li><li>Oraciones largas, con conectores: *sin embargo, por lo tanto, en consecuencia*.</li></ul><h4 class="lecc-h4">La conclusion que suma</h4><p>Una conclusion debil solo repite. Una conclusion fuerte resume y ademas abre: *si esto es cierto, entonces la clase de educacion fisica deberia cambiar su plan.*</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Ensayo para analizar: *El deporte en la escuela*</p><h4 class="lecc-h4">Introduccion</h4><p>*Hoy el deporte ocupa menos tiempo en las escuelas que hace veinte anos. Sin embargo, la actividad fisica reduce el estres y mejora el rendimiento academico. Por eso creo que las horas de deporte deberian aumentar, y no reducirse.*</p><h4 class="lecc-h4">Desarrollo</h4><p>*En primer lugar, el deporte mejora la concentracion. Un estudiante que se mueve durante el dia llega mas despierto a la ultima hora de clase. Este efecto se ha observado en varios estudios sobre educacion fisica y salud escolar.*</p><p>*En segundo lugar, el deporte enseña a trabajar en equipo. Un partido exige aceptar la decision del arbitro, esperar el turno y ayudar al que falla. Esas habilidades no se enseinan en ningun libro.*</p><p>*En tercer lugar, reducir el deporte tiene un coste. Los estudios muestran que los minutos de actividad al dia bajan el riesgo de enfermedad en la etapa adulta. Ese coste aparece veinte años despues, y es cuando ya no se puede corregir.*</p><h4 class="lecc-h4">Conclusion</h4><p>*En resumen, el deporte no es un rato que se quita cuando hay presupuesto, sino una parte del aprendizaje. Si reducimos esas horas, estamos quitando algo que mas adelante va a costar mucho mas caro.*</p><h4 class="lecc-h4">Conclusion del analisis</h4><ul class="lecc-ul"><li>La tesis aparece en el ultimo parrafo de la introduccion: las horas de deporte deberian aumentar.</li><li>Los tres argumentos se ordenan con en primer lugar, en segundo lugar y en tercer lugar.</li><li>Conclusion: la estructura esta completa y la tesis no se pierde en ningun momento.</li><li>Ojo: en el tercer argumento, la prueba es un dato. Si se quita la prueba, queda una opinion suelta.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Escribe primero la tesis y luego los tres argumentos en una lista. Solo despues pasas a redactar. Si escribes de corrido, la tesis suele perderse en la tercera linea.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="comunicacion-2-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-tipos-de-texto.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-correccion-de-estilo.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "comunicacion-2-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

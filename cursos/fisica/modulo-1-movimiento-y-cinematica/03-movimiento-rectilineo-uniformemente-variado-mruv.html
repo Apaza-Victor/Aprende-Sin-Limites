@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movimiento rectilíneo uniformemente variado (MRUV) — Física</title>
+  <meta name="description" content="Aplicar las fórmulas de aceleración constante eligiendo la versión de la fórmula que corresponde a los datos dados." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Movimiento y cinemática</a> <span class="mx-2 opacity-50">/</span>
+          <span>Movimiento rectilíneo uniformemente variado (MRUV)</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Movimiento rectilíneo uniformemente variado (MRUV)</h1>
+            <p class="articulo-modulo">Módulo 1 · Movimiento y cinemática</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Aplicar las fórmulas de aceleración constante eligiendo la versión de la fórmula que corresponde a los datos dados.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El MRUV es el movimiento con aceleración constante, y es la base de casi toda la cinemática que se usa después: la caída libre, el tiro parabólico y el movimiento de un vehículo que acelera son el mismo modelo visto desde ángulos distintos.</p><h4 class="lecc-h4">Qué es la aceleración</h4><p>La aceleración es el cambio de velocidad por unidad de tiempo. Es una magnitud vectorial y se mide en m/s². Leer esa unidad como &quot;metros por segundo, cada segundo&quot; es lo que hace que el concepto entre: no es que la velocidad cambie, es que cambia cada segundo.</p><ul class="lecc-ul"><li>Si la velocidad pasa de 0 a 20 m/s en 4 s, la aceleración es 5 m/s².</li><li>Si la velocidad es constante, la aceleración es cero, y se vuelve a MRU.</li><li>Si la aceleración es constante pero distinta de cero, la velocidad varía de forma uniforme, y las fórmulas de posición se simplifican.</li></ul><h4 class="lecc-h4">Las cinco fórmulas y cómo elegir una</h4><p>El problema real no es saber las fórmulas, es elegir cuál usar. Se eligen según lo que te den y lo que pidan:</p><ul class="lecc-ul"><li><strong>v = v0 + a·t</strong>: conocida la aceleración y el tiempo.</li><li><strong>x = v0·t + a·t²/2</strong>: conocida la aceleración y el tiempo.</li><li><strong>v² = v0² + 2·a·x</strong>: conocida la aceleración y la distancia. Es la que resuelve el tiempo bala, porque la distancia se conoce y el tiempo no.</li><li><strong>x = ((v0 + v)/2)·t</strong>: conocida la velocidad media. Se reconoce porque las velocidades aparecen como las dos de los extremos.</li><li><strong>x = v·t − a·t²/2</strong>: cuando el objeto se lanza hacia atrás o se invierte el sentido, y v es la velocidad final.</li></ul><p>Un truco para elegir sin memorizar: escribe qué tres datos tienes y busca la fórmula que los contenga. Si solo te dan distancia y velocidad final sin tiempo, casi siempre es v² = v0² + 2ax.</p><h4 class="lecc-h4">El signo es la dirección</h4><p>La aceleración puede ser positiva o negativa según el sistema de referencia, y el signo no indica &quot;bueno&quot; o &quot;malo&quot;, indica dirección. Un auto que frena hacia adelante tiene aceleración negativa si el norte es positivo. Lo que importa es que el signo debe ser coherente en las cinco fórmulas: si cambias el origen, cambias los signos de todos los datos, no solo de uno.</p><h4 class="lecc-h4">Movimiento hacia arriba y retorno</h4><p>Cuando se lanza un objeto hacia arriba, la velocidad se hace cero en el punto más alto, y la aceleración sigue siendo la misma, 9,8 m/s² hacia abajo. Esa es la parte que más se confunde: en el vértice la velocidad es cero, pero la aceleración no. Si la aceleración fuera cero ahí, el objeto se quedaría suspendido, lo cual es imposible.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una pelota se lanza verticalmente hacia arriba a 29,4 m/s desde el suelo. ¿Qué altura máxima alcanza, cuánto tarda en llegar al punto más alto y cuánto tarda en volver al suelo? Tómese g = 9,8 m/s².</p><h4 class="lecc-h4">Método 1: elegir la fórmula que elimina el tiempo</h4><ul class="lecc-ul"><li>Primero: en el punto más alto la velocidad es cero, y la distancia que busca es la altura, así que la fórmula adecuada es v² = v0² + 2·a·x.</li><li>Segundo: sustituyo y despejo la altura, x = (0 − 29,4²) entre 2·(−9,8) = menos 864,36 entre menos 19,6, que da 44,1 metros.</li><li>Tercero: la altura máxima es 44,1 metros. El signo negativo de la aceleración se compensó con el signo menos de la resta, y el resultado es positivo, como debe ser.</li></ul><h4 class="lecc-h4">Método 2: calcular el tiempo y luego la altura</h4><ul class="lecc-ul"><li>Cuarto: con v = v0 + a·t llego antes al tiempo, t = (0 − 29,4) entre (−9,8) = 3 segundos.</li><li>Quinto: con x = v0·t + a·t²/2, la altura es 29,4 · 3 menos 9,8 · 9 entre 2 = 88,2 menos 44,1 = 44,1 metros. El mismo resultado por otro camino.</li></ul><h4 class="lecc-h4">Método 3: exploit la simetría del tiro</h4><ul class="lecc-ul"><li>Sexto: el tiempo de subida es 3 segundos, y el de bajada es el mismo por simetría, 3 segundos, así que el vuelo completo dura 6 segundos.</li><li>Séptimo: compruebo la altura con la fórmula del punto 1 invertida, 4,9 por el cuadrado de 3 = 44,1 metros. Tres métodos, una sola respuesta.</li></ul><div class="lecc-nota">Un detalle que conviene retener: los 44,1 metros se pueden calcular como la mitad de 9,8 por 3 al cuadrado. Esa forma corta, 4,9t², aparece en todos los problemas de caída libre y ahorra tiempo en un examen.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de operar, escribe hacia dónde es positivo tu eje. Si el resultado te da una altura negativa, casi siempre el error es de signo y no de aritmética: revisa solo eso primero.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-0-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-movimiento-rectilineo-uniforme-mru.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-caida-libre.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-0-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnóstico inicial de tu nivel — Admisión Universitaria</title>
+  <meta name="description" content="Aplicar una prueba de diagnóstico para saber con exactitud qué temas dominas y cuáles necesitan refuerzo, y ordenar los esfuerzos por prioridad." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Estrategia y diagnóstico</a> <span class="mx-2 opacity-50">/</span>
+          <span>Diagnóstico inicial de tu nivel</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Diagnóstico inicial de tu nivel</h1>
+            <p class="articulo-modulo">Módulo 1 · Estrategia y diagnóstico</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Aplicar una prueba de diagnóstico para saber con exactitud qué temas dominas y cuáles necesitan refuerzo, y ordenar los esfuerzos por prioridad.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El diagnóstico es el paso que separa a quien mejora de quien solo estudia. Estudiar sin saber qué te falta produce la sensación de avanzar sin mejorar el puntaje, porque repasas lo que ya sabes y pospones lo que no.</p><h4 class="lecc-h4">Qué mide un buen diagnóstico</h4><p>Un diagnóstico útil tiene tres requisitos: que mida los temas que <strong>van a caer</strong>, que sea <strong>cronometrado</strong> como el examen real y que termine en un <strong>puntaje comparable</strong> con el del simulacro final. Un simulacro fácil en un tiempo amplio solo te dice lo que ya sabes.</p><h4 class="lecc-h4">Cómo leer el resultado</h4><ul class="lecc-ul"><li><strong>Por tema, no en bloque</strong>: no sirve decir &quot;matemáticas está mal&quot;. Sirve decir &quot;fracciones y porcentajes 3 de 10, álgebra 5 de 10, probabilidad 8 de 10&quot;.</li><li><strong>Separa la causa del síntoma</strong>: si fallaste cinco de cinco en fracciones, el problema puede ser el concepto o puede ser la prisa. Vuelve a hacer las mismas preguntas sin cronómetro y observa si cambian.</li><li><strong>Calcula la brecha</strong>: para cada tema, la distancia entre tu acierto actual y el 85 % que necesitas. Estudia primero donde la brecha es grande y el esfuerzo disponible es corto.</li></ul><h4 class="lecc-h4">Cuándo repetirlo</h4><p>Al comienzo, a la mitad del plan y dos semanas antes de la prueba. Las dos últimas repeticiones son las que más información dan, porque muestran si las correcciones funcionaron o solo cambiaron la estrategia de respuesta.</p><div class="lecc-nota">El diagnóstico no es un examen más: es un instrumento de medición. Solo sirve si lo repites con la misma dificultad y en condiciones parecidas.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Dos postulantes responden el mismo simulacro de 40 preguntas y ambos sacan 22 aciertos. Uno cree que está igual de preparado que el otro porque el puntaje es el mismo. El análisis de tema muestra otra cosa muy distinta.</p><h4 class="lecc-h4">Método 1: lectura por tema</h4><ul class="lecc-ul"><li>Postulante A acierta 18 de 20 en razonamiento verbal y 4 de 20 en matemático.</li><li>Postulante B acierta 12 de 20 en verbal y 10 de 20 en matemático.</li><li>Mismo total, perfiles opuestos. A necesita un bloque corto de repaso verbal y B necesita un bloque largo de matemático.</li><li>La conclusión &quot;voy a estudiar un poco de todo&quot; no sirve para ninguno de los dos.</li></ul><h4 class="lecc-h4">Método 2: lectura por tipo de error</h4><ul class="lecc-ul"><li>A comete errores por <strong>desconocimiento</strong>: no reconoce la estructura de una ecuación ni la regla de tres.</li><li>B comete errores por <strong>apresuramiento</strong>: reconoce todo pero se equivoca en el último paso, y en cuatro ítems marcó dos respuestas.</li><li>El tratamiento es distinto: A necesita teoría y práctica guiada; B necesita control de tiempo y comprobación de respuestas.</li></ul><h4 class="lecc-h4">Método 3: brecha contra el objetivo</h4><ul class="lecc-ul"><li>Si el objetivo de cada sección es 75 % de aciertos, A tiene una brecha de 3 ítems en verbal y de 11 en matemático.</li><li>B tiene una brecha de 3 ítems en verbal y de 5 en matemático.</li><li>Con 20 horas semanales, A dedicate 14 a matemático y B 9, sin descuidar el otro bloque.</li></ul><div class="lecc-nota">La conclusión práctica: dos personas con el mismo puntaje pueden necesitar planes opuestos. Por eso el simulacro se analiza por tema y por tipo de error, nunca solo por el total.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Cuando termines el diagnóstico, escribe el plan de repaso antes de cerrar el cuaderno ese día. Si lo dejas para después, la impresión fresca se diluye y vuelves a la primera decisión, que es repasar lo que ya sabes.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-0-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-plan-de-estudio-realista.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-ansiedad-tiempo-y-lectura-bajo-presion.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-0-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

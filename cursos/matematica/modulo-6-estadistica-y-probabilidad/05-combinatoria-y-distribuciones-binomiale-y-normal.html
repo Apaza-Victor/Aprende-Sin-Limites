@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combinatoria y distribuciones binomiale y normal — Matemática</title>
+  <meta name="description" content="Contar resultados con permutaciones y combinaciones, y entender cuándo un experimento se ajusta a una binomial o a una normal." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 6 · Estadística y probabilidad</a> <span class="mx-2 opacity-50">/</span>
+          <span>Combinatoria y distribuciones binomiale y normal</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Combinatoria y distribuciones binomiale y normal</h1>
+            <p class="articulo-modulo">Módulo 6 · Estadística y probabilidad</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Contar resultados con permutaciones y combinaciones, y entender cuándo un experimento se ajusta a una binomial o a una normal.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La <strong>combinatoria</strong> cuenta resultados sin necesidad de representarlos uno a uno. Antes de contar hay que hacerse siempre la misma pregunta: ¿<strong>el orden importa</strong>?</p><h4 class="lecc-h4">Con orden: permutaciones</h4><p>Ordenar 3 libros de 5 en una estantería:</p><div class="formula">V<sub>5</sub><sup>3</sup> = 5 × 4 × 3 = 60</div><p>Multiplicas por 5 opciones para el primer hueco, luego 4, luego 3. En general <span class="formula formula-linea">V<sub>n</sub><sup>k</sup> = n! / (n-k)!</span>.</p><h4 class="lecc-h4">Sin orden: combinaciones</h4><p>Elegir 3 jugadores de 8 para un equipo, donde da igual quién va primero:</p><div class="formula">C<sub>8</sub><sup>3</sup> = <span class="frac"><span class="frac-n">8!</span><span class="frac-d">3! · 5!</span></span> = 56</div><p>Se lee con la fórmula de «n sobre k» y <strong>siempre da un entero</strong>.</p><h4 class="lecc-h4">La distribución binomial</h4><p>Se aplica cuando se repite una prueba idéntica, con dos resultados, y en cada una la probabilidad de éxito no cambia:</p><div class="formula">P(X = k) = C<sub>n</sub><sup>k</sup> · p<sup>k</sup> · (1-p)<sup>n-k</sup></div><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Símbolo</th><th>Significado</th></tr></thead><tbody><tr><td>n</td><td>número de pruebas</td></tr><tr><td>k</td><td>número de aciertos que se pide</td></tr><tr><td>p</td><td>probabilidad de acierto en una prueba</td></tr></tbody></table></div><p>El ejemplo clásico es lanzar una moneda 10 veces y contar caras: n = 10, p = 0.5.</p><h4 class="lecc-h4">La curva normal</h4><p>Cuando n es grande, la binomial se parece a una <strong>campana</strong> centrada en la media, y se puede resumir con dos números: media y desviación.</p><div class="formula">X ∼ N(np, <span class="raiz"><span class="r-signo">√</span><span class="radicando">np(1-p)</span></span>)</div><p>Por eso en una muestra grande basta la media y la desviación para describir casi todo. La regla de las tres sigmas reparte aproximadamente el 68, 95 y 99,7 por ciento.</p><div class="lecc-nota">La media aritmética de cualquier distribución y la moda coinciden en la normal. En general no pasa, y por eso la media sola no describe un conjunto de datos.</div><dl class="lecc-glosario"><dt>Permutación</dt><dd>Selección ordenada; el orden de los elementos sí importa.</dd><dt>Combinación</dt><dd>Selección sin orden; da igual qué elemento va primero.</dd><dt>Factorial</dt><dd>Producto de todos los enteros desde 1 hasta n.</dd><dt>Distribución binomial</dt><dd>Probabilidades de número de aciertos en n pruebas iguales.</dd><dt>Distribución normal</dt><dd>Campana de media y desviación conocidas, aproximada con la binomial en muestras grandes.</dd><dt>Probabilidad binomial</dt><dd>Probabilidad de exactamente k aciertos en n pruebas.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>En un examen de 10 preguntas de opción múltiple, hay 4 opciones y solo una es correcta. Cada pregunta se contesta al azar. ¿Cuál es la probabilidad de aprobar con 6 o más aciertos?</p><h4 class="lecc-h4">Parámetros del modelo</h4><div class="formula">n = 10,       p = <span class="frac"><span class="frac-n">1</span><span class="frac-d">4</span></span> = 0.25,       q = 0.75</div><p>Media esperada: <span class="formula formula-linea">np = 2.5</span> aciertos. Aprobar exige casi el doble de la media.</p><h4 class="lecc-h4">Probabilidad de exactamente 6</h4><div class="formula">P(X = 6) = C<sub>10</sub><sup>6</sup> × 0.25<sup>6</sup> × 0.75<sup>4</sup></div><div class="formula">= 210 × 0.000244 × 0.3164 ≈ 0.0162</div><h4 class="lecc-h4">Sumamos de 6 a 10</h4><div class="formula">P(X = 7) = 120 × 0.25<sup>7</sup> × 0.75<sup>3</sup> ≈ 0.0116</div><div class="formula">P(X = 8) = 45 × 0.25<sup>8</sup> × 0.75<sup>2</sup> ≈ 0.0039</div><div class="formula">P(X = 9) = 10 × 0.25<sup>9</sup> × 0.75 ≈ 0.0005</div><div class="formula">P(X = 10) = 0.25<sup>10</sup> ≈ 0.000001</div><div class="formula">P(X ≥ 6) ≈ 0.0162 + 0.0116 + 0.0039 + 0.0005 + 0.000001 ≈ 0.032</div><p>Solo un 3,2 por ciento de los alumnos que contestan al azar aprueba. La pregunta del examen era si merece la pena contestar al azar.</p><div class="lecc-nota">Un alumno que estudia y saca el 6 seguro debería asegurarse: su nota está 2,8 desviaciones por encima de la media de los que responden al azar.</div><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Cuenta con criterio</h4><ol class="lecc-ol"><li>¿Cuántas formas hay de elegir personas de un grupo de 10, si el orden no importa?</li><li>¿Cuántas hay si importa quién va primero?</li><li>En una binomial con p = 0.5, ¿cuántos intentos se necesitan para que la desviación sea menor que 1?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p><span class="formula formula-linea">C<sub>10</sub><sup>2</sup> = 45</span>, porque el orden no importa. Si el orden importa son <span class="formula formula-linea">10 × 9 = 90</span>. Y por la fórmula, <span class="formula formula-linea"><span class="raiz"><span class="r-signo">√</span><span class="radicando">np(1-p)</span></span> = <span class="raiz"><span class="r-signo">√</span><span class="radicando">n</span></span>/2 &lt; 1</span> pide <span class="formula formula-linea">n &lt; 4</span>, o sea 3 intentos.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>En combinatoria, decide primero si el orden importa y anótalo. Después usa la fórmula y comprueba que el resultado sea entero: si sale decimal, casi siempre has usado la fórmula equivocada o estás contando dos veces lo mismo.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-5-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-probabilidad-condicional-e-independencia.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="index.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-5-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

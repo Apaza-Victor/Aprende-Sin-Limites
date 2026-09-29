@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Reparto del tiempo: tres pasadas</text>
+
+  <rect x="14" y="40" width="332" height="40" rx="8" class="fig-zona"/>
+  <line x1="213" y1="40" x2="213" y2="80" class="fig-medida"/>
+  <line x1="296" y1="40" x2="296" y2="80" class="fig-medida"/>
+
+  <text x="113" y="66" text-anchor="middle" class="fig-ok-txt" font-size="13">60 %</text>
+  <text x="254" y="66" text-anchor="middle" class="fig-acento-texto" font-size="13">25 %</text>
+  <text x="321" y="66" text-anchor="middle" class="fig-acento-texto" font-size="13">15 %</text>
+
+  <text x="14" y="104" class="fig-nota" font-size="12">1. Primera pasada: responde todo lo que sabes.</text>
+  <text x="14" y="122" class="fig-nota" font-size="12">2. Segunda pasada: corrige y completa lo que quedo.</text>
+  <text x="14" y="140" class="fig-nota" font-size="12">3. Tercera pasada: marca los items y vuelve al final.</text>
+
+  <text x="180" y="176" text-anchor="middle" class="fig-nota" font-size="12">Dejar un item en blanco es una decision, no una derrota.</text>
+</svg>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energía cinética y potencial — Física</title>
+  <meta name="description" content="Distinguir y calcular las energías de movimiento y posición y saber cuándo aplicar cada una, con el criterio de elección explícito." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Energía y ondas</a> <span class="mx-2 opacity-50">/</span>
+          <span>Energía cinética y potencial</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Energía cinética y potencial</h1>
+            <p class="articulo-modulo">Módulo 4 · Energía y ondas</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Distinguir y calcular las energías de movimiento y posición y saber cuándo aplicar cada una, con el criterio de elección explícito.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La energía cinética y la potencial son las dos formas más básicas de guardar energía. Saber cuál se aplica y cómo se calcula resuelve la mitad de los problemas de física sin necesidad de introducir fuerzas.&quot;</p><h4 class="lecc-h4">La energía cinética</h4><p>E_c = ½ · m · v². La lectura importante es que depende del cuadrado de la velocidad, y por eso duplicar la masa no tiene el mismo efecto que duplicar la rapidez.</p><ul class="lecc-ul"><li>Doble de masa, misma rapidez: la energía se duplica.</li><li>Misma masa, doble de rapidez: la energía se cuadruplica.</li><li>Cuadruplicar la rapidez multiplica por 16 la energía.</li></ul><p>Esa desproporción explica por qué un accidente a 120 km/h libera muchísima más energía que uno a 60 km/h, y por eso los límites de velocidad no son arbitrarios.</p><h4 class="lecc-h4">La energía potencial gravitatoria</h4><p>E_p = m · g · h, donde h es la altura respecto de un nivel de referencia. La referencia es arbitraria y solo importa que se use en todos los términos del mismo problema: la energía potencial no tiene valor absoluto, tiene diferencia.</p><ul class="lecc-ul"><li>Si el cuerpo sube, h aumenta y la energía potencial también.</li><li>Si el cuerpo baja, h disminuye y la energía potencial se convierte en cinética.</li></ul><p>El término g · h tiene unidades de energía por kilogramo, y por eso a veces conviene agruparlo: E_p = m · (g · h). Esa forma abre la puerta a entenderla como una masa multiplicada por una energía específica.</p><h4 class="lecc-h4">Sumar o intercambiar</h4><p>En un sistema sin fricción, la energía cinética y la potencial se intercambian sin perderse: E_c + E_p se mantiene constante. Ese es el principio de conservación de la energía, y la lección siguiente lo aplica.</p><ul class="lecc-ul"><li>Si un cuerpo cae, la potencial baja y la cinética sube por la misma cantidad.</li><li>Si un cuerpo sube con el motor apagado, la cinética baja y la potencial sube.</li><li>Si sube con el motor encendido, la energía externa hace el trabajo y la suma aumenta.</li></ul>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una pelota de 0,5 kg se lanza hacia arriba a 20 m/s desde el suelo. ¿Qué altura máxima alcanza, cuál es su energía cinética inicial y cuánto vale su energía potencial en el punto más alto? Use g = 9,8 m/s².</p><h4 class="lecc-h4">Método 1: por el teorema trabajo-energía</h4><ul class="lecc-ul"><li>Primero: en el punto más alto la rapidez es cero, de modo que toda la energía cinética inicial se convirtió en potencial.</li><li>Segundo: la energía cinética inicial es un medio de 0,5 por 20 al cuadrado = 100 J.</li><li>Tercero: igualo 100 J a m · g · h, es decir 100 = 0,5 · 9,8 · h, de donde h = 100 entre 4,9 = 20,4 metros.</li></ul><h4 class="lecc-h4">Método 2: por la cinemática</h4><ul class="lecc-ul"><li>Cuarto: con v al cuadrado = 0 menos 2 · 9,8 · h, despejo h = 400 entre 19,6 = 20,4 metros. El mismo valor por un camino que no usa energía.</li><li>Quinto: en el punto más alto la energía cinética es cero y la potencial vale 0,5 · 9,8 · 20,4 = 100 J. La energía no se perdió, se mudó de sitio.</li></ul><h4 class="lecc-h4">Método 3: verificar el intercambio continuo</h4><ul class="lecc-ul"><li>Sexto: a mitad de camino, unos 10,2 m, la energía potencial es 50 J y la cinética también es 50 J. El reparto es exactamente a la mitad, lo cual confirma la simetría del tiro vertical.</li><li>Séptimo: obsérvese que la masa desaparece al despejar la altura, y por eso el punto más alto no depende de la masa. Un resultado útil para resolver rápido.</li></ul><div class="lecc-nota">El dato que hay que guardar es que la altura máxima no depende de la masa. Se obtiene dividiendo la rapidez al cuadrado entre 2g, y eso resuelve el 90 % de los ítems de tiro vertical en tres operaciones.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Fija siempre la referencia de altura antes de empezar, y úsala en todos los términos. Si mezclas niveles, las alturas se restan mal y el error no se ve hasta el final.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-3-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-trabajo-y-potencia.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-conservacion-de-la-energia.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-3-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

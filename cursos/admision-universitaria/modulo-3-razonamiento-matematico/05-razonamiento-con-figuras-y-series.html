@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Razonamiento con figuras y series — Admisión Universitaria</title>
+  <meta name="description" content="Completar series numéricas y de figuras detectando la regla que las genera, y resolver problemas de distribuciones, cruces y conteo visual." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Razonamiento matemático</a> <span class="mx-2 opacity-50">/</span>
+          <span>Razonamiento con figuras y series</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Razonamiento con figuras y series</h1>
+            <p class="articulo-modulo">Módulo 3 · Razonamiento matemático</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Completar series numéricas y de figuras detectando la regla que las genera, y resolver problemas de distribuciones, cruces y conteo visual.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Las series aparecen en las pruebas de dos formas: como sucesiones numéricas y como patrones de figuras. Ambas se resuelven con la misma pregunta: ¿cómo cambia cada término respecto al anterior? Find esa regla y el término siguiente es inmediato.</p><h4 class="lecc-h4">Progresión aritmética</h4><p>Cada término suma una cantidad fija. Se reconoce porque las diferencias entre términos consecutivos son iguales. Ejemplo: 3, 7, 11, 15: la diferencia es 4, así que el siguiente es 19.</p><p>La fórmula es término = primero + diferencia × posición. Pero en una prueba conviene más el método directo que la fórmula: sumar 4 cinco veces es más rápido y menos propenso a errores que una sustitución.</p><figure class="lecc-figura"><svg viewBox="0 0 360 220" role="img" aria-label="Sumar siempre lo mismo o multiplicar siempre lo mismo: ahi esta la diferencia."><text x="180" y="18" text-anchor="middle" class="fig-titulo">Aritmetica suma fija, geometrica multiplica fija</text>
+
+  <defs>
+    <marker id="punta-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <text x="14" y="44" class="fig-ok-txt" font-size="13">Aritmetica: +4</text>
+  <rect x="14" y="56" width="64" height="34" rx="9" class="fig-ok"/>
+  <text x="46" y="78" text-anchor="middle" class="fig-ok-txt" font-size="13">5</text>
+  <rect x="104" y="56" width="64" height="34" rx="9" class="fig-ok"/>
+  <text x="136" y="78" text-anchor="middle" class="fig-ok-txt" font-size="13">9</text>
+  <rect x="194" y="56" width="64" height="34" rx="9" class="fig-ok"/>
+  <text x="226" y="78" text-anchor="middle" class="fig-ok-txt" font-size="13">13</text>
+  <line x1="80" y1="73" x2="100" y2="73" class="fig-flecha-ok"/>
+  <line x1="170" y1="73" x2="190" y2="73" class="fig-flecha-ok"/>
+
+  <text x="14" y="124" class="fig-destac-txt" font-size="13">Geometrica: x2</text>
+  <rect x="14" y="136" width="62" height="34" rx="9" class="fig-destac"/>
+  <text x="45" y="158" text-anchor="middle" class="fig-destac-txt" font-size="13">3</text>
+  <rect x="100" y="136" width="62" height="34" rx="9" class="fig-destac"/>
+  <text x="131" y="158" text-anchor="middle" class="fig-destac-txt" font-size="13">6</text>
+  <rect x="186" y="136" width="62" height="34" rx="9" class="fig-destac"/>
+  <text x="217" y="158" text-anchor="middle" class="fig-destac-txt" font-size="13">12</text>
+  <rect x="272" y="136" width="62" height="34" rx="9" class="fig-destac"/>
+  <text x="303" y="158" text-anchor="middle" class="fig-destac-txt" font-size="13">24</text>
+  <line x1="78" y1="153" x2="96" y2="153" class="fig-flecha-ok"/>
+  <line x1="164" y1="153" x2="182" y2="153" class="fig-flecha-ok"/>
+  <line x1="250" y1="153" x2="268" y2="153" class="fig-flecha-ok"/>
+
+  <text x="180" y="198" text-anchor="middle" class="fig-nota" font-size="12">Si sumas siempre lo mismo es aritmetica; si multiplicas, es geometrica.</text></svg><figcaption class="fig-titulo">Sumar siempre lo mismo o multiplicar siempre lo mismo: ahi esta la diferencia.</figcaption></figure><h4 class="lecc-h4">Progresión geométrica</h4><p>Cada término multiplica un factor fijo. Se reconoce porque las diferencias no son constantes, pero los cocientes sí. Ejemplo: 2, 6, 18, 54: el factor es 3, y el siguiente es 162.</p><p>Un error típico es seguir buscando diferencias y declarar que &quot;no hay patrón&quot;. Cuando las diferencias fallan, prueba con cocientes.</p><h4 class="lecc-h4">Patrones de figuras</h4><p>Se busca una regla de crecimiento, no una forma. Casos habituales:</p><ul class="lecc-ul"><li>Cada figura añade un elemento: el siguiente paso añade uno.</li><li>Cada figura duplica los elementos: 2, 4, 8, 16.</li><li>Se quita uno y se añaden dos: la diferencia neta es más uno.</li></ul><p>La pregunta del ítem suele ser &quot;cuántas figuras para llegar a 60 elementos&quot; o &quot;cuántos triángulos hay en la figura 20&quot;. Esa segunda es un conteo directo, y suele ser la más fácil de los tres.</p><h4 class="lecc-h4">Conteo y combinatoria básica</h4><ul class="lecc-ul"><li>&quot;De 5 camisa y 3 pantalones, cuántas combinaciones&quot;: 5 × 3 = 15, porque se elige una de cada.</li><li>&quot;Cuántas formas de ordenar 4 números&quot;: 4 × 3 × 2 × 1 = 24, porque en cada paso quedan menos opciones.</li><li>&quot;Cuántas parejas de un grupo de 8&quot;: 8 × 7 ÷ 2 = 28, porque cada pareja se cuenta dos veces.</li></ul><p>El último caso es el que más se olvida: dividir entre dos cuando la pareja no tiene orden.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una figura está formada por cuadrados: la figura 1 tiene 1, la figura 2 tiene 5, la figura 3 tiene 9. ¿Cuántos cuadrados tendrá la figura 12?</p><h4 class="lecc-h4">Método 1: buscar diferencias</h4><ul class="lecc-ul"><li>Primero: 5 − 1 = 4, 9 − 5 = 4. Las diferencias son constantes, así que es una progresión aritmética de diferencia 4.</li><li>La figura 12 tiene 1 + 4 × 11 = 45 cuadrados.</li></ul><h4 class="lecc-h4">Método 2: buscar el término general</h4><ul class="lecc-ul"><li>Segundo: los términos son 1, 5, 9, 13... El término n es 4n − 3. Para n = 12: 48 − 3 = 45.</li><li>Coincide con el método anterior, y esa coincidencia es la señal de que no cometí error.</li></ul><h4 class="lecc-h4">Método 3: comprobar con una figura cercana</h4><ul class="lecc-ul"><li>Tercero: si la figura 3 tiene 9, y cada figura añade 4, entonces la figura 4 tiene 13, la 5 tiene 17, la 6 tiene 21, y así hasta 12.</li><li>Sumando de 4 en 4 desde 9: 9, 13, 17, 21, 25, 29, 33, 37, 41, 45. Confirmado.</li></ul><div class="lecc-nota">Los tres métodos dicen 45. Si los tres métodos dan números distintos, el problema está mal leído, no mal resuelto.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Si las diferencias no son constantes, no abandones el ítem: pasa a buscar cocientes. Ahí está la mitad de las series de la prueba.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-2-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-probabilidad-y-combinatoria.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-4-comprension-y-produccion-escrita/01-la-estructura-del-texto-argumentativo.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-2-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Identidades trigonométricas básicas — Matemática</title>
+  <meta name="description" content="Usar las identidades trigonométricas fundamentales para simplificar expresiones y resolver problemas con ángulos desconocidos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Trigonometría</a> <span class="mx-2 opacity-50">/</span>
+          <span>Identidades trigonométricas básicas</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Identidades trigonométricas básicas</h1>
+            <p class="articulo-modulo">Módulo 4 · Trigonometría</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Usar las identidades trigonométricas fundamentales para simplificar expresiones y resolver problemas con ángulos desconocidos.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Las identidades trigonométricas son igualdades que se cumplen siempre, para cualquier ángulo. Son la herramienta que permite transformar expresiones desconocidas en otras más sencillas.</p><h4 class="lecc-h4">Las tres identidades de un ángulo</h4><ul class="lecc-ul"><li>seno² α + coseno² α = 1</li><li>1 + tangente² α = secante² α</li><li>1 + cotangente² α = cosecante² α</li></ul><h4 class="lecc-h4">Identidades de la suma y la resta</h4><ul class="lecc-ul"><li>seno(α ± β) = seno α × coseno β ± coseno α × seno β</li><li>coseno(α ± β) = coseno α × coseno β ∓ seno α × seno β</li><li>tangente(α ± β) = (tangente α ± tangente β) ÷ (1 ∓ tangente α × tangente β)</li></ul><p>En la fórmula del coseno el signo se invierte, y ese detalle es la causa de casi todos los errores.</p><h4 class="lecc-h4">Identidades del ángulo doble</h4><ul class="lecc-ul"><li>seno 2α = 2 × seno α × coseno α</li><li>coseno 2α = coseno² α − seno² α, y también vale 1 − 2 × seno² α o 2 × coseno² α − 1</li></ul><div class="lecc-nota">Truco: para simplificar una expresión con dos razones del mismo ángulo, conviértela a una sola usando la primera identidad y luego usa el ángulo doble.</div><figure class="lecc-figura"><svg viewBox="0 0 320 260" role="img" aria-label="Los ángulos de un mismo cuadrante comparten el mismo signo"><path d="M40 220 L280 220" class="fig-dato"/>
+  <path d="M160 220 L160 20" class="fig-acento"/>
+  <path d="M160 20 A200 200 0 0 1 292.8 90" class="fig-dato"/>
+  <circle cx="160" cy="220" r="3" fill="currentColor" stroke="none"/>
+  <path d="M160 220 L249.3 120" class="fig-acento"/>
+  <path d="M160 220 L247.5 70" class="fig-dato"/>
+  <text x="256" y="126" font-size="14" class="fig-acento-texto">30°</text>
+  <text x="256" y="70" font-size="14" class="fig-nota">45°</text>
+  <circle cx="160" cy="20" r="3.5" fill="currentColor" stroke="none"/>
+  <text x="160" y="12" text-anchor="middle" font-size="13" class="fig-etiqueta">90°</text>
+  <text x="160" y="242" text-anchor="middle" font-size="13" class="fig-nota">en el primer cuadrante el seno y el coseno son positivos</text>
+  <text x="34" y="200" font-size="14" class="fig-etiqueta">180°</text>
+  <text x="292" y="214" font-size="14" class="fig-etiqueta">0°</text></svg><figcaption class="fig-titulo">Los ángulos de un mismo cuadrante comparten el mismo signo</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Simplifica 2 × seno α × coseno α + seno² α − coseno² α.</p><h4 class="lecc-h4">Método del ángulo doble, que reconoce las dos piezas</h4><ul class="lecc-ul"><li>El primer término es seno de 2α, porque el seno del ángulo doble es 2 × seno α × coseno α.</li><li>Los otros dos términos juntos son seno² α − coseno² α, que es la versión con el signo cambiado del coseno de 2α.</li><li>El resultado queda <strong>seno de 2α − coseno de 2α</strong>.</li></ul><h4 class="lecc-h4">Método de llevar todo a un mismo tipo de función</h4><ul class="lecc-ul"><li>El coseno del ángulo doble es coseno² α − seno² α, así que seno² α − coseno² α es exactamente el negativo: −coseno de 2α.</li><li>El seno de 2α se deja como está, o se pasa a coseno de (90° − 2α) si lo que se quiere es una sola función en el resultado.</li><li>Con cualquiera de las dos decisiones, el resultado es el mismo: seno de 2α − coseno de 2α.</li></ul><h4 class="lecc-h4">Método numérico, que es la prueba de fuego</h4><ul class="lecc-ul"><li>Tomo α = 30°, de modo que 2α = 60°.</li><li>Por identidades: seno de 60° − coseno de 60° = 0,866 − 0,5 = <strong>0,366</strong>.</li><li>Por la expresión original: 2 × 0,5 × 0,866 + 0,25 − 0,75 = 0,866 − 0,5 = <strong>0,366</strong>.</li><li>Los dos caminos dan exactamente lo mismo.</li></ul><div class="lecc-nota">Con un solo valor numérico compruebas cualquier identidad en un segundo, sin desarrollar veinte líneas de álgebra. Si no coinciden, hay un error de signo en algún lado.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Aprende primero a pasar cualquier par de razones al mismo ángulo y después aplica el ángulo doble. Cuando expression aparentemente no se simplifica, casi siempre falta convertir un coseno en seno o al revés, y por eso conviene tener presentes las tres identidades de un ángulo.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-3-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-resolucion-de-triangulos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-alturas-y-distancias.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-3-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contraseñas, seguridad y privacidad — Alfabetización Digital</title>
+  <meta name="description" content="Crear contraseñas seguras, reconocer intentos de engaño y aplicar medidas básicas de protección del equipo." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="alfabetizacion-digital">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Alfabetización Digital</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · La computadora y tus archivos</a> <span class="mx-2 opacity-50">/</span>
+          <span>Contraseñas, seguridad y privacidad</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-laptop"></i></div>
+            <h1 class="articulo-titulo">Contraseñas, seguridad y privacidad</h1>
+            <p class="articulo-modulo">Módulo 1 · La computadora y tus archivos</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Crear contraseñas seguras, reconocer intentos de engaño y aplicar medidas básicas de protección del equipo.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La mayoría de los robos de cuentas no usan tecnología complicada: usan <strong>ingeniería social</strong>, es decir, convencerte de que entregues lo que pides.</p><h4 class="lecc-h4">Anatomía de una contraseña segura</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Regla</th><th>Por qué</th></tr></thead><tbody><tr><td>Mínimo 12 caracteres</td><td>las cortas se prueban en segundos</td></tr><tr><td>Mayúsculas, minúsculas, números y símbolos</td><td>multiplica las combinaciones</td></tr><tr><td>Sin datos personales</td><td>tu nombre se adivina</td></tr><tr><td>Una distinta para cada sitio</td><td>una filtración no abre todas las cuentas</td></tr><tr><td>Un gestor de contraseñas</td><td>solo recuerdas una</td></tr></tbody></table></div><p>Una frase larga es más segura que una palabra corta con símbolos:</p><ul class="lecc-ul"><li>`perro` con símbolos: muchas menos combinaciones, fácil de romper.</li><li>`el_perro_verde_dormia_en_el_sofá`: mucho más larga y más difícil.</li></ul><h4 class="lecc-h4">Señales de un engaño</h4><ul class="lecc-ul"><li>Urgencia: «tu cuenta se bloqueará hoy».</li><li>Dirección rara: el dominio no es el de la empresa.</li><li>Petición de datos que nunca se piden: clave, pin, código de un mensaje.</li><li>Enlace que no coincide con lo que dice el texto.</li></ul><dl class="lecc-glosario"><dt>Contraseña</dt><dd>Secreto que abre el acceso a una cuenta.</dd><dt>Ingeniería social</dt><dd>Manipulación para que una persona entregue información.</dd><dt>Phishing</dt><dd>Intento de obtener datos mediante un mensaje falso.</dd><dt>Verificación en dos pasos</dt><dd>Código adicional además de la contraseña.</dd><dt>Antivirus</dt><dd>Programa que detecta y elimina programas dañinos.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Recibes este mensaje: «Estimado usuario: su cuenta bancaria será suspendida en 24 horas. Ingrese a www.banco-seguro-verificacion.com para actualizar sus datos». ¿Qué haces?</p><h4 class="lecc-h4">Las tres señales de alarma</h4><ol class="lecc-ol"><li><strong>Urgencia</strong>: un banco nunca amenaza con suspender cuentas en 24 horas.</li><li><strong>Dirección sospechosa</strong>: un banco real no pondría «verificacion» en el dominio.</li><li><strong>Petición de datos</strong>: ninguna página legítima pide clave por mensaje.</li></ol><h4 class="lecc-h4">Qué hacer</h4><ul class="lecc-ul"><li>No hacer clic en el enlace.</li><li>Entrar a la cuenta escribiendo tú mismo la dirección en el navegador.</li><li>Avisar al banco por el canal oficial.</li><li>Cambiar la contraseña si ya se introducción.</li></ul><div class="lecc-nota">La regla de oro: si un mensaje te pide prisa y datos, es falso. Un sitio serio puede esperar diez minutos más que tú.</div><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Detecta el engaño</h4><ol class="lecc-ol"><li>«Ganaste un premio. Ingresa tu número de tarjeta para el envío». ¿Es real?</li><li>Un compañero pide tu contraseña para «completar un trabajo». ¿Se la das?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p>Lo del premio es phishing clásico: nadie regala nada. La contraseña no se comparte nunca con nadie, ni con un compañero de confianza: las cuentas se pueden usar cosas a tu nombre.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Activa la verificación en dos pasos en el correo primero. Si alguien entra a tu correo, puede restablecer todas tus otras cuentas; el segundo paso evita la mayoría de esos ataques.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="alfabetizacion-digital-0-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-nombres-de-archivo-carpetas-y-respaldos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-2-documentos-y-hojas-de-calculo/01-procesador-de-textos-estructura-y-formato.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "alfabetizacion-digital-0-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

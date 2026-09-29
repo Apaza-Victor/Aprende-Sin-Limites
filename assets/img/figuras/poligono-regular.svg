@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260">
+  <polygon points="240,130 195,207.9 105,207.9 60,130 105,52.1 195,52.1" class="fig-forma"/>
+  <path d="M150 130 L82.5 169" class="fig-dato"/>
+  <path d="M225 104 A30 30 0 0 0 225 156" class="fig-acento"/>
+  <circle cx="150" cy="130" r="3" fill="currentColor" stroke="none"/>
+  <text x="150" y="122" text-anchor="middle" font-size="14" class="fig-etiqueta">O</text>
+  <text x="112" y="152" text-anchor="middle" font-size="15" class="fig-acento-texto">a</text>
+  <text x="228" y="80" text-anchor="middle" font-size="15">l</text>
+  <text x="258" y="136" text-anchor="middle" font-size="14" class="fig-nota">ángulo interior</text>
+  <text x="150" y="248" text-anchor="middle" font-size="13" class="fig-nota">a es el apotema: distancia del centro al punto medio del lado</text>
+</svg>

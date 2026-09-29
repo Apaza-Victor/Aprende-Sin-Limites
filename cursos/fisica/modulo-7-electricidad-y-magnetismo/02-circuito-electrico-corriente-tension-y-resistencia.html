@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circuito eléctrico: corriente, tensión y resistencia — Física</title>
+  <meta name="description" content="Distinguir corriente, tensión y resistencia, y aplicar las leyes de Ohm y de Kirchhoff en circuitos sencillos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 7 · Electricidad y magnetismo</a> <span class="mx-2 opacity-50">/</span>
+          <span>Circuito eléctrico: corriente, tensión y resistencia</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Circuito eléctrico: corriente, tensión y resistencia</h1>
+            <p class="articulo-modulo">Módulo 7 · Electricidad y magnetismo</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Distinguir corriente, tensión y resistencia, y aplicar las leyes de Ohm y de Kirchhoff en circuitos sencillos.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Un circuito es un camino cerrado donde la carga fluye. Sus tres magnitudes clave son:</p><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Magnitud</th><th>Símbolo</th><th>Unidad</th><th>Qué es realmente</th></tr></thead><tbody><tr><td>Corriente</td><td>I</td><td>amperio (A)</td><td>carga que pasa por un punto cada segundo</td></tr><tr><td>Tensión</td><td>V</td><td>voltio (V)</td><td>energía que se da a cadaculombio</td></tr><tr><td>Resistencia</td><td>R</td><td>ohmio (Ω)</td><td>oposición al paso de la corriente</td></tr></tbody></table></div><h4 class="lecc-h4">Ley de Ohm</h4><div class="formula">V = I · R</div><p>La ley de Ohm relaciona las tres. Si la resistencia es constante, un diagrama de tensión frente a corriente es una recta que pasa por el origen y cuya pendiente es R.</p><h4 class="lecc-h4">Leyes de Kirchhoff</h4><p>En los nodos de un circuito se cumple lo mismo que en una tubería con agua: lo que entra, sale.</p><ul class="lecc-ul"><li><strong>Leyes de nodos</strong>: la suma de corrientes que entran es la suma de las que salen.</li><li><strong>Ley de mallas</strong>: la suma de subidas de tensión es igual a la suma de bajadas.</li></ul><figure class="lecc-figura"><svg viewBox="0 0 360 260" role="img" aria-label="Dos resistencias en serie suman; en paralelo, la conductancia suma"><text x="180" y="18" text-anchor="middle" class="fig-titulo">Dos resistencias en serie y en paralelo</text>
+
+  <text x="16" y="40" class="fig-sub">En serie</text>
+  <rect x="16" y="52" width="30" height="24" rx="6" class="fig-ok"/>
+  <text x="31" y="69" text-anchor="middle" class="fig-ok-txt" font-size="11">R1</text>
+  <line x1="46" y1="64" x2="76" y2="64" class="fig-flecha"/>
+  <rect x="76" y="52" width="30" height="24" rx="6" class="fig-ok"/>
+  <text x="91" y="69" text-anchor="middle" class="fig-ok-txt" font-size="11">R2</text>
+  <line x1="106" y1="64" x2="150" y2="64" class="fig-flecha"/>
+  <line x1="150" y1="64" x2="150" y2="40" class="fig-flecha"/>
+  <line x1="150" y1="40" x2="178" y2="40" class="fig-flecha"/>
+  <rect x="178" y="28" width="16" height="24" rx="3" class="fig-destac"/>
+  <line x1="194" y1="40" x2="212" y2="40" class="fig-flecha"/>
+  <line x1="212" y1="40" x2="212" y2="88" class="fig-flecha"/>
+  <line x1="212" y1="88" x2="150" y2="88" class="fig-flecha"/>
+  <line x1="150" y1="88" x2="46" y2="88" class="fig-flecha"/>
+  <line x1="46" y1="88" x2="46" y2="64" class="fig-flecha"/>
+  <text x="110" y="106" text-anchor="middle" class="fig-nota" font-size="11">la misma corriente por las dos</text>
+  <text x="110" y="122" text-anchor="middle" class="fig-ok-txt" font-size="11">R = R1 + R2</text>
+
+  <line x1="16" y1="140" x2="344" y2="140" class="fig-medida"/>
+
+  <text x="16" y="160" class="fig-sub">En paralelo</text>
+  <rect x="16" y="196" width="30" height="24" rx="6" class="fig-ok"/>
+  <text x="31" y="213" text-anchor="middle" class="fig-ok-txt" font-size="11">R1</text>
+  <rect x="16" y="230" width="30" height="24" rx="6" class="fig-ok"/>
+  <text x="31" y="247" text-anchor="middle" class="fig-ok-txt" font-size="11">R2</text>
+  <line x1="0" y1="208" x2="16" y2="208" class="fig-flecha"/>
+  <line x1="0" y1="242" x2="16" y2="242" class="fig-flecha"/>
+  <line x1="46" y1="208" x2="60" y2="208" class="fig-flecha"/>
+  <line x1="46" y1="242" x2="60" y2="242" class="fig-flecha"/>
+  <line x1="60" y1="208" x2="60" y2="242" class="fig-flecha"/>
+  <line x1="60" y1="208" x2="90" y2="208" class="fig-flecha"/>
+  <line x1="60" y1="242" x2="90" y2="242" class="fig-flecha"/>
+  <line x1="90" y1="208" x2="90" y2="242" class="fig-flecha"/>
+  <line x1="90" y1="208" x2="120" y2="208" class="fig-flecha"/>
+  <line x1="90" y1="242" x2="120" y2="242" class="fig-flecha"/>
+  <line x1="120" y1="208" x2="120" y2="242" class="fig-flecha"/>
+  <text x="70" y="188" text-anchor="middle" class="fig-nota" font-size="11">misma tension en las dos</text>
+  <text x="70" y="176" text-anchor="middle" class="fig-ok-txt" font-size="11">1/R = 1/R1 + 1/R2</text>
+
+  <rect x="170" y="164" width="174" height="90" rx="9" class="fig-zona"/>
+  <text x="257" y="184" text-anchor="middle" class="fig-sub">Que cambia de verdad</text>
+  <text x="180" y="204" class="fig-nota" font-size="11">Serie: las resistencias suman.</text>
+  <text x="180" y="220" class="fig-nota" font-size="11">Paralelo: la equivalente es menor</text>
+  <text x="180" y="236" class="fig-nota" font-size="11">que la menor de las dos.</text>
+  <text x="180" y="250" class="fig-destac-txt" font-size="11">Serie para limitar, paralelo para alimentar.</text></svg><figcaption class="fig-titulo">Dos resistencias en serie suman; en paralelo, la conductancia suma</figcaption></figure><h4 class="lecc-h4">Serie y paralelo</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Configuración</th><th>Resistencia</th><th>Corriente</th><th>Tensión</th></tr></thead><tbody><tr><td>Serie</td><td><span class="formula formula-linea">R<sub>t</sub> = R<sub>1</sub> + R<sub>2</sub></span></td><td>la misma</td><td>se reparte</td></tr><tr><td>Paralelo</td><td><span class="formula formula-linea"><span class="frac"><span class="frac-n">1</span><span class="frac-d">R<sub>t</sub></span></span> = <span class="frac"><span class="frac-n">1</span><span class="frac-d">R<sub>1</sub></span></span> + <span class="frac"><span class="frac-n">1</span><span class="frac-d">R<sub>2</sub></span></span></span></td><td>se reparte</td><td>la misma</td></tr></tbody></table></div><div class="lecc-nota">En <strong>paralelo</strong> siempre se ve la misma tensión en las dos ramas; en <strong>serie</strong> siempre pasa la misma corriente. Cada combinación tiene un rasgo invariante, y ese rasgo es la pista para escoger la fórmula.</div><dl class="lecc-glosario"><dt>Intensidad</dt><dd>Corriente eléctrica; cantidad de carga que cruza un punto por segundo.</dd><dt>Voltaje</dt><dd>Diferencia de potencial entre dos puntos de un circuito.</dd><dt>Resistencia</dt><dd>Oposición al paso de la corriente, en ohmios.</dd><dt>Ley de Ohm</dt><dd>La tensión es el producto de intensidad por resistencia.</dd><dt>Ley de Kirchhoff</dt><dd>En un nodo no se acumula carga; en una malla la suma de fuerzas es cero.</dd><dt>Circuito serie</dt><dd>Donde todas las resistencias comparten la misma corriente.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Dos resistencias de 4 Ω y 6 Ω se conectan a 12 V. Calcula la resistencia total y la intensidad en cada una.</p><h4 class="lecc-h4">Caso serie</h4><div class="formula">R<sub>t</sub> = 4 + 6 = 10<span class="cmd"> </span><span class="fn-txt">Ω</span></div><div class="formula">I = <span class="frac"><span class="frac-n">V</span><span class="frac-d">R<sub>t</sub></span></span> = <span class="frac"><span class="frac-n">12</span><span class="frac-d">10</span></span> = 1.2<span class="cmd"> </span><span class="fn-txt">A</span></div><h4 class="lecc-h4">Tensión en cada resistencia</h4><div class="formula">V<sub>1</sub> = 1.2 × 4 = 4.8<span class="cmd"> </span><span class="fn-txt">V</span>,       V<sub>2</sub> = 1.2 × 6 = 7.2<span class="cmd"> </span><span class="fn-txt">V</span></div><p>Comprobación: <span class="formula formula-linea">4.8 + 7.2 = 12<span class="cmd"> </span><span class="fn-txt">V</span></span>, toda la tensión de la fuente.</p><h4 class="lecc-h4">Caso paralelo</h4><div class="formula"><span class="frac"><span class="frac-n">1</span><span class="frac-d">R<sub>t</sub></span></span> = <span class="frac"><span class="frac-n">1</span><span class="frac-d">4</span></span> + <span class="frac"><span class="frac-n">1</span><span class="frac-d">6</span></span> = <span class="frac"><span class="frac-n">5</span><span class="frac-d">12</span></span> ⇒ R<sub>t</sub> = 2.4<span class="cmd"> </span><span class="fn-txt">Ω</span></div><div class="formula">I = <span class="frac"><span class="frac-n">12</span><span class="frac-d">2.4</span></span> = 5<span class="cmd"> </span><span class="fn-txt">A</span></div><p>Cada rama recibe 12 V, así que las intensidades son 3 A y 2 A, y suman los 5 A del total.</p><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Resuelve el circuito</h4><ol class="lecc-ol"><li>Dos resistencias de 3 Ω y 6 Ω en paralelo. ¿Cuál es la resistencia total?</li><li>Dos de 2 Ω en serie con 10 V. ¿Cuánto consume cada una?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p><span class="formula formula-linea">1/R<sub>t</sub> = 1/3 + 1/6 = 1/2</span>, así que <span class="formula formula-linea">R<sub>t</sub> = 2<span class="cmd"> </span><span class="fn-txt">Ω</span></span>. En serie <span class="formula formula-linea">I = 10/4 = 2.5<span class="cmd"> </span><span class="fn-txt">A</span></span>, y cada una cae <span class="formula formula-linea">2.5 × 2 = 5<span class="cmd"> </span><span class="fn-txt">V</span></span>, la mitad de la fuente.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>No intentes resolver el circuito mentalmente. Dibuja un rectángulo, pon la batería y las resistencias, y numera los nodos. Con el dibujo, la ley de mallas se escribe sola y se ven las resistencias equivalentes.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-6-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-carga-electrica-y-ley-de-coulomb.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-potencia-y-resistencia-interna.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-6-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

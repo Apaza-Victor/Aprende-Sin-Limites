@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La membrana y el transporte de sustancias — Biología</title>
+  <meta name="description" content="Explicar cómo la membrana regula el paso de sustancias mediante difusión, ósmosis y transporte activo." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="biologia">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Biología</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · La célula y la vida</a> <span class="mx-2 opacity-50">/</span>
+          <span>La membrana y el transporte de sustancias</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-brightness-high"></i></div>
+            <h1 class="articulo-titulo">La membrana y el transporte de sustancias</h1>
+            <p class="articulo-modulo">Módulo 1 · La célula y la vida</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Explicar cómo la membrana regula el paso de sustancias mediante difusión, ósmosis y transporte activo.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La membrana es una doble capa de lípidos con proteínas incrustadas, y tiene una propiedad decisiva: deja pasar algunas sustancias y otras no.</p><h4 class="lecc-h4">Dos formas de cruzar</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Proceso</th><th>Energía</th><th>Contra el gradiente</th><th>Ejemplo</th></tr></thead><tbody><tr><td>Difusión pasiva</td><td>no</td><td>no</td><td>oxígeno entrando a los pulmones</td></tr><tr><td>Difusión facilitada</td><td>no</td><td>no</td><td>glucosa entrando a la célula</td></tr><tr><td>Ósmosis</td><td>no</td><td>no</td><td>agua a través de la membrana</td></tr><tr><td>Transporte activo</td><td>sí</td><td>sí</td><td>sodio y potasio en las neuronas</td></tr></tbody></table></div><figure class="lecc-figura"><svg viewBox="0 0 360 290" role="img" aria-label="La misma idea del balance de agua, medida de otra forma"><text x="180" y="18" text-anchor="middle" class="fig-titulo">Histograma y caja: las dos cuentan lo mismo</text>
+
+  <text x="14" y="42" class="fig-sub">Histograma</text>
+  <line x1="14" y1="180" x2="346" y2="180" class="fig-flecha"/>
+  <rect x="26" y="120" width="34" height="60" class="fig-apoyo"/>
+  <rect x="64" y="76" width="34" height="104" class="fig-ok"/>
+  <rect x="102" y="52" width="34" height="128" class="fig-ok"/>
+  <rect x="140" y="88" width="34" height="92" class="fig-apoyo"/>
+  <rect x="178" y="116" width="34" height="64" class="fig-apoyo"/>
+  <rect x="216" y="140" width="34" height="40" class="fig-forma"/>
+  <text x="43" y="112" text-anchor="middle" class="fig-apoyo-txt" font-size="11">2</text>
+  <text x="81" y="68" text-anchor="middle" class="fig-ok-txt" font-size="11">4</text>
+  <text x="119" y="44" text-anchor="middle" class="fig-ok-txt" font-size="11">5</text>
+  <text x="157" y="80" text-anchor="middle" class="fig-apoyo-txt" font-size="11">3</text>
+  <text x="195" y="108" text-anchor="middle" class="fig-apoyo-txt" font-size="11">2</text>
+  <text x="233" y="132" text-anchor="middle" class="fig-forma-txt" font-size="11">1</text>
+  <text x="180" y="198" text-anchor="middle" class="fig-nota">la altura de cada barra es la frecuencia</text>
+  <text x="180" y="214" text-anchor="middle" class="fig-nota">no la frecuencia acumulada</text>
+
+  <line x1="14" y1="226" x2="346" y2="226" class="fig-flecha"/>
+  <text x="180" y="248" text-anchor="middle" class="fig-sub">Caja de los cinco numeros</text>
+  <line x1="40" y1="244" x2="320" y2="244" class="fig-medida"/>
+  <line x1="40" y1="234" x2="40" y2="254" class="fig-medida"/>
+  <line x1="320" y1="234" x2="320" y2="254" class="fig-medida"/>
+  <rect x="120" y="234" width="120" height="20" class="fig-zona"/>
+  <line x1="100" y1="234" x2="100" y2="254" class="fig-destac"/>
+  <line x1="180" y1="234" x2="180" y2="254" class="fig-destac"/>
+  <line x1="240" y1="234" x2="240" y2="254" class="fig-destac"/>
+  <text x="40" y="266" text-anchor="middle" class="fig-nota" font-size="10">min</text>
+  <text x="100" y="266" text-anchor="middle" class="fig-nota" font-size="10">Q1</text>
+  <text x="180" y="266" text-anchor="middle" class="fig-nota" font-size="10">mediana</text>
+  <text x="240" y="266" text-anchor="middle" class="fig-nota" font-size="10">Q3</text>
+  <text x="320" y="266" text-anchor="middle" class="fig-nota" font-size="10">max</text></svg><figcaption class="fig-titulo">La misma idea del balance de agua, medida de otra forma</figcaption></figure><h4 class="lecc-h4">Difusión y ósmosis</h4><p><strong>Difusión</strong> es el movimiento de sustancias de alta concentración a baja concentración hasta igualarse. <strong>Ósmosis</strong> es lo mismo, pero solo para el agua.</p><h4 class="lecc-h4">Tres soluciones y su efecto en la célula</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Solución</th><th>Concentración de solutos</th><th>Efecto en una célula</th></tr></thead><tbody><tr><td>Hipotónica</td><td>menor que dentro</td><td>entra agua, la célula se hincha</td></tr><tr><td>Isotónica</td><td>igual que dentro</td><td>equilibrio, no hay cambio</td></tr><tr><td>Hipertónica</td><td>mayor que dentro</td><td>sale agua, la célula se encoge</td></tr></tbody></table></div><p>Por eso las plantas marchitas si el agua se pierde y por qué una uva se infla en agua con sal: la sal sube por ósmosis y deshidrata la uva.</p><h4 class="lecc-h4">El transporte activo</h4><p>Muchas veces hay que mover algo <strong>contra</strong> su gradiente, de baja a alta concentración. Eso cuesta energía en forma de ATP, y por eso las células lo hacen solo cuando lo necesitan.</p><div class="lecc-nota">Una analogía útil: la difusión es dejar caer una pelota por una pendiente, gratis. El transporte activo es subirla cuesta arriba, pagando cada peldaño.</div><dl class="lecc-glosario"><dt>Difusión</dt><dd>Paso de sustancias de alta a baja concentración sin gasto de energía.</dd><dt>Ósmosis</dt><dd>Paso de agua a través de una membrana semipermeable.</dd><dt>Solución hipotónica</dt><dd>Tiene menos solutos que la célula; el agua entra y la hincha.</dd><dt>Solución isotónica</dt><dd>Tiene la misma concentración; no hay movimiento neto de agua.</dd><dt>Solución hipertónica</dt><dd>Tiene más solutos; el agua sale y la célula se encoge.</dd><dt>Transporte activo</dt><dd>Movimiento de sustancias contra el gradiente con gasto de ATP.</dd><dt>Gradiente de concentración</dt><dd>Diferencia de concentración entre dos zonas.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una célula de la hoja de una planta se coloca en salmuera muy concentrada. ¿Qué pasa y por qué?</p><h4 class="lecc-h4">Identificamos la solución</h4><p>La salmuera tiene muchos solutos, así que es <strong>hipertónica</strong> respecto a la célula.</p><h4 class="lecc-h4">Qué ocurre</h4><p>El agua sale de la célula hacia la solución por ósmosis, porque el lado externo tiene más solutos. La célula pierdee volumen y se encoge: es la <strong>plasmólisis</strong>.</p><h4 class="lecc-h4">En el caso contrario</h4><p>Si la misma célula se pone en agua pura, el agua entra, la célula se hincha y puede romperse: es la <strong>turgencia</strong> que sostiene los tallos.</p><div class="lecc-nota">Esto explica dos cosas everyday que solemos ver: las frutas se deshidratan porque pierden agua y las verduras que se recuperan al echarlas en agua fría.</div><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Compara los casos</h4><ol class="lecc-ol"><li>¿Qué pasa con un glóbulo rojo en solución salina al 10 por ciento?</li><li>¿Por qué se arrugan los dedos después de una ducha larga?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p>El glóbulo pierde agua y se encoge, porque la salina es hipertónica. Los dedos se arrugan porque la sal de la piel hace que el agua salga de las células de la capa externa, que se encogen, y el pliegue aparece en esa diferencia de volumen.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de decidir qué pasa con una célula, pregúntate solo dos cosas: qué concentración es mayor y qué lado tiene más agua. Con esas dos respuestas ya sabes la dirección del movimiento.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="biologia-0-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-la-celula-unidad-de-la-vida.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-fotosintesis-y-respiracion-celular.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "biologia-0-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

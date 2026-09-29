@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corrientes y autores esenciales — Comunicación / Lenguaje</title>
+  <meta name="description" content="Situar las tres corrientes y autores que mas se piden, y recordarlos por una imagen en vez de por una lista." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="comunicacion">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Comunicación / Lenguaje</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Literatura</a> <span class="mx-2 opacity-50">/</span>
+          <span>Corrientes y autores esenciales</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-chat-square-text"></i></div>
+            <h1 class="articulo-titulo">Corrientes y autores esenciales</h1>
+            <p class="articulo-modulo">Módulo 4 · Literatura</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Situar las tres corrientes y autores que mas se piden, y recordarlos por una imagen en vez de por una lista.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">La idea de fondo</h4><p>Los autores no se aprenden por una lista. Se aprenden por lo que tienen en comun. Si sabes que hizo cada uno, ya sabes a que corriente pertenece.</p><h4 class="lecc-h4">Las tres corrientes del examen</h4><p>### 1. Realismo magico</p><p>Nace en America Latina en los años cincuenta. Mezcla lo real y lo fantastico sin explicar la mezcla: el narrador acepta lo imposible como cotidiano.</p><ul class="lecc-ul"><li>Autor: Gabriel Garcia Marquez.</li><li>Obra clave: *Cien años de soledad*.</li><li>Pista: un pueblo llamado Macondo, un pueblo entero que desaparece del mapa, y una maldicion sobre una familia.</li></ul><p>### 2. Boom latinoamericano</p><p>Nace en los años sesenta. Rompe con las novelas costumbristas y con las novelas de aventuras.</p><ul class="lecc-ul"><li>Autores: Mario Vargas Llosa, Julio Cortazar, Carlos Fuentes, Juan Carlos Onetti.</li><li>Obra clave: *La ciudad y los perros*.</li><li>Pista: el narrador ya no es fiable, el tiempo salta, y el protagonista busca algo que nunca alcanza.</li></ul><p>### 3. Narrativa policial</p><p>Nacida a finales del siglo diecinueve. Un crimen que hay que resolver, un detective y una solucion al final.</p><ul class="lecc-ul"><li>Autores: Jorge Luis Borges y Edgar Allan Poe. Poe escribio *Los crímenes de la calle Morgue*, el primer cuento policial.</li><li>Obra clave: *La muerte y la brujula*.</li><li>Pista: un crimen, un testigo, una solucion logica que se deduce.</li></ul><h4 class="lecc-h4">El truco para memorizar</h4><p>No memorices listas. Aprende <strong>una obra, un autor y una pista</strong> por cada corriente. Con tres fichas, no necesitas mas.</p><ol class="lecc-ol"><li>Macondo desaparece del mapa: realismo magico, Garcia Marquez.</li><li>Un laberinto de tiempo: boom latinoamericano, Vargas Llosa.</li><li>Un crimen con solucion deducible: policial, Borges.</li></ol><h4 class="lecc-h4">Las tres pistas que mas se preguntan</h4><ol class="lecc-ol"><li><strong>La obra</strong>: de quien es y que argumento tiene.</li><li><strong>El autor</strong>: de que pais nacio y en que epoca escribio.</li><li><strong>La corriente</strong>: por que esa obra pertenece a esa corriente.</li></ol><div class="lecc-nota">La tercera es la que mas cuesta. Para responderla hay que mirar la forma del texto, no solo su argumento. Un realista magico y un policial pueden contar lo mismo, pero se leen distinto.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Tres preguntas tipicas de examen:</p><h4 class="lecc-h4">Pregunta 1</h4><p>*Cien años de soledad, de quien es y a que corriente pertenece.*</p><ul class="lecc-ul"><li>Autor: Gabriel Garcia Marquez.</li><li>Corriente: realismo magico.</li><li>Porque lo real y lo fantastico van juntos: nadie se sorprende de que un pueblo entero desaparezca del mapa.</li></ul><h4 class="lecc-h4">Pregunta 2</h4><p>*De que pais es Garcia Marquez y que premio recibio.*</p><ul class="lecc-ul"><li>Es colombiano. Nacio en 1927 y recibio el Nobel de Literatura en 1982.</li></ul><h4 class="lecc-h4">Pregunta 3</h4><p>*En que se diferencia el realismo magico de la novela policial.*</p><ul class="lecc-ul"><li>El realismo magico acepta lo imposible dentro de lo cotidiano y no lo explica.</li><li>La novela policial presenta lo imposible como un crimen que tiene que resolverse, y la resolucion es logica.</li></ul><h4 class="lecc-h4">Metodo para responder sin memorizar</h4><ul class="lecc-ul"><li>Pregunta 1: la obra te da el autor, y el autor te da la corriente.</li><li>Pregunta 2: la ficha del autor tiene pais y fecha.</li><li>Pregunta 3: la diferencia esta en la forma y en la intencion, no en el argumento.</li></ul><h4 class="lecc-h4">Conclusiones</h4><ul class="lecc-ul"><li>Conclusion: si reconoces una obra, ya tienes el autor y la corriente. Por eso una sola obra por corriente resuelve el examen entero.</li><li>Ojo: el Nobel de 1982 fue para Garcia Marquez. El de 2010 fue para Mario Vargas Llosa. No intercambies los años.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Estudia por fichas, no por listas. Una ficha con obra, autor y una pista concreta se recuerda mejor que veinte nombres seguidos.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="comunicacion-3-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-figuras-literarias.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-analisis-de-poemas.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "comunicacion-3-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 270">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Las cuatro partes de un parrafo</text>
+
+  <rect x="24" y="32" width="312" height="46" rx="9" class="fig-destac"/>
+  <text x="40" y="52" class="fig-destac-txt">1. Idea central</text>
+  <text x="40" y="70" class="fig-sub">la primera oracion, y no lleva conector</text>
+
+  <line x1="180" y1="78" x2="180" y2="94" class="fig-flecha"/>
+  <text x="192" y="90" class="fig-nota">se apoya en</text>
+
+  <rect x="24" y="100" width="150" height="58" rx="8" class="fig-apoyo"/>
+  <text x="99" y="122" text-anchor="middle" class="fig-titulo" font-size="12.5">2. Idea secundaria</text>
+  <text x="99" y="142" text-anchor="middle" class="fig-nota" font-size="11.5">un dato o un ejemplo</text>
+
+  <rect x="186" y="100" width="150" height="58" rx="8" class="fig-apoyo"/>
+  <text x="261" y="122" text-anchor="middle" class="fig-titulo" font-size="12.5">3. Idea secundaria</text>
+  <text x="261" y="142" text-anchor="middle" class="fig-nota" font-size="11.5">una razon mas</text>
+
+  <line x1="180" y1="158" x2="180" y2="174" class="fig-flecha"/>
+
+  <rect x="24" y="180" width="312" height="42" rx="9" class="fig-ok"/>
+  <text x="40" y="198" class="fig-ok-txt">4. Cierre</text>
+  <text x="40" y="215" class="fig-sub">repite la central con otras palabras</text>
+
+  <rect x="24" y="230" width="312" height="30" rx="8" class="fig-zona"/>
+  <text x="40" y="250" class="fig-nota">Prueba: si puedes poner un titulo de cinco palabras, es un parrafo.</text>
+</svg>

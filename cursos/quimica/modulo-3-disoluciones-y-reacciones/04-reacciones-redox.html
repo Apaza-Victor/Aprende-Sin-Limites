@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reacciones redox — Química</title>
+  <meta name="description" content="Asignar el número de oxidación de cada elemento en un compuesto, identificando el elemento que se oxida y el que se reduce, escribir las semirreacciones en medio ácido y básico, y deducir el agente oxidante y el reductor." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Disoluciones y reacciones</a> <span class="mx-2 opacity-50">/</span>
+          <span>Reacciones redox</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">Reacciones redox</h1>
+            <p class="articulo-modulo">Módulo 3 · Disoluciones y reacciones</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Asignar el número de oxidación de cada elemento en un compuesto, identificando el elemento que se oxida y el que se reduce, escribir las semirreacciones en medio ácido y básico, y deducir el agente oxidante y el reductor.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El número de oxidación es la carga <strong>formal</strong> que tendría un átomo si los electrones del enlace se asignaran al elemento más electronegativo. Sirve para predecir qué se oxida y qué se reduce sin ajustar nada.</p><h4 class="lecc-h4">Reglas para asignarlo</h4><ol class="lecc-ol"><li>En un elemento puro, vale 0: O₂, Fe, Na.</li><li>Un átomo neutro tiene 0; un ion simple tiene su carga: Na⁺ es +1, Cl⁻ es −1, Ca²⁺ es +2.</li><li>El hidrógeno es <strong>+1</strong> en casi todos los compuestos, y <strong>−1</strong> en los hidruros metálicos como NaH, CaH₂ y BH₃.</li><li>El oxígeno es <strong>−2</strong> en los óxidos y peróxidos como su estado individual, y <strong>−1</strong> en los peróxidos como H₂O₂ y Na₂O₂.</li><li>Los halógenos valen −1 en sus hidrácidos, pero pueden ser positivos si están unidos a un elemento más electronegativo, como en ClO₃⁻.</li><li>La suma de todos los números de oxidación de un compuesto neutro es <strong>cero</strong>, y en un ion es igual a la carga del ion.</li></ol><h4 class="lecc-h4">Oxidación y reducción</h4><ul class="lecc-ul"><li><strong>Oxidación</strong>: el número de oxidación <strong>aumenta</strong>. La sustancia pierde electrones y se vuelve más positiva.</li><li><strong>Reducción</strong>: el número de oxidación <strong>disminuye</strong>. Gana electrones y se vuelve más negativa.</li><li><strong>Agente oxidante</strong>: el que se reduce, es decir el que <strong>recibe</strong> electrones. Se oxida a sí mismo y oxida al otro.</li><li><strong>Agente reductor</strong>: el que se oxida, es decir el que <strong>cede</strong> electrones. Se reduce a sí mismo y reduce al otro.</li></ul><div class="lecc-nota">El agente oxidante es el que se reduce, y el nombre engaña: se oxida al oxidar a otro. Es el error de memoria más extendido en el tema.</div><h4 class="lecc-h4">Semirreacciones</h4><p>En <strong>medio ácido</strong> se balancean con H₂O y H⁺; en <strong>medio básico</strong>, con H₂O y OH⁻. El procedimiento es siempre el mismo:</p><ol class="lecc-ol"><li>Separar el elemento que cambia de número de oxidación.</li><li>Igualar los átomos de ese elemento.</li><li>Completar el oxígeno con H₂O y el hidrógeno con H⁺ (en medio ácido).</li><li>Igualar la carga con H⁺ y, si sigue sin cuadrar, con e⁻.</li><li>Multiplicar por el factor que borre los decimales, sumar y cancelar lo que aparece en ambos lados.</li></ol><p>Ejemplo, medio ácido:</p><ul class="lecc-ul"><li>MnO₄⁻ → Mn²⁺: el Mn pasa de +7 a +2.</li><li>Se anota 5 a la derecha para igualar los 5 electrones: MnO₄⁻ + 5e⁻ → Mn²⁺.</li><li>Con agua e hidrógeno: MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O.</li><li>La carga a la izquierda es −1 + 8 − 5 = +2, igual a la derecha. Cuadra.</li></ul><h4 class="lecc-h4">Aplicación</h4><p>Como referencia para memorizar el mecanismo, sirve la reacción del permanganato con hierro(II) en medio ácido: el permanganato es el oxidante porque el Mn baja de +7 a +2, y el Fe²⁺ es el reductor porque sube de +2 a +3.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se ajusta la reacción: KMnO₄ + HCl → KCl + MnCl₂ + Cl₂ + H₂O, y se identifica qué reactivo es el oxidante.</p><h4 class="lecc-h4">Método 1: números de oxidación</h4><ul class="lecc-ul"><li>En KMnO₄: el K es +1 y el O es −2, así que el Mn debe ser <strong>+7</strong>.</li><li>En MnCl₂: el Cl es −1 y hay dos, así que el Mn es <strong>+2</strong>.</li><li>El Mn pasa de +7 a +2: <strong>se reduce</strong>, y con 5 electrones captados.</li><li>El Cl pasa de −1 (en HCl) a 0 (en Cl₂): <strong>se oxida</strong>, y pierde 1 electrón por átomo.</li></ul><h4 class="lecc-h4">Método 2: semirreacciones en medio ácido</h4><ul class="lecc-ul"><li>Reducción: MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O.</li><li>Oxidación: 2Cl⁻ → Cl₂ + 2e⁻.</li><li>Se multiplica la oxidación por 5 para tener 10 electrones: 10Cl⁻ → 5Cl₂ + 10e⁻.</li><li>Se multiplica la reducción por 2 para tener 10 electrones: 2MnO₄⁻ + 16H⁺ + 10e⁻ → 2Mn²⁺ + 8H₂O.</li><li>Al sumar y cancelar electrones y H⁺: 2MnO₄⁻ + 16H⁺ + 10Cl⁻ → 2Mn²⁺ + 8H₂O + 5Cl₂.</li></ul><h4 class="lecc-h4">Método 3: volver a la fórmula molecular</h4><ul class="lecc-ul"><li>2 KMnO₄ + 16 HCl → 2 MnCl₂ + 5 Cl₂ + 8 H₂O.</li><li>Comprobación del Cl: 16 a la izquierda, y 2 × 2 = 4 en MnCl₂ más 5 × 2 = 10 en Cl₂, total 14. <strong>Faltan 2 Cl</strong>, que van con los 2 K.</li><li>La ecuación correcta es <strong>2 KMnO₄ + 16 HCl → 2 KCl + 2 MnCl₂ + 5 Cl₂ + 8 H₂O</strong>.</li><li>Ahora el Cl sí cuadra: 2 en KCl, 4 en MnCl₂ y 10 en Cl₂, total 16.</li></ul><div class="lecc-nota">El KMnO₄ es el <strong>agente oxidante</strong>: es el Mn el que se reduce, y quien se reduce oxida al resto. El HCl es el reductor, porque su cloruro se oxida a Cl₂.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Empieza siempre calculando el número de oxidación del elemento que tiene dos estados distintos en la reacción. Con eso ya sabes cuál de las dos semirreacciones escribir primero, y el resto es aritmética.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-2-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-ph-y-neutralizacion.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-equilibrio-quimico.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-2-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

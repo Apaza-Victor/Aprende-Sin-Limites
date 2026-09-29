@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palancas y máquinas simples — Física</title>
+  <meta name="description" content="Usar la ley de la palanca para amplificar fuerzas y saber cuándo aplicar cada una, con el criterio de elección explícito." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Estática y equilibrio</a> <span class="mx-2 opacity-50">/</span>
+          <span>Palancas y máquinas simples</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Palancas y máquinas simples</h1>
+            <p class="articulo-modulo">Módulo 3 · Estática y equilibrio</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Usar la ley de la palanca para amplificar fuerzas y saber cuándo aplicar cada una, con el criterio de elección explícito.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Las máquinas simples no quitan trabajo: lo transforman. Todo el módulo se puede resumir en una frase, y esa frase es la que resuelve cualquier ejercicio del tema.</p><h4 class="lecc-h4">La idea central</h4><p>En cualquier máquina simple se cumple trabajo de entrada igual a trabajo de salida. Si multiplicas la fuerza por el recorrido que haces, obtienes la fuerza multiplicada por el recorrido que la máquina impone. La diferencia está en el recorrido y en la fuerza, nunca en el trabajo.</p><p>La otra mitad de la idea es que la fuerza grande implica recorrido corto. En una palanca que multiplica la fuerza por diez, el punto de aplicación se mueve la décima parte. Esa es la razón por la que una rampa larga permite subir una carga pesada con poco esfuerzo.</p><h4 class="lecc-h4">Catálogo de las seis máquinas simples</h4><ol class="lecc-ol"><li><strong>Palanca</strong>: barra rígida que gira sobre un fulcro. Tres clases según dónde esté el fulcro, la fuerza y la carga.</li><li><strong>Rueda y eje</strong>: la rueda grande da ventaja por recorrido, y el eje pequeño gana fuerza.</li><li><strong>Polea fija</strong>: cambia solo la dirección de la fuerza. La ventaja mecánica es 1, y por eso no ahorra esfuerzo, solo posición.</li><li><strong>Polea móvil</strong>: una de las poleas se mueve con la carga. La ventaja mecánica es 2, porque la carga se reparte entre dos tramos de cuerda.</li><li><strong>Cuña</strong>: convierte fuerza en presión, es la idea detrás del cuchillo y del clavo.</li><li><strong>Tornillo</strong>: una cuña enrollada. Multiplica la fuerza por la longitud del recorrido, y por eso aprieta tanto.</li></ol><h4 class="lecc-h4">La palanca en detalle</h4><p>En una palanca se cumple F · d fuerza = P · d peso, donde las dos distancias se miden desde el fulcro. De ahí sale la ventaja mecánica, que es la razón entre el brazo de la fuerza y el brazo de la carga.</p><ul class="lecc-ul"><li><strong>Palanca de primer género</strong>: fulcro entre la fuerza y la carga, como las tijeras. Es la de mayor ventaja mecánica.</li><li><strong>Palanca de segundo género</strong>: carga entre el fulcro y la fuerza, como el carretillo. Siempre tiene ventaja mayor que 1.</li><li><strong>Palanca de tercer género</strong>: fuerza entre el fulcro y la carga, como las pinzas de depilar. Su ventaja es menor que 1, y a cambio da mayor velocidad y precisión.</li></ul><p>Que la ventaja sea menor que 1 no es un defecto: significa que se gana en velocidad y no en fuerza, que es exactamente lo que necesita una pinza de uñas.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una barra homogenous de 2 m se apoya en un fulcro situado a 0,5 m del extremo izquierdo. En el extremo derecho se coloca una carga de 40 kg y en el extremo izquierdo se aplica la fuerza. ¿Qué fuerza se necesita y cuál es la ventaja mecánica?</p><h4 class="lecc-h4">Método 1: medir los brazos</h4><ul class="lecc-ul"><li>Primero: el fulcro está a 0,5 m del extremo izquierdo, de modo que la distancia hasta el extremo derecho es 2 − 0,5 = 1,5 m.</li><li>Segundo: el brazo de la carga es 1,5 m y el brazo de la fuerza es 0,5 m. Es una palanca de primer género, porque el fulcro está entre los dos puntos.</li><li>Tercero: el peso de la carga es 40 · 9,8 = 392 N.</li></ul><h4 class="lecc-h4">Método 2: aplicar el equilibrio de momentos</h4><ul class="lecc-ul"><li>Cuarto: el momento de la fuerza debe igualar el momento del peso: F · 0,5 = 392 · 1,5.</li><li>Quinto: de ahí F · 0,5 = 588, de donde F = 1176 N.</li><li>Sexto: la ventaja mecánica es 1176/392 = 3, y también se obtiene directo como 1,5/0,5.</li></ul><h4 class="lecc-h4">Método 3: verificar con el trabajo</h4><ul class="lecc-ul"><li>Séptimo: si la fuerza baja 1 m, el peso sube 0,5 m, porque el recorrido se invierte con la misma proporción.</li><li>Octavo: el trabajo por los dos lados es el mismo, 1176 N · 1 m = 1176 J y 392 N · 3 m = 1176 J. Ninguna máquina simple crea trabajo.</li><li>Noveno: la cuenta de trabajo confirma la razón inversa de recorridos.</li></ul><div class="lecc-nota">La ventaja mecánica de 3 significa que la fuerza se triplica y el recorrido se reduce a la tercera parte. Si un ejercicio pide esfuerzo total y no solo fuerza, ese es el dato que falta.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de hacer números, identifica dónde está el fulcro y mide los dos brazos desde ahí. Casi todos los errores de palancas son errores de distancia mal medida.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-2-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-equilibrio-de-cuerpos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-centro-de-gravedad.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-2-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

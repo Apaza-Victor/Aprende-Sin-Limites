@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equilibrio de cuerpos — Física</title>
+  <meta name="description" content="Aplicar las condiciones de equilibrio de traslación y rotación eligiendo la versión de la fórmula que corresponde a los datos dados." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Estática y equilibrio</a> <span class="mx-2 opacity-50">/</span>
+          <span>Equilibrio de cuerpos</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Equilibrio de cuerpos</h1>
+            <p class="articulo-modulo">Módulo 3 · Estática y equilibrio</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Aplicar las condiciones de equilibrio de traslación y rotación eligiendo la versión de la fórmula que corresponde a los datos dados.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Un cuerpo está en equilibrio cuando no acelera, ni en traslación ni en rotación. Eso son dos condiciones independientes, y confundirlas es el error más común del módulo.</p><h4 class="lecc-h4">Las dos condiciones</h4><ul class="lecc-ul"><li><strong>Equilibrio de traslación</strong>: la fuerza neta es cero. Todos los objetos en reposo sobre una mesa lo cumplen, aunque estén a punto de caerse si se retira la mesa.</li><li><strong>Equilibrio de rotación</strong>: el momento total alrededor de cualquier eje es cero. Es la que se olvida: un objeto puede estar quieto y aun así girar, y un objeto puede no girar y estar acelerando.</li></ul><p>La diferencia entre ambos se ve en un ejemplo: un libro apoyado vertical contra una pared no se mueve y por tanto está en equilibrio de traslación, pero si el ángulo es pequeño tenderá a caer, lo cual indica que el momento de la gravedad alrededor de la base no está equilibrado por ninguna otra fuerza. La segunda condición es la que detecta ese peligro.</p><h4 class="lecc-h4">Cómo se plantea</h4><p>El procedimiento tiene cuatro pasos que conviene repetir siempre:</p><ol class="lecc-ol"><li>Dibujar el diagrama de cuerpo libre con todas las fuerzas.</li><li>Elegir ejes y origen, y declarar positivo cada eje.</li><li>Escribir la ecuación de fuerzas por eje: la suma en cada eje vale cero.</li><li>Escribir la ecuación de momentos alrededor de un punto, tomando el signo del giro.</li></ol><p>Un detalle que ahorra mucho tiempo: los momentos de las fuerzas cuya línea de acción pasa por el punto elegido son cero, porque su brazo es cero. Por eso se elige como origen el punto donde se cruzan las fuerzas conocidas, normalmente el punto de apoyo o de suspensión.</p><h4 class="lecc-h4">Casos de una fuerza</h4><ul class="lecc-ul"><li><strong>Equilibrio de una fuerza</strong>: una sola fuerza no puede estar en equilibrio, porque su momento alrededor de su propio punto de aplicación es cero pero su fuerza neta no lo es. Todo equilibrio requiere al menos dos fuerzas.</li><li><strong>Equilibrio de dos fuerzas</strong>: solo es posible si son iguales, opuestas y colineales, como un colgado de una cuerda o un peso sobre una superficie horizontal sin fricción. Si no son colineales, generan un par y el cuerpo gira.</li><li><strong>Equilibrio de tres fuerzas</strong>: si tres fuerzas no concurrentes están en equilibrio, sus líneas de acción deben cortarse en un mismo punto. Esa es la condición del teorema de las tres fuerzas, útil cuando hay que encontrar una fuerza o una distancia desconocida.</li></ul>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una escalera de 4 m de largo y masa de 20 kg se apoya contra una pared vertical. Su base está a 3 m de la pared y su parte superior a 2,5 m de altura. ¿Cuál es la fuerza de la pared sobre la escalera y cuál es el ángulo con el suelo? Use g = 9,8 m/s².</p><h4 class="lecc-h4">Método 1: geometría y equilibrio de traslación</h4><ul class="lecc-ul"><li>Primero: la altura de la pared y la base forman un triángulo rectángulo de catetos 3 y 2,5, con hipotenusa 4. La longitud encaja con la escalera.</li><li>Segundo: el peso es 20 · 9,8 = 196 N, aplicado en el punto medio de la escalera, a 2 m de la base.</li><li>Tercero: la base no se mueve, así que la normal del suelo vale 196 N. La única fuerza horizontal es la reacción de la pared, y por tanto la normal del suelo la equilibra por completo.</li></ul><h4 class="lecc-h4">Método 2: equilibrio de rotación alrededor de la base</h4><ul class="lecc-ul"><li>Cuarto: tomo momentos con origen en la base, donde el momento de la normal del suelo es cero.</li><li>Quinto: el peso produce un momento de 196 · 2 = 392 N·m, que intenta tumbar la escalera.</li><li>Sexto: la reacción de la pared, perpendicular a la pared y horizontal, tiene un brazo igual a la altura, 2,5 m. Su momento es F · 2,5, y debe igualar 392.</li><li>Séptimo: de ahí F = 392 entre 2,5 = 156,8 N.</li></ul><h4 class="lecc-h4">Método 3: el ángulo y una comprobación</h4><ul class="lecc-ul"><li>Octavo: el ángulo con el suelo es el arcosen de 2,5 entre 4 = 38,7 grados, y el arco de la tg de 3/2,5 confirma los 50,2 grados complementarios.</li><li>Noveno: compruebo que la normal del suelo es exactamente 196 N, porque la reacción de la pared es horizontal y no tiene componente vertical.</li></ul><div class="lecc-nota">El dato útil es que la normal del suelo iguala al peso solo porque la otra fuerza es horizontal. Si la pared estuviera inclinada, habría que descomponer y la normal ya no valdría 196 N.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Toma los momentos alrededor del punto de apoyo, no de un punto cualquiera. Ahí se anulan los momentos desconocidos y te quedas con una sola ecuación en lugar de tres.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-2-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-momento-de-una-fuerza-torque.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-palancas-y-maquinas-simples.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-2-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 250">
+  <path d="M30 215 L30 35" class="fig-dato"/>
+  <path d="M30 215 L310 215" class="fig-dato"/>
+  <path d="M30 185 L310 185" class="fig-dato"/>
+  <path d="M30 155 L310 155" class="fig-dato"/>
+  <path d="M30 125 L310 125" class="fig-dato"/>
+  <path d="M30 95 L310 95" class="fig-dato"/>
+  <path d="M30 65 L310 65" class="fig-dato"/>
+  <path d="M60 205 L90 185 L120 205 L150 185 L180 205 L210 185 L240 205 L270 185 L300 205" class="fig-acento"/>
+  <path d="M60 175 L90 155 L120 175 L150 155 L180 175 L210 155 L240 175 L270 155 L300 175" class="fig-acento"/>
+  <path d="M60 145 L90 125 L120 145 L150 125 L180 145 L210 125 L240 145 L270 125 L300 145" class="fig-acento"/>
+  <path d="M60 115 L90 95 L120 115 L150 95 L180 115 L210 95 L240 115 L270 95 L300 115" class="fig-acento"/>
+  <path d="M60 85 L90 65 L120 85 L150 65 L180 85 L210 65 L240 85 L270 65 L300 85" class="fig-acento"/>
+  <circle cx="90" cy="185" r="4" class="fig-relleno-2"/>
+  <circle cx="180" cy="155" r="4" class="fig-relleno-2"/>
+  <circle cx="270" cy="125" r="4" class="fig-relleno-2"/>
+  <text x="24" y="219" text-anchor="end" font-size="13" class="fig-nota">1532</text>
+  <text x="24" y="189" text-anchor="end" font-size="13" class="fig-nota">1572</text>
+  <text x="24" y="159" text-anchor="end" font-size="13" class="fig-nota">1688</text>
+  <text x="24" y="129" text-anchor="end" font-size="13" class="fig-nota">1780</text>
+  <text x="24" y="99" text-anchor="end" font-size="13" class="fig-nota">1821</text>
+  <text x="24" y="69" text-anchor="end" font-size="13" class="fig-nota">1883</text>
+  <text x="30" y="26" font-size="15" class="fig-acento-texto">del Virreinato a la República</text>
+  <text x="180" y="240" text-anchor="middle" font-size="13" class="fig-nota">la línea escalonada es el territorio perdido</text>
+</svg>

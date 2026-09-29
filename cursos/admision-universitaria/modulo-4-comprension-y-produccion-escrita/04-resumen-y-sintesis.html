@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resumen y síntesis — Admisión Universitaria</title>
+  <meta name="description" content="Resumir un texto conservando su estructura y sus ideas principales, y sintetizar información de varias fuentes en un solo párrafo claro." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Comprensión y producción escrita</a> <span class="mx-2 opacity-50">/</span>
+          <span>Resumen y síntesis</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Resumen y síntesis</h1>
+            <p class="articulo-modulo">Módulo 4 · Comprensión y producción escrita</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Resumir un texto conservando su estructura y sus ideas principales, y sintetizar información de varias fuentes en un solo párrafo claro.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Resumir y sintetizar son operaciones distintas, y la prueba las separa. Un resumen reproduce el contenido del texto en menos palabras. Una síntesis combina varios textos, ideas o apartados en una afirmación nueva que ninguno de los textos enunciaba por separado. Confundirlas es el error más común de esta sección.</p><h4 class="lecc-h4">Las tres etapas del resumen</h4><ol class="lecc-ol"><li><strong>Lectura de acknowledgment</strong>: leer el texto completo una vez sin tomar notas, para entender de qué trata.</li><li><strong>Lectura de marcado</strong>: segunda lectura, subrayando la idea principal de cada párrafo y las ideas de detalle.</li><li><strong>Redacción</strong>: escribir con las ideas de detalle convertidas en oraciones completas, y no en fragmentos.</li></ol><p>El orden importa. Marcar durante la primera lectura produce resúmenes que siguen el orden del texto, lo cual está bien, pero no permite identificar la tesis, que solo se ve al terminar.</p><h4 class="lecc-h4">Las cuatro etapas de la síntesis</h4><ol class="lecc-ol"><li><strong>Comparar</strong>: identificar qué tienen en común los textos o apartados.</li><li><strong>Detectar la tensión</strong>: ver dónde se contradicen o se complementan.</li><li><strong>Formular una afirmación integradora</strong>: una idea que requiera los elementos por separado, y que ninguno enunciaba.</li><li><strong>Respaldar</strong>: señalar qué parte de cada texto sostiene la afirmación.</li></ol><p>El paso 3 es el que separa la síntesis de un resumen con comas. Una buena afirmación integradora no se obtiene recortando: se obtiene pensando.</p><h4 class="lecc-h4">Los tres errores de resumen</h4><ul class="lecc-ul"><li><strong>Bajar el tono</strong>: &quot;el autor dice que hay problemas&quot; cuando el autor sostiene que hay problemas graves. Al resumir no se suaviza la posición del texto.</li><li><strong>Meter opinión</strong>: añadir &quot;esto es muy importante&quot; no está en el texto. El resumen no juzga.</li><li><strong>Igualar el peso</strong>: dedica una línea a cada idea secondary y ninguna a la tesis. La estructura del resumen debe reflejar la del texto.</li></ul><h4 class="lecc-h4">Cuándo resumir y cuándo sintetizar</h4><p>Si el ítem dice &quot;resume el texto&quot;, quieres compresión fiel. Si dice &quot;sintetiza las dos fuentes&quot; o &quot;qué postura se desprende en conjunto&quot;, quieres una afirmación integradora. Un resumen no puede responder a una pregunta de síntesis, por más bien escrito que esté, y ahí es donde se pierden los puntos.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un texto A dice que el transporte público reduce las emisiones de las ciudades. Un texto B dice que el transporte público mejora la salud de quienes lo usan, al reducir el tiempo de traslado.</p><h4 class="lecc-h4">Método 1: identificar el resumen</h4><ul class="lecc-ul"><li>Primero: un resumen fiel sería &quot;el texto A habla de emisiones y el texto B de salud&quot;.</li><li>Eso describe los dos textos por separado, y no responde a nada nuevo. Es la respuesta de quien no entendió qué se le pedía.</li></ul><h4 class="lecc-h4">Método 2: encontrar la afirmación integradora</h4><ul class="lecc-ul"><li>Segundo: comparo los dos. Los dos hablan de transporte público, y los dos de un efecto positivo sobre la calidad de vida, no solo sobre la economía.</li><li>La afirmación integradora es: &quot;el transporte público no es solo una política ambiental, es una política de salud pública&quot;.</li></ul><h4 class="lecc-h4">Método 3: respaldar la afirmación</h4><ul class="lecc-ul"><li>Tercero: esa afirmación no aparece en ninguno de los dos textos, pero se apoya en el de emisiones (A) y en el de salud (B).</li><li>Esa es la diferencia con un resumen: la síntesis añade una conclusión que ninguno sostendría por sí solo, y aun así es defendible con los datos disponibles.</li></ul><div class="lecc-nota">Un resumen te dice qué hay en el texto. Una síntesis te dice qué significan juntos. La prueba paga por lo segundo, y por eso pide siempre respaldo de la afirmación.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Escribe primero la frase que integra todo y después vuelve a los textos para respaldarla. Si no puedes respaldarla con una cita concreta de cada uno, tu síntesis es una opinión disfrazada.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-3-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-coherencia-cohesion-y-conectores.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-errores-frecuentes-y-reescritura.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-3-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Números reales, intervalos y logaritmos en la recta — Matemática</title>
+  <meta name="description" content="Clasificar números reales, operar con intervalos y aplicar propiedades de logaritmos para simplificar expresiones." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 5 · Funciones y sucesiones</a> <span class="mx-2 opacity-50">/</span>
+          <span>Números reales, intervalos y logaritmos en la recta</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Números reales, intervalos y logaritmos en la recta</h1>
+            <p class="articulo-modulo">Módulo 5 · Funciones y sucesiones</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Clasificar números reales, operar con intervalos y aplicar propiedades de logaritmos para simplificar expresiones.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El conjunto de los <strong>números reales</strong> <span class="formula formula-linea"><span class="conj">R</span></span> incluye naturales, enteros, racionales e irracionales. Se representan en la recta real sin huecos.</p><h4 class="lecc-h4">Clasificación</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Conjunto</th><th>Notación</th><th>Ejemplos</th></tr></thead><tbody><tr><td>Naturales</td><td><span class="formula formula-linea"><span class="conj">N</span></span></td><td><span class="formula formula-linea">1, 2, 3, ...</span></td></tr><tr><td>Enteros</td><td><span class="formula formula-linea"><span class="conj">Z</span></span></td><td><span class="formula formula-linea">..., -2, -1, 0, 1, 2, ...</span></td></tr><tr><td>Racionales</td><td><span class="formula formula-linea"><span class="conj">Q</span></span></td><td><span class="formula formula-linea"><span class="frac"><span class="frac-n">1</span><span class="frac-d">2</span></span>, -0.25, 0.<span class="acento"><span class="acento-raya">‾</span>3</span></span></td></tr><tr><td>Irracionales</td><td><span class="formula formula-linea"><span class="conj">I</span></span></td><td><span class="formula formula-linea">π, <span class="raiz"><span class="r-signo">√</span><span class="radicando">2</span></span>, e</span></td></tr><tr><td>Reales</td><td><span class="formula formula-linea"><span class="conj">R</span> = <span class="conj">Q</span> ∪ <span class="conj">I</span></span></td><td>todos</td></tr></tbody></table></div><h4 class="lecc-h4">Intervalos</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Notación</th><th>Descripción</th><th>Gráfica</th></tr></thead><tbody><tr><td><span class="formula formula-linea">(a, b)</span></td><td><span class="formula formula-linea">a &lt; x &lt; b</span></td><td>abierto</td></tr><tr><td><span class="formula formula-linea">[a, b]</span></td><td><span class="formula formula-linea">a ≤ x ≤ b</span></td><td>cerrado</td></tr><tr><td><span class="formula formula-linea">(a, b]</span></td><td><span class="formula formula-linea">a &lt; x ≤ b</span></td><td>semiabierto</td></tr><tr><td><span class="formula formula-linea">(-∞, b)</span></td><td><span class="formula formula-linea">x &lt; b</span></td><td>infinito</td></tr><tr><td><span class="formula formula-linea">[a, +∞)</span></td><td><span class="formula formula-linea">x ≥ a</span></td><td>infinito</td></tr></tbody></table></div><div class="lecc-nota">El intervalo <span class="formula formula-linea">(a, b)</span> NO incluye los extremos y <span class="formula formula-linea">[a, b]</span> sí. Lo que decide es si el cierre es redondo o cuadrado.</div><h4 class="lecc-h4">Propiedades de logaritmos</h4><div class="formula"><span class="fn">log</span><sub>a</sub>(b<sup>p</sup> c<sup>q</sup>) = p<span class="fn">log</span><sub>a</sub> b + q<span class="fn">log</span><sub>a</sub> c</div><div class="formula"><span class="fn">log</span><sub>a</sub><span class="frac"><span class="frac-n">b<sup>p</sup></span><span class="frac-d">c<sup>q</sup></span></span> = p<span class="fn">log</span><sub>a</sub> b - q<span class="fn">log</span><sub>a</sub> c</div><h4 class="lecc-h4">Logaritmos naturales y decimales</h4><div class="formula"><span class="fn">ln</span> x = <span class="fn">log</span><sub>e</sub> x,      e ≈ 2.718,      <span class="fn">log</span><sub>10</sub> x = <span class="fn">log</span> x</div><div class="lecc-nota"><span class="formula formula-linea"><span class="raiz"><span class="r-signo">√</span><span class="radicando">2</span></span> ≈ 1.414213...</span> es irracional: no se puede escribir como fracción exacta y su decimal no es periódico.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Escribe en intervalo y representa: <span class="formula formula-linea">x ≥ 2</span> y <span class="formula formula-linea">x &lt; 5</span>.</p><h4 class="lecc-h4">Un intervalo semiabierto</h4><p>El intervalo semiabierto es <span class="formula formula-linea">[2, 5)</span>: incluye el 2 porque el cierre es cuadrado, y excluye el 5 porque el paréntesis lo deja fuera.</p><p>---</p><p>Simplifica <span class="formula formula-linea"><span class="fn">log</span> 100 - <span class="fn">log</span> 10<sup>2</sup> + <span class="fn">log</span><sub>a</sub>(a<sup>3</sup>)</span>.</p><div class="formula"><span class="fn">log</span> 100 = 2,      <span class="fn">log</span> 10<sup>2</sup> = 2,      <span class="fn">log</span><sub>a</sub>(a<sup>3</sup>) = 3</div><div class="formula">2 - 2 + 3 = 3</div><p>---</p><p>Desarrolla <span class="formula formula-linea"><span class="fn">log</span><sub>2</sub><span class="frac"><span class="frac-n">8x<sup>3</sup></span><span class="frac-d">y<sup>2</sup></span></span></span>.</p><div class="formula"><span class="fn">log</span><sub>2</sub>(8x<sup>3</sup>) - <span class="fn">log</span><sub>2</sub>(y<sup>2</sup>) = <span class="fn">log</span><sub>2</sub> 8 + 3<span class="fn">log</span><sub>2</sub> x - 2<span class="fn">log</span><sub>2</sub> y</div><div class="formula">= 3 + 3<span class="fn">log</span><sub>2</sub> x - 2<span class="fn">log</span><sub>2</sub> y</div><div class="lecc-nota">Siempre comprueba el argumento: para que <span class="formula formula-linea"><span class="frac"><span class="frac-n">8x<sup>3</sup></span><span class="frac-d">y<sup>2</sup></span></span></span> sea positivo hacen falta <span class="formula formula-linea">x ≠ 0</span> y <span class="formula formula-linea">y ≠ 0</span>, y como el signo de <span class="formula formula-linea">x<sup>3</sup></span> es el de <span class="formula formula-linea">x</span>, solo se admite <span class="formula formula-linea">x &gt; 0</span>.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Al unir intervalos con &quot;y&quot;, piensa en intersección (<span class="formula formula-linea">∩</span>), y con &quot;o&quot; en unión (<span class="formula formula-linea">∪</span>). Ese matiz evita errores frecuentes en desigualdades compuestas, y antes de dar por buena una respuesta comprueba que los extremos abiertos o cerrados coinciden con lo que pide el enunciado.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-4-4" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="04-sucesiones-progresiones-aritmeticas-y-geometricas.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="../modulo-6-estadistica-y-probabilidad/01-variables-datos-y-como-se-distribuyen.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-4-4";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

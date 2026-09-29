@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divisibilidad y números primos — Matemática</title>
+  <meta name="description" content="Reconocer números primos, aplicar los criterios de divisibilidad del 2 al 11 y descomponer cualquier número en factores primos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Aritmética y números</a> <span class="mx-2 opacity-50">/</span>
+          <span>Divisibilidad y números primos</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Divisibilidad y números primos</h1>
+            <p class="articulo-modulo">Módulo 1 · Aritmética y números</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Reconocer números primos, aplicar los criterios de divisibilidad del 2 al 11 y descomponer cualquier número en factores primos.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Todo número natural puede escribirse como producto de factores primos, y esa descomposición es la base de casi todo lo que viene después: el MCM, el MCD, la simplificación de fracciones y la resolución de ecuaciones.</p><h4 class="lecc-h4">Qué es un número primo</h4><p>Un número primo tiene exactamente dos divisores: el 1 y él mismo. Los primos menores son 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31. El 1 <strong>no</strong> es primo porque solo tiene un divisor, y el 2 es el único primo par: cualquier otro número par es compuesto.</p><h4 class="lecc-h4">Criterios de divisibilidad</h4><p>Estos atajos evitan tener que dividir entre posibles divisores uno por uno:</p><ul class="lecc-ul"><li>Divisible entre 2: termina en cifra par.</li><li>Divisible entre 3: la suma de sus cifras es múltiplo de 3.</li><li>Divisible entre 4: las dos últimas cifras forman un múltiplo de 4.</li><li>Divisible entre 5: termina en 0 o en 5.</li><li>Divisible entre 6: cumple a la vez el criterio del 2 y el del 3.</li><li>Divisible entre 8: las tres últimas cifras forman un múltiplo de 8.</li><li>Divisible entre 9: la suma de sus cifras es múltiplo de 9.</li><li>Divisible entre 11: la diferencia entre la suma de las cifras en posición impar y la suma de las cifras en posición par es múltiplo de 11.</li></ul><h4 class="lecc-h4">Cómo descomponer en factores primos</h4><p>Se divide entre el primo más pequeño posible y se repite sobre el cociente hasta llegar a 1. Al empezar, prueba con el 2 si el número es par; cuando ya no sea par, pasa al 3, luego al 5, 7, 11, y así sucesivamente.</p><div class="lecc-nota">Un control muy útil: si multiplicas todos los factores primos que obtuviste, tiene que volverte el número original. Si no coincide, te saltaste un paso.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Determina si 1 728 es divisible entre 12 y factorízalo en primos.</p><h4 class="lecc-h4">Método de las reglas de divisibilidad, que responde sí o no en un segundo</h4><ul class="lecc-ul"><li>Para que un número sea divisible entre 12 debe serlo entre 3 y entre 4 a la vez.</li><li>Regla del 3: 1 + 7 + 2 + 8 = 18, y 18 es múltiplo de 3, así que 1 728 es divisible entre 3.</li><li>Regla del 4: las dos últimas cifras, 28, forman un múltiplo de 4, así que 1 728 también es divisible entre 4.</li><li>Al cumplir las dos condiciones, la respuesta es sí, es divisible entre 12.</li></ul><h4 class="lecc-h4">Método de la división sucesiva por primos, que además da la factorización</h4><ul class="lecc-ul"><li>Entre 2: 1 728 / 2 = 864, / 2 = 432, / 2 = 216, / 2 = 108, / 2 = 54, / 2 = 27. Paro porque 27 es impar, y tengo seis factores 2.</li><li>Entre 3: 27 / 3 = 9, / 3 = 3, / 3 = 1. Tres factores 3.</li><li>Resultado: 1 728 = 2⁶ × 3³ = 64 × 27.</li></ul><h4 class="lecc-h4">Método del control por exponentes, que no confía en la regla</h4><ul class="lecc-ul"><li>12 = 2² × 3. En 1 728 = 2⁶ × 3³ los exponentes cumplen 6 ≥ 2 y 3 ≥ 1, así que el 12 cabe entero dentro del número.</li><li>Comprobación aritmética: 1 728 ÷ 12 = 144, que es un número entero. Confirmado.</li><li>De paso, como los exponentes son tan altos, también es divisible entre 24, 36 y 48.</li></ul><div class="lecc-nota">La respuesta corta es sí, pero el valor de la segunda vía es que te da la factorización completa, que es lo que permite trabajar de arriba abajo en cualquier problema de factorización.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Para comprobar si un número grande es primo basta con dividirlo entre todos los primos menores o iguales a su raíz cuadrada: si ninguno lo divide, es primo. En el examen suele ser mucho más rápido aplicar los criterios de divisibilidad que factorizar a mano.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-0-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-operaciones-basicas-y-jerarquia.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-mcm-y-mcd.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-0-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

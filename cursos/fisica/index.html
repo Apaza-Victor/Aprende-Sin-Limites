@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Física — Aprende Sin Límites</title>
+  <meta name="description" content="Comprende el movimiento, las fuerzas, la energía y las ondas desde cero con un enfoque práctico." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../index.html"><i class="bi bi-stars"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCurso"
+        aria-controls="navCurso" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navCurso">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../index.html"><i class="bi bi-house-door"></i> Inicio</a>
+          <span class="mx-2 opacity-50">/</span>
+          <span>Física</span>
+        </nav>
+
+        <header class="cabecera-curso tarjeta p-4 p-lg-5 mb-4">
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <div class="icono flex-shrink-0"><i class="bi bi-lightning-charge"></i></div>
+            <div>
+              <h1 class="mb-0">Física</h1>
+              <p class="col-mut mb-2 mt-1">Comprende el movimiento, las fuerzas, la energía y las ondas desde cero con un enfoque práctico.</p>
+              <div class="d-flex flex-wrap gap-2"><span class="chip d-inline-block">Cinemática</span><span class="chip d-inline-block">Dinámica</span><span class="chip d-inline-block">Estática</span><span class="chip d-inline-block">Energía</span><span class="chip d-inline-block">Ondas</span></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="tarjeta p-4 reveal">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div><i class="bi bi-graph-up-arrow" style="color: var(--acento);"></i></div>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between small">
+                <span class="col-mut">Progreso del curso</span>
+                <span id="contadorCurso" class="fw-semibold">0 / 35</span>
+              </div>
+              <div class="progress" style="height: 8px; margin-top: .4rem;">
+                <div id="barraCurso" class="progress-bar" style="width: 0%;" role="progressbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-8">
+            <h4 class="d-flex align-items-center gap-2 mb-3"><i class="bi bi-diagram-3" style="color: var(--acento);"></i> Módulos del curso</h4>
+            <div class="row g-4" id="gridModulos"><div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-collection"></i></div><div><span class="mod-card-kicker">Módulo 1</span><h5 class="mod-card-titulo mb-0">Movimiento y cinemática</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="fisica-0-0" href="modulo-1-movimiento-y-cinematica/01-magnitudes-y-unidades.html"><span class="minificha-num">1</span><span class="minificha-txt">Magnitudes y unidades</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-0-1" href="modulo-1-movimiento-y-cinematica/02-movimiento-rectilineo-uniforme-mru.html"><span class="minificha-num">2</span><span class="minificha-txt">Movimiento rectilíneo uniforme (MRU)</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-0-2" href="modulo-1-movimiento-y-cinematica/03-movimiento-rectilineo-uniformemente-variado-mruv.html"><span class="minificha-num">3</span><span class="minificha-txt">Movimiento rectilíneo uniformemente variado (MRUV)</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-0-3" href="modulo-1-movimiento-y-cinematica/04-caida-libre.html"><span class="minificha-num">4</span><span class="minificha-txt">Caída libre</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-0-4" href="modulo-1-movimiento-y-cinematica/05-movimiento-circular-uniforme.html"><span class="minificha-num">5</span><span class="minificha-txt">Movimiento circular uniforme</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-1-movimiento-y-cinematica/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-map"></i></div><div><span class="mod-card-kicker">Módulo 2</span><h5 class="mod-card-titulo mb-0">Fuerzas y dinámica</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="fisica-1-0" href="modulo-2-fuerzas-y-dinamica/01-las-leyes-de-newton.html"><span class="minificha-num">1</span><span class="minificha-txt">Las leyes de Newton</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-1-1" href="modulo-2-fuerzas-y-dinamica/02-fuerza-masa-y-aceleracion.html"><span class="minificha-num">2</span><span class="minificha-txt">Fuerza, masa y aceleración</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-1-2" href="modulo-2-fuerzas-y-dinamica/03-fuerza-de-rozamiento.html"><span class="minificha-num">3</span><span class="minificha-txt">Fuerza de rozamiento</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-1-3" href="modulo-2-fuerzas-y-dinamica/04-plano-inclinado.html"><span class="minificha-num">4</span><span class="minificha-txt">Plano inclinado</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-1-4" href="modulo-2-fuerzas-y-dinamica/05-fuerza-centripeta.html"><span class="minificha-num">5</span><span class="minificha-txt">Fuerza centrípeta</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-2-fuerzas-y-dinamica/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-layers"></i></div><div><span class="mod-card-kicker">Módulo 3</span><h5 class="mod-card-titulo mb-0">Estática y equilibrio</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="fisica-2-0" href="modulo-3-estatica-y-equilibrio/01-momento-de-una-fuerza-torque.html"><span class="minificha-num">1</span><span class="minificha-txt">Momento de una fuerza (torque)</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-2-1" href="modulo-3-estatica-y-equilibrio/02-equilibrio-de-cuerpos.html"><span class="minificha-num">2</span><span class="minificha-txt">Equilibrio de cuerpos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-2-2" href="modulo-3-estatica-y-equilibrio/03-palancas-y-maquinas-simples.html"><span class="minificha-num">3</span><span class="minificha-txt">Palancas y máquinas simples</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-2-3" href="modulo-3-estatica-y-equilibrio/04-centro-de-gravedad.html"><span class="minificha-num">4</span><span class="minificha-txt">Centro de gravedad</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-2-4" href="modulo-3-estatica-y-equilibrio/05-estabilidad.html"><span class="minificha-num">5</span><span class="minificha-txt">Estabilidad</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-3-estatica-y-equilibrio/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-compass"></i></div><div><span class="mod-card-kicker">Módulo 4</span><h5 class="mod-card-titulo mb-0">Energía y ondas</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="fisica-3-0" href="modulo-4-energia-y-ondas/01-trabajo-y-potencia.html"><span class="minificha-num">1</span><span class="minificha-txt">Trabajo y potencia</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-3-1" href="modulo-4-energia-y-ondas/02-energia-cinetica-y-potencial.html"><span class="minificha-num">2</span><span class="minificha-txt">Energía cinética y potencial</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-3-2" href="modulo-4-energia-y-ondas/03-conservacion-de-la-energia.html"><span class="minificha-num">3</span><span class="minificha-txt">Conservación de la energía</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-3-3" href="modulo-4-energia-y-ondas/04-movimiento-ondulatorio.html"><span class="minificha-num">4</span><span class="minificha-txt">Movimiento ondulatorio</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-3-4" href="modulo-4-energia-y-ondas/05-sonido-y-luz.html"><span class="minificha-num">5</span><span class="minificha-txt">Sonido y luz</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-4-energia-y-ondas/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-diagram-3"></i></div><div><span class="mod-card-kicker">Módulo 5</span><h5 class="mod-card-titulo mb-0">Óptica y ondas electromagnéticas</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="fisica-4-0" href="modulo-5-optica-y-ondas-electromagneticas/01-naturaleza-de-la-luz-y-propagacion-rectilinea.html"><span class="minificha-num">1</span><span class="minificha-txt">Naturaleza de la luz y propagación rectilínea</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-4-1" href="modulo-5-optica-y-ondas-electromagneticas/02-reflexion-espejos-planos-y-esfericos.html"><span class="minificha-num">2</span><span class="minificha-txt">Reflexión, espejos planos y esféricos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-4-2" href="modulo-5-optica-y-ondas-electromagneticas/03-lentes-y-optica-geometrica.html"><span class="minificha-num">3</span><span class="minificha-txt">Lentes y óptica geométrica</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-4-3" href="modulo-5-optica-y-ondas-electromagneticas/04-ondas-amplitud-longitud-de-onda-y-sonido.html"><span class="minificha-num">4</span><span class="minificha-txt">Ondas: amplitud, longitud de onda y sonido</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-4-4" href="modulo-5-optica-y-ondas-electromagneticas/05-espectro-electromagnetico-y-aplicaciones.html"><span class="minificha-num">5</span><span class="minificha-txt">Espectro electromagnético y aplicaciones</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-5-optica-y-ondas-electromagneticas/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-lightning-charge"></i></div><div><span class="mod-card-kicker">Módulo 6</span><h5 class="mod-card-titulo mb-0">Termodinámica</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="fisica-5-0" href="modulo-6-termodinamica/01-temperatura-y-calor-que-se-mide-y-como-se-transmite.html"><span class="minificha-num">1</span><span class="minificha-txt">Temperatura y calor: qué se mide y cómo se transmite</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-5-1" href="modulo-6-termodinamica/02-primera-ley-de-la-termodinamica-y-trabajo.html"><span class="minificha-num">2</span><span class="minificha-txt">Primera ley de la termodinámica y trabajo</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-5-2" href="modulo-6-termodinamica/03-segunda-ley-entropia-y-maquinas-termicas.html"><span class="minificha-num">3</span><span class="minificha-txt">Segunda ley, entropía y máquinas térmicas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-5-3" href="modulo-6-termodinamica/04-ciclos-gases-ideales-y-transformaciones.html"><span class="minificha-num">4</span><span class="minificha-txt">Ciclos, gases ideales y transformaciones</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-5-4" href="modulo-6-termodinamica/05-ciclos-otto-y-diesel-el-motor-real.html"><span class="minificha-num">5</span><span class="minificha-txt">Ciclos Otto y Diesel: el motor real</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-6-termodinamica/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-globe-americas"></i></div><div><span class="mod-card-kicker">Módulo 7</span><h5 class="mod-card-titulo mb-0">Electricidad y magnetismo</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="fisica-6-0" href="modulo-7-electricidad-y-magnetismo/01-carga-electrica-y-ley-de-coulomb.html"><span class="minificha-num">1</span><span class="minificha-txt">Carga eléctrica y ley de Coulomb</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-6-1" href="modulo-7-electricidad-y-magnetismo/02-circuito-electrico-corriente-tension-y-resistencia.html"><span class="minificha-num">2</span><span class="minificha-txt">Circuito eléctrico: corriente, tensión y resistencia</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-6-2" href="modulo-7-electricidad-y-magnetismo/03-potencia-y-resistencia-interna.html"><span class="minificha-num">3</span><span class="minificha-txt">Potencia y resistencia interna</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-6-3" href="modulo-7-electricidad-y-magnetismo/04-campo-electrico-y-potencial.html"><span class="minificha-num">4</span><span class="minificha-txt">Campo eléctrico y potencial</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="fisica-6-4" href="modulo-7-electricidad-y-magnetismo/05-magnetismo-campo-magnetico-y-fuerza-de-lorentz.html"><span class="minificha-num">5</span><span class="minificha-txt">Magnetismo, campo magnético y fuerza de Lorentz</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-7-electricidad-y-magnetismo/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div></div>
+          </div>
+          <aside class="col-lg-4">
+            <div class="tarjeta p-4 reveal">
+              <h5 class="d-flex align-items-center gap-2"><i class="bi bi-signpost-2" style="color: var(--acento);"></i> Ruta de estudio</h5>
+              <ol class="ruta-estudio mt-3 mb-0"><li class="reveal"><span class="paso-num">1</span><span class="paso-txt">Empieza por magnitudes y unidades para manejar bien los datos.</span></li><li class="reveal"><span class="paso-num">2</span><span class="paso-txt">Domina cinemática antes de dinámica: movimiento primero, fuerzas después.</span></li><li class="reveal"><span class="paso-num">3</span><span class="paso-txt">Cierra con energía y ondas conectando todo lo aprendido.</span></li></ol>
+            </div>
+          </aside>
+        </div>
+
+        <div class="tarjeta p-4 mt-4 reveal">
+          <h5 class="d-flex align-items-center gap-2"><i class="bi bi-puzzle" style="color: var(--acento);"></i> Recursos recomendados</h5>
+          <ul class="lista-recursos mt-3 mb-0"><li class="d-flex gap-2 mb-2"><i class="bi bi-box-arrow-up-right" style="color:var(--acento);"></i><div><a href="https://es.khanacademy.org/science/physics" target="_blank" rel="noopener">Khan Academy — Física</a><div class="col-mut small">Videos con simulaciones de movimiento y energía.</div></div></li><li class="d-flex gap-2 mb-2"><i class="bi bi-box-arrow-up-right" style="color:var(--acento);"></i><div><a href="https://educaplus.org" target="_blank" rel="noopener">Educaplus — Física interactiva</a><div class="col-mut small">Laboratorios virtuales de mecánica y ondas.</div></div></li><li class="d-flex gap-2 mb-2"><i class="bi bi-info-circle" style="color:var(--acento);"></i><div><span>Fórmulas de una sola hoja</span><div class="col-mut small">Resume cinemática y dinámica en una ficha para repasar. Elabora la tuya al finalizar</div></div></li></ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../secciones/recursos.html">Recursos</a>
+          <a href="../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+  <script>
+    var CLAVES = ["fisica-0-0","fisica-0-1","fisica-0-2","fisica-0-3","fisica-0-4","fisica-1-0","fisica-1-1","fisica-1-2","fisica-1-3","fisica-1-4","fisica-2-0","fisica-2-1","fisica-2-2","fisica-2-3","fisica-2-4","fisica-3-0","fisica-3-1","fisica-3-2","fisica-3-3","fisica-3-4","fisica-4-0","fisica-4-1","fisica-4-2","fisica-4-3","fisica-4-4","fisica-5-0","fisica-5-1","fisica-5-2","fisica-5-3","fisica-5-4","fisica-6-0","fisica-6-1","fisica-6-2","fisica-6-3","fisica-6-4"];
+    var KEY = "asl-progreso";
+    function leer() { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; } }
+    function pintar() {
+      var estados = leer(), hechas = 0;
+      CLAVES.forEach(function (k) { if (estados[k]) hechas++; });
+      var contador = document.getElementById("contadorCurso");
+      if (contador) contador.textContent = hechas + " / " + CLAVES.length;
+      var barra = document.getElementById("barraCurso");
+      if (barra && CLAVES.length) barra.style.width = Math.round((hechas / CLAVES.length) * 100) + "%";
+      var fichas = document.querySelectorAll(".minificha-link[data-clave]");
+      fichas.forEach(function (f) {
+        if (estados[f.getAttribute("data-clave")]) f.classList.add("hecha");
+        else f.classList.remove("hecha");
+      });
+    }
+    document.addEventListener("DOMContentLoaded", pintar);
+    document.addEventListener("DOMContentLoaded", function () {
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naturaleza de la luz y propagación rectilínea — Física</title>
+  <meta name="description" content="Describir cómo se propaga la luz, explicar la sombra y el eclipses, y aplicar las leyes de la geometría óptica." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 5 · Óptica y ondas electromagnéticas</a> <span class="mx-2 opacity-50">/</span>
+          <span>Naturaleza de la luz y propagación rectilínea</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Naturaleza de la luz y propagación rectilínea</h1>
+            <p class="articulo-modulo">Módulo 5 · Óptica y ondas electromagnéticas</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Describir cómo se propaga la luz, explicar la sombra y el eclipses, y aplicar las leyes de la geometría óptica.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La luz es una <strong>radiación electromagnética</strong> que se propaga por el vacío y por los medios transparentes a una velocidad mucho mayor que la del sonido. Una de sus propiedades clave es que <strong>viaja en línea recta</strong> en un medio homogéneo, y de ahí se deduce todo lo demás de este módulo.</p><h4 class="lecc-h4">Sombra y eclipses</h4><p>Si un cuerpo opaco se interpone entre la fuente luminosa y un punto, ese punto queda en la <strong>sombra</strong>: la luz no llega. Cuando el cuerpo tapa solo una parte de la fuente, se ve la <strong>penumbra</strong>, una zona con luz parcial.</p><div class="formula">I = <span class="frac"><span class="frac-n">d<sup>2</sup></span><span class="frac-d">4</span></span></div><p>La fórmula de <strong>[iluminancia] de un foco puntual</strong> dice que la luz que llega a una superficie cae con el cuadrado de la distancia. Si duplicas la distancia, la iluminancia se reduce a la cuarta parte. Por eso una lámpara da mucha más luz de cerca que de lejos.</p><h4 class="lecc-h4">Dos leyes que Lucía siempre necesitó</h4><ul class="lecc-ul"><li><strong>Reflexión</strong>: el ángulo de incidencia es igual al ángulo de reflexión, y ambos miden desde la normal (la perpendicular a la superficie), no desde la superficie. Confundir esos dos ángulos es el error más común del tema.</li><li><strong>Refracción</strong>: al cambiar de medio, el rayo se desvía. La <strong>ley de Snell</strong> relaciona los ángulos con las velocidades.</li></ul><div class="formula">n<sub>1</sub> <span class="fn">sin</span>θ<sub>1</sub> = n<sub>2</sub> <span class="fn">sin</span>θ<sub>2</sub></div><h4 class="lecc-h4">Por qué la luz se curva en el agua</h4><p>Cuando la luz pasa del aire al agua pasa de ir rápido a ir más despacio, y el rayo se inclina <strong>hacia la normal</strong>. Al salir del agua hacia el aire ocurre lo contrario y se aleja de la normal, por eso desde dentro de una piscina el fondo parece estar más cerca.</p><div class="lecc-nota">Un rayo que pasa del agua al aire nunca se desvía hacia la normal: al salir siempre se aleja, y por eso las cosas vistas a través de una vaso de agua parecen más grandes de lo que son.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un foco se sitúa a 4 m de una pared. ¿Qué iluminancia recibe la pared?</p><h4 class="lecc-h4">Aplicamos la fórmula</h4><div class="formula">I = <span class="frac"><span class="frac-n">d<sup>2</sup></span><span class="frac-d">4</span></span> = <span class="frac"><span class="frac-n">4<sup>2</sup></span><span class="frac-d">4</span></span> = <span class="frac"><span class="frac-n">16</span><span class="frac-d">4</span></span> = 4</div><h4 class="lecc-h4">Con más distancia para comparar</h4><p>A 8 m: <span class="formula formula-linea">I = <span class="frac"><span class="frac-n">8<sup>2</sup></span><span class="frac-d">4</span></span> = <span class="frac"><span class="frac-n">64</span><span class="frac-d">4</span></span> = 16</span></p><h4 class="lecc-h4">La comprobación que importa</h4><p>Pasar de 4 a 8 m es <strong>duplicar</strong> la distancia, y la iluminancia pasa de 4 a 16: se ha <strong>cuadruplicado</strong>, no se ha duplicado. Eso confirma que la ley es del cuadrado de la distancia.</p><div class="lecc-nota">Si el enunciado pidiera el punto donde la iluminancia cae a la mitad, despejando: <span class="formula formula-linea">d = <span class="raiz"><span class="r-signo">√</span><span class="radicando">4I</span></span></span>.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Mide siempre los ángulos de la ley de Snell desde la <strong>normal</strong>, no desde la superficie. Un rayo que se acerca mucho a la normal se ve casi vertical, y mar personas cuentan el ángulo desde el suelo y obtienen 20° en lugar de 70°.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-4-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-4-energia-y-ondas/05-sonido-y-luz.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-reflexion-espejos-planos-y-esfericos.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-4-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscar en internet sin perder tiempo — Alfabetización Digital</title>
+  <meta name="description" content="Construir consultas de búsqueda mediante operadores, filtrar resultados y evaluar la relevancia de una página." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="alfabetizacion-digital">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Alfabetización Digital</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Internet, fuentes y trabajo en la nube</a> <span class="mx-2 opacity-50">/</span>
+          <span>Buscar en internet sin perder tiempo</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-laptop"></i></div>
+            <h1 class="articulo-titulo">Buscar en internet sin perder tiempo</h1>
+            <p class="articulo-modulo">Módulo 3 · Internet, fuentes y trabajo en la nube</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Construir consultas de búsqueda mediante operadores, filtrar resultados y evaluar la relevancia de una página.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Buscar «celular botones no devuelve lo que uno quiere. La diferencia entre una búsqueda útil y una frustrada está en el <strong>operador</strong>.</p><h4 class="lecc-h4">Operadores que cambian todo</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Operador</th><th>Qué hace</th><th>Ejemplo</th></tr></thead><tbody><tr><td>comillas</td><td>frase exacta</td><td>`&quot;cambio climático&quot;`</td></tr><tr><td>menos</td><td>excluye términos</td><td>`flores -cactus`</td></tr><tr><td>site</td><td>busca dentro de un dominio</td><td>`site:gob.pe origami`</td></tr><tr><td>filetype</td><td>filtra por tipo de archivo</td><td>`filetype:pdf`</td></tr><tr><td>OR</td><td>cualquiera de las dos palabras</td><td>`perro OR cachorro`</td></tr></tbody></table></div><h4 class="lecc-h4">Cómo se lee un resultado</h4><div class="tabla-wrap"><table class="tabla-datos"><thead><tr><th>Parte</th><th>Qué significa</th></tr></thead><tbody><tr><td>Título</td><td>el nombre de la página</td></tr><tr><td>URL</td><td>quién publica y en qué dominio</td></tr><tr><td>Descripción</td><td>el fragmento que el buscador muestra</td></tr></tbody></table></div><p>Un título recargado con muchos términos puede ser publicidad, no información.</p><h4 class="lecc-h4">Ordena los resultados</h4><ol class="lecc-ol"><li>Pon la frase exacta entre comillas.</li><li>Añade un término que quite la ambigüedad.</li><li>Usa el menos para descartar lo que no quieres.</li><li>Filtra por fecha si buscas información reciente.</li><li>Si la búsqueda oficial no funciona, cambia de estrategia.</li></ol><dl class="lecc-glosario"><dt>Buscador</dt><dd>Programa que encuentra páginas a partir de una consulta.</dd><dt>Consulta</dt><dd>Texto que se escribe para buscar información.</dd><dt>Operador</dt><dd>Símbolo que modifica el significado de una búsqueda.</dd><dt>Palabra clave</dt><dd>Término que define el tema buscado.</dd><dt>Cache</dt><dd>Copia temporal que guarda el buscador de una página.</dd></dl>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Necesitas un gráfico de la erosión interna del suelo, para un trabajo escolar.</p><h4 class="lecc-h4">Consulta inicial, fallida</h4><div class="lecc-codigo"><pre><code>erosion suelo
+</code></pre></div><p>Devuelve páginas de venta de Tierra y un artículo de 2004 con datos que ya no sirven.</p><h4 class="lecc-h4">Consulta mejorada</h4><div class="lecc-codigo"><pre><code>&quot;erosión del suelo&quot; -venta -comprar 2015..2026
+</code></pre></div><p>Ahora aparecen documentos de organismos oficiales y de la última década.</p><h4 class="lecc-h4">Si el resultado oficial no aparece</h4><p>Se añade `site:` con el dominio del organismo y se busca el nombre exacto del informe. Si tampoco aparece, es probable que el documento ya no exista, y eso vale como respuesta: en un trabajo se puede citar «no se encontró información oficial actualizada».</p><div class="lecc-nota">Una búsqueda no es una consulta: es una estrategia. Si el primer resultado no sirve, el problema casi nunca es el buscador, es la consulta.</div><div class="lecc-ejercicio"><h4 class="lecc-ejercicio-titulo"><i class="bi bi-pencil-square"></i> Mejora una búsqueda</h4><ol class="lecc-ol"><li>¿Cómo buscarías un resumen del libro «El principito»?</li><li>¿Cómo excluirías páginas de venta de Shoes?</li></ol><details class="lecc-respuesta"><summary>Ver respuesta</summary><p>Con `&quot;El principito&quot; resumen`, y con `zapatos -comprar -venta -precio`.</p></details></div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Cuando dices un término en dos palabras, búscalo también en plural y sin acentos. Mucha información usa el singular y el buscador no siempre lo resuelve solo.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="alfabetizacion-digital-2-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="../modulo-2-documentos-y-hojas-de-calculo/03-hojas-de-calculo-formulas-y-referencias.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-fuentes-confiables-y-citas.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "alfabetizacion-digital-2-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

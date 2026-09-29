@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Las cuatro regiones del Tawantinsuyo</text>
+
+  <defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <rect x="14" y="40" width="112" height="46" rx="10" class="fig-zona"/>
+  <text x="70" y="60" text-anchor="middle" class="fig-titulo" font-size="12">Chinchaysuyo</text>
+  <text x="70" y="78" text-anchor="middle" class="fig-nota" font-size="11">norte y costa</text>
+
+  <rect x="234" y="40" width="112" height="46" rx="10" class="fig-zona"/>
+  <text x="290" y="60" text-anchor="middle" class="fig-titulo" font-size="12">Antisuyo</text>
+  <text x="290" y="78" text-anchor="middle" class="fig-nota" font-size="11">este, selva y llanos</text>
+
+  <rect x="14" y="138" width="112" height="46" rx="10" class="fig-zona"/>
+  <text x="70" y="158" text-anchor="middle" class="fig-titulo" font-size="12">Contisuyo</text>
+  <text x="70" y="176" text-anchor="middle" class="fig-nota" font-size="11">oeste, costa sur</text>
+
+  <rect x="234" y="138" width="112" height="46" rx="10" class="fig-zona"/>
+  <text x="290" y="158" text-anchor="middle" class="fig-titulo" font-size="12">Collasuyo</text>
+  <text x="290" y="176" text-anchor="middle" class="fig-nota" font-size="11">sur y altiplano</text>
+
+  <circle cx="180" cy="112" r="30" class="fig-destac"/>
+  <text x="180" y="116" text-anchor="middle" class="fig-destac-txt" font-size="13">Cusco</text>
+
+  <line x1="152" y1="92" x2="112" y2="86" class="fig-flecha"/>
+  <line x1="208" y1="92" x2="248" y2="86" class="fig-flecha"/>
+  <line x1="152" y1="132" x2="112" y2="140" class="fig-flecha"/>
+  <line x1="208" y1="132" x2="248" y2="140" class="fig-flecha"/>
+
+  <text x="180" y="212" text-anchor="middle" class="fig-nota" font-size="12">Tawantinsuyo son las cuatro regiones unidas por una red de caminos.</text>
+  <text x="180" y="232" text-anchor="middle" class="fig-nota" font-size="12">Cusco no estaba en el centro geografico, sino en el cruce de rutas.</text>
+</svg>

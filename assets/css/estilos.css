@@ -1,0 +1,1803 @@
+/* ============================================================================
+   TEMA
+
+   El sitio es oscuro por defecto. El modo claro se activa con data-tema="claro"
+   en <html>, que escribe el boton de ui.js ANTES de que se pinte el fondo: si se
+   hiciera despues, la pagina apareceria un instante en oscuro y luego saltaria
+   a claro, que es el parpadeo que hace que un sitio con selector de tema parezca
+   poco pulido.
+
+   El modo claro no es un segundo archivo de estilos. Todo lo que cambia son las
+   variables de este bloque, mas los pocos colores que estaban escritos a mano
+   y que ahora salen de una variable. Por eso las reglas de abajo usan siempre
+   var(--...) y nunca un color fijo: si aparece un #fff o un rgba(255,255,255)
+   suelto, ese elemento se quedara ilegible al cambiar de tema.
+
+   --sobre-acento es el color del texto o del icono que va ENCIMA de un color de
+   acento. Sin el, cada boton de acento tendria que decidir entre blanco y
+   negro segun el curso, y en modo claro algunos de los tonos claros necesitan
+   texto oscuro encima.
+   ========================================================================= */
+:root {
+  color-scheme: dark;
+
+  --fondo: #0b1020;
+  --fondo-2: #0e1530;
+  --fondo-card: rgba(255, 255, 255, 0.04);
+  --fondo-card-hover: rgba(255, 255, 255, 0.08);
+  --fondo-formula: rgba(11, 16, 32, 0.55);
+  --fondo-codigo: #080d1a;
+  --borde: rgba(255, 255, 255, 0.12);
+  --texto: #e8ecf7;
+  --texto-mut: #9aa6c3;
+  --azul: #3b82f6;
+  --violeta: #8b5cf6;
+  --verde: #10b981;
+  --ambar: #f59e0b;
+  --rosa: #f43f5e;
+  --cian: #06b6d4;
+  --sombra: 0 10px 40px rgba(0, 0, 0, 0.35);
+  --radio: 1rem;
+  --fuente: "Poppins", "Inter", system-ui, -apple-system, sans-serif;
+
+  /* --- Derivados: los que antes estaban escritos a mano en las reglas --- */
+  /* Fondo traslucido de la barra de navegacion. Sobre un fondo claro un rgba
+     oscuro deja la barra gris sucio; aqui se cambia por un blanco al 80%. */
+  --nav-fondo: rgba(11, 16, 32, 0.75);
+  /* Texto/icono encima de un color de acento. */
+  --sobre-acento: #ffffff;
+  /* Blancos usages: en claro se invierten a negros al 4-8% para que "realzar"
+     siga significando "un poco mas de contraste" y no "mas luz". */
+  --realce: rgba(255, 255, 255, 0.06);
+  --realce-fuerte: rgba(255, 255, 255, 0.12);
+  --borde-fuerte: rgba(255, 255, 255, 0.28);
+  --sombra-card: 0 8px 20px rgba(0, 0, 0, 0.30);
+  --sombra-hover: 0 12px 28px rgba(0, 0, 0, 0.40);
+  --sombra-flotante: 0 14px 34px rgba(0, 0, 0, 0.40);
+  /* Halo que delata que un bloque con scroll sigue teniendo contenido a la
+     derecha. */
+  --scroll-halo: rgba(255, 255, 255, 0.06);
+  /* Intensidad del degradado radial que dibuja .curso-card::before. */
+  --card-halo: 0.55;
+  /* Degradados de fondo de la pagina. */
+  --halo-1: rgba(59, 130, 246, 0.18);
+  --halo-2: rgba(139, 92, 246, 0.14);
+  /* Texto degradado de la marca y de los numeros estadisticos: los tonos
+     pasteles del modo oscuro se pierden sobre blanco, asi que en claro se
+     usan variantes oscuras del mismo degradado. */
+  --marca-a: #60a5fa;
+  --marca-b: #a78bfa;
+  --marca-c: #f472b6;
+  --marca-d: #fbbf24;
+  /* Grises de apoyo dentro de las figuras SVG. */
+  --fig-apoyo: rgba(148, 163, 184, 0.14);
+  --fig-apoyo-linea: rgba(148, 163, 184, 0.70);
+  --fig-apoyo-txt: rgba(203, 213, 225, 0.85);
+  --fig-sub: rgba(203, 213, 225, 0.80);
+  /* Etiquetas de color plano (badge del hero, objetivo-tag, pills activas). */
+  --pastel: #c4b5fd;
+  --exito-txt: #6ee7b7;
+}
+
+[data-curso="matematica"] { --acento: var(--azul); --acento-2: #60a5fa; }
+[data-curso="fisica"] { --acento: var(--violeta); --acento-2: #a78bfa; }
+[data-curso="quimica"] { --acento: var(--verde); --acento-2: #34d399; }
+[data-curso="raz-matematico"],
+[data-curso="razonamiento-matematico"] { --acento: var(--ambar); --acento-2: #fbbf24; }
+[data-curso="raz-verbal"],
+[data-curso="razonamiento-verbal"] { --acento: var(--rosa); --acento-2: #fb7185; }
+[data-curso="comunicacion"] { --acento: var(--cian); --acento-2: #22d3ee; }
+[data-curso="historia"] { --acento: #d97706; --acento-2: #f59e0b; }
+[data-curso="ciencia-tecnologia-ambiente"] { --acento: #0d9488; --acento-2: #2dd4bf; }
+[data-curso="admision-universitaria"] { --acento: #a855f7; --acento-2: #c084fc; }
+[data-curso="biologia"] { --acento: #16a34a; --acento-2: #4ade80; }
+[data-curso="alfabetizacion-digital"] { --acento: #0891b2; --acento-2: #22d3ee; }
+
+/* ============================================================================
+   Modo claro
+   ========================================================================= */
+:root[data-tema="claro"] {
+  color-scheme: light;
+
+  --fondo: #f5f7fc;
+  --fondo-2: #e9edf7;
+  --fondo-card: rgba(15, 23, 42, 0.035);
+  --fondo-card-hover: rgba(15, 23, 42, 0.065);
+  --fondo-formula: rgba(15, 23, 42, 0.04);
+  --fondo-codigo: #eef1f8;
+  --borde: rgba(15, 23, 42, 0.14);
+  --texto: #131a2b;
+  --texto-mut: #57627d;
+  --sombra: 0 10px 40px rgba(15, 23, 42, 0.10);
+
+  --nav-fondo: rgba(245, 247, 252, 0.82);
+  --sobre-acento: #ffffff;
+  --realce: rgba(15, 23, 42, 0.04);
+  --realce-fuerte: rgba(15, 23, 42, 0.08);
+  --borde-fuerte: rgba(15, 23, 42, 0.22);
+  --sombra-card: 0 8px 20px rgba(15, 23, 42, 0.10);
+  --sombra-hover: 0 12px 28px rgba(15, 23, 42, 0.14);
+  --sombra-flotante: 0 14px 34px rgba(15, 23, 42, 0.16);
+  --scroll-halo: rgba(15, 23, 42, 0.05);
+  --card-halo: 0.14;
+  --halo-1: rgba(59, 130, 246, 0.16);
+  --halo-2: rgba(139, 92, 246, 0.12);
+  --marca-a: #2563eb;
+  --marca-b: #7c3aed;
+  --marca-c: #db2777;
+  --marca-d: #d97706;
+  --fig-apoyo: rgba(100, 116, 139, 0.10);
+  --fig-apoyo-linea: rgba(100, 116, 139, 0.55);
+  --fig-apoyo-txt: rgba(51, 65, 85, 0.85);
+  --fig-sub: rgba(51, 65, 85, 0.75);
+  --pastel: #5b21b6;
+  --exito-txt: #047857;
+}
+
+/* Los acentos claros del modo oscuro (#60a5fa, #34d399...) estan pensados para
+   texto sobre fondo oscuro. Sobre blanco casi no se ven, asi que en modo claro
+   cada curso baja su --acento-2 a una variante oscura del mismo tono. El
+   --acento principal se conserva: se usa en rellenos y bordes, donde el tono
+   vivo funciona en los dos temas. */
+:root[data-tema="claro"] [data-curso="matematica"] { --acento-2: #1d4ed8; }
+:root[data-tema="claro"] [data-curso="fisica"] { --acento-2: #6d28d9; }
+:root[data-tema="claro"] [data-curso="quimica"] { --acento-2: #047857; }
+:root[data-tema="claro"] [data-curso="raz-matematico"],
+:root[data-tema="claro"] [data-curso="razonamiento-matematico"] { --acento-2: #b45309; }
+:root[data-tema="claro"] [data-curso="raz-verbal"],
+:root[data-tema="claro"] [data-curso="razonamiento-verbal"] { --acento-2: #be123c; }
+:root[data-tema="claro"] [data-curso="comunicacion"] { --acento-2: #0e7490; }
+:root[data-tema="claro"] [data-curso="historia"] { --acento-2: #b45309; }
+:root[data-tema="claro"] [data-curso="ciencia-tecnologia-ambiente"] { --acento-2: #0f766e; }
+:root[data-tema="claro"] [data-curso="admision-universitaria"] { --acento-2: #7e22ce; }
+:root[data-tema="claro"] [data-curso="biologia"] { --acento-2: #15803d; }
+:root[data-tema="claro"] [data-curso="alfabetizacion-digital"] { --acento-2: #0e7490; }
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--fuente);
+  background:
+    radial-gradient(1200px 600px at 85% -10%, var(--halo-1), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, var(--halo-2), transparent 55%),
+    linear-gradient(180deg, var(--fondo), var(--fondo-2));
+  background-attachment: fixed;
+  color: var(--texto);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: -0.02em; }
+
+a { color: var(--acento, var(--azul)); text-decoration: none; }
+a:hover { color: var(--acento-2, #93c5fd); }
+
+/* ===== Barra de navegación ===== */
+.nav-guia {
+  background: var(--nav-fondo);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--borde);
+}
+.nav-guia .nav-link { color: var(--texto-mut); font-weight: 500; }
+.nav-guia .nav-link:hover, .nav-guia .nav-link.active { color: var(--texto); }
+.marca {
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--marca-a), var(--marca-b), var(--marca-c));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ===== Hero ===== */
+.hero { padding: 6rem 0 4.5rem; }
+.hero .badge-grad {
+  background: linear-gradient(90deg, rgba(59,130,246,.15), rgba(139,92,246,.15));
+  border: 1px solid rgba(139,92,246,.4);
+  color: var(--pastel);
+  padding: .45rem .9rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.1;
+}
+.grad-texto {
+  background: linear-gradient(90deg, var(--marca-a), var(--marca-b), var(--marca-c), var(--marca-d));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero .lead { color: var(--texto-mut); max-width: 46rem; }
+.btn-cta {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  border: none;
+  color: var(--sobre-acento);
+  font-weight: 600;
+  padding: .8rem 1.6rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, .35);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn-cta:hover { color: var(--sobre-acento); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(99,102,241,.5); }
+.btn-ghost {
+  background: var(--realce);
+  border: 1px solid var(--borde);
+  color: var(--texto);
+  font-weight: 600;
+  padding: .8rem 1.6rem;
+  border-radius: 999px;
+  transition: background .15s ease;
+}
+.btn-ghost:hover { background: var(--realce-fuerte); color: var(--texto); }
+
+/* ===== Cards ===== */
+.tarjeta {
+  background: var(--fondo-card);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  height: 100%;
+}
+.tarjeta:hover {
+  transform: translateY(-6px);
+  border-color: var(--borde-fuerte);
+  background: var(--fondo-card-hover);
+}
+.curso-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.8rem;
+  color: var(--texto);
+}
+.curso-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(500px 200px at 80% -20%, var(--acento) 0%, transparent 60%);
+  opacity: var(--card-halo);
+  pointer-events: none;
+}
+.curso-card .icono {
+  width: 58px; height: 58px;
+  display: grid; place-items: center;
+  font-size: 1.7rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--acento), var(--acento-2));
+  color: var(--sobre-acento);
+  box-shadow: var(--sombra-card);
+}
+.curso-card .areas-chips { position: relative; z-index: 1; }
+.chip {
+  display: inline-block;
+  background: var(--realce);
+  border: 1px solid var(--borde);
+  color: var(--texto-mut);
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  margin: .15rem;
+}
+.link-curso { font-weight: 700; color: var(--acento-2); }
+
+/* ===== Tablas / listas ===== */
+.lista-checks { list-style: none; padding: 0; }
+.lista-checks li { padding: .35rem 0; color: var(--texto-mut); }
+.lista-checks i { color: var(--acento); margin-right: .5rem; }
+
+/* ===== Secciones ===== */
+.seccion { padding: 4rem 0; }
+.seccion .etiqueta {
+  color: var(--acento);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .8rem;
+}
+.titulo-seccion { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+
+/* ===== Card de módulo (grid del índice de curso) =====
+   El padding va aqui y no como utilidad p-4 en el HTML para que las fichas y
+   el boton hereden el mismo margen interior en los cuatro lados. Antes no
+   habia padding en la card y el contenido tocaba el borde. */
+.mod-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: 1.3rem 1.35rem 1.35rem;
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+.mod-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--acento), var(--acento-2));
+}
+.mod-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--acento) 45%, var(--borde));
+  box-shadow: var(--sombra-flotante);
+}
+.mod-card-ico {
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  flex: 0 0 2.9rem;
+  border-radius: .9rem;
+  font-size: 1.35rem;
+  color: var(--acento-2);
+  background: color-mix(in srgb, var(--acento) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--acento) 38%, transparent);
+}
+.mod-card-kicker {
+  display: block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--acento-2);
+}
+.mod-card-titulo {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--texto);
+  line-height: 1.3;
+}
+
+/* ===== Mini-fichas de lección dentro de la card de módulo ===== */
+.lista-minifichas { list-style: none; margin: 0; padding: 0; display: grid; gap: .3rem; }
+.minificha-link {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .45rem .6rem;
+  border-radius: .6rem;
+  font-size: .88rem;
+  color: var(--texto-mut);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background .16s ease, color .16s ease, border-color .16s ease;
+}
+.minificha-link:hover {
+  color: var(--texto);
+  background: var(--fondo-card-hover);
+  border-color: var(--borde);
+}
+.minificha-num {
+  display: grid;
+  place-items: center;
+  flex: 0 0 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--acento-2);
+  background: color-mix(in srgb, var(--acento) 16%, transparent);
+}
+.minificha-txt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.minificha-ok { display: none; color: var(--verde); font-size: .95rem; }
+.minificha-go { font-size: .8rem; opacity: .5; transition: transform .16s ease, opacity .16s ease; }
+.minificha-link:hover .minificha-go { opacity: 1; transform: translateX(3px); }
+.minificha-link.hecha { color: var(--texto-mut); }
+.minificha-link.hecha .minificha-txt { text-decoration: line-through; text-decoration-color: var(--verde); }
+.minificha-link.hecha .minificha-ok { display: inline-block; }
+.minificha-link.hecha .minificha-go { display: none; }
+
+/* El separador de la lista de fichas se corre hacia adentro para que no llegue
+   al borde de la card, que ya tiene padding. */
+.mod-card .lista-minifichas { margin: .1rem 0 .2rem; }
+
+/* ===== Card de lección (grid del índice de módulo) ===== */
+.lecc-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: .9rem;
+  padding: 1.15rem 1.25rem 1.15rem;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.lecc-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--acento) 45%, var(--borde));
+  box-shadow: var(--sombra-hover);
+}
+.lecc-num {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  flex: 0 0 2.1rem;
+  border-radius: .65rem;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--acento-2);
+  background: color-mix(in srgb, var(--acento) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--acento) 36%, transparent);
+}
+.lecc-titulo { font-size: 1rem; font-weight: 700; line-height: 1.35; }
+.lecc-titulo a { color: var(--texto); text-decoration: none; }
+.lecc-card:hover .lecc-titulo a { color: var(--acento-2); }
+.lecc-obj { line-height: 1.5; }
+/* Pie de la card: boton para entrar a la leccion + casilla de completada.
+   Ya no hace falta z-index sobre un stretched-link porque el titulo ya no
+   estira su zona clicable: el boton es la accion principal. */
+.lecc-pie {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding-top: .8rem;
+  border-top: 1px solid var(--borde);
+}
+.lecc-entrar { flex: 1 1 auto; }
+.lecc-check {
+  position: relative;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0 .1rem;
+  border: 0;
+  display: flex;
+  align-items: center;
+}
+.lecc-check .form-check-input { margin: 0; cursor: pointer; }
+.lecc-card.hecha { border-color: color-mix(in srgb, var(--verde) 40%, var(--borde)); }
+.lecc-card.hecha .lecc-titulo a { color: var(--texto-mut); }
+.lecc-card.hecha .lecc-num { color: var(--verde); border-color: color-mix(in srgb, var(--verde) 45%, transparent); background: color-mix(in srgb, var(--verde) 15%, transparent); }
+
+/* ===== FAQ (cards visibles, sin desplegables) ===== */
+.faq-card { transition: transform .2s ease, border-color .2s ease; }
+.faq-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--acento) 40%, var(--borde)); }
+.faq-ico {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: .85rem;
+  font-size: 1.25rem;
+  color: var(--acento-2);
+  background: color-mix(in srgb, var(--acento) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--acento) 38%, transparent);
+}
+
+/* ===== Miga de pan ===== */
+.miga { font-size: .85rem; color: var(--texto-mut); }
+.miga a { color: var(--texto-mut); }
+.miga a:hover { color: var(--texto); }
+
+/* ===== Caja de contenidos de lección ===== */
+.caja-leccion {
+  background: var(--fondo-card);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  backdrop-filter: blur(8px);
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.caja-leccion h3 {
+  font-size: 1.05rem;
+  color: var(--acento-2);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.caja-leccion p, .caja-leccion li { color: var(--texto-mut); }
+.caja-destacada {
+  border-left: 4px solid var(--acento);
+  background: linear-gradient(90deg, var(--realce), transparent);
+}
+
+/* ===== Cuerpo largo de la leccion =====
+   Una leccion real puede tener varios parrafos, listas y subtitulos. Sin esto
+   el texto queda como una sola linea larguisima y nadie lo lee. */
+.lecc-texto { max-width: 68ch; }
+.lecc-texto > *:first-child { margin-top: 0; }
+.lecc-texto > *:last-child { margin-bottom: 0; }
+.lecc-texto p {
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  font-size: 1.02rem;
+}
+.lecc-texto strong { color: var(--texto); font-weight: 600; }
+
+.lecc-h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texto);
+  margin: 1.6rem 0 .7rem;
+  padding-left: .7rem;
+  border-left: 3px solid var(--acento);
+  line-height: 1.4;
+}
+
+.lecc-ul, .lecc-ol { margin: 0 0 1.1rem; padding-left: 1.35rem; }
+.lecc-ul li, .lecc-ol li {
+  line-height: 1.7;
+  margin-bottom: .45rem;
+  font-size: 1.02rem;
+}
+.lecc-ul li::marker { color: var(--acento); }
+.lecc-ol li::marker { color: var(--acento); font-weight: 600; }
+
+.lecc-nota {
+  margin: 0 0 1.1rem;
+  padding: .8rem 1rem;
+  border-radius: .6rem;
+  background: rgba(255, 193, 7, .10);
+  border: 1px solid rgba(255, 193, 7, .28);
+  color: var(--texto);
+  line-height: 1.7;
+  font-size: 1.02rem;
+}
+.lecc-nota::before {
+  content: "\1F4A1";
+  margin-right: .45rem;
+}
+
+/* ===========================================================================
+   BLOQUES RICOS DE LAS LECCIONES
+   Los genera generar-estructura.cjs a partir de las marcas del archivo de
+   contenido: $$formula$$, | tabla |, ```codigo```, !! ejercicios !!,
+   ?? autoevaluacion ?? y glosario:termino :: definicion.
+   Todos se apoyan en las variables del tema, asi que funcionan igual de bien
+   en el modo claro que en el oscuro.
+   ========================================================================= */
+
+/* --- formula ------------------------------------------------------------ */
+.formula {
+  margin: 0 0 1.25rem;
+  padding: .95rem 1.1rem;
+  border-radius: .7rem;
+  background: var(--fondo-formula);
+  border: 1px solid var(--borde);
+  border-left: 3px solid var(--acento);
+  color: var(--texto);
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif;
+  font-size: 1.16rem;
+  line-height: 1.9;
+  text-align: center;
+  overflow-x: auto;
+}
+.formula .frac {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 .28em;
+  line-height: 1.25;
+}
+.formula .frac-n { padding: 0 .35em; border-bottom: 1.5px solid currentColor; }
+.formula .frac-d { padding: 0 .35em; }
+.formula .raiz { white-space: nowrap; }
+.formula .r-signo { font-size: 1.1em; }
+.formula .radicando {
+  border-top: 1.5px solid currentColor;
+  padding: 0 .12em 0 .04em;
+}
+.formula .fn { font-style: italic; }
+.formula .conj { font-style: normal; font-weight: 600; letter-spacing: .01em; }
+.formula .fn-txt { font-style: normal; font-family: var(--fuente); font-size: .92em; }
+.formula .cmd { color: var(--rosa); font-size: .9em; }
+/* Acentos: la raya (overline, hat, vec...) va encima del simbolo. */
+.formula .acento { position: relative; display: inline-block; padding-top: .18em; }
+.formula .acento-raya {
+  position: absolute;
+  top: -.02em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 1;
+  font-size: .8em;
+  pointer-events: none;
+}
+.formula .acento-linea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: currentColor;
+}
+.formula sup, .formula sub { font-size: .72em; }
+
+/* --- tabla de datos ----------------------------------------------------- */
+.tabla-wrap {
+  margin: 0 0 1.25rem;
+  overflow-x: auto;
+  border-radius: .7rem;
+  border: 1px solid var(--borde);
+}
+.tabla-datos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .98rem;
+}
+.tabla-datos th, .tabla-datos td {
+  padding: .6rem .8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--borde);
+  vertical-align: top;
+}
+/* La misma formula, pero como <span>: se usa dentro de una celda de tabla,
+   donde un <div> rompería el HTML. */
+.formula-celda {
+  display: inline-block;
+  margin: 0;
+  padding: .15rem .5rem;
+  font-size: 1rem;
+  border-left-width: 0;
+  text-align: left;
+}
+
+/* Formula en linea, para las respuestas de ejercicios y autoevaluaciones:
+   esas respuestas van dentro de un <p>, asi que la formula no puede romper el
+   bloque. Sin esta regla heredaria el display:block de .formula y partia la
+   respuesta en tres lineas. */
+.formula-linea {
+  display: inline-block;
+  margin: 0;
+  padding: .1rem .3rem;
+  font-size: .97em;
+  border-left-width: 0;
+  border-radius: 4px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tabla-datos thead th {
+  background: var(--fondo-card-hover);
+  color: var(--texto);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tabla-datos tbody tr:last-child td { border-bottom: 0; }
+.tabla-datos tbody tr:hover { background: var(--fondo-card); }
+
+/* --- bloque de codigo --------------------------------------------------- */
+.lecc-codigo {
+  margin: 0 0 1.25rem;
+  border-radius: .7rem;
+  border: 1px solid var(--borde);
+  overflow: hidden;
+  background: var(--fondo-codigo);
+}
+.lecc-codigo-lengua {
+  padding: .4rem .9rem;
+  font-size: .74rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--acento-2);
+  background: var(--fondo-card-hover);
+  border-bottom: 1px solid var(--borde);
+  font-family: var(--fuente);
+}
+.lecc-codigo pre {
+  margin: 0;
+  padding: .95rem 1.05rem;
+  overflow-x: auto;
+}
+.lecc-codigo code {
+  font-family: "Cascadia Code", Consolas, "SF Mono", Menlo, monospace;
+  font-size: .9rem;
+  line-height: 1.65;
+  color: var(--texto);
+  white-space: pre;
+}
+
+/* --- ejercicios y autoevaluacion --------------------------------------- */
+.lecc-ejercicio, .lecc-autoeval {
+  margin: 0 0 1.35rem;
+  padding: 1.05rem 1.15rem .55rem;
+  border-radius: .8rem;
+  border: 1px solid var(--borde);
+  background: var(--fondo-card);
+  border-left: 3px solid var(--ambar);
+}
+.lecc-autoeval { border-left-color: var(--verde); }
+.lecc-ejercicio-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texto);
+  margin-bottom: .85rem;
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+.lecc-ejercicio-titulo i { color: var(--ambar); }
+.lecc-autoeval .lecc-ejercicio-titulo i { color: var(--verde); }
+.lecc-ejercicio .lecc-ul, .lecc-ejercicio .lecc-ol,
+.lecc-autoeval .lecc-ul, .lecc-autoeval .lecc-ol { margin-bottom: .8rem; }
+
+.lecc-respuesta, .lecc-check-item {
+  border: 1px dashed var(--borde);
+  border-radius: .55rem;
+  background: var(--fondo-card-hover);
+  margin-bottom: .7rem;
+}
+.lecc-respuesta > summary, .lecc-check-item > summary {
+  cursor: pointer;
+  padding: .55rem .8rem;
+  font-size: .95rem;
+  color: var(--acento-2);
+  font-weight: 500;
+  list-style: none;
+}
+.lecc-respuesta > summary::-webkit-details-marker,
+.lecc-check-item > summary::-webkit-details-marker { display: none; }
+.lecc-respuesta > summary::before,
+.lecc-check-item > summary::before {
+  content: "\27A6";
+  display: inline-block;
+  margin-right: .5rem;
+  transition: transform .2s ease;
+}
+.lecc-respuesta[open] > summary::before,
+.lecc-check-item[open] > summary::before { transform: rotate(90deg); }
+.lecc-respuesta > p, .lecc-check-body {
+  padding: 0 .85rem .6rem;
+  margin-bottom: 0;
+  color: var(--texto);
+  font-size: .98rem;
+  line-height: 1.7;
+}
+.lecc-check-item { margin-bottom: .5rem; }
+.lecc-check-item[open] { border-style: solid; border-color: var(--acento); }
+
+/* --- glosario ----------------------------------------------------------- */
+.lecc-glosario {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: .7rem;
+  background: var(--fondo-card);
+  border: 1px solid var(--borde);
+}
+.lecc-glosario dt {
+  font-weight: 600;
+  color: var(--acento-2);
+  margin-top: .7rem;
+  font-size: 1rem;
+}
+.lecc-glosario dt:first-child { margin-top: 0; }
+.lecc-glosario dd {
+  margin: .1rem 0 0;
+  color: var(--texto-mut);
+  font-size: .97rem;
+  line-height: 1.65;
+}
+.objetivo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  background: rgba(16,185,129,.15);
+  border: 1px solid rgba(16,185,129,.4);
+  color: var(--exito-txt);
+  padding: .3rem .8rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+/* ===== Navegación anterior/siguiente ===== */
+.nav-leccion { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.nav-leccion .nav-btn {
+  flex: 0 0 auto;
+  max-width: 48%;
+  background: var(--fondo-card);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: .9rem 1.2rem;
+  color: var(--texto);
+  transition: transform .15s ease, border-color .15s ease;
+}
+.nav-leccion .nav-btn:hover { transform: translateY(-3px); border-color: var(--acento); color: var(--texto); }
+.nav-leccion .nav-btn small { color: var(--texto-mut); display: block; }
+.nav-leccion .nav-btn span { font-weight: 600; }
+
+/* ===== Progreso ===== */
+.fila-progreso { display: flex; align-items: center; gap: .5rem; font-size: .85rem; }
+.form-check-input { cursor: pointer; }
+
+/* ===== Recursos ===== */
+.recurso {
+  background: var(--fondo-card);
+  border: 1px solid var(--borde);
+  border-radius: .9rem;
+  padding: 1.1rem 1.3rem;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.recurso:hover { border-color: var(--acento); transform: translateY(-3px); }
+.recurso h6 { margin: 0; }
+.recurso p { color: var(--texto-mut); font-size: .88rem; margin: .3rem 0 0; }
+.recurso .url { color: var(--acento-2); font-size: .78rem; word-break: break-all; }
+
+/* ===== Stats ===== */
+.stat { text-align: center; }
+.stat .numero {
+  font-size: 2.4rem; font-weight: 800;
+  background: linear-gradient(90deg, var(--marca-a), var(--marca-b));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.stat .leyenda { color: var(--texto-mut); font-size: .9rem; }
+
+/* ===== Footer ===== */
+.footer-guia {
+  border-top: 1px solid var(--borde);
+  color: var(--texto-mut);
+  padding: 2.5rem 0;
+  margin-top: 4rem;
+}
+
+/* ===== Rutas de estudio (timeline) =====
+   El numero y el titulo van en la misma linea: .paso es flex, porque si fuera
+   inline el .paso-num (que es grid) romperia la linea y el numero apareceria
+   solo encima del texto. El punto decorativo se elimino porque competia con el
+   circulo numerado y dejaba los dos desalineados respecto a la guia. */
+.ruta { position: relative; padding-left: 2.4rem; }
+.ruta::before {
+  content: "";
+  position: absolute;
+  left: .95rem; top: 1rem; bottom: 1.1rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--acento), transparent);
+}
+.ruta .paso {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  margin-bottom: .35rem;
+  padding: .4rem .5rem .4rem 0;
+  border-radius: .6rem;
+  color: var(--texto-mut);
+  text-decoration: none;
+  transition: background .18s ease, color .18s ease;
+}
+.ruta .paso:last-child { margin-bottom: 0; }
+.ruta .paso:hover { background: var(--fondo-card-hover); color: var(--texto); }
+.ruta .paso.active { color: var(--texto); }
+.ruta .paso.active .paso-num { box-shadow: 0 0 0 4px color-mix(in srgb, var(--acento) 22%, transparent); }
+/* El titulo ocupa lo que queda y se puede partir en varias lineas. */
+.ruta .paso > .paso-txt { min-width: 0; line-height: 1.4; }
+.ruta .paso-go { flex: 0 0 auto; opacity: 0; transition: opacity .18s ease, transform .18s ease; }
+.ruta .paso:hover .paso-go { opacity: .7; transform: translateX(2px); }
+.ruta .paso.active .paso-go { opacity: .55; }
+.ruta h5 { color: var(--texto); margin-bottom: .25rem; }
+.ruta p { color: var(--texto-mut); margin: 0; font-size: .92rem; }
+
+/* ===== Utilidades ===== */
+.col-mut { color: var(--texto-mut); }
+.contenedor-suave { max-width: 1100px; }
+
+.sombra { box-shadow: var(--sombra); }
+.subrayado-acento { border-bottom: 2px solid var(--acento); padding-bottom: .25rem; }
+
+/* ===== Título del curso ===== */
+.curso-titulo { font-size: clamp(1.7rem, 3.4vw, 2.6rem); }
+
+/* ===== Encabezado de curso (indice de curso) ===== */
+.cabecera-curso {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--acento) 18%, transparent), transparent 62%);
+}
+.cabecera-curso::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -70% 55%;
+  height: 100%;
+  background: radial-gradient(circle at center, color-mix(in srgb, var(--acento-2) 26%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.cabecera-curso .icono {
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.1rem;
+  font-size: 1.9rem;
+  color: var(--acento-2);
+  background: color-mix(in srgb, var(--acento) 20%, transparent);
+  border: 1px solid color-mix(in srgb, var(--acento) 42%, transparent);
+}
+.cabecera-curso h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); }
+
+/* ===== Titulo de modulo ===== */
+.titulo-curso .icono {
+  display: grid;
+  place-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  color: var(--acento-2);
+  background: color-mix(in srgb, var(--acento) 20%, transparent);
+  border: 1px solid color-mix(in srgb, var(--acento) 42%, transparent);
+}
+
+/* ===== Ruta de estudio ===== */
+.ruta-estudio { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+.ruta-estudio li {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  font-size: .93rem;
+  color: var(--texto-mut);
+}
+.paso-num {
+  display: grid;
+  place-items: center;
+  flex: 0 0 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--fondo);
+  background: var(--acento-2);
+}
+
+/* ===== Lista de recursos ===== */
+.lista-recursos { list-style: none; margin: 0; padding: 0; }
+.lista-recursos a { color: var(--acento-2); text-decoration: none; }
+.lista-recursos a:hover { text-decoration: underline; }
+.lista-recursos span { color: var(--texto); font-weight: 500; }
+
+/* ===== Animación de entrada (reveal) ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+@media (max-width: 576px) {
+  .nav-leccion .nav-btn { max-width: 100%; width: 100%; }
+  .hero { padding: 4.5rem 0 3rem; }
+}
+
+/* ============================================================================
+   Tabla periódica
+   ========================================================================== */
+.pt-wrap {
+  overflow-x: auto;
+  padding-bottom: .75rem;
+}
+#tablaPeriodica {
+  display: grid;
+  grid-template-columns: repeat(18, minmax(2.9rem, 1fr));
+  gap: 3px;
+  min-width: 720px;
+}
+.elem-slot { aspect-ratio: 1 / 1; }
+.elem-slot.vacio { background: transparent; }
+
+.elem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border: 1px solid var(--borde);
+  border-radius: .4rem;
+  background: var(--fondo-card);
+  color: var(--texto);
+  padding: 2px;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.elem:hover {
+  transform: scale(1.14);
+  z-index: 3;
+  box-shadow: var(--sombra-card);
+  border-color: var(--acento);
+}
+.elem:focus-visible { outline: 2px solid var(--acento-2); outline-offset: 1px; }
+.elem-z { font-size: .58rem; opacity: .72; line-height: 1; }
+.elem-sim { font-size: 1.02rem; font-weight: 700; line-height: 1.15; }
+.elem-masa { font-size: .52rem; opacity: .6; line-height: 1; }
+
+.elem.resaltado {
+  border-color: var(--acento-2);
+  box-shadow: 0 0 0 2px var(--acento-2);
+  transform: scale(1.1);
+}
+.elem.resaltado .elem-masa { opacity: 1; }
+
+/* Colores por familia */
+.cat-alcalino { background: rgba(239, 68, 68, .22); border-color: rgba(239, 68, 68, .5); }
+.cat-alcalino-terreo { background: rgba(249, 115, 22, .22); border-color: rgba(249, 115, 22, .5); }
+.cat-transicion { background: rgba(234, 179, 8, .20); border-color: rgba(234, 179, 8, .48); }
+.cat-post { background: rgba(132, 204, 22, .20); border-color: rgba(132, 204, 22, .48); }
+.cat-metaloide { background: rgba(34, 197, 94, .22); border-color: rgba(34, 197, 94, .5); }
+.cat-no-metal { background: rgba(14, 165, 233, .22); border-color: rgba(14, 165, 233, .5); }
+.cat-halogeno { background: rgba(168, 85, 247, .22); border-color: rgba(168, 85, 247, .5); }
+.cat-noble { background: rgba(244, 114, 182, .22); border-color: rgba(244, 114, 182, .5); }
+.cat-lantano { background: rgba(251, 146, 60, .20); border-color: rgba(251, 146, 60, .5); }
+.cat-actino { background: rgba(248, 113, 113, .20); border-color: rgba(248, 113, 113, .5); }
+
+.leyenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem .9rem;
+  margin-top: 1rem;
+  font-size: .8rem;
+  color: var(--texto-mut);
+}
+.leyenda-item { display: inline-flex; align-items: center; gap: .4rem; }
+.leyenda-item i {
+  width: .95rem;
+  height: .95rem;
+  border-radius: .25rem;
+  border: 1px solid var(--borde);
+  display: inline-block;
+}
+
+/* Familias (lantanidos y actinidos) */
+#tablaFamilias { margin-top: .9rem; }
+.familia-fila {
+  display: grid;
+  grid-template-columns: repeat(15, minmax(2.9rem, 1fr));
+  gap: 3px;
+}
+.familia { display: flex; align-items: center; gap: .6rem; margin-bottom: .5rem; }
+.familia-tit {
+  font-size: .78rem;
+  color: var(--texto-mut);
+  min-width: 6.5rem;
+  text-align: right;
+}
+.familia-hueco { height: .4rem; }
+
+/* Detalle del elemento */
+.pt-detalle { display: flex; gap: 1.1rem; align-items: flex-start; }
+.det-cab {
+  width: 5.2rem;
+  height: 5.2rem;
+  flex-shrink: 0;
+  border-radius: .7rem;
+  border: 1px solid var(--borde);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.det-sim { font-size: 2rem; font-weight: 700; }
+.det-datos {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: .15rem .9rem;
+  margin: 0;
+  font-size: .9rem;
+}
+.det-datos dt { color: var(--texto-mut); font-weight: 500; }
+.det-datos dd { margin: 0; font-weight: 600; }
+
+/* ============================================================================
+   Tablas de fórmulas de consulta
+   ========================================================================== */
+.tabla-formula {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+  margin-bottom: .5rem;
+}
+.tabla-formula caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  color: var(--texto);
+  padding-bottom: .5rem;
+}
+.tabla-formula th, .tabla-formula td {
+  padding: .5rem .7rem;
+  border-bottom: 1px solid var(--borde);
+  text-align: left;
+  vertical-align: top;
+}
+.tabla-formula thead th {
+  color: var(--acento-2);
+  font-weight: 600;
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border-bottom: 1px solid var(--acento);
+}
+.tabla-formula tbody tr:hover { background: var(--fondo-card); }
+.tabla-formula td:first-child { font-weight: 600; color: var(--texto); white-space: nowrap; }
+.formula {
+  font-family: "Segoe UI", "Poppins", system-ui, sans-serif;
+  color: var(--texto);
+  white-space: nowrap;
+}
+
+/* Figuras dentro de las lecciones */
+.lecc-figura {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.lecc-figura svg {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: var(--texto);
+  background: rgba(127, 150, 255, .05);
+  border: 1px solid var(--borde);
+  border-radius: .8rem;
+  padding: .5rem;
+}
+.lecc-figura figcaption {
+  font-size: .86rem;
+  color: var(--texto-mut);
+  margin-top: .55rem;
+}
+.lecc-figura .fig-titulo {
+  font-size: .84rem;
+  color: var(--acento-2, #93c5fd);
+  font-weight: 500;
+  letter-spacing: .01em;
+}
+.lecc-figura svg text {
+  stroke: none;
+  fill: currentColor;
+  font-family: var(--fuente);
+  font-weight: 500;
+}
+.lecc-figura .fig-forma { fill: rgba(127, 150, 255, .12); }
+.lecc-figura .fig-relleno-2 { fill: rgba(127, 150, 255, .22); }
+.lecc-figura .fig-acento { stroke: var(--acento-2, #93c5fd); }
+.lecc-figura .fig-dato { stroke-dasharray: 6 5; opacity: .8; }
+.lecc-figura .fig-medida { stroke: var(--acento-2, #93c5fd); stroke-width: 1.4; }
+.lecc-figura .fig-etiqueta { fill: var(--texto-mut); font-size: 13px; }
+.lecc-figura .fig-nota { fill: var(--texto-mut); font-size: 12.5px; }
+.lecc-figura .fig-acento-texto { fill: var(--acento-2, #93c5fd); }
+.lecc-figura-falta { border: 1px dashed var(--rosa); }
+
+/* ===== Colores y resaltes para figuras =====
+   Las clases siguientes permiten distinguir roles dentro de un mismo dibujo
+   sin repetir estilos en cada SVG: una parte correcta, una que se descarta, una
+   que es el dato clave y una que es solo de apoyo. */
+.lecc-figura .fig-ok      { fill: rgba(52, 211, 153, .18); stroke: #34d399; stroke-width: 1.6; }
+.lecc-figura .fig-ok-txt  { fill: #34d399; font-weight: 700; }
+.lecc-figura .fig-mal     { fill: rgba(244, 114, 182, .16); stroke: #f472b6; stroke-width: 1.6; stroke-dasharray: 5 4; }
+.lecc-figura .fig-mal-txt { fill: #f472b6; font-weight: 700; }
+.lecc-figura .fig-destac  { fill: rgba(251, 191, 36, .2); stroke: #fbbf24; stroke-width: 2; }
+.lecc-figura .fig-destac-txt { fill: #fbbf24; font-weight: 800; }
+.lecc-figura .fig-apoyo   { fill: var(--fig-apoyo); stroke: var(--fig-apoyo-linea); stroke-width: 1.2; }
+.lecc-figura .fig-apoyo-txt  { fill: var(--fig-apoyo-txt); }
+/* Resalte suave para marcar una zona o un bloque sin llenarlo de color. */
+.lecc-figura .fig-zona    { fill: rgba(127, 150, 255, .1); stroke: rgba(127, 150, 255, .45); stroke-width: 1; }
+/* Flechas y conectores entre bloques. */
+.lecc-figura .fig-flecha  { stroke: var(--acento-2, #93c5fd); stroke-width: 1.8; fill: none; marker-end: url(#punta-flecha); }
+.lecc-figura .fig-flecha-ok  { stroke: #34d399; marker-end: url(#punta-ok); }
+/* Titulo de bloque dentro de la figura. */
+.lecc-figura .fig-titulo  { fill: var(--texto); font-weight: 700; font-size: 14px; }
+.lecc-figura .fig-sub     { fill: var(--fig-sub); font-size: 12px; }
+/* Marcadores de flecha, definidos una vez y referenciados desde el SVG. */
+.lecc-figura marker { overflow: visible; }
+
+/* ============================================================================
+   Paneles de consulta (secciones/tablas.html y similares)
+   ========================================================================== */
+.card-panel {
+  background: var(--fondo-card);
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.panel-titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+/* Antes esta regla fijaba 2.1rem y pisaba el clamp responsive de la linea 182:
+   en un movil de 360px un titulo de seccion ocupaba cuatro lineas. */
+.titulo-seccion { font-size: clamp(1.3rem, 4.6vw, 2.1rem); font-weight: 800; margin-bottom: .75rem; }
+.text-muted-2 { color: var(--texto-mut); }
+
+.tabla-formula-wrap {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+.tabla-formula tbody tr:last-child th,
+.tabla-formula tbody tr:last-child td { border-bottom: none; }
+.tabla-formula td { white-space: normal; }
+
+#pillsFormulas .nav-link {
+  color: var(--texto-mut);
+  border: 1px solid var(--borde);
+  border-radius: 2rem;
+  padding: .35rem .95rem;
+  font-size: .9rem;
+}
+#pillsFormulas .nav-link:hover { color: var(--texto); border-color: var(--acento); }
+#pillsFormulas .nav-link.active {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: var(--sobre-acento);
+}
+
+.detalle-elemento {
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px dashed var(--borde);
+  min-height: 3rem;
+}
+.detalle-elemento:empty { display: none; }
+
+/* ============================================================================
+   Leccion como articulo
+   ----------------------------------------------------------------------------
+   Antes la leccion era una pila de cajas: cabecera, teoria, ejemplo, consejo y
+   pie, cada una con su fondo y su borde. Eso parte la lectura en trozos y hace
+   que una leccion larga se vea corta. Aqui el cuerpo es un solo articulo sin
+   cajas: solo hay separadores, una regla de acento y aire entre bloques.
+   ========================================================================== */
+.articulo {
+  max-width: none;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+/* Cabecera: sin caja, solo un titulo grande y una regla de acento. */
+.articulo-cabecera {
+  padding-bottom: 1.6rem;
+  margin-bottom: 2.2rem;
+  border-bottom: 1px solid var(--borde);
+}
+.articulo-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: .85rem;
+  font-size: 1.35rem;
+  color: var(--acento-2);
+  background: color-mix(in srgb, var(--acento) 16%, transparent);
+  margin-bottom: 1.1rem;
+}
+.articulo-titulo {
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -.015em;
+  margin: 0 0 .5rem;
+  color: var(--texto);
+  text-wrap: balance;
+}
+.articulo-modulo {
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--acento-2);
+  margin: 0 0 1.2rem;
+}
+.articulo-objetivo {
+  margin: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--acento);
+  color: var(--texto);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.articulo-objetivo span {
+  display: block;
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--texto-mut);
+  margin-bottom: .15rem;
+}
+
+/* El cuerpo principal ya no va dentro de una caja: se ensancha un poco. */
+.lecc-fluida { max-width: none; }
+.lecc-fluida p { color: var(--texto); }
+.lecc-fluida li { color: var(--texto); }
+.lecc-fluida p { font-size: 1.06rem; line-height: 1.8; margin-bottom: 1.15rem; }
+.lecc-fluida .lecc-ul li, .lecc-fluida .lecc-ol li { font-size: 1.04rem; line-height: 1.75; }
+
+/* Separadores entre bloques: una linea, no una caja. */
+.bloque {
+  margin-top: 2.8rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid var(--borde);
+}
+.bloque:first-of-type { border-top: 0; }
+.bloque-titulo {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: var(--acento-2);
+  margin: 0 0 1.2rem;
+}
+.bloque-titulo i { font-size: 1.05rem; }
+
+/* El ejemplo lleva una guia lateral; el consejo, una nota al margen. */
+.bloque-teoria { border-left: 3px solid var(--acento); padding-left: 1.4rem; }
+.bloque-consejo .lecc-nota { margin-bottom: 0; }
+
+/* Pie: regla superior y botones alineados, sin tarjeta. */
+.articulo-pie {
+  margin-top: 3rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--borde);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.marcar-leccion {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  cursor: pointer;
+  color: var(--texto-mut);
+  font-size: .95rem;
+  user-select: none;
+}
+.marcar-leccion:hover { color: var(--texto); }
+.articulo-pie .nav-leccion .nav-btn { max-width: none; }
+.nav-btn-sig { margin-left: auto; }
+
+@media (max-width: 575.98px) {
+  .bloque-teoria { padding-left: .9rem; }
+  .articulo-pie .nav-leccion { flex-direction: column; }
+  .articulo-pie .nav-leccion .nav-btn { width: 100%; text-align: center; }
+  .nav-btn-sig { margin-left: 0; }
+}
+/* ============================================================================
+   Botón de tema
+   ---------------------------------------------------------------------------
+   Mismo tamaño y forma que .btn-toggler de Bootstrap, que es donde se
+   encaja en la barra. El color sale de --borde/--realce para que herede el
+   tema solo, sin iconos duplicados en claro y oscuro.
+   ========================================================================== */
+.btn-tema {
+  flex: 0 0 auto;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--realce);
+  color: var(--texto);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.btn-tema:hover {
+  background: var(--realce-fuerte);
+  border-color: var(--borde-fuerte);
+  color: var(--acento-2);
+}
+.btn-tema:focus-visible { outline: 2px solid var(--acento-2); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .btn-tema { transition: none; }
+}
+
+/* ============================================================================
+   Buscadores
+   ---------------------------------------------------------------------------
+   El buscador del hero lleva las utilidades de Bootstrap .bg-transparent y
+   .text-light, que son !important y por eso no las pisa una regla normal. En
+   modo oscuro van bien (texto claro sobre fondo oscuro) pero en claro el texto
+   se volveria blanco sobre blanco. Se corrige aqui con !important tambien.
+   ========================================================================== */
+.buscador-hero .text-light { color: var(--texto-mut) !important; }
+.buscador-hero .form-control::placeholder { color: var(--texto-mut); opacity: .85; }
+.buscador-hero .form-control:focus {
+  box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--acento) 30%, transparent);
+  color: var(--texto);
+}
+
+/* ============================================================================
+   Calculadora
+   ---------------------------------------------------------------------------
+   Rejilla de 4 columnas. En movil se mantiene la rejilla y se reduce el
+   tamano de las teclas: 10 columnas de 4 con etiquetas cientificas necesitan
+   menos ancho del que da un movil de 360px, asi que se apila en dos bloques
+   (cientificas arriba, basicas abajo) con menos columnas por fila.
+   ========================================================================== */
+.calc {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+@media (min-width: 992px) {
+  .calc { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: start; }
+}
+
+.calc-panel {
+  background: var(--fondo-card);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.25rem;
+}
+
+/* --- Pantalla --- */
+.calc-pantalla {
+  background: var(--fondo-codigo);
+  border: 1px solid var(--borde);
+  border-radius: .9rem;
+  padding: 1rem 1.1rem;
+  margin-bottom: .9rem;
+  min-height: 7.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  overflow-wrap: anywhere;
+}
+/* El campo de la expresión y la línea del resultado van alineados a la derecha,
+   como en cualquier calculadora: los números se leen mejor por su derecha. */
+.calc-expresion {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  padding: .15rem 0;
+  background: transparent;
+  font-family: "Cambria Math", "Cambria", "Segoe UI", var(--fuente);
+  font-size: clamp(.95rem, 2.4vw, 1.15rem);
+  text-align: right;
+  color: var(--texto);
+  min-height: 1.6em;
+}
+.calc-expresion::placeholder { color: var(--texto-mut); opacity: .7; }
+/* El navegador pinta su propio contorno al escribir, y el marco de la pantalla
+   ya marca dónde está el campo: aquí sólo se quita el duplicado. */
+.calc-expresion:focus { outline: none; box-shadow: none; }
+.calc-resultado {
+  font-family: "Cambria Math", "Cambria", "Segoe UI", var(--fuente);
+  font-size: clamp(1.6rem, 6vw, 2.3rem);
+  font-weight: 600;
+  text-align: right;
+  color: var(--texto);
+  overflow-x: auto;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+.calc-resultado:empty::before {
+  content: "0";
+  color: var(--texto-mut);
+  opacity: .5;
+}
+.calc-error {
+  font-family: var(--fuente);
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--rosa);
+  min-height: 1.2em;
+  text-align: left;
+}
+
+/* --- Teclado --- */
+.calc-grupo { margin-bottom: .9rem; }
+.calc-grupo:last-of-type { margin-bottom: 0; }
+.calc-etiqueta {
+  display: block;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--texto-mut);
+  margin-bottom: .4rem;
+}
+.calc-teclas {
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.calc-tecla {
+  appearance: none;
+  min-height: 2.9rem;
+  padding: .35rem .2rem;
+  border: 1px solid var(--borde);
+  border-radius: .75rem;
+  background: var(--realce);
+  color: var(--texto);
+  font-family: var(--fuente);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.15;
+  cursor: pointer;
+  transition: background .12s ease, border-color .12s ease, transform .08s ease;
+}
+.calc-tecla:hover { background: var(--realce-fuerte); border-color: var(--borde-fuerte); }
+.calc-tecla:active { transform: scale(.96); }
+.calc-tecla:focus-visible { outline: 2px solid var(--acento-2); outline-offset: 2px; }
+/* Las cuatro familias de tecla, distinguidas por color de fondo y no solo por
+   el texto: en un teclado scientifico la posicion sola no basta. */
+.calc-tecla-num { font-size: 1.15rem; }
+.calc-tecla-op { color: var(--acento-2); border-color: color-mix(in srgb, var(--acento) 40%, transparent); }
+.calc-tecla-fn {
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--acento-2);
+  background: color-mix(in srgb, var(--acento) 14%, transparent);
+  border-color: color-mix(in srgb, var(--acento) 32%, transparent);
+}
+.calc-tecla-ctrl {
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--texto-mut);
+}
+.calc-tecla-igual {
+  color: var(--sobre-acento);
+  background: linear-gradient(135deg, var(--acento), var(--acento-2));
+  border-color: transparent;
+  font-size: 1.2rem;
+}
+.calc-tecla-igual:hover {
+  background: linear-gradient(135deg, var(--acento), var(--acento-2));
+  border-color: transparent;
+  filter: brightness(1.08);
+}
+.calc-ancho-2 { grid-column: span 2; }
+
+/* --- Botones de control en línea (limpiar historial, ángulos) --- */
+.calc-mini {
+  border: 1px solid var(--borde);
+  background: var(--realce);
+  color: var(--texto-mut);
+  border-radius: 999px;
+  padding: .15rem .7rem;
+  font-family: var(--fuente);
+  font-size: .72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .12s ease, color .12s ease, border-color .12s ease;
+}
+.calc-mini:hover { background: var(--realce-fuerte); color: var(--texto); border-color: var(--borde-fuerte); }
+.calc-mini:focus-visible { outline: 2px solid var(--acento-2); outline-offset: 2px; }
+
+/* --- Ejemplos del lateral --- */
+.calc-ejemplos { list-style: none; margin: 0; padding: 0; }
+.calc-ejemplos li + li { margin-top: .4rem; }
+.calc-ejemplo {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
+  text-align: left;
+  background: var(--realce);
+  border: 1px solid var(--borde);
+  border-radius: .6rem;
+  padding: .5rem .75rem;
+  font-family: var(--fuente);
+  font-size: .88rem;
+  color: var(--texto);
+  cursor: pointer;
+  transition: background .12s ease, border-color .12s ease;
+}
+.calc-ejemplo:hover { background: var(--realce-fuerte); border-color: var(--acento); }
+.calc-ejemplo:focus-visible { outline: 2px solid var(--acento-2); outline-offset: 2px; }
+.calc-ejemplo-expr { font-family: "Cambria Math", "Cambria", var(--fuente); overflow-wrap: anywhere; }
+.calc-ejemplo-val { color: var(--acento-2); font-weight: 600; white-space: nowrap; }
+
+/* --- Historial --- */
+.calc-historial {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 15rem;
+  overflow-y: auto;
+}
+.calc-historial li + li { margin-top: .4rem; }
+.calc-hist-item {
+  width: 100%;
+  text-align: left;
+  background: var(--realce);
+  border: 1px solid var(--borde);
+  border-radius: .6rem;
+  padding: .5rem .7rem;
+  color: var(--texto);
+  font-family: var(--fuente);
+  cursor: pointer;
+  transition: background .12s ease, border-color .12s ease;
+}
+.calc-hist-item:hover { background: var(--realce-fuerte); border-color: var(--borde-fuerte); }
+.calc-hist-item:focus-visible { outline: 2px solid var(--acento-2); outline-offset: 2px; }
+.calc-hist-expr {
+  display: block;
+  font-size: .76rem;
+  color: var(--texto-mut);
+  overflow-wrap: anywhere;
+}
+.calc-hist-val {
+  display: block;
+  font-size: 1.02rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.calc-vacio {
+  font-size: .85rem;
+  color: var(--texto-mut);
+  margin: 0;
+}
+
+/* --- Ayuda de teclado --- */
+.calc-atajos { margin: 0; font-size: .85rem; }
+.calc-atajos dt { color: var(--texto-mut); font-weight: 500; }
+.calc-atajos dd { margin: 0 0 .7rem; color: var(--texto); }
+.calc-kbd {
+  display: inline-block;
+  padding: .1rem .45rem;
+  border: 1px solid var(--borde);
+  border-bottom-width: 2px;
+  border-radius: .35rem;
+  background: var(--realce);
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: .78rem;
+  color: var(--texto);
+}
+
+/* ============================================================================
+   Botón "volver arriba": fijo en la esquina, aparece al bajar.
+
+   z-index 1030 queda por debajo de los modales de Bootstrap (1055) y del
+   menú lateral (1045), así nunca tapa algo con el que hay que interactuar.
+   ========================================================================== */
+.btn-subir {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1030;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  background: var(--fondo-2);
+  color: var(--texto);
+  font-size: 1.15rem;
+  line-height: 1;
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(.8rem);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease,
+    background .15s ease, color .15s ease, border-color .15s ease;
+}
+.btn-subir.visivel { opacity: 1; visibility: visible; transform: none; }
+.btn-subir:hover {
+  background: var(--acento, #6366f1);
+  border-color: transparent;
+  color: var(--sobre-acento);
+}
+.btn-subir:focus-visible { outline: 2px solid var(--acento-2, #93c5fd); outline-offset: 3px; }
+
+@media (max-width: 575.98px) {
+  .btn-subir { right: .9rem; bottom: .9rem; width: 2.6rem; height: 2.6rem; font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-subir { transition: none; }
+}
+
+/* ============================================================================
+   Pantallas pequeñas
+   Pensado para el movil de 360px de ancho, que es el caso mas estrecho que
+   todavia se usa. Tres tramos: primero lo que evita desbordes en cualquier
+   ancho, luego el ajuste general de moviles y por ultimo el repaso extra del
+   tramo 360-400px, donde cada pixel de padding se nota.
+   ========================================================================== */
+
+/* --- 1. Nada puede empujar la pagina a los lados -------------------------- */
+body { overflow-wrap: break-word; }
+img, svg, video, iframe { max-width: 100%; }
+.lecc-texto img, .lecc-texto svg { height: auto; }
+
+/* Nombres de archivo y URLs sueltos dentro del texto (los de Alfabetizacion
+   Digital, por ejemplo) tienen 40+ caracteres sin espacios: sin esto revientan
+   la columna. */
+.lecc-texto code, .lecc-texto kbd, .lecc-texto samp {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Los bloques que ya llevan overflow-x: auto (formulas, tablas, codigo y tabla
+   periodica) necesitan scroll tactil explicito: en Safari de iOS el arrastre
+   horizontal no funciona sin -webkit-overflow-scrolling. */
+.formula, .tabla-wrap, .pt-wrap, .tabla-formula-wrap, .lecc-codigo pre {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+/* La sombra del scroll horizontal delata que la tabla sigue a la derecha. */
+.tabla-wrap, .lecc-codigo pre {
+  background-image: linear-gradient(90deg, var(--scroll-halo), transparent 12px);
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+/* Aviso de que la tabla periódica se desplaza: solo en pantallas donde no
+   cabe entera, porque en escritorio sobra. */
+.pt-hint { display: none; }
+@media (max-width: 991.98px) {
+  .pt-hint {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    margin: 0 0 .7rem;
+    font-size: .8rem;
+    color: var(--texto-mut);
+  }
+}
+
+/* --- 2. Moviles: hasta 576px ---------------------------------------------- */
+@media (max-width: 575.98px) {
+  /* Menos aire: a 360px cada padding se come el ancho util. */
+  .seccion { padding: 2.8rem 0; }
+  .lecc-nota { padding: .7rem .8rem; }
+  .lecc-ejercicio, .lecc-autoeval { padding: .9rem .85rem .5rem; }
+  .formula { padding: .7rem .6rem; font-size: 1.02rem; line-height: 1.75; }
+  .lecc-figura { margin: 1.15rem 0; }
+  .lecc-figura svg { padding: .35rem; }
+
+  /* La miga tiene hasta cuatro niveles: mas pequena y con mas interlineado. */
+  .miga { font-size: .78rem; line-height: 1.9; }
+
+  /* Las pestanas de la pagina de tablas se desplazan en horizontal en vez de
+     partirse en dos filas, que dejaba una linea de texto cortada. */
+  .nav-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .nav-tabs .nav-link { white-space: nowrap; }
+
+  /* Cifras de los contadores y titulos de ficha. */
+  .stat .numero { font-size: 1.9rem; }
+  .cabecera-curso .icono { width: 3.2rem; height: 3.2rem; font-size: 1.5rem; }
+  .articulo-icono { width: 2.6rem; height: 2.6rem; font-size: 1.15rem; }
+
+  /* El boton de subir se separa un poco mas del borde en pantallas con
+     gesto de recarga o barra de direccion. */
+  .btn-subir { bottom: 1.5rem; }
+}
+
+/* --- 3. El tramo 360-400px: el movil pequeno de verdad --------------------- */
+@media (max-width: 400px) {
+  body { font-size: .97rem; }
+
+  .lecc-texto p { font-size: 1rem; }
+  .articulo-titulo { font-size: 1.5rem; }
+  .hero .lead { font-size: 1rem; }
+
+  .lecc-card { padding: .95rem 1rem; gap: .7rem; }
+  .lecc-pie { gap: .5rem; padding-top: .65rem; }
+  .lecc-entrar { padding: .45rem .85rem; font-size: .88rem; }
+  .lecc-num { width: 1.9rem; height: 1.9rem; flex-basis: 1.9rem; font-size: .8rem; }
+
+  .lecc-ejercicio, .lecc-autoeval { padding: .8rem .7rem .45rem; }
+  .lecc-nota { padding: .65rem .7rem; }
+  .formula { padding: .6rem .45rem; font-size: .96rem; }
+
+  .btn-cta, .btn-ghost { padding: .68rem 1.1rem; }
+  .stat .numero { font-size: 1.6rem; }
+  .btn-subir { width: 2.4rem; height: 2.4rem; font-size: .95rem; right: .75rem; }
+}

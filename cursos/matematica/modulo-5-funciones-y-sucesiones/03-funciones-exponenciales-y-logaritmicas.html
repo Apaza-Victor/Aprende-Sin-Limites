@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funciones exponenciales y logarítmicas — Matemática</title>
+  <meta name="description" content="Aplicar las propiedades de exponentes y logaritmos para resolver ecuaciones y analizar funciones exponenciales." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 5 · Funciones y sucesiones</a> <span class="mx-2 opacity-50">/</span>
+          <span>Funciones exponenciales y logarítmicas</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Funciones exponenciales y logarítmicas</h1>
+            <p class="articulo-modulo">Módulo 5 · Funciones y sucesiones</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Aplicar las propiedades de exponentes y logaritmos para resolver ecuaciones y analizar funciones exponenciales.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La <strong>función exponencial</strong> es <span class="formula formula-linea">f(x) = a<sup>x</sup></span> con <span class="formula formula-linea">a &gt; 0</span>, <span class="formula formula-linea">a ≠ 1</span>, y su dominio es todo <span class="formula formula-linea"><span class="conj">R</span></span>.</p><h4 class="lecc-h4">Propiedades básicas</h4><div class="formula">a<sup>x+y</sup> = a<sup>x</sup> a<sup>y</sup>,      a<sup>x-y</sup> = <span class="frac"><span class="frac-n">a<sup>x</sup></span><span class="frac-d">a<sup>y</sup></span></span></div><div class="formula">(a<sup>b</sup>)<sup>x</sup> = a<sup>bx</sup>,      a<sup>0</sup> = 1,      a<sup>-x</sup> = <span class="frac"><span class="frac-n">1</span><span class="frac-d">a<sup>x</sup></span></span></div><h4 class="lecc-h4">El logaritmo es la operación inversa</h4><div class="formula"><span class="fn">log</span><sub>a</sub> y = x ⇔ a<sup>x</sup> = y</div><p>con las condiciones <span class="formula formula-linea">a &gt; 0</span>, <span class="formula formula-linea">a ≠ 1</span> y <span class="formula formula-linea">y &gt; 0</span>.</p><h4 class="lecc-h4">Propiedades del logaritmo</h4><div class="formula"><span class="fn">log</span><sub>a</sub>(xy) = <span class="fn">log</span><sub>a</sub> x + <span class="fn">log</span><sub>a</sub> y,       <span class="fn">log</span><sub>a</sub><span class="frac"><span class="frac-n">x</span><span class="frac-d">y</span></span> = <span class="fn">log</span><sub>a</sub> x - <span class="fn">log</span><sub>a</sub> y</div><div class="formula"><span class="fn">log</span><sub>a</sub>(x<sup>k</sup>) = k <span class="fn">log</span><sub>a</sub> x,       <span class="fn">log</span><sub>a</sub> a = 1,       <span class="fn">log</span><sub>a</sub> 1 = 0</div><h4 class="lecc-h4">Cambio de base</h4><div class="formula"><span class="fn">log</span><sub>a</sub> b = <span class="frac"><span class="frac-n"><span class="fn">ln</span> b</span><span class="frac-d"><span class="fn">ln</span> a</span></span> = <span class="frac"><span class="frac-n"><span class="fn">log</span><sub>10</sub> b</span><span class="frac-d"><span class="fn">log</span><sub>10</sub> a</span></span> = <span class="frac"><span class="frac-n">1</span><span class="frac-d"><span class="fn">log</span><sub>b</sub> a</span></span></div><div class="lecc-nota">El logaritmo solo existe para argumentos positivos. Antes de dar por buena una solución logarítmica, compruébala en la expresión original: casi siempre es un argumento negativo.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Resuelve <span class="formula formula-linea">2<sup>x</sup> + 2<sup>x+1</sup> = 12</span>.</p><h4 class="lecc-h4">Factor común</h4><ul class="lecc-ul"><li>Como <span class="formula formula-linea">2<sup>x+1</sup> = 2 · 2<sup>x</sup></span>, se puede sacar <span class="formula formula-linea">2<sup>x</sup></span>: <span class="formula formula-linea">2<sup>x</sup>(1 + 2) = 12</span>.</li><li>Entonces <span class="formula formula-linea">3 · 2<sup>x</sup> = 12 ⇒ 2<sup>x</sup> = 4 = 2<sup>2</sup> ⇒ x = 2</span>.</li></ul><h4 class="lecc-h4">Comprobación</h4><div class="formula">2<sup>2</sup> + 2<sup>3</sup> = 4 + 8 = 12</div><p>---</p><p>Resuelve <span class="formula formula-linea"><span class="fn">log</span>(x) + <span class="fn">log</span>(x - 3) = 1</span> en base 10.</p><h4 class="lecc-h4">Condición de existencia primero</h4><ul class="lecc-ul"><li>Para que ambos logaritmos existan: <span class="formula formula-linea">x &gt; 0</span> y <span class="formula formula-linea">x - 3 &gt; 0</span>, luego <span class="formula formula-linea">x &gt; 3</span>.</li></ul><h4 class="lecc-h4">Aplicamos las propiedades</h4><div class="formula"><span class="fn">log</span>(x(x-3)) = <span class="fn">log</span>(10) ⇒ x<sup>2</sup> - 3x - 10 = 0</div><div class="formula">(x-5)(x+2) = 0 ⇒ x = 5 <span class="fn-txt"> o </span> x = -2</div><h4 class="lecc-h4">Descartamos y comprobamos</h4><ul class="lecc-ul"><li><span class="formula formula-linea">x = -2</span> <strong>no vale</strong>: incumple <span class="formula formula-linea">x &gt; 3</span> y además daría un logaritmo de negativo.</li><li><span class="formula formula-linea">x = 5</span> sí: <span class="formula formula-linea"><span class="fn">log</span> 5 + <span class="fn">log</span> 2 = <span class="fn">log</span> 10 = 1</span>.</li></ul><div class="lecc-nota">Solución: <span class="formula formula-linea">x = 5</span>. El descarte de -2 no es un fallo del álgebra, es la condición de existencia del logaritmo.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>En ecuaciones con logaritmos, escribe siempre la condición de existencia (<span class="formula formula-linea">x&gt;0</span>, <span class="formula formula-linea">x-3&gt;0</span>, lo que toque) <strong>antes</strong> de despejar. Te ahorra perder tiempo con soluciones extraviadas y, sobre todo, evita presentar en el examen una raíz que no existe.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-4-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-funciones-lineales-cuadraticas-y-de-proporcionalidad.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-sucesiones-progresiones-aritmeticas-y-geometricas.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-4-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

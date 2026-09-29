@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220">
+  <path d="M70 170 L70 50" class="fig-acento"/>
+  <path d="M70 170 L260 170" class="fig-acento"/>
+  <path d="M70 50 L260 50" class="fig-dato"/>
+  <path d="M150 50 L150 170" class="fig-dato"/>
+  <path d="M130 170 A60 60 0 0 0 70 110"/>
+  <text x="126" y="140" text-anchor="middle" font-size="15" class="fig-nota">90°</text>
+  <text x="200" y="164" text-anchor="middle" font-size="15">a</text>
+  <text x="58" y="110" text-anchor="middle" font-size="15">b</text>
+  <text x="70" y="196" text-anchor="middle" font-size="13" class="fig-nota">A</text>
+</svg>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupos funcionales — Química</title>
+  <meta name="description" content="Identificar la familia de un compuesto a partir de su grupo funcional, asignar la nomenclatura a partir del nombre del hidrocarburo base, y relacionar el comportamiento químico de cada grupo con la presencia de átomos electronegativos o de carga formal." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="quimica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Química</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Química orgánica</a> <span class="mx-2 opacity-50">/</span>
+          <span>Grupos funcionales</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-droplet-fill"></i></div>
+            <h1 class="articulo-titulo">Grupos funcionales</h1>
+            <p class="articulo-modulo">Módulo 4 · Química orgánica</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Identificar la familia de un compuesto a partir de su grupo funcional, asignar la nomenclatura a partir del nombre del hidrocarburo base, y relacionar el comportamiento químico de cada grupo con la presencia de átomos electronegativos o de carga formal.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Un grupo funcional es un conjunto de átomos que determina la reactividad de una molécula. Todo lo demás es el esqueleto de carbonos, que en la práctica se comporta como sustituyente.</p><h4 class="lecc-h4">Familias y grupos principales</h4><ul class="lecc-ul"><li><strong>Alcano</strong>: solo enlaces simples, C–C. Hibridación sp³, muy pocos enlaces polares, casi apolar y muy poco reactivo.</li><li><strong>Alqueno</strong>: doble enlace, C=C. sp², el doble enlace es rico en electrones, ataca a electrófilos.</li><li><strong>Alquino</strong>: triple enlace, C≡C. sp, el carbono terminal es ligeramente ácido.</li><li><strong>Alcohol y fenol</strong>: grupo –OH unido a carbono sp³ o a un anillo aromático. El fenol es mucho más ácido porque el anillo estabiliza el ion fenóxido.</li><li><strong>Éter</strong>: C–O–C, con el oxígeno entre dos carbonos. Sin grupo –OH, así que no forma puentes de hidrógeno consigo mismo.</li><li><strong>Aldehído y cetona</strong>: carbonilo, C=O. El aldehído tiene un hidrógeno unido al carbono del carbonilo; la cetona, dos carbonos.</li><li><strong>Ácido carboxílico</strong>: –COOH. El carbono del carbonilo va +3, el oxígeno del OH va −2 y el del carbonilo −2: el carbono más oxidado de los compuestos orgánicos.</li><li><strong>Éster</strong>: –COO–. Se forma al reaccionar un ácido carboxílico con un alcohol, eliminando agua.</li><li><strong>Amina</strong>: –NH₂. Es básica porque el nitrógeno tiene un par de electrones libres.</li><li><strong>Haluro</strong>: –Cl, –Br, –I. El halógeno es electronegativo, así que el carbono unido a él queda polarizado.</li></ul><figure class="lecc-figura"><svg viewBox="0 0 360 230" role="img" aria-label="El grupo funcional, y no el tamano de la molecula, decide la reaccion."><text x="180" y="18" text-anchor="middle" class="fig-titulo">El grupo funcional decide la reaccion</text>
+
+  <text x="14" y="60" class="fig-nota" font-size="12">Alcohol</text>
+  <rect x="170" y="40" width="150" height="30" rx="7" class="fig-ok"/>
+  <text x="245" y="61" text-anchor="middle" class="fig-ok-txt" font-size="12">R - OH</text>
+
+  <text x="14" y="106" class="fig-nota" font-size="12">Aldehido</text>
+  <rect x="170" y="86" width="150" height="30" rx="7" class="fig-ok"/>
+  <text x="245" y="107" text-anchor="middle" class="fig-ok-txt" font-size="12">R - CHO</text>
+
+  <text x="14" y="152" class="fig-nota" font-size="12">Acido carboxilico</text>
+  <rect x="170" y="132" width="150" height="30" rx="7" class="fig-destac"/>
+  <text x="245" y="153" text-anchor="middle" class="fig-destac-txt" font-size="12">R - COOH</text>
+
+  <text x="14" y="198" class="fig-nota" font-size="12">Amina</text>
+  <rect x="170" y="178" width="150" height="30" rx="7" class="fig-ok"/>
+  <text x="245" y="199" text-anchor="middle" class="fig-ok-txt" font-size="12">R - NH2</text>
+
+  <text x="180" y="226" text-anchor="middle" class="fig-nota" font-size="12">R es el resto de la molecula: puede ser enorme y no importa.</text></svg><figcaption class="fig-titulo">El grupo funcional, y no el tamano de la molecula, decide la reaccion.</figcaption></figure><h4 class="lecc-h4">Nomenclatura</h4><p>El nombre tiene tres partes: el nombre del hidrocarburo base, el grupo funcional como sufijo, y los sustituyentes con su posición.</p><ul class="lecc-ul"><li><strong>-ol</strong> alcohol, <strong>-ona</strong> cetona, <strong>-al</strong> aldehído, <strong>-oico</strong> ácido carboxílico.</li><li><strong>-ano</strong> alcano, <strong>-eno</strong> alqueno, <strong>-ino</strong> alquino.</li><li>El <strong>ácido</strong> es la única función que exige que el carbono del carbonilo lleve el número 1.</li><li>Los sustituyentes se listan en orden alfabético, cada uno con su número de posición.</li><li>Los números van separados por comas y los nombres por guiones: 3-metilpentan-2-ona.</li></ul><div class="lecc-nota">La prioridad de los grupos es fija: ácido carboxílico sobre aldehído sobre cetona sobre alcohol sobre amina. Si un compuesto tiene dos grupos, manda el de mayor prioridad para elegir el sufijo y el otro se nombra como prefijo.</div><h4 class="lecc-h4">Comportamiento</h4><ul class="lecc-ul"><li><strong>Polaridad</strong>: los grupos con O o N hacen el compuesto más polar y más soluble en agua.</li><li><strong>Punto de ebullición</strong>: las familias ordenadas de menor a mayor son alcanos, alquenos, alquinos, éteres, aldehídos, cetonas, alcoholes, ácidos carboxílicos. Los dos últimos están arriba porque hacen puentes de hidrógeno y a veces forman dímeros.</li><li><strong>Hidrólisis</strong>: un éster se rompe en ácido carboxílico y alcohol, igual que en una grasa, y por eso los jabones funcionan como sales de ácidos grasos.</li></ul>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Se pide nombrar: CH₃–CH₂–COOH, CH₃–CO–CH₂–CH₃ y CH₃–CH(OH)–CH₃, y compararlos.</p><h4 class="lecc-h4">Método 1: identificar el grupo funcional</h4><ul class="lecc-ul"><li>CH₃–CH₂–COOH termina en COOH, así que es un <strong>ácido carboxílico</strong>. Ácido de 3 carbonos: <strong>ácido propanoico</strong>.</li><li>CH₃–CO–CH₂–CH₃ tiene un carbonilo con carbonos a ambos lados, así que es una <strong>cetona</strong>. La cadena más larga con el carbonilo tiene 4 carbonos, y el carbonilo va en 2: <strong>butan-2-ona</strong>.</li><li>CH₃–CH(OH)–CH₃ tiene un OH en medio de la cadena, así que es un <strong>alcohol</strong>. Tres carbonos, y el OH en el 2: <strong>propan-2-ol</strong>.</li></ul><h4 class="lecc-h4">Método 2: numerar desde el extremo correcto</h4><ul class="lecc-ul"><li>En la cetona, si numerara desde el otro extremo, el carbonilo caería en 3. La regla dice que se elige la numeración <strong>menor</strong>, así que 2 es lo correcto.</li><li>En el propan-2-ol, da igual desde dónde se numere: siempre queda en 2.</li><li>En el ácido propanoico, el carbono del carboxilo es obligatoriamente el 1, aunque no lleve sufijo.</li></ul><h4 class="lecc-h4">Método 3: comparar el comportamiento de los tres</h4><ul class="lecc-ul"><li>Punto de ebullición: propanoico 141 °C, butan-2-ona 80 °C, propan-2-ol 97 °C.</li><li>El ácido va primero porque forma <strong>dímeros</strong> por puentes de hidrógeno, el alcohol segundo porque también hace puentes, y la cetona solo tiene dipolos.</li><li>Solubilidad en agua: el ácido propanoico es el más soluble de los tres, porque además de ser polar se ioniza parcialmente y produce iones hidronio que se hidratan.</li></ul><div class="lecc-nota">La conclusión en una frase: <strong>más grupos con oxígeno y más capacidad de formar puentes de hidrógeno, mayor punto de ebullición y mejor comportamiento en agua</strong>.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Identifica primero el grupo funcional y solo después cuentes carbonos. Nombrar al revés, contando la cadena desde el extremo que uno quiere, produce nombres plausibles pero equivocados, y el error no se ve hasta el momento de comparar.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="quimica-3-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-hidrocarburos.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-alcoholes-y-acidos-organicos.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "quimica-3-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan de estudio realista — Admisión Universitaria</title>
+  <meta name="description" content="Diseñar un plan de estudio con horas semanales realistas, reparto por materias y revisiones espaciadas que se sostengan durante semanas." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Estrategia y diagnóstico</a> <span class="mx-2 opacity-50">/</span>
+          <span>Plan de estudio realista</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Plan de estudio realista</h1>
+            <p class="articulo-modulo">Módulo 1 · Estrategia y diagnóstico</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Diseñar un plan de estudio con horas semanales realistas, reparto por materias y revisiones espaciadas que se sostengan durante semanas.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Un plan de estudio sirve para ordenar el tiempo, no para llenar la agenda. La diferencia entre un plan que funciona y uno que se abandona a las dos semanas está en que el primero es realista y el segundo es aspiracional.</p><h4 class="lecc-h4">Las tres reglas de un plan que aguanta</h4><ul class="lecc-ul"><li><strong>Horas reales, no horas ideales</strong>: cuenta lo que puedes sostener seis días seguidos, no lo que puedes hacer un domingo con ganas. la experiencia demuestra que la constancia gana a la intensidad.</li><li><strong>Repaso espaciado</strong>: estudiar un tema una vez y esperar un mes es casi lo mismo que no estudiarlo. La memoria se consolida cuando el tema se vuelve a ver justo antes de olvidarlo.</li><li><strong>Repaso diagnóstico antes que repaso a ciegas</strong>: releer apuntes es cómodo y casi inútil. Un ejercicio de cinco preguntas que te obligan a producir la respuesta enseña más que una hora de lectura.</li></ul><h4 class="lecc-h4">La estructura semanal que mejor funciona</h4><p>Reparte el tiempo en bloques de 50 minutos con 10 de descanso, en lugar de tres horas seguidas, porque la concentración sostenida por encima de 90 minutos rinde menos de la mitad. Alterna materia: después de dos bloques de matemáticas, un bloque de verbal. Y reserva siempre un bloque corto para repasar lo del día anterior, que es donde la consolidación ocurre.</p><h4 class="lecc-h4">La revisión semanal</h4><p>Cada siete días, dedica una sesión a <strong>repetir los errores</strong> de la semana, no a estudiar contenido nuevo. Mira tu cuaderno de errores, vuelve a hacer los ejercicios que fallaste y comprueba si ahora salen. Ese momento es el que más puntaje mueve, y casi nadie lo hace.</p><div class="lecc-nota">Un plan que no tenga un momento semanal de revisión de errores está a medio camino de convertirse en un plan que no se cumple.</div>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un estudiante tiene seis semanas para la prueba y dispone de tres horas diarias de lunes a viernes y cinco horas cada sábado y domingo. En total son unas 25 horas semanales, unas 150 en el mes y medio. Repartidas sin criterio, se le van en leer apuntes y no sube el puntaje.</p><h4 class="lecc-h4">Método 1: reparto por peso de la sección</h4><ul class="lecc-ul"><li>El matemático pesa el 40 %, el verbal el 30 %, la comprensión lectora el 20 % y la escritura el 10 %.</li><li>De 25 horas semanales: 10 al matemático, 7,5 al verbal, 5 a comprensión y 2,5 a escritura.</li><li>Como el 40 % del puntaje es matemático, cada hora de álgebra rinde más que cada hora de vocabulario.</li></ul><h4 class="lecc-h4">Método 2: reparto por diagnóstico</h4><ul class="lecc-ul"><li>El diagnóstico inicial dice: matemático 40 % de aciertos, verbal 70 %, lectora 85 %.</li><li>Repartir por peso y por necesidad da: matemático 55 %, verbal 25 %, lectora 15 %, escritura 5 %.</li><li>El método 1 y el 2 coinciden en que el matemático recibe más, pero el 2 además concentra ahí donde la brecha es grande.</li></ul><h4 class="lecc-h4">Método 3: reparto por bloques de tiempo reales</h4><ul class="lecc-ul"><li>Repartir 25 horas en bloques de 50 minutos da 30 bloques semanales.</li><li>Quedan 16 bloques de matemático, 8 de verbal, 4 de lectora y 2 de escritura, más una sesión de revisión de errores los domingos.</li><li>Al final del mes los 16 bloques de matemático se notan; lo que no se repartió no se estudia.</li></ul><div class="lecc-nota">Elige el método 2 y combínalo con los bloques del método 3: reparto por necesidad, ejecutado en bloques cortos y con revisión semanal de errores.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Escribe el plan con horas concretas en el calendario, no con la intención de estudiar. La diferencia entre &quot;voy a estudiar álgebra&quot; y &quot;lunes, martes y miércoles de 7 a 8:30: álgebra&quot; es casi toda la diferencia entre cumplir y abandonar.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-0-1" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="01-como-funciona-una-prueba-de-admision.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="03-diagnostico-inicial-de-tu-nivel.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-0-1";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

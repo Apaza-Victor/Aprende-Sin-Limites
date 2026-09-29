@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geografía y ambiente — Admisión Universitaria</title>
+  <meta name="description" content="Relacionar los fenómenos geográficos y ambientales con las actividades humanas, y explicar sus efectos sobre el clima, el agua y el paisaje." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="admision-universitaria">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Admisión Universitaria</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 5 · Conocimiento general</a> <span class="mx-2 opacity-50">/</span>
+          <span>Geografía y ambiente</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-mortarboard"></i></div>
+            <h1 class="articulo-titulo">Geografía y ambiente</h1>
+            <p class="articulo-modulo">Módulo 5 · Conocimiento general</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Relacionar los fenómenos geográficos y ambientales con las actividades humanas, y explicar sus efectos sobre el clima, el agua y el paisaje.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>La geografía no es memorizar países: es entender cómo el territorio determina lo que es posible hacer. En una prueba de conocimiento general, las preguntas geográficas suelen ser de relaciones: clima, población, recursos y desarrollo.</p><h4 class="lecc-h4">Los cuatro factores geográficos que explican casi todo</h4><ol class="lecc-ol"><li><strong>Clima</strong>: define qué cultivos y qué formas de vida son posibles. Un clima frío limita la agricultura y empuja hacia la ganadería o la Silvicultura.</li><li><strong>Relieve</strong>: la altitud y la pendiente condicionan el poblamiento, el transporte y la agricultura. Las zonas de ladera son casi inaccesibles para la agricultura mecanizada.</li><li><strong>Recursos</strong>: agua, suelos, minerales y energía. No tenerlos no es destino, pero sí limita las opciones hasta que aparece tecnología que los compensa.</li><li><strong>Posición</strong>: estar en una costa o un centro comercial hizo crecer a muchos países; estar en un paso de montaña hizo crecer a otros.</li></ol><p>Ninguno de estos factores obra solo, y por eso el ítem suele pedir la relación entre dos.</p><h4 class="lecc-h4">La población como dato, no como destino</h4><p>La densidad de población no determina el desarrollo, aunque a veces se confunda. Lo que sí funciona es la relación: muchos países densamente poblados son pobres y muchos poco poblados son ricos. La variable que explica mejor es la productividad, no el número de personas.</p><p>Este es el mismo error de la fuente sin contexto: sin el denominador, el dato no significa nada.</p><h4 class="lecc-h4">Las cuatro formas de presentar el mundo en la prueba</h4><ol class="lecc-ol"><li><strong>Mapa</strong>: qué se ubica dónde.</li><li><strong>Gráfico de barras</strong>: comparación de magnitudes.</li><li><strong>Gráfico circular</strong>: proporciones sobre un total.</li><li><strong>Cuadro comparativo</strong>: la forma más frecuente en conocimiento general, con tres o cuatro países y cinco indicadores.</li></ol><p>El cuadro comparativo es donde se concentran los ítems, porque obliga a leer intersecciones de fila y columna sin perder el hilo. La técnica es marcar la celda antes de leer la opción.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Un cuadro comparativo presenta tres países: clima templado, 40 % de población urbana, PIB per cápita alto y producción agrícola de exportación.</p><h4 class="lecc-h4">Método 1: leer la intersección correcta</h4><ul class="lecc-ul"><li>Primero: si la opción dice &quot;el país con clima templado tiene producción agrícola de exportación&quot;, debo verificar la fila del clima templado y ver si esa celda coincide.</li><li>Marcar la celda antes evita comparar con el país que tiene PIB alto, que es el error típico.</li></ul><h4 class="lecc-h4">Método 2: buscar la relación, no la coincidencia</h4><ul class="lecc-ul"><li>Segundo: cuatro indicadores juntos sugieren un país desarrollado, templado y con comercio exterior. Eso no identifica un país único, y el ítem suele querer una característica, no un nombre.</li></ul><h4 class="lecc-h4">Método 3: evaluar la relación entre indicadores</h4><ul class="lecc-ul"><li>Tercero: 40 % de población urbana no explica un PIB alto por sí solo, pero combinado con clima templado y exportación agrícola sí sugiere un país con más recursos y más acceso a mercados.</li><li>La conclusión defendible es la relación, no la causalidad entre un solo par.</li></ul><div class="lecc-nota">Un cuadro comparativo no premia a quien memoriza el país, sino a quien lee la celda correcta y la relaciona con lo que la pregunta realmente pide.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Antes de leer las opciones de un cuadro comparativo, di en voz alta qué fila y qué columna necesitas. Leer las opciones primero es la forma más rápida derespondere mal.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="admision-universitaria-4-2" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="02-historia-y-proceso-historico.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="04-ciudadania-etica-y-derechos.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "admision-universitaria-4-2";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

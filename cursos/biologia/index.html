@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biología — Aprende Sin Límites</title>
+  <meta name="description" content="De la célula al ecosistema: cómo funciona la vida, cómo se heredan los genes y cómo se relacionan los seres vivos con su ambiente." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="biologia">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../index.html"><i class="bi bi-stars"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCurso"
+        aria-controls="navCurso" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navCurso">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../index.html"><i class="bi bi-house-door"></i> Inicio</a>
+          <span class="mx-2 opacity-50">/</span>
+          <span>Biología</span>
+        </nav>
+
+        <header class="cabecera-curso tarjeta p-4 p-lg-5 mb-4">
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <div class="icono flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+            <div>
+              <h1 class="mb-0">Biología</h1>
+              <p class="col-mut mb-2 mt-1">De la célula al ecosistema: cómo funciona la vida, cómo se heredan los genes y cómo se relacionan los seres vivos con su ambiente.</p>
+              <div class="d-flex flex-wrap gap-2"><span class="chip d-inline-block">Célula</span><span class="chip d-inline-block">Genética</span><span class="chip d-inline-block">Ecología</span><span class="chip d-inline-block">Cuerpo humano</span></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="tarjeta p-4 reveal">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div><i class="bi bi-graph-up-arrow" style="color: var(--acento);"></i></div>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between small">
+                <span class="col-mut">Progreso del curso</span>
+                <span id="contadorCurso" class="fw-semibold">0 / 17</span>
+              </div>
+              <div class="progress" style="height: 8px; margin-top: .4rem;">
+                <div id="barraCurso" class="progress-bar" style="width: 0%;" role="progressbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-8">
+            <h4 class="d-flex align-items-center gap-2 mb-3"><i class="bi bi-diagram-3" style="color: var(--acento);"></i> Módulos del curso</h4>
+            <div class="row g-4" id="gridModulos"><div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-collection"></i></div><div><span class="mod-card-kicker">Módulo 1</span><h5 class="mod-card-titulo mb-0">La célula y la vida</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 5 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="biologia-0-0" href="modulo-1-la-celula-y-la-vida/01-que-es-la-biologia-y-como-se-estudia.html"><span class="minificha-num">1</span><span class="minificha-txt">¿Qué es la biología y cómo se estudia?</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-0-1" href="modulo-1-la-celula-y-la-vida/02-la-celula-unidad-de-la-vida.html"><span class="minificha-num">2</span><span class="minificha-txt">La célula: unidad de la vida</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-0-2" href="modulo-1-la-celula-y-la-vida/03-la-membrana-y-el-transporte-de-sustancias.html"><span class="minificha-num">3</span><span class="minificha-txt">La membrana y el transporte de sustancias</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-0-3" href="modulo-1-la-celula-y-la-vida/04-fotosintesis-y-respiracion-celular.html"><span class="minificha-num">4</span><span class="minificha-txt">Fotosíntesis y respiración celular</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-0-4" href="modulo-1-la-celula-y-la-vida/05-celulas-especializadas-tejidos-y-organos.html"><span class="minificha-num">5</span><span class="minificha-txt">Células especializadas, tejidos y órganos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-1-la-celula-y-la-vida/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-map"></i></div><div><span class="mod-card-kicker">Módulo 2</span><h5 class="mod-card-titulo mb-0">Genética y herencia</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 4 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="biologia-1-0" href="modulo-2-genetica-y-herencia/01-adn-la-molecula-de-la-informacion-hereditaria.html"><span class="minificha-num">1</span><span class="minificha-txt">ADN: la molécula de la información hereditaria</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-1-1" href="modulo-2-genetica-y-herencia/02-de-los-genes-a-las-proteinas.html"><span class="minificha-num">2</span><span class="minificha-txt">De los genes a las proteínas</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-1-2" href="modulo-2-genetica-y-herencia/03-herencia-mendeliana.html"><span class="minificha-num">3</span><span class="minificha-txt">Herencia mendeliana</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-1-3" href="modulo-2-genetica-y-herencia/04-genetica-humana-y-biotecnologia.html"><span class="minificha-num">4</span><span class="minificha-txt">Genética humana y biotecnología</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-2-genetica-y-herencia/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-layers"></i></div><div><span class="mod-card-kicker">Módulo 3</span><h5 class="mod-card-titulo mb-0">Ecología y ambiente</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 4 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="biologia-2-0" href="modulo-3-ecologia-y-ambiente/01-ecosistemas-y-niveles-troficos.html"><span class="minificha-num">1</span><span class="minificha-txt">Ecosistemas y niveles tróficos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-2-1" href="modulo-3-ecologia-y-ambiente/02-relaciones-entre-seres-vivos.html"><span class="minificha-num">2</span><span class="minificha-txt">Relaciones entre seres vivos</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-2-2" href="modulo-3-ecologia-y-ambiente/03-poblaciones-como-crecen-y-se-regulan.html"><span class="minificha-num">3</span><span class="minificha-txt">Poblaciones: cómo crecen y se regulan</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-2-3" href="modulo-3-ecologia-y-ambiente/04-biodiversidad-deforestacion-y-cambio-climatico.html"><span class="minificha-num">4</span><span class="minificha-txt">Biodiversidad, deforestación y cambio climático</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-3-ecologia-y-ambiente/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div>
+<div class="col-12 col-xl-6"><article class="tarjeta mod-card h-100 reveal"><div class="mod-card-cab d-flex align-items-start gap-3"><div class="mod-card-ico flex-shrink-0"><i class="bi bi-compass"></i></div><div><span class="mod-card-kicker">Módulo 4</span><h5 class="mod-card-titulo mb-0">El cuerpo humano</h5><div class="col-mut small mt-1"><i class="bi bi-journal-text"></i> 4 lecciones</div></div></div><ul class="lista-minifichas mt-3 mb-3"><li class="minificha"><a class="minificha-link" data-clave="biologia-3-0" href="modulo-4-el-cuerpo-humano/01-niveles-de-organizacion-y-homeostasis.html"><span class="minificha-num">1</span><span class="minificha-txt">Niveles de organización y homeostasis</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-3-1" href="modulo-4-el-cuerpo-humano/02-el-sistema-nervioso-y-la-respuesta-del-organismo.html"><span class="minificha-num">2</span><span class="minificha-txt">El sistema nervioso y la respuesta del organismo</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-3-2" href="modulo-4-el-cuerpo-humano/03-circulacion-sangre-y-respiracion.html"><span class="minificha-num">3</span><span class="minificha-txt">Circulación, sangre y respiración</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li><li class="minificha"><a class="minificha-link" data-clave="biologia-3-3" href="modulo-4-el-cuerpo-humano/04-digestion-excrecion-y-defensas-del-organismo.html"><span class="minificha-num">4</span><span class="minificha-txt">Digestión, excreción y defensas del organismo</span><i class="bi bi-check-circle-fill minificha-ok"></i><i class="bi bi-arrow-right ms-auto minificha-go"></i></a></li></ul><a class="btn btn-sm btn-cta w-100 mt-auto" href="modulo-4-el-cuerpo-humano/index.html">Ver lecciónes del módulo <i class="bi bi-arrow-right"></i></a></article></div></div>
+          </div>
+          <aside class="col-lg-4">
+            <div class="tarjeta p-4 reveal">
+              <h5 class="d-flex align-items-center gap-2"><i class="bi bi-signpost-2" style="color: var(--acento);"></i> Ruta de estudio</h5>
+              <ol class="ruta-estudio mt-3 mb-0"><li class="reveal"><span class="paso-num">1</span><span class="paso-txt">Empieza por la célula: es la unidad en la que se decide todo lo demás.</span></li><li class="reveal"><span class="paso-num">2</span><span class="paso-txt">Sigue con la genética para entender por qué cada organismo es distinto.</span></li><li class="reveal"><span class="paso-num">3</span><span class="paso-txt">Cierra con ecología, donde las relaciones entre seres vivos se vuelven el tema central.</span></li></ol>
+            </div>
+          </aside>
+        </div>
+
+        <div class="tarjeta p-4 mt-4 reveal">
+          <h5 class="d-flex align-items-center gap-2"><i class="bi bi-puzzle" style="color: var(--acento);"></i> Recursos recomendados</h5>
+          <ul class="lista-recursos mt-3 mb-0"><li class="d-flex gap-2 mb-2"><i class="bi bi-box-arrow-up-right" style="color:var(--acento);"></i><div><a href="https://es.khanacademy.org/science/biology" target="_blank" rel="noopener">Khan Academy — Biología</a><div class="col-mut small">Lecciones en español con animación de procesos celulares.</div></div></li><li class="d-flex gap-2 mb-2"><i class="bi bi-info-circle" style="color:var(--acento);"></i><div><span>BioDigital</span><div class="col-mut small">Aula virtual con simulaciones de microscopía y genética.</div></div></li><li class="d-flex gap-2 mb-2"><i class="bi bi-info-circle" style="color:var(--acento);"></i><div><span>Cuaderno de laboratorio</span><div class="col-mut small">Anota lo que observas: la biología se aprende registrando.</div></div></li></ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../secciones/recursos.html">Recursos</a>
+          <a href="../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+  <script>
+    var CLAVES = ["biologia-0-0","biologia-0-1","biologia-0-2","biologia-0-3","biologia-0-4","biologia-1-0","biologia-1-1","biologia-1-2","biologia-1-3","biologia-2-0","biologia-2-1","biologia-2-2","biologia-2-3","biologia-3-0","biologia-3-1","biologia-3-2","biologia-3-3"];
+    var KEY = "asl-progreso";
+    function leer() { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; } }
+    function pintar() {
+      var estados = leer(), hechas = 0;
+      CLAVES.forEach(function (k) { if (estados[k]) hechas++; });
+      var contador = document.getElementById("contadorCurso");
+      if (contador) contador.textContent = hechas + " / " + CLAVES.length;
+      var barra = document.getElementById("barraCurso");
+      if (barra && CLAVES.length) barra.style.width = Math.round((hechas / CLAVES.length) * 100) + "%";
+      var fichas = document.querySelectorAll(".minificha-link[data-clave]");
+      fichas.forEach(function (f) {
+        if (estados[f.getAttribute("data-clave")]) f.classList.add("hecha");
+        else f.classList.remove("hecha");
+      });
+    }
+    document.addEventListener("DOMContentLoaded", pintar);
+    document.addEventListener("DOMContentLoaded", function () {
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 210">
+  <polygon points="50,170 150,40 268,170" class="fig-forma"/>
+  <path d="M65.9 149.4 A26 26 0 0 1 76 170"/>
+  <path d="M134.1 60.6 A26 26 0 0 1 167.5 59.2"/>
+  <path d="M242 170 A26 26 0 0 0 250.5 151"/>
+  <text x="212" y="118" text-anchor="middle" font-size="16">a</text>
+  <text x="159" y="192" text-anchor="middle" font-size="16">b</text>
+  <text x="86" y="96" text-anchor="middle" font-size="16">c</text>
+  <text x="34" y="186" text-anchor="middle" font-size="14" class="fig-etiqueta">A</text>
+  <text x="150" y="28" text-anchor="middle" font-size="14" class="fig-etiqueta">B</text>
+  <text x="276" y="186" text-anchor="middle" font-size="14" class="fig-etiqueta">C</text>
+  <text x="150" y="206" text-anchor="middle" font-size="13" class="fig-nota">los tres ángulos son menores de 90°</text>
+</svg>

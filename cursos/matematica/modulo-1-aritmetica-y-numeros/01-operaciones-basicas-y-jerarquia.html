@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operaciones básicas y jerarquía — Matemática</title>
+  <meta name="description" content="Resolver con seguridad cualquier expresión numérica respetando el orden de las operaciones, el uso del paréntesis y los signos." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="matematica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Matemática</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 1 · Aritmética y números</a> <span class="mx-2 opacity-50">/</span>
+          <span>Operaciones básicas y jerarquía</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-calculator"></i></div>
+            <h1 class="articulo-titulo">Operaciones básicas y jerarquía</h1>
+            <p class="articulo-modulo">Módulo 1 · Aritmética y números</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Resolver con seguridad cualquier expresión numérica respetando el orden de las operaciones, el uso del paréntesis y los signos.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>Las operaciones no se ejecutan en el orden en que aparecen, sino en uno fijo que conviene memorizar. Ese orden es: primero los <strong>paréntesis, corchetes y llaves</strong>, resueltos de dentro hacia afuera; luego las <strong>potencias y raíces</strong>; después las <strong>multiplicaciones y divisiones</strong>, de izquierda a derecha; y al final las <strong>sumas y restas</strong>, también de izquierda a derecha.</p><h4 class="lecc-h4">El paréntesis cambia la respuesta</h4><p>El paréntesis es la herramienta más poderosa de la aritmética, porque te permite forzar ese orden. Antes de calcular nada, busca todos los paréntesis y resuélvelos. El signo negativo que antecede a un paréntesis se aplica al resultado completo, no solo al primer término.</p><h4 class="lecc-h4">Cuidado con los signos de las potencias</h4><p>Aquí hay una distinción que decide puntos: <strong>el exponente pertenece a la potencia, no al número</strong>. En (−3)² el paréntesis hace que el menos también se eleve, y (−3)² = 9. En cambio, en −3² no hay paréntesis, así que primero se calcula 3² = 9 y luego se aplica el signo, dando −9. Lo mismo ocurre con las raíces: la raíz de −9 no existe en los reales, pero el negativo de la raíz de 9 sí vale −3.</p><h4 class="lecc-h4">Propiedades que simplifican el cálculo</h4><p>Para no hacer cuentas inútiles usa estas tres propiedades:</p><ul class="lecc-ul"><li><strong>Asociativa</strong>: (a + b) + c = a + (b + c). Permite agrupar como convenga.</li><li><strong>Conmutativa</strong>: a + b = b + a. Permite reordenar los términos.</li><li><strong>Distributiva</strong>: a(b + c) = ab + ac. Permite abrir paréntesis.</li></ul><p>La conmutativa es muy útil para cancelar términos opuestos sin equivocarse: en 15 − 7 + 3 − 8, si sumas primero los positivos (15 + 3 = 18) y luego los negativos (7 + 8 = 15), la operación se vuelve 18 − 15 = 3. Y recuerda que (aᵐ)ⁿ = a elevado a m por n, mientras que aᵐ por aⁿ = a elevado a m más n.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Resuelve: −3² + 2 × (5 + 4) − (8 − 6)² ÷ 2</p><h4 class="lecc-h4">Método directo, paso a paso</h4><ul class="lecc-ul"><li>Paréntesis: (5 + 4) = 9 y (8 − 6)² = 2² = 4.</li><li>División: 4 ÷ 2 = 2.</li><li>Multiplicación: 2 × 9 = 18.</li><li>Potencia del negativo: −3² = −(3²) = −9, porque el paréntesis rodea solo al 3, no al signo.</li><li>Sumas y restas de izquierda a derecha: −9 + 18 − 2 = 9 − 2 = <strong>7</strong>.</li></ul><h4 class="lecc-h4">Método PEMm/T, que ordena por prioridades en lugar de avanzar por sectores</h4><ul class="lecc-ul"><li><strong>P</strong>aréntesis: quedan los dos que había, que valen 9 y 4.</li><li><strong>E</strong>xponentes: el 4 ya está elevado, y −3² se resuelve como −(3²) = −9.</li><li><strong>Mm</strong>ultiplicación y división: quedan 2 × 9 = 18 y 4 ÷ 2 = 2.</li><li><strong>A</strong>dición y resta, y <strong>T</strong>ermino: 18 − 9 − 2 = <strong>7</strong>.</li></ul><ol class="lecc-ol"><li><strong>Control por partes</strong>: separo la expresión en sus tres sumandos, 2 × (5 + 4) = 18, (8 − 6)² ÷ 2 = 2 y 3² = 9, y el resultado tiene que ser 18 − 2 − 9 = 7, igual que antes.</li></ol><div class="lecc-nota">Ojo con el error típico: tratar −3² como si fuera (−3)². Eso daría 9 + 18 − 2 = 25, que es el distractor que ofrece el enunciado a quien confunde los signos.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>No calcules nada hasta haber resuelto todos los paréntesis. Después anota el resultado de cada uno: ese es tu mapa de trabajo y evita la mayor parte de los errores de signo.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="matematica-0-0" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="index.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="02-divisibilidad-y-numeros-primos.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "matematica-0-0";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230">
+  <defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+    <marker id="punta-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">La serie marca la respuesta</text>
+
+  <rect x="16" y="40" width="46" height="34" rx="8" class="fig-ok"/>
+  <text x="39" y="62" text-anchor="middle" class="fig-ok-txt">1</text>
+  <rect x="86" y="40" width="46" height="34" rx="8" class="fig-ok"/>
+  <text x="109" y="62" text-anchor="middle" class="fig-ok-txt">3</text>
+  <rect x="156" y="40" width="46" height="34" rx="8" class="fig-ok"/>
+  <text x="179" y="62" text-anchor="middle" class="fig-ok-txt">5</text>
+  <rect x="226" y="40" width="46" height="34" rx="8" class="fig-ok"/>
+  <text x="249" y="62" text-anchor="middle" class="fig-ok-txt">7</text>
+  <rect x="296" y="40" width="46" height="34" rx="8" class="fig-destac"/>
+  <text x="319" y="62" text-anchor="middle" class="fig-destac-txt">?</text>
+
+  <line x1="62" y1="57" x2="84" y2="57" class="fig-flecha-ok"/>
+  <line x1="132" y1="57" x2="154" y2="57" class="fig-flecha-ok"/>
+  <line x1="202" y1="57" x2="224" y2="57" class="fig-flecha-ok"/>
+  <line x1="272" y1="57" x2="294" y2="57" class="fig-flecha-ok"/>
+
+  <text x="180" y="98" text-anchor="middle" class="fig-nota">los numeros impares siguen de dos en dos</text>
+
+  <rect x="16" y="118" width="158" height="94" rx="10" class="fig-ok"/>
+  <text x="95" y="140" text-anchor="middle" class="fig-ok-txt" font-size="13">Si hay distractor</text>
+  <text x="28" y="164" class="fig-nota">Se descarta la opcion</text>
+  <text x="28" y="182" class="fig-nota">que rompe la regla, aunque</text>
+  <text x="28" y="200" class="fig-nota">suene verosimil.</text>
+
+  <rect x="188" y="118" width="156" height="94" rx="10" class="fig-destac"/>
+  <text x="266" y="140" text-anchor="middle" class="fig-destac-txt" font-size="13">Si no hay distractor</text>
+  <text x="200" y="164" class="fig-nota">Se continua la serie hasta</text>
+  <text x="200" y="182" class="fig-nota">llenar todos los huecos, y la</text>
+  <text x="200" y="200" class="fig-nota">ultima casilla es la respuesta.</text>
+</svg>

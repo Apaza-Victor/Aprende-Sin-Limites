@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Tesis debil frente a tesis defendible</text>
+
+  <defs>
+    <marker id="punta-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <rect x="14" y="36" width="152" height="120" rx="12" class="fig-mal"/>
+  <text x="90" y="62" text-anchor="middle" class="fig-mal-txt" font-size="13">Tesis debil</text>
+  <text x="90" y="90" text-anchor="middle" class="fig-apoyo-txt" font-size="12">"La tecnologia es</text>
+  <text x="90" y="110" text-anchor="middle" class="fig-apoyo-txt" font-size="12">buena."</text>
+  <text x="90" y="140" text-anchor="middle" class="fig-nota" font-size="12">nadie puede discrepar</text>
+
+  <line x1="170" y1="96" x2="190" y2="96" class="fig-flecha-ok"/>
+
+  <rect x="194" y="36" width="152" height="120" rx="12" class="fig-ok"/>
+  <text x="270" y="62" text-anchor="middle" class="fig-ok-txt" font-size="13">Tesis defendible</text>
+  <text x="270" y="86" text-anchor="middle" class="fig-apoyo-txt" font-size="12">"La tecnologia cambia</text>
+  <text x="270" y="106" text-anchor="middle" class="fig-apoyo-txt" font-size="12">el trabajo de rutina</text>
+  <text x="270" y="126" text-anchor="middle" class="fig-apoyo-txt" font-size="12">y crea riesgos</text>
+  <text x="270" y="146" text-anchor="middle" class="fig-apoyo-txt" font-size="12">digitales."</text>
+
+  <text x="180" y="186" text-anchor="middle" class="fig-nota" font-size="12">La buena tesis se puede probar, refutar y sostener con datos.</text>
+</svg>

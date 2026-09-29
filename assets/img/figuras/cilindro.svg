@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250">
+  <ellipse cx="150" cy="55" rx="70" ry="22" class="fig-forma"/>
+  <path d="M80 55 L80 185" class="fig-acento"/>
+  <path d="M220 55 L220 185" class="fig-acento"/>
+  <path d="M80 185 A70 22 0 0 0 220 185" class="fig-acento"/>
+  <path d="M150 55 L220 55" class="fig-dato"/>
+  <path d="M40 55 L40 185" class="fig-dato"/>
+  <path d="M34 55 L46 55 M34 185 L46 185"/>
+  <text x="188" y="46" text-anchor="middle" font-size="15">r</text>
+  <text x="30" y="126" text-anchor="middle" font-size="15">h</text>
+  <text x="150" y="240" text-anchor="middle" font-size="13" class="fig-nota">V = π · r² · h   ·   A = 2πr(r + h)</text>
+</svg>

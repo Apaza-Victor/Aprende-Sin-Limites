@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>%%TITULO%% — %%CURSO%%</title>
+  <meta name="description" content="%%OBJETIVO%%" />
+  %%SCRIPT_TEMA%%
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="%%REL%%/assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="%%SLUG%%">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="%%REL%%/index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="%%REL%%/secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="%%REL%%/secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="%%REL%%/secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="%%REL%%/secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="%%REL%%/secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="%%REL%%/secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="%%REL%%/secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="%%RUTA_CURSO%%">%%CURSO%%</a> <span class="mx-2 opacity-50">/</span>
+          <a href="%%RUTA_MODULO%%">%%MODULO%%</a> <span class="mx-2 opacity-50">/</span>
+          <span>%%TITULO%%</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi %%ICONO%%"></i></div>
+            <h1 class="articulo-titulo">%%TITULO%%</h1>
+            <p class="articulo-modulo">%%MODULO%%</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> %%OBJETIVO%%</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+%%TEORIA%%
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+%%EJEMPLO%%
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+%%CONSEJO%%
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="%%CLAVE%%" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="%%RUTA_MODULO%%"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="%%RUTA_ANTERIOR%%"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="%%RUTA_SIGUIENTE%%">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="%%REL%%/secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="%%REL%%/secciones/metodo.html">Método</a>
+          <a class="me-3" href="%%REL%%/secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="%%REL%%/secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="%%REL%%/secciones/recursos.html">Recursos</a>
+          <a href="%%REL%%/secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="%%REL%%/assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "%%CLAVE%%";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

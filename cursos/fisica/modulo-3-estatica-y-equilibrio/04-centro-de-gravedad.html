@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de gravedad — Física</title>
+  <meta name="description" content="Encontrar el punto donde se concentra el peso de un cuerpo con un método que se pueda repetir y comprobar." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="fisica">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Física</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 3 · Estática y equilibrio</a> <span class="mx-2 opacity-50">/</span>
+          <span>Centro de gravedad</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-lightning-charge"></i></div>
+            <h1 class="articulo-titulo">Centro de gravedad</h1>
+            <p class="articulo-modulo">Módulo 3 · Estática y equilibrio</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Encontrar el punto donde se concentra el peso de un cuerpo con un método que se pueda repetir y comprobar.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<p>El centro de gravedad es el punto donde se puede imaginar concentrada toda la masa de un cuerpo para analizar su equilibrio. Es una idealización útil, y su posición explica por qué las cosas se vuelcan o no.</p><h4 class="lecc-h4">Definición y cálculo</h4><p>En un cuerpo uniforme, el centro de gravedad coincide con el centro geométrico: el centro de un rectángulo está a la mitad de cada lado, y el de un disco está en el centro. Cuando el cuerpo no es uniforme, hay que calcularlo, y el método es siempre el mismo:</p><ol class="lecc-ol"><li>Se descompone el cuerpo en piezas simples de masa conocida.</li><li>Se ubica el centro de gravedad de cada pieza.</li><li>Se calcula el promedio ponderado: la posición total es la suma de las posiciones por sus masas, dividida entre la suma de las masas.</li></ol><p>Ese promedio ponderado explica por qué un tanque lleno y uno vacío tienen el mismo centro, mientras que un auto cargado lleva el suyo más abajo, cerca del eje trasero, que es donde se soporta la carga.</p><h4 class="lecc-h4">Altura y pendulum</h4><p>La altura del centro de gravedad es lo que realmente importa para la estabilidad, no solo su posición horizontal. Un objeto con la base ancha y el centro bajo es difícil de tumbar, mientras que uno con la base estrecha y el centro alto se vuelca con facilidad.</p><p>Un objeto con la base ancha y el centro bajo es difícil de tumbar, mientras que uno con la base estrecha y el centro alto se vuelca con facilidad.</p><p>Las personas ensanchan las piernas cuando cargan peso precisamente por eso: ensanchan la base de sustentación.</p><h4 class="lecc-h4">Aplicación: suspendiendo un cuerpo</h4><p>Un cuerpo colgado de un solo punto queda en equilibrio cuando el centro de gravedad queda exactamente por debajo del punto de suspensión. Si no, gira hasta que lo alcanza. Esa es la razón por la que un colgado con el gancho torcido se endereza solo: el peso lo hace girar.</p><p>Para encontrar el centro de gravedad de una lámina irregular, se cuelga en dos puntos distintos y se traza la vertical desde cada suspensión. La intersección de esas dos rectas es el centro.</p>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Una barra de 3 m tiene una masa de 8 kg en el extremo izquierdo, 12 kg a 1,2 m del mismo extremo y ninguna más. ¿Dónde está el centro de gravedad y qué pasa si se apoya la barra en un punto único a 1,8 m del extremo izquierdo?</p><h4 class="lecc-h4">Método 1: promedio ponderado</h4><ul class="lecc-ul"><li>Primero: tomo el extremo izquierdo como origen y como cero la coordenada.</li><li>Segundo: la suma de las masas es 8 + 12 = 20 kg.</li><li>Tercero: la suma de los momentos es 8 · 0 + 12 · 1,2 = 14,4 kg·m.</li><li>Cuarto: el centro de gravedad está en 14,4 entre 20 = 0,72 m del extremo izquierdo.</li></ul><h4 class="lecc-h4">Método 2: por reducción de masas</h4><ul class="lecc-ul"><li>Quinto: tomo los 20 kg como una masa única en el punto medio, que está a 6 entre 20 = 0,3 m. Esa es una masa equivalente a dos de 10 kg.</li><li>Sexto: la barra de 2 m aporta 8 kg repartidos uniformemente, con su centro en 1 m. Su momento es 8 · 1 = 8 kg·m, y con la masa reducida el total queda en 0,72 m. Coincide con el método anterior.</li></ul><h4 class="lecc-h4">Método 3: el apoyo de un solo punto</h4><ul class="lecc-ul"><li>Séptimo: el apoyo está a 1,8 m, es decir a la derecha del centro de gravedad, que se encuentra en 0,72 m.</li><li>Octavo: el peso produce un momento que hace girar la barra hacia la derecha, y como el centro de gravedad queda a la derecha del apoyo, la barra cae por ese lado.</li><li>Noveno: para que la barra quedara en equilibrio con ese apoyo, el centro de gravedad tendría que estar exactamente sobre los 1,8 m, y eso exigiría mover la carga de 12 kg hacia la derecha.</li></ul><div class="lecc-nota">El resultado clave es que la barra no es simétrica, y por eso un apoyo en el punto medio tampoco serviría: el centro de gravedad quedaría a la izquierda de los 1,5 m y la barra caería hacia ese lado.</div>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Siempre que encuentres el centro de gravedad, compara su posición con el punto de apoyo. Si no coinciden, el cuerpo gira. Esa comparación resuelve la mayor parte de los problemas de equilibrio.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="fisica-2-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-palancas-y-maquinas-simples.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-estabilidad.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "fisica-2-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

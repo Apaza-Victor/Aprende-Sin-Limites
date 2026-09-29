@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 270">
+  <defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+    <marker id="punta-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Orden de descarte: de mas rapido a mas lento</text>
+
+  <rect x="20" y="34" width="320" height="44" rx="9" class="fig-ok"/>
+  <text x="36" y="52" class="fig-ok-txt">1. Oposicion</text>
+  <text x="36" y="70" class="fig-sub">la opcion dice lo contrario del texto</text>
+  <text x="300" y="60" class="fig-ok-txt" font-size="12">rapidisimo</text>
+
+  <rect x="20" y="86" width="320" height="44" rx="9" class="fig-ok"/>
+  <text x="36" y="104" class="fig-ok-txt">2. Limite</text>
+  <text x="36" y="122" class="fig-sub">dice mas de lo que el texto sostiene</text>
+  <text x="300" y="112" class="fig-ok-txt" font-size="12">rapido</text>
+
+  <rect x="20" y="138" width="320" height="44" rx="9" class="fig-destac"/>
+  <text x="36" y="156" class="fig-destac-txt">3. Significado</text>
+  <text x="36" y="174" class="fig-sub">hay dos que dicen lo mismo: cambia un detalle</text>
+  <text x="300" y="164" class="fig-destac-txt" font-size="12">medio</text>
+
+  <rect x="20" y="190" width="320" height="44" rx="9" class="fig-apoyo"/>
+  <text x="36" y="208" class="fig-titulo" font-size="13">4. Sentido comun</text>
+  <text x="36" y="226" class="fig-sub">contradice algo que cualquiera sabe</text>
+  <text x="300" y="216" class="fig-apoyo-txt" font-size="12">el mas lento</text>
+
+  <text x="180" y="256" text-anchor="middle" class="fig-nota">al descartar tres, la cuarta es la correcta</text>
+</svg>

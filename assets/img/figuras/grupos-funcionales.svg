@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230">
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">El grupo funcional decide la reaccion</text>
+
+  <text x="14" y="60" class="fig-nota" font-size="12">Alcohol</text>
+  <rect x="170" y="40" width="150" height="30" rx="7" class="fig-ok"/>
+  <text x="245" y="61" text-anchor="middle" class="fig-ok-txt" font-size="12">R - OH</text>
+
+  <text x="14" y="106" class="fig-nota" font-size="12">Aldehido</text>
+  <rect x="170" y="86" width="150" height="30" rx="7" class="fig-ok"/>
+  <text x="245" y="107" text-anchor="middle" class="fig-ok-txt" font-size="12">R - CHO</text>
+
+  <text x="14" y="152" class="fig-nota" font-size="12">Acido carboxilico</text>
+  <rect x="170" y="132" width="150" height="30" rx="7" class="fig-destac"/>
+  <text x="245" y="153" text-anchor="middle" class="fig-destac-txt" font-size="12">R - COOH</text>
+
+  <text x="14" y="198" class="fig-nota" font-size="12">Amina</text>
+  <rect x="170" y="178" width="150" height="30" rx="7" class="fig-ok"/>
+  <text x="245" y="199" text-anchor="middle" class="fig-ok-txt" font-size="12">R - NH2</text>
+
+  <text x="180" y="226" text-anchor="middle" class="fig-nota" font-size="12">R es el resto de la molecula: puede ser enorme y no importa.</text>
+</svg>

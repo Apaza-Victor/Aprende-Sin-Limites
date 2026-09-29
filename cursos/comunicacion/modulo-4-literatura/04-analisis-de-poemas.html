@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análisis de poemas — Comunicación / Lenguaje</title>
+  <meta name="description" content="Analizar un poema por sus cuatro niveles, que es el orden en que el examen pide siempre la analisis." />
+  <script>
+/* Aplica el tema guardado ANTES de que se pinte el fondo, para que la pagina
+   no aparezca un instante en el tema contrario. La clave es la misma que usa
+   ui.js; si alguna vez cambia, hay que cambiarla en los dos sitios. */
+(function () {
+  var t;
+  try {
+    t = localStorage.getItem("asl-tema");
+  } catch (e) {
+    t = null;
+  }
+  if (t !== "claro" && t !== "oscuro") {
+    /* Sin eleccion previa se sigue al sistema; si no se puede preguntar,
+       se usa el oscuro, que es el tema por defecto del sitio. */
+    t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      ? "claro"
+      : "oscuro";
+  }
+  document.documentElement.setAttribute("data-tema", t);
+})();
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+</head>
+<body data-curso="comunicacion">
+
+  <nav class="navbar navbar-expand-lg nav-guia sticky-top">
+    <div class="container">
+      <a class="navbar-brand marca d-flex align-items-center gap-2" href="../../../index.html"><i class="bi bi-stars fs-5"></i> Aprende Sin Límites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLeccion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLeccion">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/metodo.html">Método</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/tablas.html">Tablas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../secciones/faq.html">Preguntas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+
+        <nav class="miga mb-3" aria-label="breadcrumb">
+          <a href="../../../secciones/cursos.html"><i class="bi bi-collection"></i> Cursos</a> <span class="mx-2 opacity-50">/</span>
+          <a href="../index.html">Comunicación / Lenguaje</a> <span class="mx-2 opacity-50">/</span>
+          <a href="index.html">Módulo 4 · Literatura</a> <span class="mx-2 opacity-50">/</span>
+          <span>Análisis de poemas</span>
+        </nav>
+
+        <article class="articulo">
+
+          <header class="articulo-cabecera">
+            <div class="articulo-icono"><i class="bi bi-chat-square-text"></i></div>
+            <h1 class="articulo-titulo">Análisis de poemas</h1>
+            <p class="articulo-modulo">Módulo 4 · Literatura</p>
+            <p class="articulo-objetivo"><span>Objetivo</span> Analizar un poema por sus cuatro niveles, que es el orden en que el examen pide siempre la analisis.</p>
+          </header>
+
+          <div class="lecc-texto lecc-fluida">
+<h4 class="lecc-h4">La idea de fondo</h4><p>Un poema no se analiza buscando el tema escondido. Se analiza en <strong>capas</strong>: primero lo que dice, despues como lo dice, luego con que intencion y por ultimo que efecto produce. Ese es el orden que pide el examen.</p><h4 class="lecc-h4">Los cuatro niveles, en orden</h4><p>### 1. El contenido o tema</p><p>Que dice el poema. Se responde con una frase: de que habla y que dice de eso.</p><ul class="lecc-ul"><li>No se busca el tema escondido. Se busca lo que el poema <strong>afirma</strong>.</li></ul><p>### 2. La forma</p><p>Como esta escrito: el metro, la rima, la estructura de las estrofas y los recursos.</p><ul class="lecc-ul"><li>Tipo de poema: soneto, romance, haiku, verso libre.</li><li>Si hay rima, de que tipo: consonante o asonante.</li></ul><p>### 3. El recursos literarios</p><p>Que figuras aparecen y en que palabras. Se citan literalmente, con su nombre.</p><ul class="lecc-ul"><li>*El rio dormia*: personificacion.</li><li>*Raton*: metonimia.</li></ul><p>### 4. La intencion y el efecto</p><p>Que busca el poeta y que siente el lector. Aqui se cierra el analisis.</p><div class="lecc-nota">La pregunta que resume el metodo: <strong>que dice, como lo dice, para que y que efecto causa</strong>. Las cuatro respuestas, en ese orden.</div><h4 class="lecc-h4">Los tres datos que hay que mirar siempre</h4><ol class="lecc-ol"><li><strong>El titulo</strong>: casi siempre resume la idea central. Se empieza por ahi.</li><li><strong>El primer y el ultimo verso</strong>: el primero plantea y el ultimo cierra.</li><li><strong>Las palabras repetidas</strong>: suelen ser la clave del poema entero.</li></ol><h4 class="lecc-h4">La confusion mas comun</h4><p>Confundir el tema con el argumento. El tema es una afirmacion, no un asunto.</p><ul class="lecc-ul"><li>Asunto: el mar.</li><li>Tema: el mar no se puede relancejar.</li></ul><p>El primero dice de que se habla. El segundo dice que piensa el poema. En un examen solo se acepta el segundo.</p><h4 class="lecc-h4">El truco de los cuatro niveles</h4><p>Si te piden el tema, no menciones figuras. Si te piden los recursos, no repitas el tema. Cada nivel tiene su propia respuesta, y mezclarlos es el error mas comun.</p><figure class="lecc-figura"><svg viewBox="0 0 360 250" role="img" aria-label="El orden de los cuatro niveles no se puede cambiar"><defs>
+    <marker id="punta-flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <text x="180" y="18" text-anchor="middle" class="fig-titulo">Las cuatro del analisis de un poema</text>
+
+  <rect x="24" y="32" width="312" height="42" rx="9" class="fig-destac"/>
+  <text x="40" y="50" class="fig-destac-txt">1. Que dice  (el tema)</text>
+  <text x="40" y="67" class="fig-sub">una afirmacion, nunca un sustantivo solo</text>
+
+  <line x1="180" y1="74" x2="180" y2="86" class="fig-flecha"/>
+
+  <rect x="24" y="88" width="312" height="42" rx="9" class="fig-ok"/>
+  <text x="40" y="106" class="fig-ok-txt">2. Como lo dice  (la forma)</text>
+  <text x="40" y="123" class="fig-sub">metro, rima, estrofas</text>
+
+  <line x1="180" y1="130" x2="180" y2="142" class="fig-flecha"/>
+
+  <rect x="24" y="144" width="312" height="42" rx="9" class="fig-apoyo"/>
+  <text x="40" y="162" class="fig-titulo" font-size="13">3. Con que figuras  (los recursos)</text>
+  <text x="40" y="179" class="fig-sub">citadas literalmente, con su nombre</text>
+
+  <line x1="180" y1="186" x2="180" y2="198" class="fig-flecha"/>
+
+  <rect x="24" y="200" width="312" height="42" rx="9" class="fig-mal"/>
+  <text x="40" y="218" class="fig-mal-txt">4. Para que y que efecto  (la intencion)</text>
+  <text x="40" y="235" class="fig-sub">aqui se cierra el analisis</text></svg><figcaption class="fig-titulo">El orden de los cuatro niveles no se puede cambiar</figcaption></figure>
+
+            <section class="bloque bloque-teoria">
+              <h2 class="bloque-titulo"><i class="bi bi-lightbulb"></i> Ejemplo resuelto</h2>
+<p>Poema para analizar:</p><p>*El mar\ncuando se levanta\nnadie sabe\ndonde termina.\n\nLo que empieza\ntermina, y el mar\nsigue.*</p><h4 class="lecc-h4">Nivel 1: el tema</h4><ul class="lecc-ul"><li>El poema habla del mar, y afirma que es algo que no se puede(rc) medir ni_(x) acotar.</li><li>Asunto: el mar.</li><li>Tema: el mar es ilimitado, y por eso no se puede medir ni delimitar.</li></ul><h4 class="lecc-h4">Nivel 2: la forma</h4><ul class="lecc-ul"><li>Trece versos.</li><li>Estructura: tres estrofas de cuatro versos.</li><li>No hay rima en el sentido estricto: se repite la palabra mar, y eso es una <strong>anadiplosis</strong> al final.</li></ul><h4 class="lecc-h4">Nivel 3: los recursos</h4><ul class="lecc-ul"><li>*Cuando se levanta*: el mar no se levanta por decision propia. Es personificacion.</li><li>*Nadie sabe donde termina*: la pregunta implicita es una anticipacion.</li><li>La repeticion de *el mar* al principio y al final es un recurso de estructura.</li></ul><h4 class="lecc-h4">Nivel 4: la intencion y el efecto</h4><ul class="lecc-ul"><li>El poeta quiere mostrar que hay cosas que no se pueden medir.</li><li>El efecto en el lector es de incomodidad, porque el poema no cierra la pregunta.</li></ul><h4 class="lecc-h4">Conclusion</h4><ul class="lecc-ul"><li>Conclusion: el tema se escribe con una afirmacion, no con un sustantivo.</li><li>Ojo: si escribes *el mar* como tema, el profesor va a decir que eso es el asunto y no el tema.</li><li>Conclusion 2: el orden de los cuatro niveles no se puede cambiar. Si empiezas por las figuras, ya no sabes que diras del tema.</li></ul>
+            </section>
+
+            <section class="bloque bloque-consejo">
+              <h2 class="bloque-titulo"><i class="bi bi-patch-check"></i> Consejo que suma puntos</h2>
+<p>Escribe las cuatro respuestas en cuatro lineas separadas, con el titulo de cada nivel. Asi no mezclas el tema con las figuras y el trabajo queda ordenado.</p>
+            </section>
+          </div>
+
+          <footer class="articulo-pie">
+            <label class="marcar-leccion">
+              <input class="form-check-input checkbox-leccion" type="checkbox" id="checkLeccion" data-clave="comunicacion-3-3" />
+              <span>He completado esta lección</span>
+            </label>
+            <nav class="nav-leccion">
+              <a class="nav-btn" href="index.html"><i class="bi bi-arrow-left"></i> Volver al módulo</a>
+              <a class="nav-btn" href="03-corrientes-y-autores-esenciales.html"><i class="bi bi-chevron-left"></i> Anterior</a>
+              <a class="nav-btn nav-btn-sig" href="05-recursos-para-estudiar-literatura.html">Siguiente <i class="bi bi-chevron-right"></i></a>
+            </nav>
+          </footer>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-guia">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6">
+          <div class="marca d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i> Aprende Sin Límites</div>
+          <p class="mb-0">Guía abierta para preparar tus áreas académicas con libertad y método.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="me-3" href="../../../secciones/cursos.html">Cursos</a>
+          <a class="me-3" href="../../../secciones/metodo.html">Método</a>
+          <a class="me-3" href="../../../secciones/tablas.html">Tablas</a>
+          <a class="me-3" href="../../../secciones/calculadora.html">Calculadora</a>
+          <a class="me-3" href="../../../secciones/recursos.html">Recursos</a>
+          <a href="../../../secciones/faq.html">Preguntas</a>
+        </div>
+        <div class="col-12 text-center mt-4 pt-3 border-top border-secondary-subtle">
+          <small>© <span id="anioAuto"></span> Aprende Sin Límites · Hecho con dedicación para tu futuro.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- si el JS no corre, .reveal no debe quedarse invisible -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var CLAVE = "comunicacion-3-3";
+      var cb = document.getElementById("checkLeccion");
+      var ALM = "asl-progreso";
+      function leer() { try { return JSON.parse(localStorage.getItem(ALM) || "{}"); } catch (e) { return {}; } }
+      var anio = document.getElementById("anioAuto");
+      if (anio) anio.textContent = new Date().getFullYear();
+      if (cb) {
+        var est = leer();
+        cb.checked = !!est[CLAVE];
+        cb.addEventListener("change", function () {
+          var e = leer();
+          if (cb.checked) e[CLAVE] = true; else delete e[CLAVE];
+          localStorage.setItem(ALM, JSON.stringify(e));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

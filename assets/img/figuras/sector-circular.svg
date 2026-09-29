@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240">
+  <path d="M60 200 A140 140 0 0 1 196.4 73.8 L60 200 Z" class="fig-forma"/>
+  <path d="M60 200 L250 200 M60 200 L60 10" class="fig-dato"/>
+  <path d="M60 200 L196.4 73.8" class="fig-acento"/>
+  <circle cx="60" cy="200" r="3" fill="currentColor" stroke="none"/>
+  <path d="M60 172 A28 28 0 0 0 82.8 178.2" class="fig-acento"/>
+  <text x="150" y="106" text-anchor="middle" font-size="15">A = (θ : 360) · π · r²</text>
+  <text x="112" y="176" text-anchor="middle" font-size="14" class="fig-acento-texto">θ</text>
+  <text x="78" y="188" text-anchor="middle" font-size="15" class="fig-acento-texto">r</text>
+  <text x="48" y="206" text-anchor="middle" font-size="14" class="fig-etiqueta">O</text>
+  <text x="266" y="206" text-anchor="middle" font-size="14" class="fig-etiqueta">r</text>
+  <text x="54" y="24" text-anchor="middle" font-size="14" class="fig-etiqueta">r</text>
+  <text x="150" y="232" text-anchor="middle" font-size="13" class="fig-nota">el arco mide L = (θ : 360) · 2π · r</text>
+</svg>
